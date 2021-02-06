@@ -12,11 +12,13 @@ The hypotheses at the foundation of the BET theory are:
 Following an approach similar to the one adopted for the derivation of the Langmuir isotherm let us begin by defining the rates of adsorption and desorption. In the case of th BET isotherm the rates will depend on the layer considered and will therefore have subscript $i$ that indicate the layer on which adsorption takes place. 
 
 The adsorption rate on layer $i$ can be written as: 
+
 $$
 R_{A,i}=k_{A,i}\Gamma_iP
 $$(eq1)
 
 The desorption rate instead, explicitly introducing the dependence on the adsorption enthalpy through an Arrhenius-like functional form, is written as: 
+
 $$
 R_{D,i}=k_{D,i}\Gamma_i=A_ie^{\frac{-E_i}{RT}}\Gamma_i
 $$(eq2)
@@ -79,7 +81,6 @@ $$
 $$(eq9)
 
 and analogously for $\Gamma_2$: 
-
 
 $$
 \Gamma_2=\frac{k_{A,1}}{k_{D,2}}\Gamma_1P=\frac{k_{A,1}}{A_{2}}e^{\frac{E_2}{RT}}P\Gamma_1

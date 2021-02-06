@@ -15,7 +15,6 @@ The adsorption process takes place when a molecule of the component that is unde
 
 $$
 R_A=k_A\Gamma_0{C}
-{\tag{1}}
 $$(eq1)
 
 Where $k_A$ is the kinetic constant, $\Gamma_0$ is the fraction of free adsorption sites,  and $x$ is the molar fraction of the adsorbing component in the fluid phase.
@@ -24,7 +23,6 @@ The rate of desorption instead can be considered analogous to a monomolecular re
 
 $$
 R_D=k_D\Gamma_1
-{\tag{2}}
 $$(eq2)
 
 At equilibrium, the rates of adsorption and desorption are equal and the net flux of molecules to and from the adsorbed phase is null. 
@@ -32,28 +30,24 @@ We can thus write:
 
 $$
 k_A\Gamma_0{C}=k_D\Gamma_1
-\label{eq:3}{\tag{3}}
 $$(eq3)
 
 Recalling the stoichiometric relation between the fraction of accupied and free sites Eq. \eqref{eq:3} becomes: 
 
 $$
 k_A(1-\Gamma_1){C}=k_D\Gamma_1
-\label{eq:4}{\tag{4}}
 $$(eq4)
 
 which can be rearranged to provide an explicit expression of $\Gamma_1$, the fraction of accupied sites, as a function of the concentration $C$ in the fluid phase: 
 
 $$
 \Gamma_1=\frac{k_A{C}}{k_D+k_A{C}}
-\label{eq:5}{\tag{5}}
 $$(eq5)
 
 To obtain a typical expression of the Langmuir isotherm we shall introduce as a single parameter for this equation the adsorption equilibrium constant $B_0=k_A/k_D$: 
 
 $$
 \Gamma_1=\frac{B_0{C}}{1+B_0{C}}
-\label{eq:6}{\tag{6}}
 $$(eq6)
 
 
@@ -150,8 +144,7 @@ In this case the expression of the monocomponent Langmuir isotherm becomes:
 
 $$
 q=q_M\frac{B_1{P}}{1+B_1{P}}
-\label{eq:8}{\tag{8}}
-$$(eq1)
+$$(eq7)
 
 where $B_1=B_0/RT$ and $P$ is pressure.
 
@@ -159,8 +152,7 @@ In multicomponent systems, where more than one component is competing for the sa
 
 $$
 q_i=q_M\frac{B_{1,i}{P_i}}{1+B_{1,i}{P_i}}
-\label{eq:9}{\tag{9}}
-$$(eq1)
+$$(eq8)
 
 where $P_i$ is the partial pressure component i in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
 
@@ -199,4 +191,3 @@ axes.plot(P,Gamma0, marker=' ' , c=c)
 axes.set_xlabel('P [bar]', fontsize=14);
 axes.set_ylabel('$\Gamma_0 / \Gamma_{1,i}$', fontsize=18);
 axes.legend(['$\Gamma_{1,1}$','$\Gamma_{1,2}$','$\Gamma_{0}$'], fontsize=18);
-
