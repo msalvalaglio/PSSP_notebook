@@ -1,4 +1,4 @@
-# 6. The BET isotherm
+# 6. The BET Isotherm
 
 The BET (Brunauer, Emmet and Teller) isotherm allows to extend ideas and hypotheses that are adopted to obtain the Langmuir isotherm to describe the adsorption of a component from a gas phase in cases in which it can form multiple layers on the surface of the stationary phase, up to the limit in which it condenses into a macroscopic liquid phase. 
 

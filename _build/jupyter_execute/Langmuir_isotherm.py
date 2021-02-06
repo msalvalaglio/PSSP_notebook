@@ -1,4 +1,4 @@
-# 5. The Langmuir isotherm
+# 5. The Langmuir Isotherm
 
 The Langmuir isotherm provides a relationship between the compositions of the fluid phase and of the adsorbed phase at equilibrium.
 

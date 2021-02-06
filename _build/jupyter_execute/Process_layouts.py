@@ -1,4 +1,4 @@
-# 4. Mass balances in membrane separation processes
+# 4. Membrane Separation Process Layouts
 
 In this set of notes we will use an example ultrafiltration process to introduce material balances in different process configurations. We will consider a Batch, semi-Batch (feed and bleed) and continuous membrane processes to develop general ideas around material balances in membrane units. Every example will be introduced by a slight variant of a problem statement. 
 

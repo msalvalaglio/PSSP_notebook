@@ -1,4 +1,4 @@
-# 3. On the thermodynamic origin of the osmotic pressure
+# 3. The Osmotic Pressure
 
 ## 3.1 Osmosis
 
