@@ -1,0 +1,30 @@
+#######################################################################################
+# Book settings
+title : PSSP Virtual Notebook
+author: Matteo Salvalaglio
+logo: 'program_class.png'
+
+# Information about where the book exists on the web
+description: >-
+  A virtual notebook for "CENG0011: Particulate Systems and Separation Processes II @ UCL Chemical Engineering."
+  AY: 2020/2021.
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks           : cache
+
+#######################################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+ #parse:
+ # myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+  #  - amsmath
