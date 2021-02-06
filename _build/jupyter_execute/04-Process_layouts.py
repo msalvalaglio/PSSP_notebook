@@ -46,9 +46,11 @@ In this simple case it can be integrated analytically to compute the volume as a
 $$
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
 $$(eq6)
+
 $$
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\left[\ln{V}\right]^{V^{\prime}}_{V_0}=\ln\left(\frac{V^\prime}{V_0}\right)
 $$(eq7)
+
 $$
 \int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt=-\frac{B}{V_0C_0 }At^\prime
 $$(eq8)
@@ -57,6 +59,7 @@ Putting together both sides of the equation and substituting $V^\prime$ with $V$
 $$
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
 $$(eq9)
+
 which describes the time dependence of the volume in the batch membrane separator. 
 
 The concentration can thus be calculated as: 
