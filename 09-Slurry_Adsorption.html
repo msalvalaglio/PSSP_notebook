@@ -266,75 +266,79 @@
 <div class="section" id="material-balance-in-a-batch-slurry-adsorption-process">
 <h2>9.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Permalink to this headline">¶</a></h2>
 <p>Let us begin by writing the material balance for a batch membrane separator.</p>
-<p>Since we have a batch system, no inlet or outlet streams are present and we can write:
-\begin{equation}
+<p>Since we have a batch system, no inlet or outlet streams are present and we can write:</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 V_\ell{c_0}=V_\ell{c}+S_pq
 \label{eq:matbalance}{\tag{1}}
-\end{equation}</p>
+\]</div>
 <p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of coloring agent in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of coloring agent in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous concentration of coloring agent adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the mass of the adsorbent particles.</p>
-<p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:
-\begin{equation}
+<p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 J=-k_\ell(c-c^*)
-{\tag{2}}
-\end{equation}
-where <span class="math notranslate nohighlight">\(k_\ell\)</span> is the mass transfer coefficient on the liquid side, and <span class="math notranslate nohighlight">\(c^*\)</span> is the equilibrium concentration, reached at the solid/liquid interface. <span class="math notranslate nohighlight">\(J\)</span> has the units of number of moles per unit time per unit surface.</p>
-<p>The differential material balance on the solute concentration can thus be written as:
-\begin{equation}
-\frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^<em>)=-k_\ell{a}(c-c^</em>)
-\label{eq:masstransfer}{\tag{3}}
-\end{equation}
-Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles mass per unit of fluid volume.</p>
-<p>The equilibrium of the adsorption process is well captured by a linear isotherm:
-\begin{equation}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_\ell\)</span> is the mass transfer coefficient on the liquid side, and <span class="math notranslate nohighlight">\(c^*\)</span> is the equilibrium concentration, reached at the solid/liquid interface. <span class="math notranslate nohighlight">\(J\)</span> has the units of number of moles per unit time per unit surface.</p>
+<p>The differential material balance on the solute concentration can thus be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(71)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles mass per unit of fluid volume.</p>
+<p>The equilibrium of the adsorption process is well captured by a linear isotherm:</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 c^*=\frac{q}{H}
-\label{eq:equilibrium}{\tag{4}}
-\end{equation}</p>
+\label{eq:equilibrium}
+\]</div>
 <p>Using Eq. \eqref{eq:matbalance} and \eqref{eq:equilibrium} Eq. \eqref{eq:masstransfer} can be rewritten as:</p>
-<p>\begin{equation}
-\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = \
-=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = \
-=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= \
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = \\
+=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = \\
+=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= \\
 {\tag{5}}
-\end{equation}</p>
+\end{split}\]</div>
 <p>Defining: <span class="math notranslate nohighlight">\(\beta=\left(1+\frac{V_\ell}{HS_p}\right)\)</span>, and <span class="math notranslate nohighlight">\(\alpha=\frac{V_\ell}{HS_p}\)</span>, one gets:</p>
-<p>\begin{equation}
-\frac{dc}{dt}+k_\ell{a}\beta,c=k_\ell{a}c_0\alpha
-\label{eq:ODE}{\tag{6}}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-eq6">
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
+\]</div>
 <p>which is a first order, non homogeneous ODE in the form <span class="math notranslate nohighlight">\(y^\prime+C_1y=C_2\)</span> with constant a and b coefficients.</p>
 <p>To solve our problem Eq. \ref{eq:ODE} can be solved either numerically or analytically.
 In this case the analytical solution can be obtained from the general solution for ODEs of this type:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight" id="equation-eq7">
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
-{\tag{7}}
-\end{equation}
-where <span class="math notranslate nohighlight">\(A(t)=\int{C_1dt}\)</span></p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A(t)=\int{C_1dt}\)</span></p>
 <p>In our case:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_1=k_\ell{a\beta}\)</span>, thus <span class="math notranslate nohighlight">\(A(t)=k_\ell{a\beta}\,t\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(C_2=k_\ell{a\alpha}c_0\)</span>,</p></li>
 </ul>
-<p>thus:
-\begin{equation}
-\int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta},t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta},t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta},t}
-{\tag{8}}
-\end{equation}</p>
+<p>thus:</p>
+<div class="math notranslate nohighlight" id="equation-eq8">
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+\int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta}\,t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta}\,t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta}\,t}
+\]</div>
 <p>putting everything together:
-\begin{equation}
-c(t)=k_1e^{-k_\ell{a\beta},t}+\frac{\alpha{c_0}}{\beta}
+$<span class="math notranslate nohighlight">\(
+c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
 {\tag{9}}
-\end{equation}</p>
-<p>The constant <span class="math notranslate nohighlight">\(C_1\)</span> can be computed from the initial conditions: at <span class="math notranslate nohighlight">\(t=0\)</span> <span class="math notranslate nohighlight">\(c(t)=c_0\)</span>, therefore:
-\begin{equation}
+\)</span>$(eq1)</p>
+<p>The constant <span class="math notranslate nohighlight">\(C_1\)</span> can be computed from the initial conditions: at <span class="math notranslate nohighlight">\(t=0\)</span> <span class="math notranslate nohighlight">\(c(t)=c_0\)</span>, therefore:</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
 {\tag{10}}
-\end{equation}</p>
+\]</div>
 <p>The final solution for the time-dependent concentration profile <span class="math notranslate nohighlight">\(c(t)\)</span> is:
-\begin{equation}
-c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta},t}+\alpha\right)
+$<span class="math notranslate nohighlight">\(
+c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 \label{eq:final}
 {\tag{11}}
-\end{equation}</p>
+\)</span>$(eq1)</p>
 <p>The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time <span class="math notranslate nohighlight">\(\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -385,22 +389,25 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta},t}+\alpha\right)
 <h2>9.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this headline">¶</a></h2>
 <p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
 <p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
-<p>\begin{equation}
-\frac{dc}{dt}=-k_\ell{a}(c-c^<em>) \rightarrow \frac}{\tau}=k_\ell{a}(c_{out}-c^</em>)
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
 {\tag{12}}
-\end{equation}</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time, <span class="math notranslate nohighlight">\(c_{out}\)</span> the concentration in the liquid phase in the unit, <span class="math notranslate nohighlight">\(c_{in}\)</span> the concentration in the feed, and <span class="math notranslate nohighlight">\(a\)</span> the amount of surface of the stationary phase particles per unit volume of the liquid phase.</p>
 <p>Note that in a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as follows:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 a={S}/Q
 {\tag{13}}
-\end{equation}</p>
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid phase.</p>
 <p>This expression needs to be solved together with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, c is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient, and with the global material balance at steady state, which reads:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 c_{in}Q=qS+c_{out}Q
 {\tag{14}}
-\end{equation}</p>
+\]</div>
 </div>
 </div>
 

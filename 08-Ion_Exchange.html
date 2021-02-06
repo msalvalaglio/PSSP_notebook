@@ -249,43 +249,40 @@ In the following examples the ligands are anionic and monovalent and are indicat
 <div class="section" id="monovalent-symmetric-cation-exchange">
 <h2>8.1 Monovalent, symmetric cation exchange.<a class="headerlink" href="#monovalent-symmetric-cation-exchange" title="Permalink to this headline">¶</a></h2>
 <p>Let us consider an ion exchange system in which the cations that are selectively displaced from the liquid phase are indicated as <span class="math notranslate nohighlight">\(A^+\)</span>, while the ligand counterions are indicated with <span class="math notranslate nohighlight">\(B^+\)</span>.
-The ion exchange reaction considered can be written as:
-\begin{equation}
-A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \
-\end{equation}
-where <span class="math notranslate nohighlight">\(X^-\)</span> are spectator anions.</p>
+The ion exchange reaction considered can be written as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \\
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(X^-\)</span> are spectator anions.</p>
 <p>The isotherm in the case of an ion exchange process can be derived starting from the equilibrium constant for the ion exchange reaction.
 If we indicate with <span class="math notranslate nohighlight">\(C_A\)</span>, <span class="math notranslate nohighlight">\(C_B\)</span> the concentration of cations A and B in the fluid phase and with <span class="math notranslate nohighlight">\(n_A\)</span>, <span class="math notranslate nohighlight">\(n_B\)</span> their respective concentration in the adsorbed phase.</p>
 <p>The equilibrtium constant is written as:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 K_{AB}=\frac{n_AC_B}{n_BC_A}
-{\tag{1}}
-\end{equation}</p>
+\)</span>$(eq1)</p>
 <p>The concentration of surface ligands is related to the concentration in the adsorbed phase of cations <span class="math notranslate nohighlight">\(A^+\)</span> and <span class="math notranslate nohighlight">\(B^+\)</span> by the following expression:
-\begin{equation}
-n_R=n_A+n_B\
-{\tag{2}}
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+n_R=n_A+n_B
+\)</span>$(eq2)</p>
 <p>The total cationic concentration in the fluid phase <span class="math notranslate nohighlight">\(C_T\)</span> is analogously defined as:
-\begin{equation}
-C_T=C_A+C_B\
-{\tag{3}}
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+C_T=C_A+C_B
+\)</span>$(eq3)</p>
 <p>hence the equilibrium constant becomes:
-\begin{equation}
-K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}\
-{\tag{4}}
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
+\)</span>$(eq4)</p>
 <p>This expression can be manipulated to provide an explicit relation between the concetration in the adsorbed phase <span class="math notranslate nohighlight">\(n_A\)</span>, and the concentration in the fluid phase <span class="math notranslate nohighlight">\(C_A\)</span>, i.e. an isotherm for the ion exchange process:</p>
-<p>\begin{equation}
-n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}\
-{\tag{5}}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}
+\]</div>
 <p>This expression can be further simplified by introducing the molar fractions in the adsorbed and fluid phases indicated with <span class="math notranslate nohighlight">\(y_A\)</span> and <span class="math notranslate nohighlight">\(x_A\)</span>, respectively:</p>
-<p>\begin{equation}
-y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}\
-{\tag{6}}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-eq6">
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
