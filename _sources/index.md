@@ -1,6 +1,6 @@
 # Particulate Systems and Separation Processes Notebook
  
-This is a collection of notes and exercises associated with the Particulate Systems and Separations II module, taught during the 2nd year of the [ChemEng curriculum at UCL](https://www.ucl.ac.uk/chemical-engineering/). 
+This is a collection of notes and exercises associated with the [Particulate Systems and Separations II module](https://moodle.ucl.ac.uk/course/view.php?id=1191), taught during the 2nd year of the [ChemEng curriculum at UCL](https://www.ucl.ac.uk/chemical-engineering/). 
 
 
 ```{admonition} Contribute to evolve these notes!
