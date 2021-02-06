@@ -143,7 +143,7 @@ In this case the expression of the monocomponent Langmuir isotherm becomes:
 
 $$
 q=q_M\frac{B_1{P}}{1+B_1{P}}
-$$(eq7)
+$$(eq8)
 
 where $B_1=B_0/RT$ and $P$ is pressure.
 
@@ -151,7 +151,7 @@ In multicomponent systems, where more than one component is competing for the sa
 
 $$
 q_i=q_M\frac{B_{1,i}{P_i}}{1+B_{1,i}{P_i}}
-$$(eq8)
+$$(eq9)
 
 where $P_i$ is the partial pressure component i in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
 
