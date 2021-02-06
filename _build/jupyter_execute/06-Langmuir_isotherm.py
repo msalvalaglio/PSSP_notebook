@@ -92,8 +92,7 @@ The concentration in the adsorbed phase is thus computed as: $q=\Gamma_1{q_M}$, 
 
 $$
 q=q_M\frac{B_0{C}}{1+B_0{C}}
-\label{eq:7}{\tag{7}}
-$$(eq1)
+$$(eq7)
 
 The parameter $q_M$ depends on the adsorbent material, and in particular on the amount of surface area per unit volume. 
 

@@ -84,24 +84,22 @@ $$
 $$(eq8)
 
 putting everything together: 
+
 $$
 c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
-{\tag{9}}
-$$(eq1)
+$$(eq9)
 
 The constant $C_1$ can be computed from the initial conditions: at $t=0$ $c(t)=c_0$, therefore: 
 
 $$
 k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
-{\tag{10}}
-$$(eq1)
+$$(eq10)
 
 The final solution for the time-dependent concentration profile $c(t)$ is: 
+
 $$
 c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
-\label{eq:final}
-{\tag{11}}
-$$(eq1)
+$$(eq11)
 
 The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time $\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}$.
 
@@ -150,9 +148,7 @@ In this context the  differential material balance on the solute concentration u
 
 $$
 \frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
-{\tag{12}}
-$$(eq1)
-
+$$(eq12)
 
 where $\tau$ is the residence time, $c_{out}$ the concentration in the liquid phase in the unit, $c_{in}$ the concentration in the feed, and $a$ the amount of surface of the stationary phase particles per unit volume of the liquid phase. 
 
@@ -160,8 +156,7 @@ Note that in a continuous process it is convenient to define $a$ as follows:
 
 $$
 a={S}/Q
-{\tag{13}}
-$$(eq1)
+$$(eq13)
 
 where $Q$ is the volumetric flowrate of the liquid phase, ans $S$ is the mass flowrate of the solid phase. 
 
@@ -169,5 +164,4 @@ This expression needs to be solved together with the adsorption isotherm $q=kc^*
 
 $$
 c_{in}Q=qS+c_{out}Q
-{\tag{14}}
-$$(eq1)
+$$(eq14)
