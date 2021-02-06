@@ -20,22 +20,27 @@ $$(eq1)
 
 where $V$ is the volume in the concentrate loop, $J$ the permeate flux per unit area and $A$ the total membrane area. 
 The permeate flux is defined by the expression: 
+
 $$
 J=BC^{-1}
 $$(eq2)
+
 with $B=0.1$. 
 
 Since the solid residue never leaves the retentate loop,  the differential material balance on the solid residue reads: 
+
 $$
 \frac{dm}{dt}=0 
 $$(eq3)
 
-Which means that the total mass of solid residue is constant and equal to its initial mass: 
+Which means that the total mass of solid residue is constant and equal to its initial mass:
+
 $$
 m=m_0=V_0C_0 
 $$(eq4)
 
 The global differential material balance can thus be rewritten as: 
+
 $$
 \frac{dV}{dt}=-J\,A=-\frac{B}{V_0C_0 }AV
 $$(eq5)
@@ -43,6 +48,7 @@ $$(eq5)
 \newpage
 
 In this simple case it can be integrated analytically to compute the volume as a function of time: 
+
 $$
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
 $$(eq6)
@@ -56,6 +62,7 @@ $$
 $$(eq8)
 
 Putting together both sides of the equation and substituting $V^\prime$ with $V$ for the sake of simplicity in the notation we get: 
+
 $$
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
 $$(eq9)
@@ -63,6 +70,7 @@ $$(eq9)
 which describes the time dependence of the volume in the batch membrane separator. 
 
 The concentration can thus be calculated as: 
+
 $$
 C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V_0C_0 }At}
 $$(eq10)
@@ -183,15 +191,19 @@ __Cascade: Solution trace__
 
 Each stage can be treated like a single unit in which the feed stream corresponds to the retentate stream from the previous unit.
 We can thus define: 
+
 $$
 C_{OUT,i}=C_{IN,i+1}
 $$(eq15)
+
 $$
 Q_{OUT,i}=Q_{IN,i+1}
 $$(eq16)
+
 where the index $i$ identifies the stage. 
 
 The material balances for each stage at steady state can thus be written as: 
+
 $$
 \frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
 $$(eq17)
@@ -199,12 +211,15 @@ $$(eq17)
 $$
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
 $$(eq18)
+
 where $n_i$ is the number of modules used in stage $i$.
 
 For each stage we can thus compute the steady state concentration and concentrate volumetric flow by solving sequentially the following equations:  
+
 $$
 C_{IN,i+1}=C_{IN,i}+n_i\frac{AB}{Q_{IN,i}}
 $$(eq19)
+
 $$
 Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 $$(eq20)
