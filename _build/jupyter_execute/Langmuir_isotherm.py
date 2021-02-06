@@ -1,4 +1,4 @@
-# 6. The Langmuir isotherm
+# 5. The Langmuir isotherm
 
 The Langmuir isotherm provides a relationship between the compositions of the fluid phase and of the adsorbed phase at equilibrium.
 
@@ -51,7 +51,7 @@ $$
 $$(eq6)
 
 
-## 6.1 Isotherm dependence on $B_0$
+## 5.1 Isotherm dependence on $B_0$
 
 In order to understand the role of the adsorption equilibrium constant let us plot the fraction of occupied adsorption sites as a function of $B_0$
 
@@ -85,7 +85,7 @@ plt.title('Langmuir Isotherm', fontsize=18);
 axes.set_xlabel('C [mol l$^{-1}$]', fontsize=14);
 axes.set_ylabel('$\Gamma_1$',fontsize=18);
 
-## 6.2 Concentration in the adsorbed phase.
+## 5.2 Concentration in the adsorbed phase.
 
 The Langmuir isotherm as discussed so far provides a relationship between the fractional occupation of adsorption sites $\Gamma_1$ and the concentration in the fluid phase $C$. This relationship is only dependent on the thermodynamics of adsorption, captured by the value of the adsorption equilibrium coinstant $B_0$. In order to compute the concentration adsorbed by a specific material we need one additional parameter, the maximum concentration $q_M$ in the adsorbed phase. 
 The concentration in the adsorbed phase is thus computed as: $q=\Gamma_1{q_M}$, hence: 
@@ -136,7 +136,7 @@ axes.set_ylabel('$B_0$',fontsize=14);
 axes.set_zlabel('$q$',fontsize=14);
 figure.colorbar(surf, shrink=0.5, aspect=5);
 
-## 6.3 Langmuir isotherm in the gas phase, and in multicomponent systems. 
+## 5.3 Langmuir isotherm in the gas phase, and in multicomponent systems. 
 
 When describing the thermodynamics of adsorption from the gas phase it is convenient to introduce explicitly the pressure $P$ in the Langmuir isotherm. 
 In this case the expression of the monocomponent Langmuir isotherm becomes: 

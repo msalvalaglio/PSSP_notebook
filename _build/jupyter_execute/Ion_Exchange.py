@@ -1,9 +1,9 @@
-# 8. Equilibria in Ion Exchange systems
+# 7. Equilibria in Ion Exchange systems
 
 In ion exchange processes adsorption takes place through by exchanging the counterions bound to charged ligands immobilised on the stationary phase. 
 In the following examples the ligands are anionic and monovalent and are indicated with $R^-$. 
 
-## 8.1 Monovalent, symmetric cation exchange. 
+## 7.1 Monovalent, symmetric cation exchange. 
 
 Let us consider an ion exchange system in which the cations that are selectively displaced from the liquid phase are indicated as $A^+$, while the ligand counterions are indicated with $B^+$. 
 The ion exchange reaction considered can be written as:
