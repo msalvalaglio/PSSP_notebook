@@ -7,51 +7,46 @@ In the following examples the ligands are anionic and monovalent and are indicat
 
 Let us consider an ion exchange system in which the cations that are selectively displaced from the liquid phase are indicated as $A^+$, while the ligand counterions are indicated with $B^+$. 
 The ion exchange reaction considered can be written as:
-\begin{equation}
+
+$$
 A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \\
-\end{equation}
+$$
 where $X^-$ are spectator anions. 
 
 The isotherm in the case of an ion exchange process can be derived starting from the equilibrium constant for the ion exchange reaction. 
 If we indicate with $C_A$, $C_B$ the concentration of cations A and B in the fluid phase and with $n_A$, $n_B$ their respective concentration in the adsorbed phase. 
 
 The equilibrtium constant is written as: 
-\begin{equation}
+$$
 K_{AB}=\frac{n_AC_B}{n_BC_A}
-{\tag{1}}
-\end{equation}
+$$(eq1)
 
 The concentration of surface ligands is related to the concentration in the adsorbed phase of cations $A^+$ and $B^+$ by the following expression: 
-\begin{equation}
-n_R=n_A+n_B\\
-{\tag{2}}
-\end{equation}
+$$
+n_R=n_A+n_B
+$$(eq2)
 
 The total cationic concentration in the fluid phase $C_T$ is analogously defined as: 
-\begin{equation}
-C_T=C_A+C_B\\
-{\tag{3}}
-\end{equation}
+$$
+C_T=C_A+C_B
+$$(eq3)
 
 hence the equilibrium constant becomes: 
-\begin{equation}
-K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}\\
-{\tag{4}}
-\end{equation}
+$$
+K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
+$$(eq4)
 
 This expression can be manipulated to provide an explicit relation between the concetration in the adsorbed phase $n_A$, and the concentration in the fluid phase $C_A$, i.e. an isotherm for the ion exchange process:
 
-\begin{equation}
-n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}\\
-{\tag{5}}
-\end{equation}
+$$
+n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}
+$$(eq5)
 
 This expression can be further simplified by introducing the molar fractions in the adsorbed and fluid phases indicated with $y_A$ and $x_A$, respectively:
 
-\begin{equation}
-y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}\\
-{\tag{6}}
-\end{equation}
+$$
+y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}
+$$(eq6)
 
 import numpy as np
 import matplotlib.pyplot as plt 
