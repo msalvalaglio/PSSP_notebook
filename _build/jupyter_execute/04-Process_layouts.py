@@ -8,7 +8,7 @@ __Problem Statement__
 
 500 l of fruit juice are concentrated from an initial solid-residue content of 0.05 kg/l to a solid-residue content of 0.2 kg/l through a batch microfiltration process. The total area of the membrane is of 20 $\mathrm{m^2}$ and the flux of pure water through the membrane is captured by the empirical expression: $J=BC^{-1} [m/h]$ with $B=0.1$ where C is the solid residue concentration in kg/l. Compute the process time necessary to reach the target concentration.
 
-<img src="./batch.jpg" alt="Drawing" style="width: 300px;"/>
+<img src="./batch.jpg" alt="Drawing" style="width: 300px;">
 
 __Solution trace__
 
@@ -123,7 +123,7 @@ __Feed and Bleed:  Problem Statement__
 
 500 l of fruit juice are concentrated in 5 h of steady state operation from an initial solid-residue content of 0.05 $kg/l$ through a feed and bleed process. The total area of the membrane is of 20 $m^2$ and the flux of pure water through the membrane is captured by the empirical expression: $J=BC^{-1} [m/h]$ with $B=0.1$ where C is the solid residue concentration in kg/l. Is the steady state concentration of the retentate compatible with the specifics of 0.2 $kg/l$? 
 
-<img src="feedandbleed.png" alt="Drawing" style="width: 300px;"/>
+<img src="feedandbleed.png" alt="Drawing" style="width: 300px;">
 
 __Feed and Bleed: Solution trace__
 
@@ -174,7 +174,7 @@ The flux of pure water through the membrane is captured by the empirical express
 
 Is it more efficient to design a single stage configuration with four units in parallel or a cascade configuration with four units in series? 
 
-<img src="cascade.png" alt="Drawing" style="width: 600px;"/>
+<img src="cascade.png" alt="Drawing" style="width: 600px;">
 
 __Cascade: Solution trace__
 
