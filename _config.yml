@@ -31,8 +31,8 @@ html:
   use_repository_button     : true
   path_to_book: https://github.com/msalvalaglio/PSSP_notebook  # An optional path to your book, defaults to repo root
   
-  launch_buttons:
-  binderhub_url: false
+  launch_buttons: off
+  binderhub_url: off
   
 # #######################################################################################
 # Interact link settings
