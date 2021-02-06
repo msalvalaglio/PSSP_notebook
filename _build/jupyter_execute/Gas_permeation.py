@@ -1,4 +1,4 @@
-# 1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
+# 1. Material Balances in a Gas Permeation Unit
 
 ## 1.1 Operating Equation
 
