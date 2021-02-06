@@ -287,18 +287,20 @@ $<span class="math notranslate nohighlight">\(
 <p>In this simple case it can be integrated analytically to compute the volume as a function of time:
 $<span class="math notranslate nohighlight">\(
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
-\)</span><span class="math notranslate nohighlight">\((eq6)
-\)</span><span class="math notranslate nohighlight">\(
+\)</span>$(eq6)</p>
+<div class="math notranslate nohighlight" id="equation-eq7">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\left[\ln{V}\right]^{V^{\prime}}_{V_0}=\ln\left(\frac{V^\prime}{V_0}\right)
-\)</span><span class="math notranslate nohighlight">\((eq7)
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight" id="equation-eq8">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
 \int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt=-\frac{B}{V_0C_0 }At^\prime
-\)</span>$(eq8)</p>
+\]</div>
 <p>Putting together both sides of the equation and substituting <span class="math notranslate nohighlight">\(V^\prime\)</span> with <span class="math notranslate nohighlight">\(V\)</span> for the sake of simplicity in the notation we get:
 $<span class="math notranslate nohighlight">\(
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
-\)</span>$(eq9)
-which describes the time dependence of the volume in the batch membrane separator.</p>
+\)</span>$(eq9)</p>
+<p>which describes the time dependence of the volume in the batch membrane separator.</p>
 <p>The concentration can thus be calculated as:
 $<span class="math notranslate nohighlight">\(
 C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V_0C_0 }At}
@@ -374,17 +376,17 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 <img src="feedandbleed.png" alt="Drawing" style="width: 300px;"><p><strong>Feed and Bleed: Solution trace</strong></p>
 <p>Also in this case the global differential material balance and the solid-residue material balance can be written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq11">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=Q_{IN}-J\,A-Q_{OUT}=0
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq12">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN}C_{IN}-Q_{OUT}C_{OUT}=0
 \]</div>
 <p>At steady state <span class="math notranslate nohighlight">\({dV}/{dt}=0\)</span> as well as <span class="math notranslate nohighlight">\({dm}/{dt}=0\)</span>. The two ODEs become then two algebraic equations that should be solved together to compute the steady state concentration.
 From the global material balance we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq13">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
 Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
 \]</div>
 <p>and then, with some manipulations:
@@ -439,7 +441,7 @@ $<span class="math notranslate nohighlight">\(
 \frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
 \)</span>$(eq17)</p>
 <div class="math notranslate nohighlight" id="equation-eq18">
-<span class="eqno">(25)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(n_i\)</span> is the number of modules used in stage <span class="math notranslate nohighlight">\(i\)</span>.</p>
