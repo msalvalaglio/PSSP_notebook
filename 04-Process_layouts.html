@@ -396,10 +396,11 @@ From the global material balance we get:</p>
 <span class="eqno">(33)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
 Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
 \]</div>
-<p>and then, with some manipulations:
-$<span class="math notranslate nohighlight">\(
+<p>and then, with some manipulations:</p>
+<div class="math notranslate nohighlight" id="equation-eq14">
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq14" title="Permalink to this equation">¶</a></span>\[
 C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
-\)</span>$(eq14)</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -437,31 +438,31 @@ The flux of pure water through the membrane is captured by the empirical express
 <p>Each stage can be treated like a single unit in which the feed stream corresponds to the retentate stream from the previous unit.
 We can thus define:</p>
 <div class="math notranslate nohighlight" id="equation-eq15">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq15" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq15" title="Permalink to this equation">¶</a></span>\[
 C_{OUT,i}=C_{IN,i+1}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq16">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq16" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq16" title="Permalink to this equation">¶</a></span>\[
 Q_{OUT,i}=Q_{IN,i+1}
 \]</div>
 <p>where the index <span class="math notranslate nohighlight">\(i\)</span> identifies the stage.</p>
 <p>The material balances for each stage at steady state can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq17">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq17" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq17" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq18">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(n_i\)</span> is the number of modules used in stage <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>For each stage we can thus compute the steady state concentration and concentrate volumetric flow by solving sequentially the following equations:</p>
 <div class="math notranslate nohighlight" id="equation-eq19">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
 C_{IN,i+1}=C_{IN,i}+n_i\frac{AB}{Q_{IN,i}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq20">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
 Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(i=1...N\)</span> with <span class="math notranslate nohighlight">\(N\)</span> is the total number of stages.</p>
