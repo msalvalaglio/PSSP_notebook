@@ -11,27 +11,32 @@ The ion exchange reaction considered can be written as:
 $$
 A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \\
 $$
+
 where $X^-$ are spectator anions. 
 
 The isotherm in the case of an ion exchange process can be derived starting from the equilibrium constant for the ion exchange reaction. 
 If we indicate with $C_A$, $C_B$ the concentration of cations A and B in the fluid phase and with $n_A$, $n_B$ their respective concentration in the adsorbed phase. 
 
 The equilibrtium constant is written as: 
+
 $$
 K_{AB}=\frac{n_AC_B}{n_BC_A}
 $$(eq1)
 
 The concentration of surface ligands is related to the concentration in the adsorbed phase of cations $A^+$ and $B^+$ by the following expression: 
+
 $$
 n_R=n_A+n_B
 $$(eq2)
 
 The total cationic concentration in the fluid phase $C_T$ is analogously defined as: 
+
 $$
 C_T=C_A+C_B
 $$(eq3)
 
 hence the equilibrium constant becomes: 
+
 $$
 K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
 $$(eq4)

@@ -233,67 +233,67 @@
 <p>Let us begin by writing the solid-liquid equilibrium conditions at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P\)</span>, between a pure crystalline phase and a multicomponent liquid phase characterised by composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>.
 Equilibrium conditions is stated by the equality of chemical potentials:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(83)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(87)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 \mu_i^s(T,P)=\mu_i^\ell(T,P,\vec{x})
 {\tag{1}}
 \]</div>
 <p>which is equivalent to the equality of the fugacity in the two phases:</p>
 <div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">(84)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(88)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 f_i^s(T,P)=f_i^\ell(T,P,\vec{x})
 \]</div>
 <p>Focusing on the right hand of Eq. \eqref{eq:fugacities}, the fugacity in the liquid phase can be rewritten as a function of the fugacity of the pure liquid phase as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
-<span class="eqno">(85)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(89)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
 f_i^\ell(T,P,\vec{x})=f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction of the solute and <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient of that specie in the liquid phase.</p>
-<p>Let us now focus on the left hand side of Eq. <a class="reference internal" href="10-MSMPR_crystallizer.html#equation-eq2">(97)</a>. The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid:</p>
+<p>Let us now focus on the left hand side of Eq. <a class="reference internal" href="08-Ion_Exchange.html#equation-eq2">(68)</a>. The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(86)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(90)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 \int^{T,P,s}_{T,P,\ell}d\mu_i=\int^{T,P,s}_{T,P,\ell}RTd\ln{f_i}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(87)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \Delta{\mu}_{i,\ell\rightarrow{s}}=RTln\left(\frac{f_i^s(T,P)}{f_i^\ell(T,P)}\right)
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(88)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(92)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 f_i^s(T,P)=f_i^\ell(T,P)e^{\frac{\Delta{\mu}_{i,\ell\rightarrow{s}}}{RT}}
 \]</div>
 <p>The change in chemical potential can be written for a pure substance as the partial molar change in free energy <span class="math notranslate nohighlight">\(\Delta{g_i(T,P)}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(89)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(93)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 \Delta\mu_{i,\ell\rightarrow{s}}=\Delta{g}_i^s(T,P)=\Delta{h}_i(T,P)-T\Delta{s}_i(T,P)
 \]</div>
 <p>The molar enthalpy change is:</p>
 <div class="math notranslate nohighlight" id="equation-eq8">
-<span class="eqno">(90)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(94)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
 \Delta{h}_i(T,P)=-\Delta{h_{fus}\left(T_f\right)}+\int_T^{T_f}Cp^{\ell}dT+\int_T^{T_f}Cp^{s}dT\simeq-\Delta{h_{fus}\left(T_f\right)}+\left(Cp^{\ell}-Cp^{s}\right)\left(T_f-T\right)
 \]</div>
 <p>while the molar entropy change is written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">(91)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(95)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
 \Delta{s}_i(T,P)=-\frac{\Delta{h_{fus}\left(T_f\right)}}{T_f}+\int_T^{T_f}\frac{Cp^{\ell}}{T}dT+\int_T^{T_f}\frac{Cp^{s}}{T}dT \simeq -\frac{\Delta{h_{fus}}}{T_f}+\left(Cp^{\ell}-Cp^{s}\right)\ln{\left(\frac{T_f}{T}\right)}
 \]</div>
 <p>Defining <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}=\left(Cp^{\ell}-Cp^{s}\right)\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq10">
-<span class="eqno">(92)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(96)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
 \Delta{g}_i^s(T,P)=-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}+\Delta{Cp}_{\ell\rightarrow{s}}\left(T_f-T-T\ln{\left(\frac{T_f}{T}\right)}\right)
 \]</div>
 <p>Since <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}\)</span> is usually small compared the above expression is typically simplified to:</p>
 <div class="math notranslate nohighlight" id="equation-eq11">
-<span class="eqno">(93)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(97)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
 \Delta{g}_i^s(T,P)\simeq-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}
 \]</div>
 <p>Inserting this equation into the equality of fugacities yields:</p>
 <div class="math notranslate nohighlight" id="equation-eq12">
-<span class="eqno">(94)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(98)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
 f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})=f_i^\ell(T,P)e^{\frac{\Delta{\mu}_{i,\ell\rightarrow{s}}}{RT}}
 \]</div>
 <p>hence the solubility of component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(x_i\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-eq13">
-<span class="eqno">(95)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
 x_i=\frac{1}{\gamma_i(T,P,\vec{x})}e^{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T}-\frac{1}{T_f}\right)}
 \]</div>
 </div>
