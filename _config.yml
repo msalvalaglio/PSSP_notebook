@@ -18,6 +18,16 @@ execute:
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
+  
+# Information about where the book exists on the web
+repository:
+  url                       : https://msalvalaglio.github.io/PSSP_notebook/index.html
+
+repository:
+  url: https://github.com/msalvalaglio/PSSP_notebook
+
+html:
+  use_edit_page_button: true
 
 # #######################################################################################
 # Interact link settings
