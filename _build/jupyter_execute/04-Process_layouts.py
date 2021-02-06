@@ -8,7 +8,7 @@ __Problem Statement__
 
 500 l of fruit juice are concentrated from an initial solid-residue content of 0.05 kg/l to a solid-residue content of 0.2 kg/l through a batch microfiltration process. The total area of the membrane is of 20 $\mathrm{m^2}$ and the flux of pure water through the membrane is captured by the empirical expression: $J=BC^{-1} [m/h]$ with $B=0.1$ where C is the solid residue concentration in kg/l. Compute the process time necessary to reach the target concentration.
 
-<img src="batch.png" alt="Drawing" style="width: 300px;"/>
+<img src="./batch.png" alt="Drawing" style="width: 300px;"/>
 
 __Solution trace__
 
