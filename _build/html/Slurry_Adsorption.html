@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. Batch Slurry Adsorption &#8212; PSSP Virtual Notebook</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Thermodynamic definition of solubility" href="Solubility.html" />
+    <link rel="prev" title="8. Equilibria in Ion Exchange systems" href="Ion_Exchange.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/Logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Gas_permeation.html">
+   1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pervaporation.html">
+   2. Pervaporation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Osmosis.html">
+   3. On the thermodynamic origin of the osmotic pressure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Process_layouts.html">
+   4. Mass balances in membrane separation processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Langmuir_isotherm.html">
+   6. The Langmuir isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BET_isotherm.html">
+   7. The BET isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ion_Exchange.html">
+   8. Equilibria in Ion Exchange systems
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Batch Slurry Adsorption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Solubility.html">
+   5. Thermodynamic definition of solubility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MSMPR_crystallizer.html">
+   10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Slurry_Adsorption.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Slurry_Adsorption.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-statement">
+   9.1 Problem Statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#material-balance-in-a-batch-slurry-adsorption-process">
+   9.2 Material Balance in a Batch Slurry adsorption process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuous-slurry-adsorption">
+   9.3 Continuous Slurry Adsorption
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="batch-slurry-adsorption">
+<h1>9. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Permalink to this headline">¶</a></h1>
+<p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
+<div class="section" id="problem-statement">
+<h2>9.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
+<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol\,l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry.  The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}}\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]\)</span>.</p>
+<ul class="simple">
+<li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
+<li><p>If this is the case how much time does it take to lower the pollutant concetration to the target specification?</p></li>
+</ul>
+</div>
+<div class="section" id="material-balance-in-a-batch-slurry-adsorption-process">
+<h2>9.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Permalink to this headline">¶</a></h2>
+<p>Let us begin by writing the material balance for a batch membrane separator.</p>
+<p>Since we have a batch system, no inlet or outlet streams are present and we can write:</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+V_\ell{c_0}=V_\ell{c}+S_pq
+\label{eq:matbalance}{\tag{1}}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of coloring agent in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of coloring agent in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous concentration of coloring agent adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the mass of the adsorbent particles.</p>
+<p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+J=-k_\ell(c-c^*)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_\ell\)</span> is the mass transfer coefficient on the liquid side, and <span class="math notranslate nohighlight">\(c^*\)</span> is the equilibrium concentration, reached at the solid/liquid interface. <span class="math notranslate nohighlight">\(J\)</span> has the units of number of moles per unit time per unit surface.</p>
+<p>The differential material balance on the solute concentration can thus be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles mass per unit of fluid volume.</p>
+<p>The equilibrium of the adsorption process is well captured by a linear isotherm:</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+c^*=\frac{q}{H}
+\label{eq:equilibrium}
+\]</div>
+<p>Using Eq. \eqref{eq:matbalance} and \eqref{eq:equilibrium} Eq. \eqref{eq:masstransfer} can be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = \\
+=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = \\
+=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= \\
+{\tag{5}}
+\end{split}\]</div>
+<p>Defining: <span class="math notranslate nohighlight">\(\beta=\left(1+\frac{V_\ell}{HS_p}\right)\)</span>, and <span class="math notranslate nohighlight">\(\alpha=\frac{V_\ell}{HS_p}\)</span>, one gets:</p>
+<div class="math notranslate nohighlight" id="equation-eq6">
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
+\]</div>
+<p>which is a first order, non homogeneous ODE in the form <span class="math notranslate nohighlight">\(y^\prime+C_1y=C_2\)</span> with constant a and b coefficients.</p>
+<p>To solve our problem Eq. \ref{eq:ODE} can be solved either numerically or analytically.
+In this case the analytical solution can be obtained from the general solution for ODEs of this type:</p>
+<div class="math notranslate nohighlight" id="equation-eq7">
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A(t)=\int{C_1dt}\)</span></p>
+<p>In our case:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_1=k_\ell{a\beta}\)</span>, thus <span class="math notranslate nohighlight">\(A(t)=k_\ell{a\beta}\,t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_2=k_\ell{a\alpha}c_0\)</span>,</p></li>
+</ul>
+<p>thus:</p>
+<div class="math notranslate nohighlight" id="equation-eq8">
+<span class="eqno">(80)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+\int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta}\,t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta}\,t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta}\,t}
+\]</div>
+<p>putting everything together:</p>
+<div class="math notranslate nohighlight" id="equation-eq9">
+<span class="eqno">(81)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
+\]</div>
+<p>The constant <span class="math notranslate nohighlight">\(C_1\)</span> can be computed from the initial conditions: at <span class="math notranslate nohighlight">\(t=0\)</span> <span class="math notranslate nohighlight">\(c(t)=c_0\)</span>, therefore:</p>
+<div class="math notranslate nohighlight" id="equation-eq10">
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
+k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
+\]</div>
+<p>The final solution for the time-dependent concentration profile <span class="math notranslate nohighlight">\(c(t)\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-eq11">
+<span class="eqno">(83)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
+\]</div>
+<p>The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time <span class="math notranslate nohighlight">\(\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+
+<span class="c1"># Data</span>
+<span class="n">Vl</span><span class="o">=</span> <span class="mi">2</span>
+<span class="n">H</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="n">Sp</span><span class="o">=</span> <span class="mi">100</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Sp</span> <span class="o">/</span> <span class="n">Vl</span>
+<span class="n">kl</span> <span class="o">=</span> <span class="mf">1E-5</span> <span class="o">*</span> <span class="mi">3600</span>
+<span class="n">alpha</span><span class="o">=</span> <span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">C_inf</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">time</span><span class="p">))</span> <span class="o">*</span> <span class="n">C0</span><span class="o">*</span><span class="n">alpha</span><span class="o">/</span><span class="n">beta</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">C0</span><span class="o">/</span><span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">kl</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">time</span><span class="p">)</span><span class="o">+</span><span class="n">alpha</span><span class="p">)</span> 
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C_inf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$time\,\,[hours]$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$C\,\,[mol / l]$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;$C(t)$&#39;</span><span class="p">,</span><span class="s1">&#39;$C_</span><span class="si">{inf}</span><span class="s1">$&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Slurry_Adsorption_6_0.png" src="_images/Slurry_Adsorption_6_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="continuous-slurry-adsorption">
+<h2>9.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this headline">¶</a></h2>
+<p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
+<p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-eq12">
+<span class="eqno">(84)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
+\frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time, <span class="math notranslate nohighlight">\(c_{out}\)</span> the concentration in the liquid phase in the unit, <span class="math notranslate nohighlight">\(c_{in}\)</span> the concentration in the feed, and <span class="math notranslate nohighlight">\(a\)</span> the amount of surface of the stationary phase particles per unit volume of the liquid phase.</p>
+<p>Note that in a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq13">
+<span class="eqno">(85)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+a={S}/Q
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid phase.</p>
+<p>This expression needs to be solved together with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, c is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient, and with the global material balance at steady state, which reads:</p>
+<div class="math notranslate nohighlight" id="equation-eq14">
+<span class="eqno">(86)<a class="headerlink" href="#equation-eq14" title="Permalink to this equation">¶</a></span>\[
+c_{in}Q=qS+c_{out}Q
+\]</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Ion_Exchange.html" title="previous page">8. Equilibria in Ion Exchange systems</a>
+    <a class='right-next' id="next-link" href="Solubility.html" title="next page">5. Thermodynamic definition of solubility</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Matteo Salvalaglio<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

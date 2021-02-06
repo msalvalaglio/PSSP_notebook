@@ -1,12 +1,12 @@
 # - file: README
 - file: index
-- file: 01-Gas_permeation.ipynb 
-- file: 02-Pervaporation.ipynb
-- file: 03-Osmosis.ipynb
-- file: 04-Process_layouts.ipynb
-- file: 06-Langmuir_isotherm.ipynb
-- file: 07-BET_isotherm.ipynb
-- file: 08-Ion_Exchange.ipynb
-- file: 09-Slurry_Adsorption.ipynb
-- file: 05-Solubility.ipynb
-- file: 10-MSMPR_crystallizer.ipynb
+- file: Gas_permeation.ipynb 
+- file: Pervaporation.ipynb
+- file: Osmosis.ipynb
+- file: Process_layouts.ipynb
+- file: Langmuir_isotherm.ipynb
+- file: BET_isotherm.ipynb
+- file: Ion_Exchange.ipynb
+- file: Slurry_Adsorption.ipynb
+- file: Solubility.ipynb
+- file: MSMPR_crystallizer.ipynb

@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. On the thermodynamic origin of the osmotic pressure &#8212; PSSP Virtual Notebook</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Mass balances in membrane separation processes" href="Process_layouts.html" />
+    <link rel="prev" title="2. Pervaporation" href="Pervaporation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/Logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Gas_permeation.html">
+   1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pervaporation.html">
+   2. Pervaporation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. On the thermodynamic origin of the osmotic pressure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Process_layouts.html">
+   4. Mass balances in membrane separation processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Langmuir_isotherm.html">
+   6. The Langmuir isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BET_isotherm.html">
+   7. The BET isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ion_Exchange.html">
+   8. Equilibria in Ion Exchange systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Slurry_Adsorption.html">
+   9. Batch Slurry Adsorption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Solubility.html">
+   5. Thermodynamic definition of solubility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MSMPR_crystallizer.html">
+   10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Osmosis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Osmosis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#osmosis">
+   3.1 Osmosis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equilibrium-conditions">
+   3.2 Equilibrium Conditions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-osmotic-pressure">
+   3.3 The Osmotic Pressure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
+     3.3.1 Dependence of the Osmotic pressure on the composition of the system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flux-of-the-solvent-suring-osmosis">
+   3.4 Flux of the solvent suring Osmosis
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="on-the-thermodynamic-origin-of-the-osmotic-pressure">
+<h1>3. On the thermodynamic origin of the osmotic pressure<a class="headerlink" href="#on-the-thermodynamic-origin-of-the-osmotic-pressure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="osmosis">
+<h2>3.1 Osmosis<a class="headerlink" href="#osmosis" title="Permalink to this headline">¶</a></h2>
+<p>Osmosis is a mass transfer process that takes place spontaneously when two compartments, containing fluid mixtures of different composition are separated by a semipermeable membrane, i.e. a membrane that restricts the transfer of one of the components across compartments.</p>
+<p>For the sake of simplicity, let us consider for now an ideal semipermeable membrane that completely restricts the transfer of the solute, while instead allowing the permeation of a solvent.</p>
+<p>Let us consider an initial state characterised by two compartments (1 and 2), at the same temperature T and pressure P.
+Compartment 1 contains a binary mixture of component B (solute) in component A (solvent), e.g. NaCl in water. Compartment 2 instead contains a pure component A (e.g. pure water).</p>
+<p>If the membrane is semipermeable and allows for the passage of the solvent alone the process of osmosis will lead to an equilibrium condition in which:</p>
+<ul class="simple">
+<li><p>Component A has transferred from compartment 2 to compartment 1.</p></li>
+<li><p>An pressure difference between compartments is established, where : <span class="math notranslate nohighlight">\(P_1&gt;P_2\)</span>.</p></li>
+<li><p>The pressure difference between compartments at equilibrium is the <em>osmotic pressure</em> <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span>.</p></li>
+</ul>
+<p>In the next paragraphs we will see what is the thermodynamic origin of the osmotic pressure.</p>
+</div>
+<div class="section" id="equilibrium-conditions">
+<h2>3.2 Equilibrium Conditions<a class="headerlink" href="#equilibrium-conditions" title="Permalink to this headline">¶</a></h2>
+<p>In order to understand the origin of the osmotic pressure, i.e. pressure difference induced by a composition difference across compartments separated by a semipermeable membrane, we begin by defining the the equilibrium state for the system described in the previous paragraph.
+To this aim we can rely on the thermodynamic definition of equilibrium for component A (e.g. water), i.e. the only component that can transfer across the membrane.
+Equilibrium is defined when <span class="math notranslate nohighlight">\(A\)</span> has the same chemical potential in both compartments</p>
+<div class="math notranslate nohighlight" id="equation-eq0">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">¶</a></span>\[
+\mu_{A,1}=\mu_{A,2}
+\]</div>
+<p>The equilibrium condition is conveniently written introducing fugacity.
+Fugacity and chemical potential are related by the expression <span class="math notranslate nohighlight">\(\mu_i=\mu_0+RT\ln{f_i}\)</span>, where <span class="math notranslate nohighlight">\(\mu_0\)</span> is the chemical potential of an arbitrary reference state.</p>
+<p>Equilibrium can conditions are thus equivalently formulated as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-equilibrium">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">¶</a></span>\[
+f_{A,1}=f_{A,2}
+\]</div>
+<p><em>In compartment 1</em> we have a <em>non-ideal</em> mixture of two components. The fugacity of component A in compartment 1 is thus written as:
+$<span class="math notranslate nohighlight">\(
+f_{A,1}=f_A(T,P_1,x_A)=\gamma_A(T,P_1,x_A)x_A f_A(T,P_1)
+\)</span>$(eq:leftside)</p>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\gamma_A(T,P_1,x_A)\)</span> is the activity coefficient of specie A in the mixture</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_A\)</span> is the molar fraction of component A</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> is the fugacity of the <em>pure component A</em> at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_1\)</span></p></li>
+</ul>
+<p><em>In compartment 2</em> we have instewad a pure component A liquid, at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_2\)</span>. The fugacity of component A in compartment 2 thus simply corresponds to the fugacity of the pure component A at <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(P_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+f_{A,2}=f_A(T,P_2)
+\)</span>$(eq:rightside)</p>
+<p><strong>The Poynting correction</strong> In order to define a common reference state between the two compartments we rewrite fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_2\)</span> (<span class="math notranslate nohighlight">\(f_A(T,P_2)\)</span>) as a function of the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span> and of the pressure difference <span class="math notranslate nohighlight">\((P_2-P_1)\)</span>.</p>
+<p>To do that we express the difference in chemical potential <span class="math notranslate nohighlight">\(\Delta\mu_{P_1\rightarrow{P_2}}\)</span> between pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_1\)</span> and pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_2\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+\Delta\mu_{P_1\rightarrow{P_2}}=\int_{T,P_1}^{T,P_2}d\mu=\int_{T,P_1}^{T,P_2}vdP=v(P_2-P_1)
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>the expression introduced for the definition of the <span class="math notranslate nohighlight">\(\Delta\mu\)</span> is the Gibbs Duhem equation (<span class="math notranslate nohighlight">\(d{\mu}=-sdT+vdP\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span> is the molar volume of the system</p></li>
+</ul>
+<p>Using the definition of fugacity introduced earlier one can thus write:
+$<span class="math notranslate nohighlight">\(
+\Delta\mu_{P_1\rightarrow{P_2}}=RT\ln\frac{f_A(T,P_2)}{f_A(T,P_1)}=v(P_2-P_1)
+\)</span>$(eq2)</p>
+<p>The fugacity of a pure A liquid at pressure <span class="math notranslate nohighlight">\(P_2\)</span> can thus be written as:
+$<span class="math notranslate nohighlight">\(
+f_A(T,P_2)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
+\label{eq:Poynting}
+\)</span>$(eq3)</p>
+<p>where the term <span class="math notranslate nohighlight">\(\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]\)</span> is the Poynting correction.</p>
+</div>
+<div class="section" id="the-osmotic-pressure">
+<h2>3.3 The Osmotic Pressure<a class="headerlink" href="#the-osmotic-pressure" title="Permalink to this headline">¶</a></h2>
+<p>Given the definition of equilibrium conditions, the expressions of the fugacity of component A in the two compartments 1 and 2, and the Poynting correction given in the previous paragraph we can write:</p>
+<div class="math notranslate nohighlight" id="equation-eq">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq" title="Permalink to this equation">¶</a></span>\[
+\gamma_A(T,P_1,x_A)x_A f_A(T,P_1)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> is the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span>, now appearing on both sides of the equation.</p>
+<p>We can thus divide both sides by <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> to obtain the expression:</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+\gamma_A(T,P_1,x_A)x_A =\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
+\]</div>
+<p>Rearranging this expression one obtains:</p>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+P_2-P_1=\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
+\]</div>
+<p>Recalling that the Osmotic pressure <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span> we get:</p>
+<div class="math notranslate nohighlight" id="equation-eq6">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+\pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
+\]</div>
+<p>This expression \textbf{relates the composition of compartment 1}, containing a mixture of components A and B (e.g NaCl in water),  \textbf{to the osmotic pressure} generated at equilibrium conditions when such compartment is in contact with a \textbf{semipermeable} membrane that has on the opposite side a compartment filled by pure component A liquid.</p>
+<p>Please note that in this expression <span class="math notranslate nohighlight">\(x_A\)</span> is the molar fraction of the solvent (e.g. water). Since we are considering a binary system and from an engineering standpoint what is typically measured is the solute concentration we can rewrite the expression as follows:</p>
+<div class="math notranslate nohighlight" id="equation-eq7">
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+\pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)(1-x_B)}\right)
+\]</div>
+<p>Where now <span class="math notranslate nohighlight">\(x_B\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(B\)</span> (e.g. NaCl).
+When the solution in compartment 1 is diluted (<span class="math notranslate nohighlight">\(x_B\)</span> small), <span class="math notranslate nohighlight">\(\gamma_A(T,P_1,x_A)\rightarrow{1}\)</span>,  <span class="math notranslate nohighlight">\(\ln{\left({(1-x_B)}\right)}\rightarrow{-x_B}\)</span>thus:
+$<span class="math notranslate nohighlight">\(
+\pi=-\frac{RT}{v}\ln\left({(1-x_B)}\right)={RT\frac{x_B}{v}}\simeq{RTc_B}
+\)</span>$(eq8)</p>
+<p>Where <span class="math notranslate nohighlight">\(c_B\simeq{x_B}v^{-1}\)</span> is the molar concentration of component B, the solute.</p>
+<div class="section" id="dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
+<h3>3.3.1 Dependence of the Osmotic pressure on the composition of the system<a class="headerlink" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system" title="Permalink to this headline">¶</a></h3>
+<p>Note that the expression <span class="math notranslate nohighlight">\(\pi={RTc_B}\)</span> is only valid for small molar fractions of component B, the solute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="c1"># Parameters: </span>
+<span class="c1"># molar fraction in the feed</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#number of points</span>
+<span class="n">x_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#Operating Equation</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x_B</span><span class="p">)</span>
+<span class="n">pi_simple</span> <span class="o">=</span> <span class="n">x_B</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.8</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_B</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_B</span><span class="p">,</span><span class="n">pi_simple</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Osmotic Pressure vs Solute Concentration&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Molar Fraction of component B&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Dimensionless Osmotic Pressure&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Osmosis_9_0.png" src="_images/Osmosis_9_0.png" />
+</div>
+</div>
+<p>Note that the dimensionless osmotic pressure plotted abotve is obtained as <span class="math notranslate nohighlight">\(\pi{v}/RT\)</span>.</p>
+</div>
+</div>
+<div class="section" id="flux-of-the-solvent-suring-osmosis">
+<h2>3.4 Flux of the solvent suring Osmosis<a class="headerlink" href="#flux-of-the-solvent-suring-osmosis" title="Permalink to this headline">¶</a></h2>
+<p>In osmosis the flux of the solvent (component A) through a membrane is driven by the difference between the <span class="math notranslate nohighlight">\(\Delta{P}=P_1-P_2\)</span> across compartments and the osmotic pressure <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq9">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+J_A=p_A\left( \Delta{P} - \pi \right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_A\)</span> is the permeability of the membrane with respect to component A.</p>
+<p>At equilibrium, when <span class="math notranslate nohighlight">\(\Delta{P}=\pi\)</span> the net flux across compartments is null. Without adding any external pressure the spontaneous direction of the flux is from compartment 2 to compartment 1 (<span class="math notranslate nohighlight">\(J&lt;0\)</span>).</p>
+<p>If we add a pressure, such that <span class="math notranslate nohighlight">\(\Delta{P}&gt;\pi\)</span> we induce the opposite flux, from compartment 1 to compartment 2. This process is named reverse osmosis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span> 
+
+<span class="c1"># Parameters: </span>
+<span class="c1"># molar fraction in the feed</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#number of points</span>
+<span class="n">DeltaP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">x_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">P_A</span><span class="o">=</span> <span class="mi">1</span> 
+<span class="n">DeltaP</span><span class="p">,</span> <span class="n">x_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">DeltaP</span><span class="p">,</span> <span class="n">x_B</span><span class="p">)</span> 
+
+<span class="n">pi</span> <span class="o">=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x_B</span><span class="p">)</span>
+
+<span class="c1">#Flux Equation</span>
+<span class="n">J_A</span> <span class="o">=</span> <span class="n">P_A</span> <span class="o">*</span> <span class="p">(</span><span class="n">DeltaP</span> <span class="o">-</span> <span class="n">pi</span><span class="p">)</span>
+
+
+<span class="c1">#Plotting</span>
+
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="c1">#axes = figure.add_axes([0.1,0.1,0.1,1.2,1.2,1.2])</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">surf</span><span class="o">=</span><span class="n">axes</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x_B</span><span class="p">,</span><span class="n">DeltaP</span><span class="p">,</span><span class="n">J_A</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span>
+                       <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">contour</span><span class="o">=</span><span class="n">axes</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">x_B</span><span class="p">,</span><span class="n">DeltaP</span><span class="p">,</span><span class="n">J_A</span><span class="p">,[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Osmotic Flux vs $\Delta</span><span class="si">{P}</span><span class="s1">$ / $x_B$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$x_B$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$\Delta</span><span class="si">{P}</span><span class="s1">$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Osmosis_13_0.png" src="_images/Osmosis_13_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Pervaporation.html" title="previous page">2. Pervaporation</a>
+    <a class='right-next' id="next-link" href="Process_layouts.html" title="next page">4. Mass balances in membrane separation processes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Matteo Salvalaglio<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

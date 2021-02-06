@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. MSMPR Crystallizer: population balance &#8212; PSSP Virtual Notebook</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="5. Thermodynamic definition of solubility" href="Solubility.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/Logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Gas_permeation.html">
+   1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pervaporation.html">
+   2. Pervaporation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Osmosis.html">
+   3. On the thermodynamic origin of the osmotic pressure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Process_layouts.html">
+   4. Mass balances in membrane separation processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Langmuir_isotherm.html">
+   6. The Langmuir isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="BET_isotherm.html">
+   7. The BET isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ion_Exchange.html">
+   8. Equilibria in Ion Exchange systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Slurry_Adsorption.html">
+   9. Batch Slurry Adsorption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Solubility.html">
+   5. Thermodynamic definition of solubility
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/MSMPR_crystallizer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/MSMPR_crystallizer.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-and-number-population-density">
+   10.1 Number and number population density
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#population-balance-in-an-msmpr-crystallizer">
+   10.2 Population Balance in an MSMPR crystallizer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">
+   10.3 Particle size distribution and process parameters:
+   <span class="math notranslate nohighlight">
+    \(\tau\)
+   </span>
+   ,
+   <span class="math notranslate nohighlight">
+    \(G\)
+   </span>
+   ,
+   <span class="math notranslate nohighlight">
+    \(J\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">
+   10.4 Moments of the PSD in a MSMPR crystallizer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">
+   10.5 Adimensional Mass distribution and dominant crystal size
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="msmpr-crystallizer-population-balance">
+<h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Permalink to this headline">¶</a></h1>
+<p>Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature.
+In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the material balance.</p>
+<div class="section" id="number-and-number-population-density">
+<h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Permalink to this headline">¶</a></h2>
+<p>Let us begin by defining <span class="math notranslate nohighlight">\(N(L)\)</span> as the <strong>number</strong> of  crystals of characteristic length <span class="math notranslate nohighlight">\(L\)</span> per unit volume.
+The <strong>number population density</strong> <span class="math notranslate nohighlight">\(n\)</span>, or in short number density, is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+\lim_{\Delta{L}\to{0}}\frac{\Delta{N(L)}}{\Delta{L}}=\frac{d{N(L)}}{d{L}}=n(L)
+\]</div>
+<p>and represents the number of crystals of length <span class="math notranslate nohighlight">\(L\)</span> <strong>per unit length</strong>, per unit volume.
+The number of crystals per unit volume with dimension comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span> can thus be computed as a definite integral of the population density:</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(101)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+N_{1,2}=\int_{L_1}^{L_2}n(L)dL
+\]</div>
+<p>Similarly the total number of crystals is obtained as:</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(102)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+N_{T}=\int_{0}^{\infty}n(L)dL
+\]</div>
+</div>
+<div class="section" id="population-balance-in-an-msmpr-crystallizer">
+<h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Permalink to this headline">¶</a></h2>
+<p>Let us write a steady state population balance for particles with size comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(103)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+{\Delta{N}}V=n_1G_1V\Delta{t}-n_2G_2V\Delta{t}-Q\overline{n}\Delta{L}\Delta{t}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta{N}V\)</span> is the change in the number of particles within the length interval <span class="math notranslate nohighlight">\(\Delta{L}=L_2-L_1\)</span> per unit volume, accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>.
+The term <span class="math notranslate nohighlight">\(n_1G_1V\Delta{t}\)</span> captures the number of crystals that outgrow length <span class="math notranslate nohighlight">\(L_1\)</span> in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>, where <span class="math notranslate nohighlight">\(G_1\)</span> is the growth rate of particles of length <span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is the total volume.
+Similarly, the term <span class="math notranslate nohighlight">\(n_2G_2V\Delta{t}\)</span> takes into account particles leaving the length  interval <span class="math notranslate nohighlight">\(\Delta{L}\)</span>, outgrowing length <span class="math notranslate nohighlight">\(L_2\)</span>.
+Finally the term <span class="math notranslate nohighlight">\(Q\overline{n}\Delta{L}\Delta{t}\)</span> accounts for the removal of particles with size comprised in  <span class="math notranslate nohighlight">\(\Delta{L}\)</span> from the crystalliser due to the magma flowrate with volumetric flowrate <span class="math notranslate nohighlight">\(Q\)</span>, where <span class="math notranslate nohighlight">\(\overline{n}\)</span> represents the average population density within the length interval <span class="math notranslate nohighlight">\(\Delta{L}\)</span>.</p>
+<p>Eq. \eqref{eq:4} can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in <span class="math notranslate nohighlight">\(\delta{L}\)</span> accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(104)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+\frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
+\]</div>
+<p>At steady state there is no accumulation and Eq. \eqref{eq:5} can be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-eq6">
+<span class="eqno">(105)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+\frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
+\]</div>
+<p>Noting that the residence time <span class="math notranslate nohighlight">\(\tau=V/Q\)</span>, and taking the limit for <span class="math notranslate nohighlight">\(\Delta{L}\rightarrow{0}\)</span> we get:
+$<span class="math notranslate nohighlight">\(
+\frac{dn}{dL}=\frac{n}{G\tau}
+\)</span>$(eq7)</p>
+<p>Whic can be solved analytically, yielding the steady state number population density n(L):</p>
+<div class="math notranslate nohighlight" id="equation-eq8">
+<span class="eqno">(106)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+n(L)=n_0\exp\left(-\frac{L}{G\tau}\right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n_0\)</span> is an integration constant, determined from the boundary conditions, that has the phisical meaning of population density of nuclei in the crystallizer at steady state.</p>
+<p>In this formulation of the population balance we consider particles to be born as nuclei at length <span class="math notranslate nohighlight">\(L=0\)</span>.
+The nucleation rate <span class="math notranslate nohighlight">\(J\)</span>, i.e. the number of nuclei generated per unit time per unit volume can be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq9">
+<span class="eqno">(107)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+J={\frac{dN}{dt}}\vert_{L=0}
+\]</div>
+<p>by applying the chain rule we can rewrite the nucleation rate as:</p>
+<div class="math notranslate nohighlight" id="equation-eq10">
+<span class="eqno">(108)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
+J=\frac{dN}{dL}\vert_{L=0}\frac{dL}{dt}\vert_{L=0}=n_0G
+\]</div>
+<p>where, by definition <span class="math notranslate nohighlight">\(\frac{dN}{dL}\vert_{L=0}=n_0\)</span>, and <span class="math notranslate nohighlight">\(\frac{dL}{dt}=G\)</span>. We shall note that here we are considering the growth rate to be independent from the crystal size.</p>
+<p>This expression allows us to determine the integration constant <span class="math notranslate nohighlight">\(n_0\)</span> based on characteristic rates of crystal nucleation and growth, yielding:</p>
+<div class="math notranslate nohighlight" id="equation-eq11">
+<span class="eqno">(109)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+n_0=\frac{J}{G}
+\]</div>
+</div>
+<div class="section" id="particle-size-distribution-and-process-parameters-tau-g-j">
+<h2>10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span><a class="headerlink" href="#particle-size-distribution-and-process-parameters-tau-g-j" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Data</span>
+<span class="n">G</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">J</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">tau</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">]);</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tau</span><span class="p">))))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tau</span><span class="p">)):</span>     
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. residence time&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+
+<span class="c1">#########################################################</span>
+<span class="c1"># Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Data</span>
+<span class="n">G</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">]);</span>
+<span class="n">J</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">tau</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">G</span><span class="p">))));</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">G</span><span class="p">)):</span>     
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. growth rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+
+
+<span class="c1">#########################################################</span>
+<span class="c1"># Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Data</span>
+<span class="n">G</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">J</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">]);</span>
+<span class="n">tau</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span> <span class="n">N</span><span class="p">);</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">J</span><span class="p">))));</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">J</span><span class="p">)):</span>     
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. nucleation rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MSMPR_crystallizer_7_0.png" src="_images/MSMPR_crystallizer_7_0.png" />
+<img alt="_images/MSMPR_crystallizer_7_1.png" src="_images/MSMPR_crystallizer_7_1.png" />
+<img alt="_images/MSMPR_crystallizer_7_2.png" src="_images/MSMPR_crystallizer_7_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="moments-of-the-psd-in-a-msmpr-crystallizer">
+<h2>10.4 Moments of the PSD in a MSMPR crystallizer<a class="headerlink" href="#moments-of-the-psd-in-a-msmpr-crystallizer" title="Permalink to this headline">¶</a></h2>
+<p>The number population density <span class="math notranslate nohighlight">\(n(L)\)</span> can be used to derive other properties of the population of particles through the calculation of the moments of the distribution.
+The <span class="math notranslate nohighlight">\(i^{th}\)</span> order moment of the number population density is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-eq12">
+<span class="eqno">(110)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
+m_i=\int_0^{\infty}L^indL
+\]</div>
+<p>Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_0=\int_0^{\infty}L^0ndL=N_L\)</span> represents the number of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(N_L\)</span> tends to the total number of particles in the crystallizer:
+$<span class="math notranslate nohighlight">\(
+N_T=n_0G\tau
+\)</span>$(eq13)</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_1=\int_0^{\infty}L^1ndL=\mathcal{L}\)</span> represents the total length of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> tends to the total length of particles in the crystallizer:
+$<span class="math notranslate nohighlight">\(
+\mathcal{L}_T=n_0(G\tau)^2
+\)</span>$(eq14)</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_2=\int_0^{\infty}L^2ndL\propto{A}\)</span> is proportional to the total area of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(A\)</span> tends to the total area of the particles contained in the crystallizer:<br />
+$<span class="math notranslate nohighlight">\(
+A_T=2{\beta}n_0(G\tau)^3
+\)</span><span class="math notranslate nohighlight">\((eq15) 
+where \)</span>\beta$ is the surface shape factor of the particles.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_3=\int_0^{\infty}L^2ndL\propto{V}\)</span> is proportional to the total volume of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(V\)</span> tends to the total volume of the particles contained in the crystallizer:
+$<span class="math notranslate nohighlight">\(
+V_T=6{\alpha}n_0(G\tau)^3
+\)</span><span class="math notranslate nohighlight">\((eq16)
+where \)</span>\alpha$ is the volumetric shape factor of the particles.</p></li>
+</ul>
+<p>It should be noted that the total volume of the particles allows to compute the total mass of particles in the system:
+$<span class="math notranslate nohighlight">\(
+M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
+\)</span><span class="math notranslate nohighlight">\((eq17)
+where \)</span>\rho_c$ is the density of the crystalline phase.</p>
+<p>This expression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
+</div>
+<div class="section" id="adimensional-mass-distribution-and-dominant-crystal-size">
+<h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Permalink to this headline">¶</a></h2>
+<p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
+<p>The cumulative mass distribution can thus be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq18">
+<span class="eqno">(111)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
+M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)\]</div>
+<p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(x)\)</span>with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq19">
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
+m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
+\]</div>
+<p>The mass-based population density m(x) has a maximum for <span class="math notranslate nohighlight">\(x=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
+<div class="math notranslate nohighlight" id="equation-eq20">
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
+L_D=3G\tau
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+  
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">M</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)]),</span><span class="s1">&#39;--&#39;</span><span class="p">,)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$M(x)/m(x)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;M(x)&#39;</span><span class="p">,</span><span class="s1">&#39;m(x)&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/MSMPR_crystallizer_12_0.png" src="_images/MSMPR_crystallizer_12_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Solubility.html" title="previous page">5. Thermodynamic definition of solubility</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Matteo Salvalaglio<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
