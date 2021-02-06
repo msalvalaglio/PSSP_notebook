@@ -13,48 +13,48 @@ In order to derive the langmuir adsorption isotherm from this set of hypotheses 
 
 The adsorption process takes place when a molecule of the component that is undergoing adsorption finds a free adsorption site. The rate of an adsorption event can thus be considered analogous to a bimolecular elementary reaction step with rate:
 
-\begin{equation}
+$$
 R_A=k_A\Gamma_0{C}
 {\tag{1}}
-\end{equation}
+$$(eq1)
 
 Where $k_A$ is the kinetic constant, $\Gamma_0$ is the fraction of free adsorption sites,  and $x$ is the molar fraction of the adsorbing component in the fluid phase.
 
 The rate of desorption instead can be considered analogous to a monomolecular reaction, in which a (non-covalent) bond is broken and an adsorbed molecule is released to the fluid phase, leaving one free site. Its rate can be written as: 
 
-\begin{equation}
+$$
 R_D=k_D\Gamma_1
 {\tag{2}}
-\end{equation}
+$$(eq2)
 
 At equilibrium, the rates of adsorption and desorption are equal and the net flux of molecules to and from the adsorbed phase is null. 
 We can thus write: 
 
-\begin{equation}
+$$
 k_A\Gamma_0{C}=k_D\Gamma_1
 \label{eq:3}{\tag{3}}
-\end{equation}
+$$(eq3)
 
 Recalling the stoichiometric relation between the fraction of accupied and free sites Eq. \eqref{eq:3} becomes: 
 
-\begin{equation}
+$$
 k_A(1-\Gamma_1){C}=k_D\Gamma_1
 \label{eq:4}{\tag{4}}
-\end{equation}
+$$(eq4)
 
 which can be rearranged to provide an explicit expression of $\Gamma_1$, the fraction of accupied sites, as a function of the concentration $C$ in the fluid phase: 
 
-\begin{equation}
+$$
 \Gamma_1=\frac{k_A{C}}{k_D+k_A{C}}
 \label{eq:5}{\tag{5}}
-\end{equation}
+$$(eq5)
 
 To obtain a typical expression of the Langmuir isotherm we shall introduce as a single parameter for this equation the adsorption equilibrium constant $B_0=k_A/k_D$: 
 
-\begin{equation}
+$$
 \Gamma_1=\frac{B_0{C}}{1+B_0{C}}
 \label{eq:6}{\tag{6}}
-\end{equation}
+$$(eq6)
 
 
 ## 6.1 Isotherm dependence on $B_0$
@@ -96,10 +96,10 @@ axes.set_ylabel('$\Gamma_1$',fontsize=18);
 The Langmuir isotherm as discussed so far provides a relationship between the fractional occupation of adsorption sites $\Gamma_1$ and the concentration in the fluid phase $C$. This relationship is only dependent on the thermodynamics of adsorption, captured by the value of the adsorption equilibrium coinstant $B_0$. In order to compute the concentration adsorbed by a specific material we need one additional parameter, the maximum concentration $q_M$ in the adsorbed phase. 
 The concentration in the adsorbed phase is thus computed as: $q=\Gamma_1{q_M}$, hence: 
 
-\begin{equation}
+$$
 q=q_M\frac{B_0{C}}{1+B_0{C}}
 \label{eq:7}{\tag{7}}
-\end{equation}
+$$(eq1)
 
 The parameter $q_M$ depends on the adsorbent material, and in particular on the amount of surface area per unit volume. 
 
@@ -148,19 +148,19 @@ figure.colorbar(surf, shrink=0.5, aspect=5);
 When describing the thermodynamics of adsorption from the gas phase it is convenient to introduce explicitly the pressure $P$ in the Langmuir isotherm. 
 In this case the expression of the monocomponent Langmuir isotherm becomes: 
 
-\begin{equation}
+$$
 q=q_M\frac{B_1{P}}{1+B_1{P}}
 \label{eq:8}{\tag{8}}
-\end{equation}
+$$(eq1)
 
 where $B_1=B_0/RT$ and $P$ is pressure.
 
 In multicomponent systems, where more than one component is competing for the same adsorption sites, the Langmuir isotherm for component $i$ can be written as: 
 
-\begin{equation}
+$$
 q_i=q_M\frac{B_{1,i}{P_i}}{1+B_{1,i}{P_i}}
 \label{eq:9}{\tag{9}}
-\end{equation}
+$$(eq1)
 
 where $P_i$ is the partial pressure component i in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
 

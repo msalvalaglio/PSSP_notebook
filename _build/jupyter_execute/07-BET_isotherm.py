@@ -12,35 +12,31 @@ The hypotheses at the foundation of the BET theory are:
 Following an approach similar to the one adopted for the derivation of the Langmuir isotherm let us begin by defining the rates of adsorption and desorption. In the case of th BET isotherm the rates will depend on the layer considered and will therefore have subscript $i$ that indicate the layer on which adsorption takes place. 
 
 The adsorption rate on layer $i$ can be written as: 
-\begin{equation}
+$$
 R_{A,i}=k_{A,i}\Gamma_iP
-{\tag{1}}
-\end{equation}
+$$(eq1)
 
 The desorption rate instead, explicitly introducing the dependence on the adsorption enthalpy through an Arrhenius-like functional form, is written as: 
-\begin{equation}
+$$
 R_{D,i}=k_{D,i}\Gamma_i=A_ie^{\frac{-E_i}{RT}}\Gamma_i
-{\tag{2}}
-\end{equation}
+$$(eq2)
 
 where $E_i$ is the adsorption energy. Denoting with $E_0$ the adsorption energy on a free adsorption site, the adsorption energy on all successive layers is $E_2=E_3=...E_n=\lambda$, where $\lambda$ is the condensation enthalpy. 
 
 Following the same criterion also the adsorption constant $k_{A,i}$, and the pre-exponential factor of the desorption constant $A_i$ are independent from the layer index - except for those related to the adsorption on a free surface and the desorption from the first layer: 
 
-\begin{equation}
+$$
 A_{i\geq2}=const=A
-{\tag{3}}
-\end{equation}
+$$(eq3)
 
-\begin{equation}
+$$
 k_{A,i\geq1}=const=k_A
-{\tag{4}}
-\end{equation}
+$$(eq4)
 
 Having defined the rates of adsorption and desorption one can write population balances for every layer of the adsorbed phase. 
 In the following $\Gamma_0$ represents the fraction of free adsorption sites, $\Gamma_i$ represents the fractional occupation of the $i^{th}$ layer. 
 
-\begin{equation}
+$$
 \begin{cases}
  \frac{d\Gamma_0}{dt}&=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  \frac{d\Gamma_1}{dt}&=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -49,12 +45,11 @@ In the following $\Gamma_0$ represents the fraction of free adsorption sites, $\
  \frac{d\Gamma_n}{dt}&=+k_{A,n-1}\Gamma_{n-1}P -k_{D,n}\Gamma_n-k_{A,n}\Gamma_nP+k_{D,n+1}\Gamma_{n+1} \\
  \vdots\\
  \end{cases}
- {\tag{5}}
-\end{equation}
+$$(eq5)
 
 At equilibrium the balances reduce to: 
 
-\begin{equation}
+$$
 \begin{cases}
  0=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  0=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -63,86 +58,75 @@ At equilibrium the balances reduce to:
  0=+k_{A,n-1}\Gamma_{n-1}P -k_{D,n}\Gamma_n-k_{A,n}\Gamma_nP+k_{D,n+1}\Gamma_{n+1} \\
  \vdots\\
  \end{cases}
- {\tag{6}}
-\end{equation}
+$$(eq6)
 
 From the steady state balance on free sites we get: 
 
-\begin{equation}
+$$
 k_{A,0}\Gamma_0P=k_{D,1}\Gamma_1
-{\tag{7}}
-\end{equation}
+$$(eq7)
 
 hence, inserting this equality into the balance on the fraction of sites occupied by a single layer, $\Gamma_1$ we get: 
 
-\begin{equation}
+$$
 k_{A,1}\Gamma_1P=k_{D,2}\Gamma_2
-{\tag{8}}
-\end{equation}
+$$(eq8)
 
 Introducing the Arrhenius expression for the adsorption rates we get: 
 
-\begin{equation}
+$$
 \Gamma_1=\frac{k_{A,0}}{k_{D,1}}\Gamma_0P=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P\Gamma_0
-{\tag{9}}
-\end{equation}
+$$(eq9)
 
 and analogously for $\Gamma_2$: 
 
 
-\begin{equation}
+$$
 \Gamma_2=\frac{k_{A,1}}{k_{D,2}}\Gamma_1P=\frac{k_{A,1}}{A_{2}}e^{\frac{E_2}{RT}}P\Gamma_1
-{\tag{10}}
-\end{equation}
+$$(eq10)
 
 a similar procedure can now be followed recursively to obtain a compact expression for the fraction of sites occupied by an arbitrary number of layers $n$. To this aim we can introduce two constants, $\alpha$ and $\beta$ - defined as: 
 
-\begin{equation}
+$$
 \alpha=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P
-{\tag{11}}
-\end{equation}
+$$(eq11)
 
-\begin{equation}
+$$
 \beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P
-{\tag{12}}
-\end{equation}
+$$(eq12)
 
 At this point the fraction of sites occupied by $n$ layers can be obtained as: 
 
-\begin{equation}
+$$
 \Gamma_n=\beta\Gamma_{n-1}=\beta^2\Gamma_{n-2}=...=\beta^{n-1}\Gamma_{1}=\beta^n\frac{\alpha}{\beta}\Gamma_0
-{\tag{13}}
-\end{equation}
+$$(eq13)
 
 Deining for the sake of compactness the constant $B_2=\alpha/\beta$ and introducing the volume of adsorbate per unit area  $v_s^1$ one can express the total volume adsorbed as: 
 
-\begin{equation}
+$$
 v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}=v_s^1B_2\beta\frac{d\sum_{i=1}^n\beta^{i}}{d\beta}
-{\tag{14}}
-\end{equation}
+$$(eq14)
 
 By introducing the notable result for the term $\sum_{i=1}^n\beta^{i}$: 
 
-\begin{equation}
+$$
 \sum_{i=1}^n\beta^{i}=\left(\frac{1-\beta^n}{1-\beta}\right)\beta
-{\tag{15}}
-\end{equation}
+$$(eq15)
 
 one gets:
 
-\begin{equation}
+$$
 \frac{v_s}{v_s^1}=\frac{B_2\beta}{1-\beta}\frac{\left[1-(n+1)\beta^n+n\beta^{n+1}\right]}{\left[1+(B_2-1)\beta-B_2\beta^{n+1}\right]}
 \label{eq:16}
-{\tag{16}}
-\end{equation}
+$$(eq16)
 
 In order to obtain the final formulation of the BET isotherm it is useful to consider the limit corresponding to macroscopic condensation, which corresponds to a buildup of an infinite number of adsorbed layers, which corresponds to $\beta=1$. Since this condition is realised for $P=P^o$, it can be shown that $\beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P=P/P^o$. 
 
-Introducing this equality in \eqref{eq:16} one gets the so called limited form of the BET isotherm:
+Introducing this equality in {eq}`eq16` one gets the so called limited form of the BET isotherm:
 
-\begin{equation}
+$$
 \frac{v_s}{v_s^1}=\frac{B_2\left(\frac{P}{P^o}\right)}{1-\left(\frac{P}{P^o}\right)}\frac{\left[1-(n+1)\left(\frac{P}{P^o}\right)^n+n\left(\frac{P}{P^o}\right)^{n+1}\right]}{\left[1+(B_2-1)\left(\frac{P}{P^o}\right)-B_2\left(\frac{P}{P^o}\right)^{n+1}\right]}
-\end{equation}
+$$(eq17)
 
 note that the left hand side of this equation can be expressed in terms of unit mass of adsorbent, instead of unit surface. 
 

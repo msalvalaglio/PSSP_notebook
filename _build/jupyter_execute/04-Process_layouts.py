@@ -156,6 +156,7 @@ Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
 $$(eq13)
 
 and then, with some manipulations: 
+
 $$
 C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
 $$(eq14)
