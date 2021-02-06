@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9. Batch Slurry Adsorption &#8212; PSSP Virtual Notebook</title>
+    <title>8. Batch Slurry Adsorption &#8212; PSSP Virtual Notebook</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Thermodynamic definition of solubility" href="Solubility.html" />
-    <link rel="prev" title="8. Equilibria in Ion Exchange systems" href="Ion_Exchange.html" />
+    <link rel="next" title="9. Thermodynamic definition of solubility" href="Solubility.html" />
+    <link rel="prev" title="7. Equilibria in Ion Exchange systems" href="Ion_Exchange.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -111,27 +111,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Langmuir_isotherm.html">
-   6. The Langmuir isotherm
+   5. The Langmuir isotherm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="BET_isotherm.html">
-   7. The BET isotherm
+   6. The BET isotherm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Ion_Exchange.html">
-   8. Equilibria in Ion Exchange systems
+   7. Equilibria in Ion Exchange systems
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Batch Slurry Adsorption
+   8. Batch Slurry Adsorption
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Solubility.html">
-   5. Thermodynamic definition of solubility
+   9. Thermodynamic definition of solubility
   </a>
  </li>
  <li class="toctree-l1">
@@ -228,17 +228,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-statement">
-   9.1 Problem Statement
+   8.1 Problem Statement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#material-balance-in-a-batch-slurry-adsorption-process">
-   9.2 Material Balance in a Batch Slurry adsorption process
+   8.2 Material Balance in a Batch Slurry adsorption process
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continuous-slurry-adsorption">
-   9.3 Continuous Slurry Adsorption
+   8.3 Continuous Slurry Adsorption
   </a>
  </li>
 </ul>
@@ -253,10 +253,10 @@
               <div>
                 
   <div class="section" id="batch-slurry-adsorption">
-<h1>9. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Permalink to this headline">¶</a></h1>
+<h1>8. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Permalink to this headline">¶</a></h1>
 <p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
 <div class="section" id="problem-statement">
-<h2>9.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
+<h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
 <p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol\,l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry.  The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}}\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]\)</span>.</p>
 <ul class="simple">
 <li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
@@ -264,7 +264,7 @@
 </ul>
 </div>
 <div class="section" id="material-balance-in-a-batch-slurry-adsorption-process">
-<h2>9.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Permalink to this headline">¶</a></h2>
+<h2>8.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Permalink to this headline">¶</a></h2>
 <p>Let us begin by writing the material balance for a batch membrane separator.</p>
 <p>Since we have a batch system, no inlet or outlet streams are present and we can write:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
@@ -384,7 +384,7 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 </div>
 </div>
 <div class="section" id="continuous-slurry-adsorption">
-<h2>9.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this headline">¶</a></h2>
+<h2>8.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this headline">¶</a></h2>
 <p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
 <p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-eq12">
@@ -434,8 +434,8 @@ c_{in}Q=qS+c_{out}Q
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Ion_Exchange.html" title="previous page">8. Equilibria in Ion Exchange systems</a>
-    <a class='right-next' id="next-link" href="Solubility.html" title="next page">5. Thermodynamic definition of solubility</a>
+    <a class='left-prev' id="prev-link" href="Ion_Exchange.html" title="previous page">7. Equilibria in Ion Exchange systems</a>
+    <a class='right-next' id="next-link" href="Solubility.html" title="next page">9. Thermodynamic definition of solubility</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

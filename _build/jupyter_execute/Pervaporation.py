@@ -82,5 +82,5 @@ The flux equation of component $j$ can be expressed as a function of the molar f
 
 $$
 J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right)
-$$(eq:flux)
+$$(eq:flux2)
 

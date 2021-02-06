@@ -1,8 +1,8 @@
-# 9. Batch Slurry Adsorption
+# 8. Batch Slurry Adsorption
 
 In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.
 
-## 9.1 Problem Statement
+## 8.1 Problem Statement
 
 A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 $[mol\,l^{-1}]$, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume $V_{\ell}$ of 2 $m^3$, in which $100\,kg$ of adsorbent are dispersed to form a slurry.  The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm $q=Hc^*$ with $H=1\times{10^{-1}}$.  The liquid-side mass transfer coefficient is $k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]$.
 
@@ -10,7 +10,7 @@ A water purification process is carried out via batch adsorption. The initial co
 - If this is the case how much time does it take to lower the pollutant concetration to the target specification? 
 
 
-## 9.2 Material Balance in a Batch Slurry adsorption process
+## 8.2 Material Balance in a Batch Slurry adsorption process
 
 Let us begin by writing the material balance for a batch membrane separator.
 
@@ -140,7 +140,7 @@ axes.set_xlabel('$time\,\,[hours]$', fontsize=18);
 axes.set_ylabel('$C\,\,[mol / l]$',fontsize=18);
 axes.legend(['$C(t)$','$C_{inf}$'], fontsize=18);
 
-## 9.3 Continuous Slurry Adsorption
+## 8.3 Continuous Slurry Adsorption
 
 The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank. 
 
