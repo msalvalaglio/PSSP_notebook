@@ -28,13 +28,14 @@ repository:
 
 html:
   use_edit_page_button: true
-
+  use_issues_button: true
+  use_repository_button     : true
+  path_to_book: https://github.com/msalvalaglio/PSSP_notebook  # An optional path to your book, defaults to repo root
+  
 # #######################################################################################
 # Interact link settings
 notebook_interface            : "notebook"
 
- #parse:
+#parse:
  # myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
   #  - amsmath
