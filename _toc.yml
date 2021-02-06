@@ -3,4 +3,10 @@
 - file: 01-Gas_permeation.ipynb 
 - file: 02-Pervaporation.ipynb
 - file: 03-Osmosis.ipynb
-
+- file: 04-Process_layouts.ipynb
+- file: 06-Langmuir_isotherm.ipynb
+- file: 07-BET_isotherm.ipynb
+- file: 08-Ion_Exchange.ipynb
+- file: 09-Slurry_Adsorption.ipynb
+- file: 05-Solubility.ipynb
+- file: 10-MSMPR_crystallizer.ipynb

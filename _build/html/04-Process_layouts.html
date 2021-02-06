@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. The Langmuir isotherm" href="06-Langmuir_isotherm.html" />
+    <link rel="prev" title="3. On the thermodynamic origin of the osmotic pressure" href="03-Osmosis.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -75,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="index.html">
   
-  <img src="_static/program_class.png" class="logo" alt="logo">
+  <img src="_static/Logo.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
@@ -86,7 +88,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+    <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="01-Gas_permeation.html">
    1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
@@ -100,6 +102,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="03-Osmosis.html">
    3. On the thermodynamic origin of the osmotic pressure
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Mass balances in membrane separation processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-Langmuir_isotherm.html">
+   6. The Langmuir isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-BET_isotherm.html">
+   7. The BET isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-Ion_Exchange.html">
+   8. Equilibria in Ion Exchange systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-Slurry_Adsorption.html">
+   9. Batch Slurry Adsorption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-Solubility.html">
+   5. Thermodynamic definition of solubility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-MSMPR_crystallizer.html">
+   10. MSMPR Crystallizer: population balance
   </a>
  </li>
 </ul>
@@ -222,61 +259,50 @@
 <h2>4.1 Batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h2>
 <p><strong>Problem Statement</strong></p>
 <p>500 l of fruit juice are concentrated from an initial solid-residue content of 0.05 kg/l to a solid-residue content of 0.2 kg/l through a batch microfiltration process. The total area of the membrane is of 20 <span class="math notranslate nohighlight">\(\mathrm{m^2}\)</span> and the flux of pure water through the membrane is captured by the empirical expression: <span class="math notranslate nohighlight">\(J=BC^{-1} [m/h]\)</span> with <span class="math notranslate nohighlight">\(B=0.1\)</span> where C is the solid residue concentration in kg/l. Compute the process time necessary to reach the target concentration.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;./batch.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/04-Process_layouts_4_0.png" src="_images/04-Process_layouts_4_0.png" />
-</div>
-</div>
-<p><strong>Solution trace</strong></p>
+<img src="batch.png" alt="Drawing" style="width: 300px;"/><p><strong>Solution trace</strong></p>
 <p>The global differential material balance (volume basis) reads:</p>
-<p>\begin{equation}
-\frac{dV}{dt}=-J,A
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-eq1">
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+\frac{dV}{dt}=-J\,A
+\]</div>
 <p>where <span class="math notranslate nohighlight">\(V\)</span> is the volume in the concentrate loop, <span class="math notranslate nohighlight">\(J\)</span> the permeate flux per unit area and <span class="math notranslate nohighlight">\(A\)</span> the total membrane area.
 The permeate flux is defined by the expression:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 J=BC^{-1}
-\end{equation}
-with <span class="math notranslate nohighlight">\(B=0.1\)</span>.</p>
+\)</span><span class="math notranslate nohighlight">\((eq2)
+with \)</span>B=0.1$.</p>
 <p>Since the solid residue never leaves the retentate loop,  the differential material balance on the solid residue reads:
-\begin{equation}
-\frac{dm}{dt}=0
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+\frac{dm}{dt}=0 
+\)</span>$(eq3)</p>
 <p>Which means that the total mass of solid residue is constant and equal to its initial mass:
-\begin{equation}
-m=m_0=V_0C_0
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+m=m_0=V_0C_0 
+\)</span>$(eq4)</p>
 <p>The global differential material balance can thus be rewritten as:
-\begin{equation}
-\frac{dV}{dt}=-J,A=-\frac{B}{V_0C_0 }AV
-\end{equation}</p>
+$<span class="math notranslate nohighlight">\(
+\frac{dV}{dt}=-J\,A=-\frac{B}{V_0C_0 }AV
+\)</span>$(eq5)</p>
 <p>\newpage</p>
 <p>In this simple case it can be integrated analytically to compute the volume as a function of time:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
-\end{equation}
-\begin{equation}
+\)</span><span class="math notranslate nohighlight">\((eq6)
+\)</span><span class="math notranslate nohighlight">\(
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\left[\ln{V}\right]^{V^{\prime}}_{V_0}=\ln\left(\frac{V^\prime}{V_0}\right)
-\end{equation}
-\begin{equation}
+\)</span><span class="math notranslate nohighlight">\((eq7)
+\)</span><span class="math notranslate nohighlight">\(
 \int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt=-\frac{B}{V_0C_0 }At^\prime
-\end{equation}</p>
+\)</span>$(eq8)</p>
 <p>Putting together both sides of the equation and substituting <span class="math notranslate nohighlight">\(V^\prime\)</span> with <span class="math notranslate nohighlight">\(V\)</span> for the sake of simplicity in the notation we get:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
-\end{equation}
+\)</span>$(eq9)
 which describes the time dependence of the volume in the batch membrane separator.</p>
 <p>The concentration can thus be calculated as:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V_0C_0 }At}
-\end{equation}</p>
+\)</span>$(eq10)</p>
 <p>The process time necessary to obtain a solid residue concentration of 0.2 <span class="math notranslate nohighlight">\([kg/l]\)</span> is of 17.3 <span class="math notranslate nohighlight">\([h]\)</span></p>
 <p><strong>Numerical solution</strong></p>
 <div class="cell docutils container">
@@ -336,8 +362,8 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The process time necessary to obtain a solid residue concentration of 0.2 [kg/l] is: [17.32867951] [h]
 </pre></div>
 </div>
-<img alt="_images/04-Process_layouts_7_1.png" src="_images/04-Process_layouts_7_1.png" />
-<img alt="_images/04-Process_layouts_7_2.png" src="_images/04-Process_layouts_7_2.png" />
+<img alt="_images/04-Process_layouts_6_1.png" src="_images/04-Process_layouts_6_1.png" />
+<img alt="_images/04-Process_layouts_6_2.png" src="_images/04-Process_layouts_6_2.png" />
 </div>
 </div>
 </div>
@@ -345,35 +371,26 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 <h2>4.2 Feed and Bleed<a class="headerlink" href="#feed-and-bleed" title="Permalink to this headline">¶</a></h2>
 <p><strong>Feed and Bleed:  Problem Statement</strong></p>
 <p>500 l of fruit juice are concentrated in 5 h of steady state operation from an initial solid-residue content of 0.05 <span class="math notranslate nohighlight">\(kg/l\)</span> through a feed and bleed process. The total area of the membrane is of 20 <span class="math notranslate nohighlight">\(m^2\)</span> and the flux of pure water through the membrane is captured by the empirical expression: <span class="math notranslate nohighlight">\(J=BC^{-1} [m/h]\)</span> with <span class="math notranslate nohighlight">\(B=0.1\)</span> where C is the solid residue concentration in kg/l. Is the steady state concentration of the retentate compatible with the specifics of 0.2 <span class="math notranslate nohighlight">\(kg/l\)</span>?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;./feedandbleed.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/04-Process_layouts_10_0.png" src="_images/04-Process_layouts_10_0.png" />
-</div>
-</div>
-<p><strong>Feed and Bleed: Solution trace</strong></p>
+<img src="feedandbleed.png" alt="Drawing" style="width: 300px;"/><p><strong>Feed and Bleed: Solution trace</strong></p>
 <p>Also in this case the global differential material balance and the solid-residue material balance can be written as follows:</p>
-<p>\begin{equation}
-\frac{dV}{dt}=Q_{IN}-J,A-Q_{OUT}=0
-\end{equation}</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight" id="equation-eq11">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+\frac{dV}{dt}=Q_{IN}-J\,A-Q_{OUT}=0
+\]</div>
+<div class="math notranslate nohighlight" id="equation-eq12">
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN}C_{IN}-Q_{OUT}C_{OUT}=0
-\end{equation}</p>
+\]</div>
 <p>At steady state <span class="math notranslate nohighlight">\({dV}/{dt}=0\)</span> as well as <span class="math notranslate nohighlight">\({dm}/{dt}=0\)</span>. The two ODEs become then two algebraic equations that should be solved together to compute the steady state concentration.
 From the global material balance we get:</p>
-<p>\begin{equation}
-Q_{OUT}=Q_{IN}-J,A=Q_{IN}-\frac{B}{C_{OUT}}A
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-eq13">
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
+\]</div>
 <p>and then, with some manipulations:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
-\end{equation}</p>
+\)</span>$(eq14)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -407,43 +424,32 @@ C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
 <p>500 l of fruit juice are concentrated in 5 h of steady state operation from an initial solid-residue content of 0.05 kg/l through four membrane separation units characterised by a total membrane area of 20 <span class="math notranslate nohighlight">\(\mathrm{m^2}\)</span> each.
 The flux of pure water through the membrane is captured by the empirical expression: <span class="math notranslate nohighlight">\(J=BC^{-1} [m/h]\)</span> with <span class="math notranslate nohighlight">\(B=0.1\)</span> where C is the solid residue concentration in kg/l.</p>
 <p>Is it more efficient to design a single stage configuration with four units in parallel or a cascade configuration with four units in series?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;./cascade.png&#39;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">fig</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/04-Process_layouts_15_0.png" src="_images/04-Process_layouts_15_0.png" />
-</div>
-</div>
-<p><strong>Cascade: Solution trace</strong></p>
+<img src="cascade.png" alt="Drawing" style="width: 600px;"/><p><strong>Cascade: Solution trace</strong></p>
 <p>Each stage can be treated like a single unit in which the feed stream corresponds to the retentate stream from the previous unit.
 We can thus define:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 C_{OUT,i}=C_{IN,i+1}
-\end{equation}
-\begin{equation}
+\)</span><span class="math notranslate nohighlight">\((eq15)
+\)</span><span class="math notranslate nohighlight">\(
 Q_{OUT,i}=Q_{IN,i+1}
-\end{equation}
-where the index <span class="math notranslate nohighlight">\(i\)</span> identifies the stage.</p>
+\)</span><span class="math notranslate nohighlight">\((eq16)
+where the index \)</span>i$ identifies the stage.</p>
 <p>The material balances for each stage at steady state can thus be written as:
-\begin{equation}
-\frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1}),A-Q_{IN,i+1}=0
-\end{equation}</p>
-<p>\begin{equation}
+$<span class="math notranslate nohighlight">\(
+\frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
+\)</span>$(eq17)</p>
+<div class="math notranslate nohighlight" id="equation-eq18">
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
-\end{equation}
-where <span class="math notranslate nohighlight">\(n_i\)</span> is the number of modules used in stage <span class="math notranslate nohighlight">\(i\)</span>.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n_i\)</span> is the number of modules used in stage <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>For each stage we can thus compute the steady state concentration and concentrate volumetric flow by solving sequentially the following equations:<br />
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 C_{IN,i+1}=C_{IN,i}+n_i\frac{AB}{Q_{IN,i}}
-\end{equation}
-\begin{equation}
+\)</span><span class="math notranslate nohighlight">\((eq19)
+\)</span><span class="math notranslate nohighlight">\(
 Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
-\end{equation}</p>
+\)</span>$(eq20)</p>
 <p>with <span class="math notranslate nohighlight">\(i=1...N\)</span> with <span class="math notranslate nohighlight">\(N\)</span> is the total number of stages.</p>
 <p><strong>Numerical Solution</strong></p>
 <p>The solution of a cascade composed of any number of stages, each formed by an arbitrary number of modules in parallel can be tackled sequentially through a simple cycle similar to the following:</p>
@@ -575,6 +581,8 @@ In the first, representing a single-stage configuration with four membrane units
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="03-Osmosis.html" title="previous page">3. On the thermodynamic origin of the osmotic pressure</a>
+    <a class='right-next' id="next-link" href="06-Langmuir_isotherm.html" title="next page">6. The Langmuir isotherm</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
