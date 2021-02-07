@@ -58,7 +58,7 @@ $$
 $$
 
 $$
-=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= 
+=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}
 $$(eq5)
 
 Defining: $\beta=\left(1+\frac{V_\ell}{HS_p}\right)$, and $\alpha=\frac{V_\ell}{HS_p}$, one gets: 
