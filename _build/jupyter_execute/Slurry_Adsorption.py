@@ -49,11 +49,7 @@ $$(eq4)
 Using Eq. {eq}`eq1` and {eq}`eq4`, Eq. {eq}`eq2` can be rewritten as:
 
 $$
-\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = 
-$$
-
-$$
-=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = 
+\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = -k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = 
 $$
 
 $$
