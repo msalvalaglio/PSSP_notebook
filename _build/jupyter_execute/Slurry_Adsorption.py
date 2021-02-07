@@ -18,7 +18,6 @@ Since we have a batch system, no inlet or outlet streams are present and we can 
 
 $$
 V_\ell{c_0}=V_\ell{c}+S_pq
-\label{eq:matbalance}{\tag{1}}
 $$(eq1)
 
 Where $V_{\ell}$ is the volume of the liquid phase (it can be considered constant), $c_0$ is the initial concentration of coloring agent in solution, $c$ is the instantaneous concentration of coloring agent in solution,  $q$ the instantaneous concentration of coloring agent adsorbed on the stationary phase and $S_p$ the mass of the adsorbent particles.
