@@ -45,7 +45,7 @@ $$
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
 $$(eq5)
 
-At steady state there is no accumulation and Eq. \eqref{eq:5} can be rewritten as:
+At steady state there is no accumulation and Eq. {eq}`eq5` can be rewritten as:
 
 $$
 \frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
@@ -179,32 +179,40 @@ $$(eq12)
 Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning: 
 
 - $m_0=\int_0^{\infty}L^0ndL=N_L$ represents the number of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $N_L$ tends to the total number of particles in the crystallizer: 
+
 $$
 N_T=n_0G\tau
 $$(eq13)
 
 - $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $\mathcal{L}$ tends to the total length of particles in the crystallizer: 
+
 $$
 \mathcal{L}_T=n_0(G\tau)^2
 $$(eq14) 
 
-- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $A$ tends to the total area of the particles contained in the crystallizer:  
+- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $A$ tends to the total area of the particles contained in the crystallizer: 
+
 $$
 A_T=2{\beta}n_0(G\tau)^3
 $$(eq15) 
+
 where $\beta$ is the surface shape factor of the particles. 
 
 - $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $V$ tends to the total volume of the particles contained in the crystallizer: 
+
 $$
 V_T=6{\alpha}n_0(G\tau)^3
 $$(eq16)
+
 where $\alpha$ is the volumetric shape factor of the particles.
 
 
 It should be noted that the total volume of the particles allows to compute the total mass of particles in the system: 
+
 $$
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
 $$(eq17)
+
 where $\rho_c$ is the density of the crystalline phase. 
 
 This expression for $M_T$ allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since $M_T=C_{in}-C_{out}$, where $C_{in}$ and $C_{out}$ are the inlet and outlet concentrations of solute in the liquid phase. 
@@ -218,7 +226,6 @@ The cumulative mass distribution can thus be written as:
 
 $$
 M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
-
 $$(eq18)
 
 The corresponding mass population density is computed differentiating $M(x)$with respect to $x$: 
