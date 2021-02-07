@@ -68,7 +68,7 @@ $$
 F_py=J\rho_AA_M
 $$(eq2)
 
-where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. \eqref{eq:flux1} becomes:
+where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. {eq}`eq2` becomes:
 
 $$
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
@@ -82,13 +82,13 @@ $$
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
 $$(eq4)
 
-Both Eq. \ref{eq:flux2} and \ref{eq:flux3} can be solved for $F_p$ and equated, leading to: 
+Both Eq. {eq}`eq3` and {eq}`eq4` can be solved for $F_p$ and equated, leading to: 
 
 $$
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
 $$(eq5) 
 
-Eq. \ref{eq:flux4} can be solved either for $y$ or for $x$, the latter being simpler. After some algebraic manipulation the solution for $x$ is: 
+Eq. {eq}`eq5` can be solved either for $y$ or for $x$, the latter being simpler. After some algebraic manipulation the solution for $x$ is: 
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
