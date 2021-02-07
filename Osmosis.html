@@ -321,14 +321,14 @@ Compartment 1 contains a binary mixture of component B (solute) in component A (
 To this aim we can rely on the thermodynamic definition of equilibrium for component A (e.g. water), i.e. the only component that can transfer across the membrane.
 Equilibrium is defined when <span class="math notranslate nohighlight">\(A\)</span> has the same chemical potential in both compartments</p>
 <div class="math notranslate nohighlight" id="equation-eq0">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">¶</a></span>\[
 \mu_{A,1}=\mu_{A,2}
 \]</div>
 <p>The equilibrium condition is conveniently written introducing fugacity.
 Fugacity and chemical potential are related by the expression <span class="math notranslate nohighlight">\(\mu_i=\mu_0+RT\ln{f_i}\)</span>, where <span class="math notranslate nohighlight">\(\mu_0\)</span> is the chemical potential of an arbitrary reference state.</p>
 <p>Equilibrium can conditions are thus equivalently formulated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-equilibrium">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">¶</a></span>\[
 f_{A,1}=f_{A,2}
 \]</div>
 <p><em>In compartment 1</em> we have a <em>non-ideal</em> mixture of two components. The fugacity of component A in compartment 1 is thus written as:
@@ -348,7 +348,7 @@ f_{A,2}=f_A(T,P_2)
 <p><strong>The Poynting correction</strong> In order to define a common reference state between the two compartments we rewrite fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_2\)</span> (<span class="math notranslate nohighlight">\(f_A(T,P_2)\)</span>) as a function of the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span> and of the pressure difference <span class="math notranslate nohighlight">\((P_2-P_1)\)</span>.</p>
 <p>To do that we express the difference in chemical potential <span class="math notranslate nohighlight">\(\Delta\mu_{P_1\rightarrow{P_2}}\)</span> between pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_1\)</span> and pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 \Delta\mu_{P_1\rightarrow{P_2}}=\int_{T,P_1}^{T,P_2}d\mu=\int_{T,P_1}^{T,P_2}vdP=v(P_2-P_1)
 \]</div>
 <p>where:</p>
@@ -371,29 +371,29 @@ f_A(T,P_2)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 <h2>3.3 The Osmotic Pressure<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Given the definition of equilibrium conditions, the expressions of the fugacity of component A in the two compartments 1 and 2, and the Poynting correction given in the previous paragraph we can write:</p>
 <div class="math notranslate nohighlight" id="equation-eq">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eq" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq" title="Permalink to this equation">¶</a></span>\[
 \gamma_A(T,P_1,x_A)x_A f_A(T,P_1)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> is the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span>, now appearing on both sides of the equation.</p>
 <p>We can thus divide both sides by <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> to obtain the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 \gamma_A(T,P_1,x_A)x_A =\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>Rearranging this expression one obtains:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 P_2-P_1=\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>Recalling that the Osmotic pressure <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span> we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>This expression \textbf{relates the composition of compartment 1}, containing a mixture of components A and B (e.g NaCl in water),  \textbf{to the osmotic pressure} generated at equilibrium conditions when such compartment is in contact with a \textbf{semipermeable} membrane that has on the opposite side a compartment filled by pure component A liquid.</p>
 <p>Please note that in this expression <span class="math notranslate nohighlight">\(x_A\)</span> is the molar fraction of the solvent (e.g. water). Since we are considering a binary system and from an engineering standpoint what is typically measured is the solute concentration we can rewrite the expression as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)(1-x_B)}\right)
 \]</div>
 <p>Where now <span class="math notranslate nohighlight">\(x_B\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(B\)</span> (e.g. NaCl).
@@ -445,7 +445,7 @@ $<span class="math notranslate nohighlight">\(
 <h2>3.4 Flux of the solvent during Osmosis<a class="headerlink" href="#flux-of-the-solvent-during-osmosis" title="Permalink to this headline">¶</a></h2>
 <p>In osmosis the flux of the solvent (component A) through a membrane is driven by the difference between the <span class="math notranslate nohighlight">\(\Delta{P}=P_1-P_2\)</span> across compartments and the osmotic pressure <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
 J_A=p_A\left( \Delta{P} - \pi \right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(p_A\)</span> is the permeability of the membrane with respect to component A.</p>

@@ -303,34 +303,34 @@
 <p>In order to derive the langmuir adsorption isotherm from this set of hypotheses let’s start by defining expressions for the adsorption and desorption rates.</p>
 <p>The adsorption process takes place when a molecule of the component that is undergoing adsorption finds a free adsorption site. The rate of an adsorption event can thus be considered analogous to a bimolecular elementary reaction step with rate:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(45)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 R_A=k_A\Gamma_0{C}
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(k_A\)</span> is the kinetic constant, <span class="math notranslate nohighlight">\(\Gamma_0\)</span> is the fraction of free adsorption sites,  and <span class="math notranslate nohighlight">\(x\)</span> is the molar fraction of the adsorbing component in the fluid phase.</p>
 <p>The rate of desorption instead can be considered analogous to a monomolecular reaction, in which a (non-covalent) bond is broken and an adsorbed molecule is released to the fluid phase, leaving one free site. Its rate can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">(46)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 R_D=k_D\Gamma_1
 \]</div>
 <p>At equilibrium, the rates of adsorption and desorption are equal and the net flux of molecules to and from the adsorbed phase is null.
 We can thus write:</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
-<span class="eqno">(47)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
 k_A\Gamma_0{C}=k_D\Gamma_1
 \]</div>
 <p>Recalling the stoichiometric relation between the fraction of accupied and free sites Eq. \eqref{eq:3} becomes:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(48)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 k_A(1-\Gamma_1){C}=k_D\Gamma_1
 \]</div>
 <p>which can be rearranged to provide an explicit expression of <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, the fraction of accupied sites, as a function of the concentration <span class="math notranslate nohighlight">\(C\)</span> in the fluid phase:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(49)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \Gamma_1=\frac{k_A{C}}{k_D+k_A{C}}
 \]</div>
 <p>To obtain a typical expression of the Langmuir isotherm we shall introduce as a single parameter for this equation the adsorption equilibrium constant <span class="math notranslate nohighlight">\(B_0=k_A/k_D\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(50)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 \Gamma_1=\frac{B_0{C}}{1+B_0{C}}
 \]</div>
 <div class="section" id="isotherm-dependence-on-b-0">
@@ -380,7 +380,7 @@ k_A(1-\Gamma_1){C}=k_D\Gamma_1
 <p>The Langmuir isotherm as discussed so far provides a relationship between the fractional occupation of adsorption sites <span class="math notranslate nohighlight">\(\Gamma_1\)</span> and the concentration in the fluid phase <span class="math notranslate nohighlight">\(C\)</span>. This relationship is only dependent on the thermodynamics of adsorption, captured by the value of the adsorption equilibrium coinstant <span class="math notranslate nohighlight">\(B_0\)</span>. In order to compute the concentration adsorbed by a specific material we need one additional parameter, the maximum concentration <span class="math notranslate nohighlight">\(q_M\)</span> in the adsorbed phase.
 The concentration in the adsorbed phase is thus computed as: <span class="math notranslate nohighlight">\(q=\Gamma_1{q_M}\)</span>, hence:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(51)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 q=q_M\frac{B_0{C}}{1+B_0{C}}
 \]</div>
 <p>The parameter <span class="math notranslate nohighlight">\(q_M\)</span> depends on the adsorbent material, and in particular on the amount of surface area per unit volume.</p>
@@ -436,13 +436,13 @@ q=q_M\frac{B_0{C}}{1+B_0{C}}
 <p>When describing the thermodynamics of adsorption from the gas phase it is convenient to introduce explicitly the pressure <span class="math notranslate nohighlight">\(P\)</span> in the Langmuir isotherm.
 In this case the expression of the monocomponent Langmuir isotherm becomes:</p>
 <div class="math notranslate nohighlight" id="equation-eq8">
-<span class="eqno">(52)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
 q=q_M\frac{B_1{P}}{1+B_1{P}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(B_1=B_0/RT\)</span> and <span class="math notranslate nohighlight">\(P\)</span> is pressure.</p>
 <p>In multicomponent systems, where more than one component is competing for the same adsorption sites, the Langmuir isotherm for component <span class="math notranslate nohighlight">\(i\)</span> can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">(53)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
 q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(N\)</span> is the total number of components, <span class="math notranslate nohighlight">\(P_i\)</span> is the partial pressure component <span class="math notranslate nohighlight">\(i\)</span> in the gas phase, and <span class="math notranslate nohighlight">\(B_{1,i}=B_{0,i}/RT\)</span> where <span class="math notranslate nohighlight">\(B_{0,i}\)</span> is the adsorption equilibrium constant for component <span class="math notranslate nohighlight">\(i\)</span>.</p>
