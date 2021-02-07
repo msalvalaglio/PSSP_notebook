@@ -45,8 +45,6 @@ $$
 \frac{dV}{dt}=-J\,A=-\frac{B}{V_0C_0 }AV
 $$(eq5)
 
-\newpage
-
 In this simple case it can be integrated analytically to compute the volume as a function of time: 
 
 $$
