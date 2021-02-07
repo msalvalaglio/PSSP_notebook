@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2 - Exercise (with solution) &#8212; PSSP Virtual Notebook</title>
+    <title>Week 2 - Exercise &#8212; PSSP Virtual Notebook</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -148,7 +148,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Week 2 - Exercise (with solution)
+   Week 2 - Exercise
   </a>
  </li>
  <li class="toctree-l1">
@@ -267,6 +267,15 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tags-hide-cell">
+   {
+“tags”: [
+“hide-cell”,
+]
+}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-trace">
    Solution trace
   </a>
@@ -282,8 +291,8 @@
         
               <div>
                 
-  <div class="section" id="week-2-exercise-with-solution">
-<h1>Week 2 - Exercise (with solution)<a class="headerlink" href="#week-2-exercise-with-solution" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="week-2-exercise">
+<h1>Week 2 - Exercise<a class="headerlink" href="#week-2-exercise" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
 <p>A perfectly mixed gas permeation module is used to separate carbon dioxide from nitrogen using a poly
@@ -297,7 +306,13 @@ and a permeate pressure of 1.01 atm.</p>
 <li><p>Completely characterise the unit, by computing feed, permeate and retentate flow rates, cut, and retentate composition.</p></li>
 </ul>
 </div>
-<hr class="docutils" />
+<div class="section" id="tags-hide-cell">
+<h2>{
+“tags”: [
+“hide-cell”,
+]
+}<a class="headerlink" href="#tags-hide-cell" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="solution-trace">
 <h2>Solution trace<a class="headerlink" href="#solution-trace" title="Permalink to this headline">¶</a></h2>
 <img src="./scheme.png" alt="Drawing" style="width: 500px;">
@@ -331,7 +346,14 @@ F_r=F_p-F_{in}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;hide-cell&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">## Solution trace</span>
+<span class="c1"># Variables</span>
 <span class="n">A</span><span class="o">=</span><span class="mi">15</span> <span class="o">*</span> <span class="mf">1E4</span> <span class="c1"># [m^2 * cm^2 / m^2]</span>
 <span class="n">P_r</span><span class="o">=</span><span class="mf">5.5</span> <span class="o">*</span> <span class="mi">101325</span> <span class="c1"># [atm] * [Pa / atm]</span>
 <span class="n">P_p</span><span class="o">=</span><span class="mf">1.01</span> <span class="o">*</span> <span class="mi">101325</span> <span class="c1"># [atm] * [Pa / atm] </span>
@@ -381,7 +403,14 @@ Retentate flowrate:  0.7037  [mol/h]
 <p><strong>The brute force way</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;hide-cell&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">## Solution trace</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
 
 <span class="c1"># Variables</span>
 <span class="n">A</span><span class="o">=</span><span class="mi">15</span> <span class="o">*</span> <span class="mf">1E4</span> <span class="c1"># [m^2 * cm^2 / m^2]</span>
