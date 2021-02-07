@@ -92,7 +92,7 @@ Eq. \ref{eq:flux4} can be solved either for $y$ or for $x$, the latter being sim
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
-$$ 
+$$(eq6) 
 
 where $\alpha_{A,B}=\frac{P_A}{P_B}$ is the ideal separation factor.
 
@@ -100,7 +100,7 @@ Eq. \ref{eq:RTeq} can be simplified when the gas phase can be considered ideal. 
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
-$$
+$$(eq7)
 
 Eq. \eqref{eq:RTeq} is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 
 
