@@ -297,53 +297,53 @@
 <img src="./batch.png" alt="Drawing" style="width: 300px;"><p><strong>Solution trace</strong></p>
 <p>The global differential material balance (volume basis) reads:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=-J\,A
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(V\)</span> is the volume in the concentrate loop, <span class="math notranslate nohighlight">\(J\)</span> the permeate flux per unit area and <span class="math notranslate nohighlight">\(A\)</span> the total membrane area.
 The permeate flux is defined by the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 J=BC^{-1}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(B=0.1\)</span>.</p>
 <p>Since the solid residue never leaves the retentate loop,  the differential material balance on the solid residue reads:</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=0 
 \]</div>
 <p>Which means that the total mass of solid residue is constant and equal to its initial mass:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(28)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 m=m_0=V_0C_0 
 \]</div>
 <p>The global differential material balance can thus be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(25)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=-J\,A=-\frac{B}{V_0C_0 }AV
 \]</div>
 <p>In this simple case it can be integrated analytically to compute the volume as a function of time:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(30)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(31)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\left[\ln{V}\right]^{V^{\prime}}_{V_0}=\ln\left(\frac{V^\prime}{V_0}\right)
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq8">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(32)<a class="headerlink" href="#equation-eq8" title="Permalink to this equation">¶</a></span>\[
 \int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt=-\frac{B}{V_0C_0 }At^\prime
 \]</div>
 <p>Putting together both sides of the equation and substituting <span class="math notranslate nohighlight">\(V^\prime\)</span> with <span class="math notranslate nohighlight">\(V\)</span> for the sake of simplicity in the notation we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">(29)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
 \]</div>
 <p>which describes the time dependence of the volume in the batch membrane separator.</p>
 <p>The concentration can thus be calculated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq10">
-<span class="eqno">(30)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq10" title="Permalink to this equation">¶</a></span>\[
 C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V_0C_0 }At}
 \]</div>
 <p>The process time necessary to obtain a solid residue concentration of 0.2 <span class="math notranslate nohighlight">\([kg/l]\)</span> is of 17.3 <span class="math notranslate nohighlight">\([h]\)</span></p>
@@ -417,22 +417,22 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 <img src="feedandbleed.png" alt="Drawing" style="width: 300px;"><p><strong>Feed and Bleed: Solution trace</strong></p>
 <p>Also in this case the global differential material balance and the solid-residue material balance can be written as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq11">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq11" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=Q_{IN}-J\,A-Q_{OUT}=0
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq12">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq12" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN}C_{IN}-Q_{OUT}C_{OUT}=0
 \]</div>
 <p>At steady state <span class="math notranslate nohighlight">\({dV}/{dt}=0\)</span> as well as <span class="math notranslate nohighlight">\({dm}/{dt}=0\)</span>. The two ODEs become then two algebraic equations that should be solved together to compute the steady state concentration.
 From the global material balance we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq13">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
 Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
 \]</div>
 <p>and then, with some manipulations:</p>
 <div class="math notranslate nohighlight" id="equation-eq14">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq14" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq14" title="Permalink to this equation">¶</a></span>\[
 C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
 \]</div>
 <div class="cell docutils container">
@@ -472,31 +472,31 @@ The flux of pure water through the membrane is captured by the empirical express
 <p>Each stage can be treated like a single unit in which the feed stream corresponds to the retentate stream from the previous unit.
 We can thus define:</p>
 <div class="math notranslate nohighlight" id="equation-eq15">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq15" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq15" title="Permalink to this equation">¶</a></span>\[
 C_{OUT,i}=C_{IN,i+1}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq16">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq16" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq16" title="Permalink to this equation">¶</a></span>\[
 Q_{OUT,i}=Q_{IN,i+1}
 \]</div>
 <p>where the index <span class="math notranslate nohighlight">\(i\)</span> identifies the stage.</p>
 <p>The material balances for each stage at steady state can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq17">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq17" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq17" title="Permalink to this equation">¶</a></span>\[
 \frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq18">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(n_i\)</span> is the number of modules used in stage <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>For each stage we can thus compute the steady state concentration and concentrate volumetric flow by solving sequentially the following equations:</p>
 <div class="math notranslate nohighlight" id="equation-eq19">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
 C_{IN,i+1}=C_{IN,i}+n_i\frac{AB}{Q_{IN,i}}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq20">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(44)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
 Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(i=1...N\)</span> with <span class="math notranslate nohighlight">\(N\)</span> is the total number of stages.</p>

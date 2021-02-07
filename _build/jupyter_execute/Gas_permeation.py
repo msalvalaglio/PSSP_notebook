@@ -63,39 +63,43 @@ axes.set_ylabel('Molar Fraction in the Permeate',fontsize=14);
 ## 1.2 Rate Transfer Equation
 
 Let us begin by considering that the permeate flow rate of component A is given by its molar flux through the membrane multiplied by the membrane total area: 
+
 $$
 F_py=J\rho_AA_M
-\label{eq:flux1}
-$$ 
+$$(eq2)
+
 where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. \eqref{eq:flux1} becomes:
+
 $$
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
-\label{eq:flux2}
-$$ 
+$$(eq3)
+
 where $P_A$ is the permeability of the membrane to component $A$, $l$ is the thickness of the membrane, $p_r$ is the pressure on the retentate side, $p_p$ is the pressure on the permeate side. 
 
 The same expression can be written for component $B$: 
+
 $$
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
-\label{eq:flux3}
-$$ 
+$$(eq4)
 
 Both Eq. \ref{eq:flux2} and \ref{eq:flux3} can be solved for $F_p$ and equated, leading to: 
+
 $$
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
-\label{eq:flux4}
-$$ 
+$$(eq5) 
+
 Eq. \ref{eq:flux4} can be solved either for $y$ or for $x$, the latter being simpler. After some algebraic manipulation the solution for $x$ is: 
+
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
-\label{eq:RTeq}
 $$ 
+
 where $\alpha_{A,B}=\frac{P_A}{P_B}$ is the ideal separation factor.
 
 Eq. \ref{eq:RTeq} can be simplified when the gas phase can be considered ideal. In such case $\rho_A=\rho_B=P/RT$, yielding: 
+
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
-\label{eq:RTeqsimple}
 $$
 
 Eq. \eqref{eq:RTeq} is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 

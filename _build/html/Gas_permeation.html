@@ -148,7 +148,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W2_2021.html">
-   Week 2 - Exercise (with solution)
+   Week 2 - Exercise
   </a>
  </li>
  <li class="toctree-l1">
@@ -319,7 +319,7 @@ F_{in}z=F_py+(F_{in}-F_p)x
 z=\frac{F_p}{F_{in}}y+(1-\frac{F_p}{F_{in}})x
 \]</div>
 <p>the quantity <span class="math notranslate nohighlight">\(\frac{F_p}{F_{in}}\)</span> is commonly defined as cut and indicated as <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<p>Solving Eq.<a class="reference internal" href="Solubility.html#equation-eq1">(87)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
+<p>Solving Eq.<a class="reference internal" href="#equation-eq1">(1)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq-operating">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-operating" title="Permalink to this equation">¶</a></span>\[
 y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
@@ -365,38 +365,38 @@ y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 </div>
 <div class="section" id="rate-transfer-equation">
 <h2>1.2 Rate Transfer Equation<a class="headerlink" href="#rate-transfer-equation" title="Permalink to this headline">¶</a></h2>
-<p>Let us begin by considering that the permeate flow rate of component A is given by its molar flux through the membrane multiplied by the membrane total area:
-$<span class="math notranslate nohighlight">\(
+<p>Let us begin by considering that the permeate flow rate of component A is given by its molar flux through the membrane multiplied by the membrane total area:</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 F_py=J\rho_AA_M
-\label{eq:flux1}
-\)</span><span class="math notranslate nohighlight">\( 
-where \)</span>J<span class="math notranslate nohighlight">\( is the volumetric flux across the membrane, \)</span>\rho_A<span class="math notranslate nohighlight">\( is the molar density of component A, and \)</span>A_M<span class="math notranslate nohighlight">\( is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. \eqref{eq:flux1} becomes:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. \eqref{eq:flux1} becomes:</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
-\label{eq:flux2}
-\)</span><span class="math notranslate nohighlight">\( 
-where \)</span>P_A<span class="math notranslate nohighlight">\( is the permeability of the membrane to component \)</span>A<span class="math notranslate nohighlight">\(, \)</span>l<span class="math notranslate nohighlight">\( is the thickness of the membrane, \)</span>p_r<span class="math notranslate nohighlight">\( is the pressure on the retentate side, \)</span>p_p$ is the pressure on the permeate side.</p>
-<p>The same expression can be written for component <span class="math notranslate nohighlight">\(B\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_A\)</span> is the permeability of the membrane to component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(l\)</span> is the thickness of the membrane, <span class="math notranslate nohighlight">\(p_r\)</span> is the pressure on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> is the pressure on the permeate side.</p>
+<p>The same expression can be written for component <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
-\label{eq:flux3}
-\)</span>$</p>
-<p>Both Eq. \ref{eq:flux2} and \ref{eq:flux3} can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Both Eq. \ref{eq:flux2} and \ref{eq:flux3} can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
-\label{eq:flux4}
-\)</span><span class="math notranslate nohighlight">\( 
-Eq. \ref{eq:flux4} can be solved either for \)</span>y<span class="math notranslate nohighlight">\( or for \)</span>x<span class="math notranslate nohighlight">\(, the latter being simpler. After some algebraic manipulation the solution for \)</span>x<span class="math notranslate nohighlight">\( is: 
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Eq. \ref{eq:flux4} can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
-\label{eq:RTeq}
-\)</span><span class="math notranslate nohighlight">\( 
-where \)</span>\alpha_{A,B}=\frac{P_A}{P_B}$ is the ideal separation factor.</p>
-<p>Eq. \ref{eq:RTeq} can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_{A,B}=\frac{P_A}{P_B}\)</span> is the ideal separation factor.</p>
+<p>Eq. \ref{eq:RTeq} can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
+<div class="math notranslate nohighlight">
+\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
-\label{eq:RTeqsimple}
-\)</span>$</p>
+\]</div>
 <p>Eq. \eqref{eq:RTeq} is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
 <div class="section" id="id1">
 <h3>Graphical Representation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
