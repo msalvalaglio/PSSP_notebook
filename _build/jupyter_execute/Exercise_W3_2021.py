@@ -6,9 +6,9 @@ Compute the total membrane area necessary to produce 10 l/h purified water (0.03
 The feed pressure is 100 bar and the composition in the retentate stream is 7 wt%.  
 The permeate stream is at ambient pressure (1 bar), all streams are at 25$^o$ C, and the osmotic pressure in bar is captured by the semiempirical expression: 
 
-\begin{equation*}
+$$
 \pi=\frac{1.12}{14.5}T\sum_{i=1}^Nc_i
-\end{equation*}
+$$
 
 Where T is the temperature in K,  $N$ is the total number of ionic species in solution, and ci is the concentration expressed in $[mol/l]$. 
 
@@ -135,4 +135,3 @@ print("Salt passage: ", f"{SP:.2}", "[-]")
 ## Contributions
 
 Debugged by Nikita Gusev, 29 Jan 2021 
-

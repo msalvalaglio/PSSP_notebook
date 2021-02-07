@@ -47,13 +47,18 @@ c^*=\frac{q}{H}
 \label{eq:equilibrium}
 $$(eq4)
 
-Using Eq. \eqref{eq:matbalance} and \eqref{eq:equilibrium} Eq. \eqref{eq:masstransfer} can be rewritten as:
+Using Eq. {eq}`eq1` and {eq}`eq4`, Eq. {eq}`eq2` can be rewritten as:
 
 $$
-\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = \\
-=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = \\
-=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= \\
-{\tag{5}}
+\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = 
+$$
+
+$$
+=-k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = 
+$$
+
+$$
+=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}= 
 $$(eq5)
 
 Defining: $\beta=\left(1+\frac{V_\ell}{HS_p}\right)$, and $\alpha=\frac{V_\ell}{HS_p}$, one gets: 
