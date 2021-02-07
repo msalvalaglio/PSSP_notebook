@@ -130,3 +130,9 @@ print("\nOsmotic pressure: ", f"{Dpi:.4}", " [bar]")
 print("\nMembrane area: ", f"{A:.4}", " [m^2]")
 print("Salt rejection: ", f"{SR:.4}", "[-]")
 print("Salt passage: ", f"{SP:.2}", "[-]")
+
+
+## Contributions
+
+Debugged by Nikita Gusev, 29 Jan 2021 
+
