@@ -267,15 +267,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tags-hide-cell">
-   {
-“tags”: [
-“hide-cell”,
-]
-}
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-trace">
    Solution trace
   </a>
@@ -306,13 +297,7 @@ and a permeate pressure of 1.01 atm.</p>
 <li><p>Completely characterise the unit, by computing feed, permeate and retentate flow rates, cut, and retentate composition.</p></li>
 </ul>
 </div>
-<div class="section" id="tags-hide-cell">
-<h2>{
-“tags”: [
-“hide-cell”,
-]
-}<a class="headerlink" href="#tags-hide-cell" title="Permalink to this headline">¶</a></h2>
-</div>
+<hr class="docutils" />
 <div class="section" id="solution-trace">
 <h2>Solution trace<a class="headerlink" href="#solution-trace" title="Permalink to this headline">¶</a></h2>
 <img src="./scheme.png" alt="Drawing" style="width: 500px;">
@@ -346,13 +331,7 @@ F_r=F_p-F_{in}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;hide-cell&quot;</span><span class="p">,</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-
-<span class="c1">## Solution trace</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Solution trace</span>
 <span class="c1"># Variables</span>
 <span class="n">A</span><span class="o">=</span><span class="mi">15</span> <span class="o">*</span> <span class="mf">1E4</span> <span class="c1"># [m^2 * cm^2 / m^2]</span>
 <span class="n">P_r</span><span class="o">=</span><span class="mf">5.5</span> <span class="o">*</span> <span class="mi">101325</span> <span class="c1"># [atm] * [Pa / atm]</span>
@@ -403,13 +382,7 @@ Retentate flowrate:  0.7037  [mol/h]
 <p><strong>The brute force way</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;hide-cell&quot;</span><span class="p">,</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-
-<span class="c1">## Solution trace</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Solution trace</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
 
 <span class="c1"># Variables</span>

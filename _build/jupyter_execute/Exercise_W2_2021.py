@@ -14,11 +14,6 @@ The permeate is enriched to 38.0 mol% in carbon dioxide. The membrane thickness 
 
 - Completely characterise the unit, by computing feed, permeate and retentate flow rates, cut, and retentate composition. 
 
-{
-    "tags": [
-        "hide-cell",
-    ]
-}
 -----------------------------------------------------------------------------------------------------------------------------------------------
 ## Solution trace
 <img src="./scheme.png" alt="Drawing" style="width: 500px;">
@@ -59,12 +54,6 @@ F_r=F_p-F_{in}
 $$
 
 
-{
-    "tags": [
-        "hide-cell",
-    ]
-}
-
 ## Solution trace
 # Variables
 A=15 * 1E4 # [m^2 * cm^2 / m^2]
@@ -102,12 +91,6 @@ print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
 
 __The brute force way__
-
-{
-    "tags": [
-        "hide-cell",
-    ]
-}
 
 ## Solution trace
 from scipy.optimize import fsolve
