@@ -96,13 +96,13 @@ $$(eq6)
 
 where $\alpha_{A,B}=\frac{P_A}{P_B}$ is the ideal separation factor.
 
-Eq. \ref{eq:RTeq} can be simplified when the gas phase can be considered ideal. In such case $\rho_A=\rho_B=P/RT$, yielding: 
+Eq. {eq}`eq6` can be simplified when the gas phase can be considered ideal. In such case $\rho_A=\rho_B=P/RT$, yielding: 
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
 $$(eq7)
 
-Eq. \eqref{eq:RTeq} is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 
+Eq. {eq}`eq7` is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 
 
 #### Graphical Representation
 
@@ -162,6 +162,4 @@ axes.set_ylabel('Molar Fraction in the Permeate',fontsize=14);
 
 
 print("Operating point -> x = ", x_set, " y = ", y_set) 
-
-
 
