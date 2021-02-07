@@ -150,10 +150,10 @@ where $B_1=B_0/RT$ and $P$ is pressure.
 In multicomponent systems, where more than one component is competing for the same adsorption sites, the Langmuir isotherm for component $i$ can be written as: 
 
 $$
-q_i=q_M\frac{B_{1,i}{P_i}}{1+B_{1,i}{P_i}}
+q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 $$(eq9)
 
-where $P_i$ is the partial pressure component i in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
+where $N$ is the total number of components, $P_i$ is the partial pressure component $i$ in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
 
 In the following we report the competitive adsorption isotherms of two components adsorbing from a binary mixture.
 
