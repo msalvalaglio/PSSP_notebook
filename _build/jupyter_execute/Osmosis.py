@@ -153,7 +153,7 @@ axes.set_ylabel('Dimensionless Osmotic Pressure',fontsize=14);
 
 Note that the dimensionless osmotic pressure plotted abotve is obtained as $\pi{v}/RT$.
 
-## 3.4 Flux of the solvent suring Osmosis
+## 3.4 Flux of the solvent during Osmosis
 
 In osmosis the flux of the solvent (component A) through a membrane is driven by the difference between the $\Delta{P}=P_1-P_2$ across compartments and the osmotic pressure $\pi$: 
 
