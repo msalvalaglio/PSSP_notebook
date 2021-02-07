@@ -348,7 +348,7 @@ Finally the term <span class="math notranslate nohighlight">\(Q\overline{n}\Delt
 <span class="eqno">(110)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
 \]</div>
-<p>At steady state there is no accumulation and Eq. \eqref{eq:5} can be rewritten as:</p>
+<p>At steady state there is no accumulation and Eq. <a class="reference internal" href="#equation-eq5">(110)</a> can be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
 <span class="eqno">(111)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 \frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
@@ -483,30 +483,41 @@ m_i=\int_0^{\infty}L^indL
 \]</div>
 <p>Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(m_0=\int_0^{\infty}L^0ndL=N_L\)</span> represents the number of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(N_L\)</span> tends to the total number of particles in the crystallizer:
-$<span class="math notranslate nohighlight">\(
-N_T=n_0G\tau
-\)</span>$(eq13)</p></li>
-<li><p><span class="math notranslate nohighlight">\(m_1=\int_0^{\infty}L^1ndL=\mathcal{L}\)</span> represents the total length of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> tends to the total length of particles in the crystallizer:
-$<span class="math notranslate nohighlight">\(
-\mathcal{L}_T=n_0(G\tau)^2
-\)</span>$(eq14)</p></li>
-<li><p><span class="math notranslate nohighlight">\(m_2=\int_0^{\infty}L^2ndL\propto{A}\)</span> is proportional to the total area of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(A\)</span> tends to the total area of the particles contained in the crystallizer:<br />
-$<span class="math notranslate nohighlight">\(
-A_T=2{\beta}n_0(G\tau)^3
-\)</span><span class="math notranslate nohighlight">\((eq15) 
-where \)</span>\beta$ is the surface shape factor of the particles.</p></li>
-<li><p><span class="math notranslate nohighlight">\(m_3=\int_0^{\infty}L^2ndL\propto{V}\)</span> is proportional to the total volume of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(V\)</span> tends to the total volume of the particles contained in the crystallizer:
-$<span class="math notranslate nohighlight">\(
-V_T=6{\alpha}n_0(G\tau)^3
-\)</span><span class="math notranslate nohighlight">\((eq16)
-where \)</span>\alpha$ is the volumetric shape factor of the particles.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_0=\int_0^{\infty}L^0ndL=N_L\)</span> represents the number of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(N_L\)</span> tends to the total number of particles in the crystallizer:</p></li>
 </ul>
-<p>It should be noted that the total volume of the particles allows to compute the total mass of particles in the system:
-$<span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight" id="equation-eq13">
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq13" title="Permalink to this equation">¶</a></span>\[
+N_T=n_0G\tau
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_1=\int_0^{\infty}L^1ndL=\mathcal{L}\)</span> represents the total length of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> tends to the total length of particles in the crystallizer:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq14">
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq14" title="Permalink to this equation">¶</a></span>\[
+\mathcal{L}_T=n_0(G\tau)^2
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_2=\int_0^{\infty}L^2ndL\propto{A}\)</span> is proportional to the total area of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(A\)</span> tends to the total area of the particles contained in the crystallizer:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq15">
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq15" title="Permalink to this equation">¶</a></span>\[
+A_T=2{\beta}n_0(G\tau)^3
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the surface shape factor of the particles.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_3=\int_0^{\infty}L^2ndL\propto{V}\)</span> is proportional to the total volume of particles with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(V\)</span> tends to the total volume of the particles contained in the crystallizer:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq16">
+<span class="eqno">(120)<a class="headerlink" href="#equation-eq16" title="Permalink to this equation">¶</a></span>\[
+V_T=6{\alpha}n_0(G\tau)^3
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the volumetric shape factor of the particles.</p>
+<p>It should be noted that the total volume of the particles allows to compute the total mass of particles in the system:</p>
+<div class="math notranslate nohighlight" id="equation-eq17">
+<span class="eqno">(121)<a class="headerlink" href="#equation-eq17" title="Permalink to this equation">¶</a></span>\[
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
-\)</span><span class="math notranslate nohighlight">\((eq17)
-where \)</span>\rho_c$ is the density of the crystalline phase.</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_c\)</span> is the density of the crystalline phase.</p>
 <p>This expression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
 </div>
 <div class="section" id="adimensional-mass-distribution-and-dominant-crystal-size">
@@ -514,16 +525,17 @@ where \)</span>\rho_c$ is the density of the crystalline phase.</p>
 <p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
 <p>The cumulative mass distribution can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq18">
-<span class="eqno">(117)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
-M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)\]</div>
+<span class="eqno">(122)<a class="headerlink" href="#equation-eq18" title="Permalink to this equation">¶</a></span>\[
+M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
+\]</div>
 <p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(x)\)</span>with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq19">
-<span class="eqno">(118)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(123)<a class="headerlink" href="#equation-eq19" title="Permalink to this equation">¶</a></span>\[
 m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
 \]</div>
 <p>The mass-based population density m(x) has a maximum for <span class="math notranslate nohighlight">\(x=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
 <div class="math notranslate nohighlight" id="equation-eq20">
-<span class="eqno">(119)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(124)<a class="headerlink" href="#equation-eq20" title="Permalink to this equation">¶</a></span>\[
 L_D=3G\tau
 \]</div>
 <div class="cell docutils container">
