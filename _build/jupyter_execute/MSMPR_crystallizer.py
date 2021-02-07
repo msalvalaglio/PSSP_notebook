@@ -184,13 +184,13 @@ $$
 N_T=n_0G\tau
 $$(eq13)
 
-- $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $\mathcal{L}$ tends to the total length of particles in the crystallizer: 
+- $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $\mathcal{L}$ tends to the total length of particles in the crystallizer: 
 
 $$
 \mathcal{L}_T=n_0(G\tau)^2
 $$(eq14) 
 
-- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $A$ tends to the total area of the particles contained in the crystallizer: 
+- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $A$ tends to the total area of the particles contained in the crystallizer: 
 
 $$
 A_T=2{\beta}n_0(G\tau)^3
@@ -198,7 +198,7 @@ $$(eq15)
 
 where $\beta$ is the surface shape factor of the particles. 
 
-- $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $V$ tends to the total volume of the particles contained in the crystallizer: 
+- $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles contained in the crystallizer: 
 
 $$
 V_T=6{\alpha}n_0(G\tau)^3
