@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2. Pervaporation &#8212; PSSP Virtual Notebook</title>
+    <title>Week 5 - Exercise &#8212; PSSP Virtual Notebook</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. The Osmotic Pressure" href="Osmosis.html" />
-    <link rel="prev" title="1. Material Balances in a Gas Permeation Unit" href="Gas_permeation.html" />
+    <link rel="prev" title="Week 3 - Exercise" href="Exercise_W3_2021.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -101,8 +100,8 @@
    1. Material Balances in a Gas Permeation Unit
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pervaporation.html">
    2. Pervaporation
   </a>
  </li>
@@ -156,8 +155,8 @@
    Week 3 - Exercise
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W5_2021.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Week 5 - Exercise
   </a>
  </li>
@@ -201,7 +200,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Pervaporation.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Exercise_W5_2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -221,10 +220,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FPervaporation.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FExercise_W5_2021.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Pervaporation.ipynb"><button
+        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Exercise_W5_2021.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -244,7 +243,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Pervaporation.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Exercise_W5_2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -267,19 +266,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vapour-liquid-equilibrium-in-a-pervaporation-unit">
-   2.1 Vapour-Liquid Equilibrium in a Pervaporation unit
+  <a class="reference internal nav-link" href="#problem-statement">
+   Problem Statement
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vapour-liquid-equilibrium-conditions">
-   2.2 Vapour-Liquid Equilibrium conditions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flux-equation-in-a-pervaporation-unit">
-   2.3 Flux Equation in a pervaporation Unit
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine">
+     Determine:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -292,76 +288,24 @@
         
               <div>
                 
-  <div class="section" id="pervaporation">
-<h1>2. Pervaporation<a class="headerlink" href="#pervaporation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="vapour-liquid-equilibrium-in-a-pervaporation-unit">
-<h2>2.1 Vapour-Liquid Equilibrium in a Pervaporation unit<a class="headerlink" href="#vapour-liquid-equilibrium-in-a-pervaporation-unit" title="Permalink to this headline">¶</a></h2>
-<p>In pervaporation processes the feed/retentate is liquid, while the permeate is in the vapour phase.
-In this process, evaporation and permeation of different chemical through a semipermeable membrane take place simultaneously.</p>
-<p>In order to tame the complexity of the processes taking place in this unit, a typical modelling assumption is that Vapour liquid equilibrioum is established on the feed retentate side and permeation through the membrane takes place in the vapour phase.</p>
-<p>Hence, pervaporation can be treated as a gas permeation problem by introducing a <em>virtual vapour phase</em> in equilibrium with the liquid on the retentate side of the membrane.</p>
-<p>The driving force for a specie <span class="math notranslate nohighlight">\(i\)</span> can thus be written as the difference in the partial pressure for component <span class="math notranslate nohighlight">\(i\)</span> in this virtual vapour phase, and in the real vapour phase on the permeate side.</p>
+  <div class="section" id="week-5-exercise">
+<h1>Week 5 - Exercise<a class="headerlink" href="#week-5-exercise" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
+<p>A protein mixture has been separated through an ion-exchange chromatography process. The residence time of the column in non-adsorbing conditons is <span class="math notranslate nohighlight">\(t_0=1\)</span> min.
+The chromatogram resulting from the separation is reported in the following:</p>
+<img src="./chromatogram.png" alt="Drawing" style="width: 600px;">
+<div class="section" id="determine">
+<h3>Determine:<a class="headerlink" href="#determine" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How many components in the mixture can you identify from the chromatogram?</p></li>
+<li><p>What is the selectivity of this column for each couple of components?</p></li>
+<li><p>Assuming a linear adsorption isotherm holds in all cases, what conclusions can you draw about adsorption thermodynamics of each component in the column?</p></li>
+<li><p>What is the number of theoretical plates associated to the elution of each component you have identified? If the coulmn is 10 cm long, what is the height equivalent of a theoretical plate for each component of the mixture?</p></li>
+<li><p>Compute the resolution relative to each couple of components in the chromatogram. Does it depend only on the adsorption thermodynamics?</p></li>
+<li><p>Comment on the separation performances of the column. Does it allow for a sharp resolution of all components?</p></li>
+</ul>
 </div>
-<div class="section" id="vapour-liquid-equilibrium-conditions">
-<h2>2.2 Vapour-Liquid Equilibrium conditions<a class="headerlink" href="#vapour-liquid-equilibrium-conditions" title="Permalink to this headline">¶</a></h2>
-<p>To express the partial pressure of component <span class="math notranslate nohighlight">\(i\)</span> in a vapour phase in equilibrium with the liquid on the retentate side we shall begin by expressing the fundamental condition that has to be fulfilled by all species at thermodynamic equilibrium:</p>
-<div class="math notranslate nohighlight" id="equation-eq-fund">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-fund" title="Permalink to this equation">¶</a></span>\[
-\mu_i^L(T,P,\vec{x})=\mu_i^V(T,P,\vec{y})
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mu_i^L(T,P,\vec{x})\)</span> and <span class="math notranslate nohighlight">\(\mu_i^V(T,P,\vec{y})\)</span> are the chemical potentials for specie <span class="math notranslate nohighlight">\(i\)</span> in the liquid and vapour phase, respectively.</p>
-<p>For mixtures of ideal gases the chemical potential is conveniently expressed in differential form as a function of the partial pressure of component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(p_i\)</span> as <span class="math notranslate nohighlight">\(d\mu_i=RTd\ln{p_i}\)</span>.<br />
-In analogy with this expression in the case of real gases fugacity <span class="math notranslate nohighlight">\(f_i\)</span> is introduced, leading to the differential expression <span class="math notranslate nohighlight">\(d\mu_i=RTd\ln{f_i}\)</span>.
-Integrating this expression between the phases in equilibrium yields:</p>
-<div class="math notranslate nohighlight">
-\[
-\int_{L,T,P,\vec{x}}^{V,T,P,\vec{y}}d\mu_i=\int_{L,T,P,\vec{x}}^{V,T,P,\vec{y}}RTd\ln{f_i}
-\]</div>
-<div class="math notranslate nohighlight" id="equation-eq-chempot">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-chempot" title="Permalink to this equation">¶</a></span>\[
-\mu_i^V(T,P,\vec{y})-\mu_i^L(T,P,\vec{x})=RT\ln\frac{f_i^V(T,P,\vec{y}}{f_i^L(T,P,\vec{x})}
-\]</div>
-<p>Hence, the equilibrium condition expressed by Eq. <a class="reference internal" href="#equation-eq-fund">(9)</a> can be conveniently stated as:</p>
-<div class="math notranslate nohighlight" id="equation-eq-equi">
-<span class="eqno">(11)<a class="headerlink" href="#equation-eq-equi" title="Permalink to this equation">¶</a></span>\[
-f_i^V(T,P,\vec{y})=f_i^L(T,P,\vec{x})
-\]</div>
-<p>The left-hand term can be written as:</p>
-<div class="math notranslate nohighlight" id="equation-eq-vapour">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eq-vapour" title="Permalink to this equation">¶</a></span>\[
-f_i^V(T,P,\vec{y})=\phi(T,P,\vec{y})Py_i
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi(T,P,\vec{y})\)</span> is the fugacity coefficient, <span class="math notranslate nohighlight">\(P\)</span> the pressure and <span class="math notranslate nohighlight">\(y_i\)</span> the molar fraction in the vapour phase.</p>
-<p>The right hand side term can instead be written as:</p>
-<div class="math notranslate nohighlight" id="equation-eq-liquid">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-liquid" title="Permalink to this equation">¶</a></span>\[
-f_i^L(T,P,\vec{x})=\gamma_i(T,P,\vec{x})x_i\phi(T,P^o(T))P^o(T)e^{\frac{v_i(P-P^o(T))}{RT}}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(i\)</span> in the liquid phase, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient for component i in the liquid mixture, <span class="math notranslate nohighlight">\(P^o(T)\)</span> is the equilibrium vapour pressure of the pure component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\phi(T,P^o(T))\)</span> is the fugacity coefficient for the pure component <span class="math notranslate nohighlight">\(i\)</span> at <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P^o(T)\)</span>, and the term <span class="math notranslate nohighlight">\(e^{\frac{v_i(P-P^o(T))}{RT}}\)</span> is the Poynting correction. For a discussion on the origin of the Poynting correction please refer to the notes on osmosis.</p>
-<p>Introducing Eq.<a class="reference internal" href="#equation-eq-vapour">(12)</a> and Eq. <a class="reference internal" href="#equation-eq-liquid">(13)</a> in Eq.<a class="reference internal" href="#equation-eq-equi">(11)</a>, while considering negligible the Poynting correction, and ideal gas approximation applicable yields:</p>
-<div class="math notranslate nohighlight" id="equation-eq-final">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq-final" title="Permalink to this equation">¶</a></span>\[
-Py_i=\gamma_i(T,P,\vec{x})P^o(T)x_i
-\]</div>
-<p>It should be noted that introducing the further hypothesis of ideal liquid mixture yields the Raoult law:</p>
-<div class="math notranslate nohighlight" id="equation-eq-raoult">
-<span class="eqno">(15)<a class="headerlink" href="#equation-eq-raoult" title="Permalink to this equation">¶</a></span>\[
-Py_i=P^o(T)x_i
-\]</div>
-</div>
-<div class="section" id="flux-equation-in-a-pervaporation-unit">
-<h2>2.3 Flux Equation in a pervaporation Unit<a class="headerlink" href="#flux-equation-in-a-pervaporation-unit" title="Permalink to this headline">¶</a></h2>
-<p>Considering now a binary mixture of components <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, the flux equation for species <span class="math notranslate nohighlight">\(i\)</span> in a pervaporation unit is:</p>
-<div class="math notranslate nohighlight" id="equation-eq-flux">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq-flux" title="Permalink to this equation">¶</a></span>\[
-J_i=\frac{P_i}{l}\left(\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)-p_py^p_i\right)
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(P_i\)</span> is the permeability of species <span class="math notranslate nohighlight">\(i\)</span> through the membrane, <span class="math notranslate nohighlight">\(l\)</span> the thickness of the membrane, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)\)</span> is the partial pressure in the virtual vapour phase in equilibrium with the liquid on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> the pressure on the permeate side, and <span class="math notranslate nohighlight">\(y^p_i\)</span> the molar fraction of component <span class="math notranslate nohighlight">\(i\)</span> in the real vapour phase on the permeate side.</p>
-<p>The flux equation of component <span class="math notranslate nohighlight">\(j\)</span> can be expressed as a function of the molar fractions of component <span class="math notranslate nohighlight">\(i\)</span> taking advantage of the stoichiometric constraints <span class="math notranslate nohighlight">\(\sum_{i=1}^{N}x^r_i=1\)</span>, <span class="math notranslate nohighlight">\(\sum_{i=1}^{N}y^p_i=1\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-eq-flux2">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq-flux2" title="Permalink to this equation">¶</a></span>\[
-J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right)
-\]</div>
 </div>
 </div>
 
@@ -393,8 +337,7 @@ J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Gas_permeation.html" title="previous page">1. Material Balances in a Gas Permeation Unit</a>
-    <a class='right-next' id="next-link" href="Osmosis.html" title="next page">3. The Osmotic Pressure</a>
+    <a class='left-prev' id="prev-link" href="Exercise_W3_2021.html" title="previous page">Week 3 - Exercise</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

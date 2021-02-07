@@ -156,6 +156,11 @@
    Week 3 - Exercise
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W5_2021.html">
+   Week 5 - Exercise
+  </a>
+ </li>
 </ul>
 
 </nav> <!-- To handle the deprecated key -->
@@ -319,7 +324,7 @@ F_{in}z=F_py+(F_{in}-F_p)x
 z=\frac{F_p}{F_{in}}y+(1-\frac{F_p}{F_{in}})x
 \]</div>
 <p>the quantity <span class="math notranslate nohighlight">\(\frac{F_p}{F_{in}}\)</span> is commonly defined as cut and indicated as <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<p>Solving Eq.<a class="reference internal" href="#equation-eq1">(1)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
+<p>Solving Eq.<a class="reference internal" href="Solubility.html#equation-eq1">(93)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq-operating">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-operating" title="Permalink to this equation">¶</a></span>\[
 y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
@@ -370,7 +375,7 @@ y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
 F_py=J\rho_AA_M
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="#equation-eq2">(3)</a> becomes:</p>
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="Solubility.html#equation-eq2">(94)</a> becomes:</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
 <span class="eqno">(4)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
@@ -381,23 +386,23 @@ F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
 <span class="eqno">(5)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
-<p>Both Eq. <a class="reference internal" href="#equation-eq3">(4)</a> and <a class="reference internal" href="#equation-eq4">(5)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
+<p>Both Eq. <a class="reference internal" href="Solubility.html#equation-eq3">(95)</a> and <a class="reference internal" href="Solubility.html#equation-eq4">(96)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
 <span class="eqno">(6)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
-<p>Eq. <a class="reference internal" href="#equation-eq5">(6)</a> can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
+<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq5">(97)</a> can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
 <span class="eqno">(7)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha_{A,B}=\frac{P_A}{P_B}\)</span> is the ideal separation factor.</p>
-<p>Eq. <a class="reference internal" href="#equation-eq6">(7)</a> can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
+<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq6">(98)</a> can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
 <span class="eqno">(8)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
 \]</div>
-<p>Eq. <a class="reference internal" href="#equation-eq7">(8)</a> is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
+<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq7">(99)</a> is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
 <div class="section" id="id1">
 <h3>Graphical Representation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
