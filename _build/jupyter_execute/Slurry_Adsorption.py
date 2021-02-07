@@ -62,9 +62,9 @@ $$
 \frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
 $$(eq6)
 
-which is a first order, non homogeneous ODE in the form $y^\prime+C_1y=C_2$ with constant a and b coefficients. 
+which is a first order, non homogeneous ODE in the form $y^\prime+C_1y=C_2$ with constant $C_1$ and $C_2$ coefficients. 
 
-To solve our problem Eq. \ref{eq:ODE} can be solved either numerically or analytically. 
+To solve our problem Eq. {eq}`eq6` can be solved either numerically or analytically. 
 In this case the analytical solution can be obtained from the general solution for ODEs of this type: 
 
 $$
