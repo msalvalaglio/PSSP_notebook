@@ -5,7 +5,6 @@ Equilibrium conditions is stated by the equality of chemical potentials:
 
 $$
 \mu_i^s(T,P)=\mu_i^\ell(T,P,\vec{x})
-{\tag{1}}
 $$(eq1)
 
 which is equivalent to the equality of the fugacity in the two phases: 
