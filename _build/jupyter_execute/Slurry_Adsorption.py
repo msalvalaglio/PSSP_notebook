@@ -18,7 +18,7 @@ Since we have a batch system, no inlet or outlet streams are present and we can 
 
 $$
 V_\ell{c_0}=V_\ell{c}+S_pq
-$$(eq1)
+$$(slurryeq1)
 
 Where $V_{\ell}$ is the volume of the liquid phase (it can be considered constant), $c_0$ is the initial concentration of coloring agent in solution, $c$ is the instantaneous concentration of coloring agent in solution,  $q$ the instantaneous concentration of coloring agent adsorbed on the stationary phase and $S_p$ the mass of the adsorbent particles.
 
@@ -26,7 +26,7 @@ Mass transfer in these cases is dominated by bulk transport on the liquid side, 
 
 $$
 J=-k_\ell(c-c^*)
-$$(eq2)
+$$(slurryeq2)
 
 where $k_\ell$ is the mass transfer coefficient on the liquid side, and $c^*$ is the equilibrium concentration, reached at the solid/liquid interface. $J$ has the units of number of moles per unit time per unit surface. 
 
@@ -34,7 +34,7 @@ The differential material balance on the solute concentration can thus be writte
 
 $$
 \frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
-$$(eq3)
+$$(slurryeq3)
 
 Where $a$ represents the particles mass per unit of fluid volume. 
 
@@ -44,7 +44,7 @@ The equilibrium of the adsorption process is well captured by a linear isotherm:
 $$
 c^*=\frac{q}{H}
 \label{eq:equilibrium}
-$$(eq4)
+$$(slurryeq4)
 
 Using Eq. {eq}`eq1` and {eq}`eq4`, Eq. {eq}`eq2` can be rewritten as:
 
@@ -54,13 +54,13 @@ $$
 
 $$
 =-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}
-$$(eq5)
+$$(slurryeq5)
 
 Defining: $\beta=\left(1+\frac{V_\ell}{HS_p}\right)$, and $\alpha=\frac{V_\ell}{HS_p}$, one gets: 
 
 $$
 \frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
-$$(eq6)
+$$(slurryeq6)
 
 which is a first order, non homogeneous ODE in the form $y^\prime+C_1y=C_2$ with constant $C_1$ and $C_2$ coefficients. 
 
@@ -69,7 +69,7 @@ In this case the analytical solution can be obtained from the general solution f
 
 $$
 y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
-$$(eq7)
+$$(slurryeq7)
 
 where $A(t)=\int{C_1dt}$
 
@@ -81,25 +81,25 @@ thus:
 
 $$
 \int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta}\,t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta}\,t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta}\,t}
-$$(eq8)
+$$(slurryeq8)
 
 putting everything together: 
 
 $$
 c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
-$$(eq9)
+$$(slurryeq9)
 
 The constant $C_1$ can be computed from the initial conditions: at $t=0$ $c(t)=c_0$, therefore: 
 
 $$
 k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
-$$(eq10)
+$$(slurryeq10)
 
 The final solution for the time-dependent concentration profile $c(t)$ is: 
 
 $$
 c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
-$$(eq11)
+$$(slurryeq11)
 
 The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time $\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}$.
 
@@ -148,7 +148,7 @@ In this context the  differential material balance on the solute concentration u
 
 $$
 \frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
-$$(eq12)
+$$(slurryeq12)
 
 where $\tau$ is the residence time, $c_{out}$ the concentration in the liquid phase in the unit, $c_{in}$ the concentration in the feed, and $a$ the amount of surface of the stationary phase particles per unit volume of the liquid phase. 
 
@@ -156,7 +156,7 @@ Note that in a continuous process it is convenient to define $a$ as follows:
 
 $$
 a={S}/Q
-$$(eq13)
+$$(slurryeq13)
 
 where $Q$ is the volumetric flowrate of the liquid phase, ans $S$ is the mass flowrate of the solid phase. 
 
@@ -164,4 +164,4 @@ This expression needs to be solved together with the adsorption isotherm $q=kc^*
 
 $$
 c_{in}Q=qS+c_{out}Q
-$$(eq14)
+$$(slurryeq14)
