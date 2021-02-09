@@ -1,15 +1,15 @@
 # - file: README
 - file: index
-- file: Gas_permeation.ipynb 
-- file: Pervaporation.ipynb
-- file: Osmosis.ipynb
-- file: Process_layouts.ipynb
-- file: Langmuir_isotherm.ipynb
-- file: BET_isotherm.ipynb
-- file: Ion_Exchange.ipynb
-- file: Slurry_Adsorption.ipynb
-- file: Solubility.ipynb
-- file: MSMPR_crystallizer.ipynb
-- file: Exercise_W2_2021.ipynb
-- file: Exercise_W3_2021.ipynb
-- file: Exercise_W5_2021.ipynb
+  - file: Gas_permeation.ipynb 
+  - file: Pervaporation.ipynb
+  - file: Osmosis.ipynb
+  - file: Process_layouts.ipynb
+  - file: Langmuir_isotherm.ipynb
+  - file: BET_isotherm.ipynb
+  - file: Ion_Exchange.ipynb
+  - file: Slurry_Adsorption.ipynb
+  - file: Solubility.ipynb
+  - file: MSMPR_crystallizer.ipynb
+  - file: Exercise_W2_2021.ipynb
+  - file: Exercise_W3_2021.ipynb
+  - file: Exercise_W5_2021.ipynb
