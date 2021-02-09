@@ -17,18 +17,18 @@ F_{in}z=F_py+(F_{in}-F_p)x
 $$
 $$
 z=\frac{F_p}{F_{in}}y+(1-\frac{F_p}{F_{in}})x
-$$(eq1)
+$$(GPeq1)
 
 the quantity $\frac{F_p}{F_{in}}$ is commonly defined as cut and indicated as $\theta$. 
 
-Solving Eq.{eq}`eq1` for $y$ leads to the expression: 
+Solving Eq.{eq}`GPeq1` for $y$ leads to the expression: 
 
 $$
 y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
-$$(eq:Operating)
+$$(GPeq:Operating)
 
 
-Eq. {eq}`eq:Operating` is typically referred to as the Operating Equation of a perfectly mixed gas phase membrane module. 
+Eq. {eq}`GPeq:Operating` is typically referred to as the Operating Equation of a perfectly mixed gas phase membrane module. 
 
 #### Graphical Representation
 
@@ -66,13 +66,13 @@ Let us begin by considering that the permeate flow rate of component A is given 
 
 $$
 F_py=J\rho_AA_M
-$$(eq2)
+$$(GPeq2)
 
-where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. {eq}`eq2` becomes:
+where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. {eq}`GPeq2` becomes:
 
 $$
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
-$$(eq3)
+$$(GPeq3)
 
 where $P_A$ is the permeability of the membrane to component $A$, $l$ is the thickness of the membrane, $p_r$ is the pressure on the retentate side, $p_p$ is the pressure on the permeate side. 
 
@@ -80,29 +80,29 @@ The same expression can be written for component $B$:
 
 $$
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
-$$(eq4)
+$$(GPeq4)
 
-Both Eq. {eq}`eq3` and {eq}`eq4` can be solved for $F_p$ and equated, leading to: 
+Both Eq. {eq}`GPeq3` and {eq}`GPeq4` can be solved for $F_p$ and equated, leading to: 
 
 $$
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
-$$(eq5) 
+$$(GPeq5) 
 
-Eq. {eq}`eq5` can be solved either for $y$ or for $x$, the latter being simpler. After some algebraic manipulation the solution for $x$ is: 
+Eq. {eq}`GPeq5` can be solved either for $y$ or for $x$, the latter being simpler. After some algebraic manipulation the solution for $x$ is: 
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
-$$(eq6) 
+$$(GPeq6) 
 
 where $\alpha_{A,B}=\frac{P_A}{P_B}$ is the ideal separation factor.
 
-Eq. {eq}`eq6` can be simplified when the gas phase can be considered ideal. In such case $\rho_A=\rho_B=P/RT$, yielding: 
+Eq. {eq}`GPeq6` can be simplified when the gas phase can be considered ideal. In such case $\rho_A=\rho_B=P/RT$, yielding: 
 
 $$
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
-$$(eq7)
+$$(GPeq7)
 
-Eq. {eq}`eq7` is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 
+Eq. {eq}`GPeq7` is called _rate transfer equation_ and together with th operating equation identify the membrane operating conditions in composition space. 
 
 #### Graphical Representation
 

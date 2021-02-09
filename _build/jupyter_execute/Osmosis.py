@@ -26,7 +26,7 @@ Equilibrium is defined when $A$ has the same chemical potential in both compartm
 
 $$
 \mu_{A,1}=\mu_{A,2}
-$$(eq0)
+$$(OSMeq0)
 
 The equilibrium condition is conveniently written introducing fugacity. 
 Fugacity and chemical potential are related by the expression $\mu_i=\mu_0+RT\ln{f_i}$, where $\mu_0$ is the chemical potential of an arbitrary reference state. 
@@ -35,12 +35,12 @@ Equilibrium can conditions are thus equivalently formulated as:
 
 $$
 f_{A,1}=f_{A,2}
-$$(eq:Equilibrium)
+$$(OSMeq:Equilibrium)
 
 _In compartment 1_ we have a _non-ideal_ mixture of two components. The fugacity of component A in compartment 1 is thus written as: 
 $$
 f_{A,1}=f_A(T,P_1,x_A)=\gamma_A(T,P_1,x_A)x_A f_A(T,P_1)
-$$(eq:leftside)
+$$(OSMeq:leftside)
 
 where: 
 - $\gamma_A(T,P_1,x_A)$ is the activity coefficient of specie A in the mixture
@@ -50,7 +50,7 @@ where:
 _In compartment 2_ we have instewad a pure component A liquid, at temperature $T$ and pressure $P_2$. The fugacity of component A in compartment 2 thus simply corresponds to the fugacity of the pure component A at $T$, $P_2$: 
 $$
 f_{A,2}=f_A(T,P_2)
-$$(eq:rightside)
+$$(OSMeq:rightside)
 
 __The Poynting correction__ In order to define a common reference state between the two compartments we rewrite fugacity of the pure component A at pressure $P_2$ ($f_A(T,P_2)$) as a function of the fugacity of the pure component A at pressure $P_1$ and of the pressure difference $(P_2-P_1)$.
 
@@ -58,7 +58,7 @@ To do that we express the difference in chemical potential $\Delta\mu_{P_1\right
 
 $$
 \Delta\mu_{P_1\rightarrow{P_2}}=\int_{T,P_1}^{T,P_2}d\mu=\int_{T,P_1}^{T,P_2}vdP=v(P_2-P_1)
-$$(eq1)
+$$(OSMeq1)
 
 where: 
 
@@ -68,13 +68,13 @@ where:
 Using the definition of fugacity introduced earlier one can thus write: 
 $$
 \Delta\mu_{P_1\rightarrow{P_2}}=RT\ln\frac{f_A(T,P_2)}{f_A(T,P_1)}=v(P_2-P_1)
-$$(eq2)
+$$(OSMeq2)
 
 The fugacity of a pure A liquid at pressure $P_2$ can thus be written as: 
 $$
 f_A(T,P_2)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \label{eq:Poynting}
-$$(eq3)
+$$(OSMeq3)
 
 where the term $\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]$ is the Poynting correction.
 
@@ -84,7 +84,7 @@ Given the definition of equilibrium conditions, the expressions of the fugacity 
 
 $$
 \gamma_A(T,P_1,x_A)x_A f_A(T,P_1)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
-$$(eq)
+$$(OSMeq)
 
 where $f_A(T,P_1)$ is the fugacity of the pure component A at pressure $P_1$, now appearing on both sides of the equation. 
 
@@ -92,19 +92,19 @@ We can thus divide both sides by $f_A(T,P_1)$ to obtain the expression:
 
 $$
 \gamma_A(T,P_1,x_A)x_A =\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
-$$(eq4)
+$$(OSMeq4)
 
 Rearranging this expression one obtains: 
 
 $$
 P_2-P_1=\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
-$$(eq5)
+$$(OSMeq5)
  
  Recalling that the Osmotic pressure $\pi=P_1-P_2$ we get: 
  
 $$
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
-$$(eq6)
+$$(OSMeq6)
 
 This expression \textbf{relates the composition of compartment 1}, containing a mixture of components A and B (e.g NaCl in water),  \textbf{to the osmotic pressure} generated at equilibrium conditions when such compartment is in contact with a \textbf{semipermeable} membrane that has on the opposite side a compartment filled by pure component A liquid. 
 
@@ -112,13 +112,13 @@ Please note that in this expression $x_A$ is the molar fraction of the solvent (
   
 $$
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)(1-x_B)}\right)
-$$(eq7)
+$$(OSMeq7)
 
 Where now $x_B$ is the molar fraction of component $B$ (e.g. NaCl).
 When the solution in compartment 1 is diluted ($x_B$ small), $\gamma_A(T,P_1,x_A)\rightarrow{1}$,  $\ln{\left({(1-x_B)}\right)}\rightarrow{-x_B}$thus: 
 $$
 \pi=-\frac{RT}{v}\ln\left({(1-x_B)}\right)={RT\frac{x_B}{v}}\simeq{RTc_B}
-$$(eq8)
+$$(OSMeq8)
 
 Where $c_B\simeq{x_B}v^{-1}$ is the molar concentration of component B, the solute.
 
@@ -159,7 +159,7 @@ In osmosis the flux of the solvent (component A) through a membrane is driven by
 
 $$
 J_A=p_A\left( \Delta{P} - \pi \right)
-$$(eq9)
+$$(OSMeq9)
 
 where $p_A$ is the permeability of the membrane with respect to component A. 
 

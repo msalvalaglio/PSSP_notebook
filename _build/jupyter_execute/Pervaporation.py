@@ -17,7 +17,7 @@ To express the partial pressure of component $i$ in a vapour phase in equilibriu
 
 $$
 \mu_i^L(T,P,\vec{x})=\mu_i^V(T,P,\vec{y})
-$$(eq:fund)
+$$(PVAPeq:fund)
 
 where $\mu_i^L(T,P,\vec{x})$ and $\mu_i^V(T,P,\vec{y})$ are the chemical potentials for specie $i$ in the liquid and vapour phase, respectively. 
 
@@ -30,20 +30,20 @@ $$
 $$
 $$
 \mu_i^V(T,P,\vec{y})-\mu_i^L(T,P,\vec{x})=RT\ln\frac{f_i^V(T,P,\vec{y}}{f_i^L(T,P,\vec{x})}
-$$(eq:chempot)
+$$(PVAPeq:chempot)
 
 
 Hence, the equilibrium condition expressed by Eq. {eq}`eq:fund` can be conveniently stated as: 
 
 $$
 f_i^V(T,P,\vec{y})=f_i^L(T,P,\vec{x})
-$$(eq:EQUI)
+$$(PVAPeq:EQUI)
 
 The left-hand term can be written as: 
 
 $$
 f_i^V(T,P,\vec{y})=\phi(T,P,\vec{y})Py_i
-$$(eq:vapour)
+$$(PVAPeq:vapour)
 
 where $\phi(T,P,\vec{y})$ is the fugacity coefficient, $P$ the pressure and $y_i$ the molar fraction in the vapour phase. 
 
@@ -51,7 +51,7 @@ The right hand side term can instead be written as:
 
 $$
 f_i^L(T,P,\vec{x})=\gamma_i(T,P,\vec{x})x_i\phi(T,P^o(T))P^o(T)e^{\frac{v_i(P-P^o(T))}{RT}}
-$$(eq:liquid)
+$$(PVAPeq:liquid)
 
 where $x_i$ is the molar fraction of component $i$ in the liquid phase, $\gamma_i(T,P,\vec{x})$ is the activity coefficient for component i in the liquid mixture, $P^o(T)$ is the equilibrium vapour pressure of the pure component $i$, $\phi(T,P^o(T))$ is the fugacity coefficient for the pure component $i$ at $T$ and $P^o(T)$, and the term $e^{\frac{v_i(P-P^o(T))}{RT}}$ is the Poynting correction. For a discussion on the origin of the Poynting correction please refer to the notes on osmosis. 
 
@@ -59,13 +59,13 @@ Introducing Eq.{eq}`eq:vapour` and Eq. {eq}`eq:liquid` in Eq.{eq}`eq:EQUI`, whil
 
 $$
 Py_i=\gamma_i(T,P,\vec{x})P^o(T)x_i
-$$(eq:final)
+$$(PVAPeq:final)
 
 It should be noted that introducing the further hypothesis of ideal liquid mixture yields the Raoult law: 
 
 $$
 Py_i=P^o(T)x_i
-$$(eq:Raoult)
+$$(PVAPeq:Raoult)
 
 
 ## 2.3 Flux Equation in a pervaporation Unit
@@ -74,7 +74,7 @@ Considering now a binary mixture of components $i$ and $j$, the flux equation fo
 
 $$
 J_i=\frac{P_i}{l}\left(\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)-p_py^p_i\right)
-$$(eq:flux)
+$$(PVAPeq:flux)
 
 where $P_i$ is the permeability of species $i$ through the membrane, $l$ the thickness of the membrane, $\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)$ is the partial pressure in the virtual vapour phase in equilibrium with the liquid on the retentate side, $p_p$ the pressure on the permeate side, and $y^p_i$ the molar fraction of component $i$ in the real vapour phase on the permeate side.
 
@@ -82,5 +82,5 @@ The flux equation of component $j$ can be expressed as a function of the molar f
 
 $$
 J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right)
-$$(eq:flux2)
+$$(PVAPeq:flux2)
 

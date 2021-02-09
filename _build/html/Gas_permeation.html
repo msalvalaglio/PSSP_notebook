@@ -319,17 +319,17 @@
 \[
 F_{in}z=F_py+(F_{in}-F_p)x
 \]</div>
-<div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<div class="math notranslate nohighlight" id="equation-gpeq1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-gpeq1" title="Permalink to this equation">¶</a></span>\[
 z=\frac{F_p}{F_{in}}y+(1-\frac{F_p}{F_{in}})x
 \]</div>
 <p>the quantity <span class="math notranslate nohighlight">\(\frac{F_p}{F_{in}}\)</span> is commonly defined as cut and indicated as <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<p>Solving Eq.<a class="reference internal" href="Solubility.html#equation-eq1">(93)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
-<div class="math notranslate nohighlight" id="equation-eq-operating">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-operating" title="Permalink to this equation">¶</a></span>\[
+<p>Solving Eq.<a class="reference internal" href="#equation-gpeq1">(1)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
+<div class="math notranslate nohighlight" id="equation-gpeq-operating">
+<span class="eqno">(2)<a class="headerlink" href="#equation-gpeq-operating" title="Permalink to this equation">¶</a></span>\[
 y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 \]</div>
-<p>Eq. <a class="reference internal" href="#equation-eq-operating">(2)</a> is typically referred to as the Operating Equation of a perfectly mixed gas phase membrane module.</p>
+<p>Eq. <a class="reference internal" href="#equation-gpeq-operating">(2)</a> is typically referred to as the Operating Equation of a perfectly mixed gas phase membrane module.</p>
 <div class="section" id="graphical-representation">
 <h3>Graphical Representation<a class="headerlink" href="#graphical-representation" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -371,38 +371,38 @@ y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 <div class="section" id="rate-transfer-equation">
 <h2>1.2 Rate Transfer Equation<a class="headerlink" href="#rate-transfer-equation" title="Permalink to this headline">¶</a></h2>
 <p>Let us begin by considering that the permeate flow rate of component A is given by its molar flux through the membrane multiplied by the membrane total area:</p>
-<div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">¶</a></span>\[
+<div class="math notranslate nohighlight" id="equation-gpeq2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-gpeq2" title="Permalink to this equation">¶</a></span>\[
 F_py=J\rho_AA_M
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="Solubility.html#equation-eq2">(94)</a> becomes:</p>
-<div class="math notranslate nohighlight" id="equation-eq3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">¶</a></span>\[
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="#equation-gpeq2">(3)</a> becomes:</p>
+<div class="math notranslate nohighlight" id="equation-gpeq3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-gpeq3" title="Permalink to this equation">¶</a></span>\[
 F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(P_A\)</span> is the permeability of the membrane to component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(l\)</span> is the thickness of the membrane, <span class="math notranslate nohighlight">\(p_r\)</span> is the pressure on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> is the pressure on the permeate side.</p>
 <p>The same expression can be written for component <span class="math notranslate nohighlight">\(B\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<div class="math notranslate nohighlight" id="equation-gpeq4">
+<span class="eqno">(5)<a class="headerlink" href="#equation-gpeq4" title="Permalink to this equation">¶</a></span>\[
 F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
-<p>Both Eq. <a class="reference internal" href="Solubility.html#equation-eq3">(95)</a> and <a class="reference internal" href="Solubility.html#equation-eq4">(96)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
-<div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<p>Both Eq. <a class="reference internal" href="#equation-gpeq3">(4)</a> and <a class="reference internal" href="#equation-gpeq4">(5)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
+<div class="math notranslate nohighlight" id="equation-gpeq5">
+<span class="eqno">(6)<a class="headerlink" href="#equation-gpeq5" title="Permalink to this equation">¶</a></span>\[
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
-<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq5">(97)</a> can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
-<div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<p>Eq. <a class="reference internal" href="#equation-gpeq5">(6)</a> can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-gpeq6">
+<span class="eqno">(7)<a class="headerlink" href="#equation-gpeq6" title="Permalink to this equation">¶</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha_{A,B}=\frac{P_A}{P_B}\)</span> is the ideal separation factor.</p>
-<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq6">(98)</a> can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
-<div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<p>Eq. <a class="reference internal" href="#equation-gpeq6">(7)</a> can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
+<div class="math notranslate nohighlight" id="equation-gpeq7">
+<span class="eqno">(8)<a class="headerlink" href="#equation-gpeq7" title="Permalink to this equation">¶</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
 \]</div>
-<p>Eq. <a class="reference internal" href="Solubility.html#equation-eq7">(99)</a> is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
+<p>Eq. <a class="reference internal" href="#equation-gpeq7">(8)</a> is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
 <div class="section" id="id1">
 <h3>Graphical Representation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">

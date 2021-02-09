@@ -16,14 +16,14 @@ The global differential material balance (volume basis) reads:
 
 $$
 \frac{dV}{dt}=-J\,A
-$$(eq1)
+$$(PLYeq1)
 
 where $V$ is the volume in the concentrate loop, $J$ the permeate flux per unit area and $A$ the total membrane area. 
 The permeate flux is defined by the expression: 
 
 $$
 J=BC^{-1}
-$$(eq2)
+$$(PLYeq2)
 
 with $B=0.1$. 
 
@@ -31,39 +31,39 @@ Since the solid residue never leaves the retentate loop,  the differential mater
 
 $$
 \frac{dm}{dt}=0 
-$$(eq3)
+$$(PLYeq3)
 
 Which means that the total mass of solid residue is constant and equal to its initial mass:
 
 $$
 m=m_0=V_0C_0 
-$$(eq4)
+$$(PLYeq4)
 
 The global differential material balance can thus be rewritten as: 
 
 $$
 \frac{dV}{dt}=-J\,A=-\frac{B}{V_0C_0 }AV
-$$(eq5)
+$$(PLYeq5)
 
 In this simple case it can be integrated analytically to compute the volume as a function of time: 
 
 $$
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt
-$$(eq6)
+$$(PLYeq6)
 
 $$
 \int_{V_0}^{V^{\prime}}\frac{dV}{V}=\left[\ln{V}\right]^{V^{\prime}}_{V_0}=\ln\left(\frac{V^\prime}{V_0}\right)
-$$(eq7)
+$$(PLYeq7)
 
 $$
 \int_0^{t^{\prime}}-\frac{B}{V_0C_0 }Adt=-\frac{B}{V_0C_0 }At^\prime
-$$(eq8)
+$$(PLYeq8)
 
 Putting together both sides of the equation and substituting $V^\prime$ with $V$ for the sake of simplicity in the notation we get: 
 
 $$
 V(t)=V_0e^{-\frac{B}{V_0C_0 }At}
-$$(eq9)
+$$(PLYeq9)
 
 which describes the time dependence of the volume in the batch membrane separator. 
 
@@ -71,7 +71,7 @@ The concentration can thus be calculated as:
 
 $$
 C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V_0C_0 }At}
-$$(eq10)
+$$(PLYeq10)
 
 The process time necessary to obtain a solid residue concentration of 0.2 $[kg/l]$ is of 17.3 $[h]$
 
@@ -140,24 +140,24 @@ Also in this case the global differential material balance and the solid-residue
 
 $$
 \frac{dV}{dt}=Q_{IN}-J\,A-Q_{OUT}=0
-$$(eq11)
+$$(PLYeq11)
 
 $$
 \frac{dm}{dt}=Q_{IN}C_{IN}-Q_{OUT}C_{OUT}=0
-$$(eq12)
+$$(PLYeq12)
 
 At steady state ${dV}/{dt}=0$ as well as ${dm}/{dt}=0$. The two ODEs become then two algebraic equations that should be solved together to compute the steady state concentration. 
 From the global material balance we get: 
 
 $$
 Q_{OUT}=Q_{IN}-J\,A=Q_{IN}-\frac{B}{C_{OUT}}A
-$$(eq13)
+$$(PLYeq13)
 
 and then, with some manipulations: 
 
 $$
 C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
-$$(eq14)
+$$(PLYeq14)
 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -193,11 +193,11 @@ We can thus define:
 
 $$
 C_{OUT,i}=C_{IN,i+1}
-$$(eq15)
+$$(PLYeq15)
 
 $$
 Q_{OUT,i}=Q_{IN,i+1}
-$$(eq16)
+$$(PLYeq16)
 
 where the index $i$ identifies the stage. 
 
@@ -205,11 +205,11 @@ The material balances for each stage at steady state can thus be written as:
 
 $$
 \frac{dV}{dt}=Q_{IN,i}-n_iJ(C_{IN,i+1})\,A-Q_{IN,i+1}=0
-$$(eq17)
+$$(PLYeq17)
 
 $$
 \frac{dm}{dt}=Q_{IN,i}C_{IN}-Q_{IN,i+1}C_{IN,i+1}=0
-$$(eq18)
+$$(PLYeq18)
 
 where $n_i$ is the number of modules used in stage $i$.
 
@@ -217,11 +217,11 @@ For each stage we can thus compute the steady state concentration and concentrat
 
 $$
 C_{IN,i+1}=C_{IN,i}+n_i\frac{AB}{Q_{IN,i}}
-$$(eq19)
+$$(PLYeq19)
 
 $$
 Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
-$$(eq20)
+$$(PLYeq20)
 
 with $i=1...N$ with $N$ is the total number of stages. 
 

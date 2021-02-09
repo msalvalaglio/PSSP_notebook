@@ -21,37 +21,37 @@ The equilibrtium constant is written as:
 
 $$
 K_{AB}=\frac{n_AC_B}{n_BC_A}
-$$(eq1)
+$$(IEXeq1)
 
 The concentration of surface ligands is related to the concentration in the adsorbed phase of cations $A^+$ and $B^+$ by the following expression: 
 
 $$
 n_R=n_A+n_B
-$$(eq2)
+$$(IEXeq2)
 
 The total cationic concentration in the fluid phase $C_T$ is analogously defined as: 
 
 $$
 C_T=C_A+C_B
-$$(eq3)
+$$(IEXeq3)
 
 hence the equilibrium constant becomes: 
 
 $$
 K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
-$$(eq4)
+$$(IEXeq4)
 
 This expression can be manipulated to provide an explicit relation between the concetration in the adsorbed phase $n_A$, and the concentration in the fluid phase $C_A$, i.e. an isotherm for the ion exchange process:
 
 $$
 n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}
-$$(eq5)
+$$(IEXeq5)
 
 This expression can be further simplified by introducing the molar fractions in the adsorbed and fluid phases indicated with $y_A$ and $x_A$, respectively:
 
 $$
 y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}
-$$(eq6)
+$$(IEXeq6)
 
 import numpy as np
 import matplotlib.pyplot as plt 

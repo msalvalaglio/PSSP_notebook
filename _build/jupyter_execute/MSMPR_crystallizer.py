@@ -11,20 +11,20 @@ The __number population density__ $n$, or in short number density, is defined as
 
 $$
 \lim_{\Delta{L}\to{0}}\frac{\Delta{N(L)}}{\Delta{L}}=\frac{d{N(L)}}{d{L}}=n(L)
-$$(eq1)
+$$(MSMPReq1)
 
 and represents the number of crystals of length $L$ __per unit length__, per unit volume. 
 The number of crystals per unit volume with dimension comprised between $L_1$ and $L_2$ can thus be computed as a definite integral of the population density: 
 
 $$
 N_{1,2}=\int_{L_1}^{L_2}n(L)dL
-$$(eq2)
+$$(MSMPReq2)
 
 Similarly the total number of crystals is obtained as: 
 
 $$
 N_{T}=\int_{0}^{\infty}n(L)dL
-$$(eq3)
+$$(MSMPReq3)
 
 ## 10.2 Population Balance in an MSMPR crystallizer
 
@@ -32,7 +32,7 @@ Let us write a steady state population balance for particles with size comprised
 
 $$
 {\Delta{N}}V=n_1G_1V\Delta{t}-n_2G_2V\Delta{t}-Q\overline{n}\Delta{L}\Delta{t}
-$$(eq4)
+$$(MSMPReq4)
 
 where $\Delta{N}V$ is the change in the number of particles within the length interval $\Delta{L}=L_2-L_1$ per unit volume, accumulated in time $\Delta{t}$. 
 The term $n_1G_1V\Delta{t}$ captures the number of crystals that outgrow length $L_1$ in time $\Delta{t}$, where $G_1$ is the growth rate of particles of length $L_1$, $V$ is the total volume. 
@@ -43,24 +43,24 @@ Eq. \eqref{eq:4} can be rearranged to obtain on the left side a discrete accumul
 
 $$
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
-$$(eq5)
+$$(MSMPReq5)
 
-At steady state there is no accumulation and Eq. {eq}`eq5` can be rewritten as:
+At steady state there is no accumulation and Eq. {eq}`MSMPReq5` can be rewritten as:
 
 $$
 \frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
-$$(eq6)
+$$(MSMPReq6)
 
 Noting that the residence time $\tau=V/Q$, and taking the limit for $\Delta{L}\rightarrow{0}$ we get: 
 $$
 \frac{dn}{dL}=\frac{n}{G\tau}
-$$(eq7)
+$$(MSMPReq7)
 
 Whic can be solved analytically, yielding the steady state number population density n(L): 
 
 $$
 n(L)=n_0\exp\left(-\frac{L}{G\tau}\right)
-$$(eq8)
+$$(MSMPReq8)
 
 where $n_0$ is an integration constant, determined from the boundary conditions, that has the phisical meaning of population density of nuclei in the crystallizer at steady state. 
 
@@ -69,13 +69,13 @@ The nucleation rate $J$, i.e. the number of nuclei generated per unit time per u
 
 $$
 J={\frac{dN}{dt}}\vert_{L=0}
-$$(eq9)
+$$(MSMPReq9)
 
 by applying the chain rule we can rewrite the nucleation rate as: 
 
 $$
 J=\frac{dN}{dL}\vert_{L=0}\frac{dL}{dt}\vert_{L=0}=n_0G
-$$(eq10)
+$$(MSMPReq10)
 
 where, by definition $\frac{dN}{dL}\vert_{L=0}=n_0$, and $\frac{dL}{dt}=G$. We shall note that here we are considering the growth rate to be independent from the crystal size. 
 
@@ -83,7 +83,7 @@ This expression allows us to determine the integration constant $n_0$ based on c
 
 $$
 n_0=\frac{J}{G}
-$$(eq11)
+$$(MSMPReq11)
 
 ## 10.3 Particle size distribution and process parameters: $\tau$, $G$, $J$
 
@@ -174,7 +174,7 @@ The $i^{th}$ order moment of the number population density is defined as:
 
 $$
 m_i=\int_0^{\infty}L^indL
-$$(eq12)
+$$(MSMPReq12)
 
 Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning: 
 
@@ -182,19 +182,19 @@ Based on this definition we note that the moments from order 0 to 3 have a well 
 
 $$
 N_T=n_0G\tau
-$$(eq13)
+$$(MSMPReq13)
 
 - $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $\mathcal{L}$ tends to the total length of particles in the crystallizer: 
 
 $$
 \mathcal{L}_T=n_0(G\tau)^2
-$$(eq14) 
+$$(MSMPReq14) 
 
 - $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $A$ tends to the total area of the particles contained in the crystallizer: 
 
 $$
 A_T=2{\beta}n_0(G\tau)^3
-$$(eq15) 
+$$(MSMPReq15) 
 
 where $\beta$ is the surface shape factor of the particles. 
 
@@ -202,7 +202,7 @@ where $\beta$ is the surface shape factor of the particles.
 
 $$
 V_T=6{\alpha}n_0(G\tau)^3
-$$(eq16)
+$$(MSMPReq16)
 
 where $\alpha$ is the volumetric shape factor of the particles.
 
@@ -211,7 +211,7 @@ It should be noted that the total volume of the particles allows to compute the 
 
 $$
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
-$$(eq17)
+$$(MSMPReq17)
 
 where $\rho_c$ is the density of the crystalline phase. 
 
@@ -226,19 +226,19 @@ The cumulative mass distribution can thus be written as:
 
 $$
 M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
-$$(eq18)
+$$(MSMPReq18)
 
 The corresponding mass population density is computed differentiating $M(x)$with respect to $x$: 
 
 $$
 m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
-$$(eq19)
+$$(MSMPReq19)
 
 The mass-based population density m(x) has a maximum for $x=3$, hence the most probable - often referred to as the modal or dominant particle size can be computed as: 
 
 $$
 L_D=3G\tau
-$$(eq20)
+$$(MSMPReq20)
 
 import numpy as np
 import matplotlib.pyplot as plt 
