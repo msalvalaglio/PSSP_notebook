@@ -65,7 +65,7 @@ $$(slurryeq6)
 
 which is a first order, non homogeneous ODE in the form $y^\prime+C_1y=C_2$ with constant $C_1$ and $C_2$ coefficients. 
 
-In order to solve our problem Eq. {eq}`eq6` should either numerically or analytically. 
+In order to solve our problem Eq. {eq}`slurryeq6` should either numerically or analytically. 
 In this case the analytical solution can be obtained from the general solution for ODEs in the form: 
 
 $$
