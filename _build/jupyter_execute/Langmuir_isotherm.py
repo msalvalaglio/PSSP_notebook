@@ -136,7 +136,7 @@ axes.set_ylabel('$B_0$',fontsize=14);
 axes.set_zlabel('$q$',fontsize=14);
 figure.colorbar(surf, shrink=0.5, aspect=5);
 
-## 5.3 Langmuir isotherm in the gas phase, and in multicomponent systems. 
+## 5.3 Langmuir isotherm in the gas phase. 
 
 When describing the thermodynamics of adsorption from the gas phase it is convenient to introduce explicitly the pressure $P$ in the Langmuir isotherm. 
 In this case the expression of the monocomponent Langmuir isotherm becomes: 
@@ -147,7 +147,33 @@ $$(LANGeq8)
 
 where $B_1=B_0/RT$ and $P$ is pressure.
 
-In multicomponent systems, where more than one component is competing for the same adsorption sites, the Langmuir isotherm for component $i$ can be written as: 
+## 5.4 Multicomponent, competitive adsorption
+
+In multicomponent systems, in which $N$ components compete for the same adsorption sites we can define the adsorption equilibrium constant of component $i$ as: 
+
+$$
+B_{1,i}=\frac{\Gamma_i}{P_i\Gamma_0}
+$$(LANGeq9)
+
+In a multicomponent system, the single layer hypothesis bocomes: 
+
+$$
+\Gamma_0+sum_{i=1}^N{\Gamma_i}=1 
+$$(LANGeq10)
+
+Substituting in Eq. {eq}`LANGeq10` the definition of adsorption equilibrium constant given in Eq. {eq}`LANGeq9` we get: 
+
+$$
+\Gamma_0^{-1}=1+sum_{i=1}^N{B_{1,i}P_i
+$$(LANGeq11)
+
+finally, substituting again $\Gamma_0^ {-1}$ in Eq. {eq}`LANGeq9`, and rearranging we get an expression of the fraction of sites occupied by specie $i$ as a function of the partial pressure (concentration) of $i$ in the fluid phase. 
+
+$$
+\Gamma_i=\frac{{B_{1,i}P_i}{1+\sum_{i=1}^NB_{1,i}{P_i}}
+$$(LANGeq12)
+
+Finally, inserting the density of specie $i$ in the adsorbed phase we get: 
 
 $$
 q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
@@ -190,3 +216,4 @@ axes.plot(P,Gamma0, marker=' ' , c=c)
 axes.set_xlabel('P [bar]', fontsize=14);
 axes.set_ylabel('$\Gamma_0 / \Gamma_{1,i}$', fontsize=18);
 axes.legend(['$\Gamma_{1,1}$','$\Gamma_{1,2}$','$\Gamma_{0}$'], fontsize=18);
+
