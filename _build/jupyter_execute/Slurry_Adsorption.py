@@ -4,7 +4,7 @@ In this notes we will use an example problem to introduce material balances in s
 
 ## 8.1 Problem Statement
 
-A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 $[mol\,l^{-1}]$, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume $V_{\ell}$ of 2 $m^3$, in which $100\,kg$ of adsorbent are dispersed to form a slurry.  The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm $q=Hc^*$ with $H=1\times{10^{-1}}$.  The liquid-side mass transfer coefficient is $k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]$.
+A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 $[mol l^{-1}]$, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume $V_{\ell}$ of 2 $m^3$, in which $100\,kg$ of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 $mm$ and density of $700 kg\,m^{-3}$. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm $q=Hc^*$ with $H=1\times{10^{-1}} [dm]$.  The liquid-side mass transfer coefficient is $k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]$.
 
 - Is it possible to carry out the requested purification with the operation parameters described in the problem statment? 
 - If this is the case how much time does it take to lower the pollutant concetration to the target specification? 
@@ -20,7 +20,8 @@ $$
 V_\ell{c_0}=V_\ell{c}+S_pq
 $$(slurryeq1)
 
-Where $V_{\ell}$ is the volume of the liquid phase (it can be considered constant), $c_0$ is the initial concentration of coloring agent in solution, $c$ is the instantaneous concentration of coloring agent in solution,  $q$ the instantaneous concentration of coloring agent adsorbed on the stationary phase and $S_p$ the mass of the adsorbent particles.
+Where $V_{\ell}$ is the volume of the liquid phase (it can be considered constant), $c_0$ is the initial concentration of pollutant in solution, $c$ is the instantaneous concentration of pollutant in solution,  $q$ the instantaneous surface concentration of pollutant adsorbed on the stationary phase and $S_p$ the total surface exposed by the stationary phase particles.
+
 
 Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux $J$ of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as: 
 
@@ -36,7 +37,7 @@ $$
 \frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
 $$(slurryeq3)
 
-Where $a$ represents the particles mass per unit of fluid volume. 
+Where $a$ represents the particles surface area per unit of fluid volume. 
 
 
 The equilibrium of the adsorption process is well captured by a linear isotherm: 
@@ -113,24 +114,40 @@ figure=plt.figure()
 axes = figure.add_axes([0.1,0.1,1.2,1.2])
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-
-
-# Data
-Vl= 2
-H=0.1
-Sp= 100
-C0=0.1
-a = Sp / Vl
-kl = 1E-5 * 3600
-alpha= Vl/H/Sp
-beta = 1+Vl/H/Sp
 N = 500 #number of points
-time = np.linspace(0,5, N)
+time = np.linspace(0,24, N)
+
+#particles mass
+pm=100; #kg
+#particles volume
+pV=100/700; #m^3
+
+#single particle volume
+radius=1E-3;
+uV=(4/3)*np.pi*np.power(radius,3);
+uS=4*np.pi**np.power(radius,2);
+
+#number_of particles
+NP=pV/uV;
+Sp=NP*uS; #particles surface
+
+#Batch volume
+Vl=2; #m^3
+#Mass transfer
+kl=1E-5 / 3600; #m/s
+#Equilibrium
+H=1E-1; #
+
+#Analytical solution 1
+C0=0.1; #mol/l
+alpha=Vl/H/Sp;
+beta=1+alpha;
+a=Sp/Vl;
 C_inf= np.ones(np.size(time)) * C0*alpha/beta
+C = C0/beta * (np.exp(-kl*a*beta*time)+alpha) 
 
 color=iter(cm.coolwarm(np.linspace(0,1,2)))
 c=next(color)
-C = C0/beta * (np.exp(-kl*a*beta*time)+alpha) 
 axes.plot(time,C, marker=' ',c=c)
 c=next(color)
 axes.plot(time,C_inf,marker=' ',linestyle='dotted',c=c)
@@ -144,6 +161,14 @@ axes.legend(['$C(t)$','$C_{inf}$'], fontsize=18);
 
 The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank. 
 
+In a continuous process it is convenient to define $a$ as: 
+
+$$
+a={S}\sigma/Q
+$$(slurryeq13)
+
+where $Q$ is the volumetric flowrate of the liquid phase, ans $S$ is the mass flowrate of the solid adsorpbent phase, and $\sigma$ is the surface area per unit mass of the adsorbent. 
+
 In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as: 
 
 $$
@@ -152,15 +177,7 @@ $$(slurryeq12)
 
 where $\tau$ is the residence time, $c_{out}$ the concentration in the liquid phase in the unit, $c_{in}$ the concentration in the feed, and $a$ the amount of surface of the stationary phase particles per unit volume of the liquid phase. 
 
-Note that in a continuous process it is convenient to define $a$ as follows: 
-
-$$
-a={S}/Q
-$$(slurryeq13)
-
-where $Q$ is the volumetric flowrate of the liquid phase, ans $S$ is the mass flowrate of the solid phase. 
-
-This expression needs to be solved together with the adsorption isotherm $q=kc^*$, where $q$ is the amount adsorbed per kg of stationary phase, c is the molar concentration in solution and $k$ is the partition coefficient, and with the global material balance at steady state, which reads: 
+This expression should solved with the adsorption isotherm $q=kc^*$, where $q$ is the amount adsorbed per kg of stationary phase, $c$ is the molar concentration in solution and $k$ is the partition coefficient typically expressed in [l kg$^{-1}$], and with the global material balance at steady state, which reads: 
 
 $$
 c_{in}Q=qS+c_{out}Q

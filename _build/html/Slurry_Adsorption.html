@@ -157,8 +157,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W4_2021.html">
+   Week 4 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W5_2021.html">
    Week 5 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W6_2021.html">
+   Week 6 - Exercise
   </a>
  </li>
 </ul>
@@ -297,7 +307,7 @@
 <p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
 <div class="section" id="problem-statement">
 <h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
-<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol\,l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry.  The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}}\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]\)</span>.</p>
+<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 <span class="math notranslate nohighlight">\(mm\)</span> and density of <span class="math notranslate nohighlight">\(700 kg\,m^{-3}\)</span>. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}} [dm]\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]\)</span>.</p>
 <ul class="simple">
 <li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
 <li><p>If this is the case how much time does it take to lower the pollutant concetration to the target specification?</p></li>
@@ -311,7 +321,7 @@
 <span class="eqno">(83)<a class="headerlink" href="#equation-slurryeq1" title="Permalink to this equation">¶</a></span>\[
 V_\ell{c_0}=V_\ell{c}+S_pq
 \]</div>
-<p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of coloring agent in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of coloring agent in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous concentration of coloring agent adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the mass of the adsorbent particles.</p>
+<p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of pollutant in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of pollutant in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous surface concentration of pollutant adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the total surface exposed by the stationary phase particles.</p>
 <p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq2">
 <span class="eqno">(84)<a class="headerlink" href="#equation-slurryeq2" title="Permalink to this equation">¶</a></span>\[
@@ -323,7 +333,7 @@ J=-k_\ell(c-c^*)
 <span class="eqno">(85)<a class="headerlink" href="#equation-slurryeq3" title="Permalink to this equation">¶</a></span>\[
 \frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
 \]</div>
-<p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles mass per unit of fluid volume.</p>
+<p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles surface area per unit of fluid volume.</p>
 <p>The equilibrium of the adsorption process is well captured by a linear isotherm:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq4">
 <span class="eqno">(86)<a class="headerlink" href="#equation-slurryeq4" title="Permalink to this equation">¶</a></span>\[
@@ -389,24 +399,40 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-
-
-<span class="c1"># Data</span>
-<span class="n">Vl</span><span class="o">=</span> <span class="mi">2</span>
-<span class="n">H</span><span class="o">=</span><span class="mf">0.1</span>
-<span class="n">Sp</span><span class="o">=</span> <span class="mi">100</span>
-<span class="n">C0</span><span class="o">=</span><span class="mf">0.1</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Sp</span> <span class="o">/</span> <span class="n">Vl</span>
-<span class="n">kl</span> <span class="o">=</span> <span class="mf">1E-5</span> <span class="o">*</span> <span class="mi">3600</span>
-<span class="n">alpha</span><span class="o">=</span> <span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span>
-<span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
-<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#particles mass</span>
+<span class="n">pm</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="c1">#kg</span>
+<span class="c1">#particles volume</span>
+<span class="n">pV</span><span class="o">=</span><span class="mi">100</span><span class="o">/</span><span class="mi">700</span><span class="p">;</span> <span class="c1">#m^3</span>
+
+<span class="c1">#single particle volume</span>
+<span class="n">radius</span><span class="o">=</span><span class="mf">1E-3</span><span class="p">;</span>
+<span class="n">uV</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">uS</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">#number_of particles</span>
+<span class="n">NP</span><span class="o">=</span><span class="n">pV</span><span class="o">/</span><span class="n">uV</span><span class="p">;</span>
+<span class="n">Sp</span><span class="o">=</span><span class="n">NP</span><span class="o">*</span><span class="n">uS</span><span class="p">;</span> <span class="c1">#particles surface</span>
+
+<span class="c1">#Batch volume</span>
+<span class="n">Vl</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="c1">#m^3</span>
+<span class="c1">#Mass transfer</span>
+<span class="n">kl</span><span class="o">=</span><span class="mf">1E-5</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span> <span class="c1">#m/s</span>
+<span class="c1">#Equilibrium</span>
+<span class="n">H</span><span class="o">=</span><span class="mf">1E-1</span><span class="p">;</span> <span class="c1">#</span>
+
+<span class="c1">#Analytical solution 1</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span> <span class="c1">#mol/l</span>
+<span class="n">alpha</span><span class="o">=</span><span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span><span class="p">;</span>
+<span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">alpha</span><span class="p">;</span>
+<span class="n">a</span><span class="o">=</span><span class="n">Sp</span><span class="o">/</span><span class="n">Vl</span><span class="p">;</span>
 <span class="n">C_inf</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">time</span><span class="p">))</span> <span class="o">*</span> <span class="n">C0</span><span class="o">*</span><span class="n">alpha</span><span class="o">/</span><span class="n">beta</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">C0</span><span class="o">/</span><span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">kl</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">time</span><span class="p">)</span><span class="o">+</span><span class="n">alpha</span><span class="p">)</span> 
 
 <span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
 <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">C0</span><span class="o">/</span><span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">kl</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">time</span><span class="p">)</span><span class="o">+</span><span class="n">alpha</span><span class="p">)</span> 
 <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C_inf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
@@ -426,19 +452,19 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 <div class="section" id="continuous-slurry-adsorption">
 <h2>8.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this headline">¶</a></h2>
 <p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
+<p>In a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq13">
+<span class="eqno">(94)<a class="headerlink" href="#equation-slurryeq13" title="Permalink to this equation">¶</a></span>\[
+a={S}\sigma/Q
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid adsorpbent phase, and <span class="math notranslate nohighlight">\(\sigma\)</span> is the surface area per unit mass of the adsorbent.</p>
 <p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq12">
-<span class="eqno">(94)<a class="headerlink" href="#equation-slurryeq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(95)<a class="headerlink" href="#equation-slurryeq12" title="Permalink to this equation">¶</a></span>\[
 \frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time, <span class="math notranslate nohighlight">\(c_{out}\)</span> the concentration in the liquid phase in the unit, <span class="math notranslate nohighlight">\(c_{in}\)</span> the concentration in the feed, and <span class="math notranslate nohighlight">\(a\)</span> the amount of surface of the stationary phase particles per unit volume of the liquid phase.</p>
-<p>Note that in a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as follows:</p>
-<div class="math notranslate nohighlight" id="equation-slurryeq13">
-<span class="eqno">(95)<a class="headerlink" href="#equation-slurryeq13" title="Permalink to this equation">¶</a></span>\[
-a={S}/Q
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid phase.</p>
-<p>This expression needs to be solved together with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, c is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient, and with the global material balance at steady state, which reads:</p>
+<p>This expression should solved with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, <span class="math notranslate nohighlight">\(c\)</span> is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient typically expressed in [l kg<span class="math notranslate nohighlight">\(^{-1}\)</span>], and with the global material balance at steady state, which reads:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq14">
 <span class="eqno">(96)<a class="headerlink" href="#equation-slurryeq14" title="Permalink to this equation">¶</a></span>\[
 c_{in}Q=qS+c_{out}Q
