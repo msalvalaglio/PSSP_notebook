@@ -158,26 +158,26 @@ $$(LANGeq9)
 In a multicomponent system, the single layer hypothesis bocomes: 
 
 $$
-\Gamma_0+sum_{i=1}^N{\Gamma_i}=1 
+\Gamma_0+\sum_{i=1}^N{\Gamma_i}=1 
 $$(LANGeq10)
 
 Substituting in Eq. {eq}`LANGeq10` the definition of adsorption equilibrium constant given in Eq. {eq}`LANGeq9` we get: 
 
 $$
-\Gamma_0^{-1}=1+sum_{i=1}^N{B_{1,i}P_i
+\Gamma_0^{-1}=1+\sum_{i=1}^N{B_{1,i}P_i}
 $$(LANGeq11)
 
 finally, substituting again $\Gamma_0^ {-1}$ in Eq. {eq}`LANGeq9`, and rearranging we get an expression of the fraction of sites occupied by specie $i$ as a function of the partial pressure (concentration) of $i$ in the fluid phase. 
 
 $$
-\Gamma_i=\frac{{B_{1,i}P_i}{1+\sum_{i=1}^NB_{1,i}{P_i}}
+\Gamma_i=\frac{B_{1,i}P_i}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 $$(LANGeq12)
 
 Finally, inserting the density of specie $i$ in the adsorbed phase we get: 
 
 $$
 q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
-$$(LANGeq9)
+$$(LANGeq13)
 
 where $N$ is the total number of components, $P_i$ is the partial pressure component $i$ in the gas phase, and $B_{1,i}=B_{0,i}/RT$ where $B_{0,i}$ is the adsorption equilibrium constant for component $i$. 
 
