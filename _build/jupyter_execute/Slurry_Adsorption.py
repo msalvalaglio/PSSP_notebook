@@ -182,3 +182,8 @@ This expression should solved with the adsorption isotherm $q=kc^*$, where $q$ i
 $$
 c_{in}Q=qS+c_{out}Q
 $$(slurryeq14)
+
+## Contributions
+
+Salar Rahbari Namin, 8 Feb 2021  
+Nikita Gusev, 9 Feb 2021

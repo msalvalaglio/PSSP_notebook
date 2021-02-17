@@ -163,3 +163,9 @@ axes.set_ylabel('Molar Fraction in the Permeate',fontsize=14);
 
 print("Operating point -> x = ", x_set, " y = ", y_set) 
 
+
+
+## Contributions
+
+Radoslav Lukanov, 16 Feb 2021
+
