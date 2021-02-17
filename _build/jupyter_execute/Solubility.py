@@ -13,7 +13,7 @@ $$
 f_i^s(T,P)=f_i^\ell(T,P,\vec{x})
 $$(SOLeq2)
 
-Focusing on the right hand of Eq. \eqref{eq:fugacities}, the fugacity in the liquid phase can be rewritten as a function of the fugacity of the pure liquid phase as follows:
+Focusing on the right hand of Eq.{eq}`SOLeq2`, the fugacity in the liquid phase can be rewritten as a function of the fugacity of the pure liquid phase as follows:
 
 $$
 f_i^\ell(T,P,\vec{x})=f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})
@@ -21,7 +21,7 @@ $$(SOLeq3)
 
 where $x_i$ is the molar fraction of the solute and $\gamma_i(T,P,\vec{x})$ is the activity coefficient of that specie in the liquid phase.  
 
-Let us now focus on the left hand side of Eq. {eq}`eq2`. The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid: 
+Let us now focus on the left hand side of Eq. {eq}`SOLeq2`. The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid: 
 
 $$
 \int^{T,P,s}_{T,P,\ell}d\mu_i=\int^{T,P,s}_{T,P,\ell}RTd\ln{f_i}
@@ -77,3 +77,4 @@ hence the solubility of component $i$, $x_i$ is:
 $$
 x_i=\frac{1}{\gamma_i(T,P,\vec{x})}e^{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T}-\frac{1}{T_f}\right)}
 $$(SOLeq13)
+
