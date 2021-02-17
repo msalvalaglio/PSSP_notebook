@@ -2,7 +2,7 @@
 
 ## 1.1 Operating Equation
 
-Consider a binary gas phase mixture fed into a perfectly mixed membrane separation unit with volume flow rate $F_{in}$, and composition $\vec{z}$. The retentate stream is characterised by volume flow rate $F_{r}$, and composition $\vec{x}$, while  permeate is characterised by volume flow rate $F_{p}$  and composition $\vec{y}$.
+Consider a binary gas phase mixture fed into a perfectly mixed membrane separation unit with molar flow rate $F_{in}$, and composition $\vec{z}$. The retentate stream is characterised by molar flow rate $F_{r}$, and composition $\vec{x}$, while  permeate is characterised by molar flow rate $F_{p}$  and composition $\vec{y}$.
 
 Since we are dealing with a binary mixture, in all streams the compositions of A and B complement to 1 (e.g. for the permeate stream $y_B=1-y_A$). Hence we drop unnecessary subscripts and indicate with $z$, $x$, and $y$ the molar fraction of component A in the mixture.   
 
