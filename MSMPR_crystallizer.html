@@ -277,6 +277,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#material-balance">
+   10.0 Material Balance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#number-and-number-population-density">
    10.1 Number and number population density
   </a>
@@ -326,7 +331,29 @@
   <div class="section" id="msmpr-crystallizer-population-balance">
 <h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Permalink to this headline">¶</a></h1>
 <p>Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature.
-In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the material balance.</p>
+In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.</p>
+<div class="section" id="material-balance">
+<h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Permalink to this headline">¶</a></h2>
+<p>Let us begin by considering the global material balance for an MSMPR crystallizer. The operation of an ideal MSMPR crystallizer is characterised by the following set of hypotheses:</p>
+<ul class="simple">
+<li><p>The crystalliser operates continuously</p></li>
+<li><p>Operation is at steady state</p></li>
+<li><p>The crystalliser is perfectly mixed (both with respect to the liquid and the solid phases)</p></li>
+<li><p>The outlet has a composition identical in all respects to the crystallizer content</p></li>
+<li><p>There are no crystals in the feed</p></li>
+<li><p>The growth rate G=dL/dt is independent from the crystal size (L)</p></li>
+<li><p>All crystals have the same shape</p></li>
+<li><p>The system is not subject to agglomeration or breakage</p></li>
+</ul>
+<p>At steady state the nass balance for the solute precipitating in an MSMPR crystallizer can be written as:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{IN}C_{IN}=Q_{OUT}C_{OUT}+Q_{OUT}M_T
+\]</div>
+<p>(MSMPReq0)</p>
+<p>where <span class="math notranslate nohighlight">\(Q_{IN}\)</span> is the volumetric inlet flowrate of the liquid phase, <span class="math notranslate nohighlight">\(Q_{OUT}\)</span> is the volumetric outlet flowrate of the liquid phase (mother liquor), <span class="math notranslate nohighlight">\(C_{IN}\)</span> is the solute density in the feed, <span class="math notranslate nohighlight">\(C_{OUT}\)</span> is the solute density int he outlet stream, and <span class="math notranslate nohighlight">\(M_T\)</span> is the mass of crystals precipitated per unit volume of liquid phase.
+Typically <span class="math notranslate nohighlight">\(Q_{IN}\simeqQ_{OUT}=Q\)</span> and thus <span class="math notranslate nohighlight">\(M_T=C_{IN}-C_{OUT}\)</span>. It should be noted that <span class="math notranslate nohighlight">\(M_T\)</span> is determined by the process of precipitation producing a certain particles population and can be determined from the kinetics of crystal nucleation and growth, based on the population balance discussed in the following.</p>
+</div>
 <div class="section" id="number-and-number-population-density">
 <h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Permalink to this headline">¶</a></h2>
 <p>Let us begin by defining <span class="math notranslate nohighlight">\(N(L)\)</span> as the <strong>number</strong> of  crystals of characteristic length <span class="math notranslate nohighlight">\(L\)</span> per unit volume.
@@ -482,9 +509,9 @@ n_0=\frac{J}{G}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MSMPR_crystallizer_7_0.png" src="_images/MSMPR_crystallizer_7_0.png" />
-<img alt="_images/MSMPR_crystallizer_7_1.png" src="_images/MSMPR_crystallizer_7_1.png" />
-<img alt="_images/MSMPR_crystallizer_7_2.png" src="_images/MSMPR_crystallizer_7_2.png" />
+<img alt="_images/MSMPR_crystallizer_8_0.png" src="_images/MSMPR_crystallizer_8_0.png" />
+<img alt="_images/MSMPR_crystallizer_8_1.png" src="_images/MSMPR_crystallizer_8_1.png" />
+<img alt="_images/MSMPR_crystallizer_8_2.png" src="_images/MSMPR_crystallizer_8_2.png" />
 </div>
 </div>
 </div>
@@ -527,7 +554,7 @@ A_T=2{\beta}n_0(G\tau)^3
 V_T=6{\alpha}n_0(G\tau)^3
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the volumetric shape factor of the particles.</p>
-<p>It should be noted that the total volume of the particles allows to compute the total mass of particles in the system:</p>
+<p>It should be noted that the total volume of the particles allows to compute the total mass of particles per unit volume of liquid phase in the system:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq17">
 <span class="eqno">(125)<a class="headerlink" href="#equation-msmpreq17" title="Permalink to this equation">¶</a></span>\[
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
@@ -585,7 +612,7 @@ L_D=3G\tau
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MSMPR_crystallizer_12_0.png" src="_images/MSMPR_crystallizer_12_0.png" />
+<img alt="_images/MSMPR_crystallizer_13_0.png" src="_images/MSMPR_crystallizer_13_0.png" />
 </div>
 </div>
 </div>
