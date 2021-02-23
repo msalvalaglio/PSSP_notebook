@@ -227,7 +227,7 @@ where $\beta$ is the surface shape factor of the particles.
 - $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles per unit volume contained in the crystallizer: 
 
 $$
-V_T=6{\alpha}n_0(G\tau)^3
+V_T=6{\alpha}n_0(G\tau)^4
 $$(MSMPReq16)
 
 where $\alpha$ is the volumetric shape factor of the particles.
@@ -236,7 +236,7 @@ where $\alpha$ is the volumetric shape factor of the particles.
 It should be noted that the total volume of the particles per unit volume of liquid phase allows to compute the total mass of particles per unit volume of liquid phase in the system: 
 
 $$
-M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
+M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 $$(MSMPReq17)
 
 where $\rho_c$ is the density of the crystalline phase. 
