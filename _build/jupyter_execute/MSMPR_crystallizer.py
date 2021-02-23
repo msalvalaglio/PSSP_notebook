@@ -1,8 +1,34 @@
 # 10. MSMPR Crystallizer: population balance 
 
 Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature. 
-In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the material balance.
+In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.
          
+
+## 10.0 Material Balance
+
+Let us begin by considering the global material balance for an MSMPR crystallizer. The operation of an ideal MSMPR crystallizer is characterised by the following set of hypotheses: 
+
+- The crystalliser operates continuously
+- Operation is at steady state
+- The crystalliser is perfectly mixed (both with respect to the liquid and the solid phases)
+- The outlet has a composition identical in all respects to the crystallizer content
+- There are no crystals in the feed
+- The growth rate G=dL/dt is independent from the crystal size (L)
+- All crystals have the same shape
+- The system is not subject to agglomeration or breakage
+
+At steady state the nass balance for the solute precipitating in an MSMPR crystallizer can be written as: 
+
+$$
+Q_{IN}C_{IN}=Q_{OUT}C_{OUT}+Q_{OUT}M_T
+$$(MSMPReq0)
+
+where $Q_{IN}$ is the volumetric inlet flowrate of the liquid phase, $Q_{OUT}$ is the volumetric outlet flowrate of the liquid phase (mother liquor), $C_{IN}$ is the solute density in the feed, $C_{OUT}$ is the solute density int he outlet stream, and $M_T$ is the mass of crystals precipitated per unit volume of liquid phase. 
+Typically $Q_{IN}\simeq{Q_{OUT}}=Q$ and thus $M_T=C_{IN}-C_{OUT}$. 
+
+It should be noted that $M_T$ is determined by the process of precipitation producing a certain particles population and can be computed from the kinetics of crystal nucleation and growth, based on the population balance discussed in the next section. 
+
+
 
 ## 10.1 Number and number population density
 
@@ -20,7 +46,7 @@ $$
 N_{1,2}=\int_{L_1}^{L_2}n(L)dL
 $$(MSMPReq2)
 
-Similarly the total number of crystals is obtained as: 
+Similarly the total number of crystals per unit volume is obtained as: 
 
 $$
 N_{T}=\int_{0}^{\infty}n(L)dL
@@ -39,7 +65,7 @@ The term $n_1G_1V\Delta{t}$ captures the number of crystals that outgrow length 
 Similarly, the term $n_2G_2V\Delta{t}$ takes into account particles leaving the length  interval $\Delta{L}$, outgrowing length $L_2$. 
 Finally the term $Q\overline{n}\Delta{L}\Delta{t}$ accounts for the removal of particles with size comprised in  $\Delta{L}$ from the crystalliser due to the magma flowrate with volumetric flowrate $Q$, where $\overline{n}$ represents the average population density within the length interval $\Delta{L}$.  
 
-Eq. \eqref{eq:4} can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in $\delta{L}$ accumulated in time $\Delta{t}$:
+Eq. {eq}`MSMPReq4` can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in $\delta{L}$ accumulated in time $\Delta{t}$:
 
 $$
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
@@ -178,19 +204,19 @@ $$(MSMPReq12)
 
 Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning: 
 
-- $m_0=\int_0^{\infty}L^0ndL=N_L$ represents the number of particles with size smaller or equal than size L. For $L\rightarrow{\infty}$ $N_L$ tends to the total number of particles in the crystallizer: 
+- $m_0=\int_0^{\infty}L^0ndL=N_L$ represents the number of particles per unit volume of liquid phase  with size smaller or equal than size L. For $L\rightarrow{\infty}$ $N_L$ tends to the total number of particles per unit volume of liquid phase in the crystallizer: 
 
 $$
 N_T=n_0G\tau
 $$(MSMPReq13)
 
-- $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $\mathcal{L}$ tends to the total length of particles in the crystallizer: 
+- $m_1=\int_0^{\infty}L^1ndL=\mathcal{L}$ represents the total length of particles per unit volume of liquid phase with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $\mathcal{L}$ tends to the total length of particles per unit volume of liquid phase in the crystallizer: 
 
 $$
 \mathcal{L}_T=n_0(G\tau)^2
 $$(MSMPReq14) 
 
-- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $A$ tends to the total area of the particles contained in the crystallizer: 
+- $m_2=\int_0^{\infty}L^2ndL\propto{A}$ is proportional to the total area of particles per unit volume of liquid phase with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $A$ tends to the total area of the particles per unit volume of liquid phase contained in the crystallizer: 
 
 $$
 A_T=2{\beta}n_0(G\tau)^3
@@ -198,7 +224,7 @@ $$(MSMPReq15)
 
 where $\beta$ is the surface shape factor of the particles. 
 
-- $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles contained in the crystallizer: 
+- $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles per unit volume contained in the crystallizer: 
 
 $$
 V_T=6{\alpha}n_0(G\tau)^3
@@ -207,7 +233,7 @@ $$(MSMPReq16)
 where $\alpha$ is the volumetric shape factor of the particles.
 
 
-It should be noted that the total volume of the particles allows to compute the total mass of particles in the system: 
+It should be noted that the total volume of the particles per unit volume of liquid phase allows to compute the total mass of particles per unit volume of liquid phase in the system: 
 
 $$
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^3
@@ -266,3 +292,7 @@ axes.plot(np.array([3,3]),np.array([0, 1/6*np.power(3,3)*np.exp(-3)]),'--',)
 axes.set_xlabel('$x$', fontsize=18);
 axes.set_ylabel('$M(x)/m(x)$',fontsize=18);
 axes.legend(['M(x)','m(x)'], fontsize=18);
+
+## Contributions
+
+Guilherme Pizarro Werner, 23 Feb 2021

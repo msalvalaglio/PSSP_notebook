@@ -77,4 +77,3 @@ hence the solubility of component $i$, $x_i$ is:
 $$
 x_i=\frac{1}{\gamma_i(T,P,\vec{x})}e^{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T}-\frac{1}{T_f}\right)}
 $$(SOLeq13)
-
