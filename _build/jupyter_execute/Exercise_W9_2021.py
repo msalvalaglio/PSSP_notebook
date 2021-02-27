@@ -4,6 +4,9 @@
 
 The cumulative particle size distribution $N(L)$ has been measured for two different MSMPR crystallization processes (A and B) and is reported in Fig. 1. Both processes are producing the same compact crystals, under different residence times and temperatures. The growth rate is known to be independent from both temperature and composition ($G=const$). The nucleation rate $J$ instead depends exponentially on the inverse of the temperature through an Arrhenius-like expression ($J=A\exp{-B/T}$,  where $A$ and $B$ are constants).
 
+
+<img src="./chromatogram.png" alt="Drawing" style="width: 600px;">
+
 <img src="./PSDs_exercise.png" alt="Drawing" style="width: 400px;">
 
 
