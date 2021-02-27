@@ -5,4 +5,3 @@ An aqueous feed of 10000 kg h$^-1$, saturated with $BaCl_2$ at 100$^o$C, enters 
 
 - Determine the mass flow rate of crystals in the product stream (also known as 
 - Compute the predominant crystal size $L_D$ in mm.
-
