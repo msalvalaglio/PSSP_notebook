@@ -8,8 +8,7 @@ The cumulative particle size distribution $N(L)$ has been measured for two diffe
 
 
 
-- Compute and plot the number density, length, area, and normalised mass distribution for these two processes. Download the dataset.
+- Compute and plot the number density, length, area, and normalised mass distribution for these two processes. [Download the dataset](https://raw.githubusercontent.com/msalvalaglio/PSSP_notebook/master/EX_W9_data.txt).
 - Compute the dominant length $L_D$ obtained from both processes. 
 - Can you say anything about the residence time in the two crystallisers? 
 - Which process is operating at the highest temperature? 
-
