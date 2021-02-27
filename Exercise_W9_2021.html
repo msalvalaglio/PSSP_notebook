@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Particulate Systems and Separation Processes Notebook &#8212; PSSP Virtual Notebook</title>
+    <title>Week 9 - Exercise &#8212; PSSP Virtual Notebook</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,7 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Material Balances in a Gas Permeation Unit" href="Gas_permeation.html" />
+    <link rel="prev" title="Week 8 - Exercise" href="Exercise_W8_2021.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -74,7 +74,7 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="#">
+<a class="navbar-brand text-wrap" href="index.html">
   
   <img src="_static/Logo.png" class="logo" alt="logo">
   
@@ -88,13 +88,13 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
    Particulate Systems and Separation Processes Notebook
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Gas_permeation.html">
    1. Material Balances in a Gas Permeation Unit
@@ -175,8 +175,8 @@
    Week 8 - Exercise
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W9_2021.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Week 9 - Exercise
   </a>
  </li>
@@ -220,9 +220,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/index.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Exercise_W9_2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -240,10 +240,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FExercise_W9_2021.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/index.md"><button
+        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Exercise_W9_2021.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -258,10 +258,41 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Exercise_W9_2021.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-statement">
+   Problem Statement
+  </a>
+ </li>
+</ul>
+
+        </nav>
         
     </div>
 </div>
@@ -270,20 +301,18 @@
         
               <div>
                 
-  <div class="section" id="particulate-systems-and-separation-processes-notebook">
-<h1>Particulate Systems and Separation Processes Notebook<a class="headerlink" href="#particulate-systems-and-separation-processes-notebook" title="Permalink to this headline">¶</a></h1>
-<p>This is a collection of notes and exercises associated with the <a class="reference external" href="https://moodle.ucl.ac.uk/course/view.php?id=1191">Particulate Systems and Separations II module</a>, part of the second year ChemEng curriculum at UCL](<a class="reference external" href="https://www.ucl.ac.uk/chemical-engineering/">https://www.ucl.ac.uk/chemical-engineering/</a>).</p>
-<p>These note are intended a complement to the lecture material available to UCL students.</p>
-<div class="admonition-contribute-to-evolve-these-notes admonition">
-<p class="admonition-title">Contribute to evolve these notes!</p>
-<p>You can:</p>
+  <div class="section" id="week-9-exercise">
+<h1>Week 9 - Exercise<a class="headerlink" href="#week-9-exercise" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
+<p>The cumulative particle size distribution <span class="math notranslate nohighlight">\(N(L)\)</span> has been measured for two different MSMPR crystallization processes (A and B) and is reported in Fig. 1. Both processes are producing the same compact crystals, under different residence times and temperatures. The growth rate is known to be independent from both temperature and composition (<span class="math notranslate nohighlight">\(G=const\)</span>). The nucleation rate <span class="math notranslate nohighlight">\(J\)</span> instead depends exponentially on the inverse of the temperature through an Arrhenius-like expression (<span class="math notranslate nohighlight">\(J=A\exp{-B/T}\)</span>,  where <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are constants).</p>
+<img src="./PSDs_exercise.png" alt="Drawing" style="width: 500px;">
 <ul class="simple">
-<li><p>Submit an issue (using the GitHub button, on the top)</p></li>
-<li><p>Suggest an edit (also using the GitHub button, on the top)</p></li>
-<li><p>Add a new notebook solving an exercise or developing a new topic (using GitHub and/or getting in touch via email at <a class="reference external" href="mailto:m&#46;salvalaglio&#37;&#52;&#48;ucl&#46;ac&#46;uk">m<span>&#46;</span>salvalaglio<span>&#64;</span>ucl<span>&#46;</span>ac<span>&#46;</span>uk</a>)</p></li>
+<li><p>Compute and plot the number density, length, area, and normalised mass distribution for these two processes (an ascii file containing the measured size distributions can be downloaded from moodle.)</p></li>
+<li><p>Compute the dominant length <span class="math notranslate nohighlight">\(L_D\)</span> obtained from both processes.</p></li>
+<li><p>Can you say anything about the residence time in the two crystallisers?</p></li>
+<li><p>Which process is operating at the highest temperature?</p></li>
 </ul>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -315,7 +344,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="Gas_permeation.html" title="next page">1. Material Balances in a Gas Permeation Unit</a>
+    <a class='left-prev' id="prev-link" href="Exercise_W8_2021.html" title="previous page">Week 8 - Exercise</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
