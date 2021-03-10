@@ -292,9 +292,33 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution">
+   Solution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributed-by-nikita-gusev-on-9-march-2021">
+     Contributed by Nikita Gusev, on 9/March/2021
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problem-statement-2">
    Problem Statement 2
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-trace">
+   Solution Trace
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributed-by-nikita-gusev-and-guilherme-pizarro-werner-on-9-march-2021">
+     Contributed by Nikita Gusev and Guilherme Pizarro Werner, on 9/March/2021
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -316,6 +340,24 @@
 <li><p>Can you demonstrate it using the definition of solubility?</p></li>
 </ul>
 </div>
+<div class="section" id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="contributed-by-nikita-gusev-on-9-march-2021">
+<h3>Contributed by Nikita Gusev, on 9/March/2021<a class="headerlink" href="#contributed-by-nikita-gusev-on-9-march-2021" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Crystal polymorphs are defined as substances that are chemically identical but exist in more than one crystal form. A polymorphic transition is a reversible transition of a solid crystalline phase at a certain temperature and pressure (the inversion point) to another phase of the same chemical composition with a different crystal structure.
+For a monotropic system, plots of the solubility of the various polymorphs against temperature do not cross, meaning that different polymorphs always have different solubilities, and different stability.
+Solution of a crystal is favored if the energy of dissolution is greater than the lattice energy, i.e., by dissolving, a compound forms a more thermodynamically stable state. In that sense, if the solubility of a polymorph is greater, means that this polymorph is less stable in its
+crystalline state, and vice versa, the polymorph with the lowest solubility is thermodynamically more stable in its crystalline state.</p></li>
+<li><p>The chemical potential of a solid crystalline phase is given by:
+$<span class="math notranslate nohighlight">\(
+\mu_{i}^s\simeq\mu_0+RT\ln{\x_i^*}
+\)</span><span class="math notranslate nohighlight">\(
+where \)</span><span class="math notranslate nohighlight">\(\x_i^*\)</span>$ is the solubility.
+From the equation above it can be seen than the lower is the solubility, the lower is the chemical potential and we know that the phase with the lowest chemical potential at any temperature is the most stable phase at that temperature. This again shows that a less soluble polymorph is more stable.</p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="problem-statement-2">
 <h2>Problem Statement 2<a class="headerlink" href="#problem-statement-2" title="Permalink to this headline">¶</a></h2>
 <p>An aqueous feed of 10000 kg h<span class="math notranslate nohighlight">\(^{-1}\)</span>, saturated with <span class="math notranslate nohighlight">\(BaCl_2\)</span> at 100<span class="math notranslate nohighlight">\(^o\)</span>C, enters a crystallizer that can be simulated with the MSMPR model. The slurry leaves the crystallizer at 20<span class="math notranslate nohighlight">\(^o\)</span>C with crystals of the dihydrate. The crystallizer has a volume of 2.0 <span class="math notranslate nohighlight">\(m^3\)</span>. From laboratory experiments, the crystal growth rate is essentially constant at <span class="math notranslate nohighlight">\(4.0\times{10^{-7}}\)</span> m/s. The density of the dihydrate crystals is 3.097 g cm<span class="math notranslate nohighlight">\(^{-3}\)</span>. The density of an aqueous, saturated solution of barium chloride at 20<span class="math notranslate nohighlight">\(^o\)</span>C is 1.29 g cm<span class="math notranslate nohighlight">\(^{-3}\)</span>. The solubility of <span class="math notranslate nohighlight">\(BaCl_2\)</span> is 58.3 g/100 g water at 100<span class="math notranslate nohighlight">\(^o\)</span> C and 35.7 g/100 g water at 20<span class="math notranslate nohighlight">\(^o\)</span> C. The molar mass of <span class="math notranslate nohighlight">\(BaCl_2\)</span> is 208.27 g/mol, the the dihydrate, <span class="math notranslate nohighlight">\(BaCl_22H_2O\)</span> has a molar mass of 244.31 g/mol. The density of the crystals is 3097 <span class="math notranslate nohighlight">\(kg/m^3\)</span>, the density of the solution in the crystallizer is 1279 <span class="math notranslate nohighlight">\(kg/m^3\)</span></p>
@@ -323,6 +365,79 @@
 <li><p>Determine the mass flow rate of crystals in the product stream.</p></li>
 <li><p>Compute the predominant crystal size <span class="math notranslate nohighlight">\(L_D\)</span> in mm.</p></li>
 </ul>
+</div>
+<div class="section" id="solution-trace">
+<h2>Solution Trace<a class="headerlink" href="#solution-trace" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="contributed-by-nikita-gusev-and-guilherme-pizarro-werner-on-9-march-2021">
+<h3>Contributed by Nikita Gusev and Guilherme Pizarro Werner, on 9/March/2021<a class="headerlink" href="#contributed-by-nikita-gusev-and-guilherme-pizarro-werner-on-9-march-2021" title="Permalink to this headline">¶</a></h3>
+<p>A total material balance around the crystallizer (assuming steady state):
+$<span class="math notranslate nohighlight">\(
+F=V+L+S
+\)</span>$</p>
+<ul class="simple">
+<li><p>where: <span class="math notranslate nohighlight">\(F\)</span> = total feed rate (kg/h); <span class="math notranslate nohighlight">\(V\)</span> = evaporation rate; <span class="math notranslate nohighlight">\(L\)</span> = kg/h of liquid; and <span class="math notranslate nohighlight">\(S\)</span> = kg/h of crystals.</p></li>
+</ul>
+<p>Assuming evaporation is negligible and rearranging for <span class="math notranslate nohighlight">\(L\)</span>:
+$<span class="math notranslate nohighlight">\(L=F-S\)</span>$</p>
+<p>Material balance for <span class="math notranslate nohighlight">\(BaCl_2\)</span>:
+$<span class="math notranslate nohighlight">\(
+x_F{F} = x_LL + x_SS
+\)</span>$</p>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(x_F\)</span>, <span class="math notranslate nohighlight">\(x_L\)</span>, <span class="math notranslate nohighlight">\(x_S\)</span> are the mass fractions of <span class="math notranslate nohighlight">\(BaCl_2\)</span> in feed, liquid and crystals, respectively.</p></li>
+</ul>
+<p>F is known, and mass fractions can be found from the data, so we have two equations and two unknowns (L and S), and so there is 0 degrees of freedom and the problem can be solved.</p>
+<p>Solving simultaneously using the expressions above:
+$<span class="math notranslate nohighlight">\(
+x_FF= x_L(F - S) + x_SS
+\)</span>$</p>
+<p>Rearranging:
+$<span class="math notranslate nohighlight">\(
+S = F \frac{x_F-x_L}{x_S-x_L}
+\)</span>$</p>
+<p>Now finding the mass fractions:
+𝑥% =
+58.3 [𝑔 𝐵𝑎𝐶𝑙(]
+(58.3 + 100) [𝑔 𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛] = 0.3683 G
+𝑔
+𝑔 𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛
+H
+𝑥&amp; =
+35.7 [𝑔]
+(35.7 + 100) [𝑔 𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛] = 0.2631 G
+𝑔
+𝑔 𝑠𝑜𝑙𝑢𝑡𝑖𝑜𝑛
+H
+𝑥’ =
+208.27 G 𝑔 𝐵𝑎𝐶𝑙(
+𝑚𝑜𝑙 𝐵𝑎𝐶𝑙( ∙ 2𝐻(0H
+244.31 G 𝑔 𝐵𝑎𝐶𝑙( ∙ 2𝐻(0
+𝑚𝑜𝑙 𝐵𝑎𝐶𝑙( ∙ 2𝐻(0H
+= 0.8525 G
+𝑔 𝐵𝑎𝐶𝑙(
+𝑔 𝐵𝑎𝐶𝑙( ∙ 2𝐻(0
+H
+Then we can calculate the mass flowrates:
+𝑆 = 𝐹
+(𝑥% − 𝑥&amp;)
+(𝑥’ − 𝑥&amp;) = 10000 G
+𝑘𝑔
+ℎ
+H ∗
+(0.3683 − 0.2631)
+(0.8525 − 0.2631) = 1785
+𝑘𝑔
+ℎ
+𝐿 = 10000 G
+𝑘𝑔
+ℎ
+H − 1785 G
+𝑘𝑔
+ℎ
+H = 8215
+𝑘𝑔
+ℎ</p>
+</div>
 </div>
 </div>
 
