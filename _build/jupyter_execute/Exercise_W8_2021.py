@@ -23,7 +23,9 @@ where $x_i^*$ is the solubility.
 
 From the equation above it can be seen than the lower is the solubility, the lower is the chemical potential and we know that the phase with the lowest chemical potential at any temperature is the most stable phase at that temperature. This again shows that a less soluble polymorph is more stable.
 
-##### Contributed by Nikita Gusev, on 9/March/2021
+## Contributions
+
+Nikita Gusev, 9/March/2021
 
 ## Problem Statement 2
 An aqueous feed of 10000 kg h$^{-1}$, saturated with $BaCl_2$ at 100$^o$C, enters a crystallizer that can be simulated with the MSMPR model. The slurry leaves the crystallizer at 20$^o$C with crystals of the dihydrate. The crystallizer has a volume of 2.0 $m^3$. From laboratory experiments, the crystal growth rate is essentially constant at $4.0\times{10^{-7}}$ m/s. The solubility of $BaCl_2$ is 58.3 g/100 g water at 100$^o$ C and 35.7 g/100 g water at 20$^o$ C. The molar mass of $BaCl_2$ is 208.27 g/mol, the the dihydrate, $BaCl_22H_2O$ has a molar mass of 244.31 g/mol. The density of the crystals is 3097 $kg/m^3$, the density of the solution in the crystallizer is 1279 $kg/m^3$ 
@@ -148,4 +150,6 @@ print("\nThe volumetric flowrate ", f"{Q:.4}", "[m3/h]")
 print("The residence time ", f"{tau:.4}", "[s]")
 print("The predominant crystal size is ", f"{LD:.4}", " [mm]")
 
-#### Contributed by Nikita Gusev and Guilherme Pizarro Werner, on 9/March/2021
+## Contributions
+
+Nikita Gusev and Guilherme Pizarro Werner, 9/March/2021
