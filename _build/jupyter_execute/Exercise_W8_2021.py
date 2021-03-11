@@ -6,7 +6,7 @@
 
 - Can you demonstrate it using the definition of solubility? 
 
-## Solution
+## Solution Trace
 
 - Crystal polymorphs are defined as substances that are chemically identical but exist in more than one crystal form. A polymorphic transition is a reversible transition of a solid crystalline phase at a certain temperature and pressure (the inversion point) to another phase of the same chemical composition with a different crystal structure. 
 For a monotropic system, plots of the solubility of the various polymorphs against temperature do not cross, meaning that different polymorphs always have different solubilities, and different stability.
@@ -139,4 +139,3 @@ print("The residence time ", f"{tau:.4}", "[s]")
 print("The predominant crystal size is ", f"{LD:.4}", " [mm]")
 
 #### Contributed by Nikita Gusev and Guilherme Pizarro Werner, on 9/March/2021
-
