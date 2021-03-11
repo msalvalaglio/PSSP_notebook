@@ -14,10 +14,12 @@ Solution of a crystal is favored if the energy of dissolution is greater than th
 crystalline state, and vice versa, the polymorph with the lowest solubility is thermodynamically more stable in its crystalline state.
 
 - The chemical potential of a solid crystalline phase is given by:
+
 $$
 \mu_{i}^s\simeq\mu_0+RT\ln{x_i^*}
 $$
-where $$x_i^*$$ is the solubility.
+
+where $x_i^*$ is the solubility.
 
 From the equation above it can be seen than the lower is the solubility, the lower is the chemical potential and we know that the phase with the lowest chemical potential at any temperature is the most stable phase at that temperature. This again shows that a less soluble polymorph is more stable.
 
@@ -32,6 +34,7 @@ An aqueous feed of 10000 kg h$^{-1}$, saturated with $BaCl_2$ at 100$^o$C, enter
 ## Solution Trace
 
 A total material balance around the crystallizer (assuming steady state):
+
 $$
 F=V+L+S
 $$
@@ -39,9 +42,11 @@ $$
 - where: $F$ = total feed rate (kg/h); $V$ = evaporation rate; $L$ = kg/h of liquid; and $S$ = kg/h of crystals.
 
 Assuming evaporation is negligible and rearranging for $L$:
+
 $$L=F-S$$ 
 
 Material balance for $BaCl_2$:
+
 $$
 x_F{F} = x_LL + x_SS
 $$
@@ -51,11 +56,13 @@ $$
 F is known, and mass fractions can be found from the data, so we have two equations and two unknowns (L and S), and so there is 0 degrees of freedom and the problem can be solved.
 
 Solving simultaneously using the expressions above:
+
 $$
 x_FF= x_L(F - S) + x_SS
 $$
 
 Rearranging:
+
 $$
 S = F \frac{x_F-x_L}{x_S-x_L}
 $$
@@ -103,15 +110,18 @@ L=3G\tau
 $$
 
 where:
+
 - $\tau$ = average residence time 
 - $G$ = growth rate
 
 We need to find the average residence time:
+
 $$
 \tau = \frac{V}{Q} 
 $$
 
 where:
+
 - $V$  = volume of the crystallizer 
 - $Q$  = outlet volumetric flowrate 
 

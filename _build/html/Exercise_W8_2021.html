@@ -347,12 +347,13 @@
 For a monotropic system, plots of the solubility of the various polymorphs against temperature do not cross, meaning that different polymorphs always have different solubilities, and different stability.
 Solution of a crystal is favored if the energy of dissolution is greater than the lattice energy, i.e., by dissolving, a compound forms a more thermodynamically stable state. In that sense, if the solubility of a polymorph is greater, means that this polymorph is less stable in its
 crystalline state, and vice versa, the polymorph with the lowest solubility is thermodynamically more stable in its crystalline state.</p></li>
-<li><p>The chemical potential of a solid crystalline phase is given by:
-$<span class="math notranslate nohighlight">\(
-\mu_{i}^s\simeq\mu_0+RT\ln{x_i^*}
-\)</span><span class="math notranslate nohighlight">\(
-where \)</span><span class="math notranslate nohighlight">\(x_i^*\)</span>$ is the solubility.</p></li>
+<li><p>The chemical potential of a solid crystalline phase is given by:</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[
+\mu_{i}^s\simeq\mu_0+RT\ln{x_i^*}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_i^*\)</span> is the solubility.</p>
 <p>From the equation above it can be seen than the lower is the solubility, the lower is the chemical potential and we know that the phase with the lowest chemical potential at any temperature is the most stable phase at that temperature. This again shows that a less soluble polymorph is more stable.</p>
 <div class="section" id="contributed-by-nikita-gusev-on-9-march-2021">
 <h3>Contributed by Nikita Gusev, on 9/March/2021<a class="headerlink" href="#contributed-by-nikita-gusev-on-9-march-2021" title="Permalink to this headline">¶</a></h3>
@@ -368,31 +369,36 @@ where \)</span><span class="math notranslate nohighlight">\(x_i^*\)</span>$ is t
 </div>
 <div class="section" id="id1">
 <h2>Solution Trace<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>A total material balance around the crystallizer (assuming steady state):
-$<span class="math notranslate nohighlight">\(
+<p>A total material balance around the crystallizer (assuming steady state):</p>
+<div class="math notranslate nohighlight">
+\[
 F=V+L+S
-\)</span>$</p>
+\]</div>
 <ul class="simple">
 <li><p>where: <span class="math notranslate nohighlight">\(F\)</span> = total feed rate (kg/h); <span class="math notranslate nohighlight">\(V\)</span> = evaporation rate; <span class="math notranslate nohighlight">\(L\)</span> = kg/h of liquid; and <span class="math notranslate nohighlight">\(S\)</span> = kg/h of crystals.</p></li>
 </ul>
-<p>Assuming evaporation is negligible and rearranging for <span class="math notranslate nohighlight">\(L\)</span>:
-$<span class="math notranslate nohighlight">\(L=F-S\)</span>$</p>
-<p>Material balance for <span class="math notranslate nohighlight">\(BaCl_2\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p>Assuming evaporation is negligible and rearranging for <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[L=F-S\]</div>
+<p>Material balance for <span class="math notranslate nohighlight">\(BaCl_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 x_F{F} = x_LL + x_SS
-\)</span>$</p>
+\]</div>
 <ul class="simple">
 <li><p>where <span class="math notranslate nohighlight">\(x_F\)</span>, <span class="math notranslate nohighlight">\(x_L\)</span>, <span class="math notranslate nohighlight">\(x_S\)</span> are the mass fractions of <span class="math notranslate nohighlight">\(BaCl_2\)</span> in feed, liquid and crystals, respectively.</p></li>
 </ul>
 <p>F is known, and mass fractions can be found from the data, so we have two equations and two unknowns (L and S), and so there is 0 degrees of freedom and the problem can be solved.</p>
-<p>Solving simultaneously using the expressions above:
-$<span class="math notranslate nohighlight">\(
+<p>Solving simultaneously using the expressions above:</p>
+<div class="math notranslate nohighlight">
+\[
 x_FF= x_L(F - S) + x_SS
-\)</span>$</p>
-<p>Rearranging:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Rearranging:</p>
+<div class="math notranslate nohighlight">
+\[
 S = F \frac{x_F-x_L}{x_S-x_L}
-\)</span>$</p>
+\]</div>
 <p>Now finding the mass fractions:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -450,10 +456,11 @@ L=3G\tau
 <li><p><span class="math notranslate nohighlight">\(\tau\)</span> = average residence time</p></li>
 <li><p><span class="math notranslate nohighlight">\(G\)</span> = growth rate</p></li>
 </ul>
-<p>We need to find the average residence time:
-$<span class="math notranslate nohighlight">\(
+<p>We need to find the average residence time:</p>
+<div class="math notranslate nohighlight">
+\[
 \tau = \frac{V}{Q} 
-\)</span>$</p>
+\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(V\)</span>  = volume of the crystallizer</p></li>
