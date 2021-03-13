@@ -17,7 +17,7 @@ Let us begin by considering the global material balance for an MSMPR crystallize
 - All crystals have the same shape
 - The system is not subject to agglomeration or breakage
 
-At steady state the nass balance for the solute precipitating in an MSMPR crystallizer can be written as: 
+At steady state the mass balance for the solute precipitating in an MSMPR crystallizer can be written as: 
 
 $$
 Q_{IN}C_{IN}=Q_{OUT}C_{OUT}+Q_{OUT}M_T
@@ -88,7 +88,7 @@ $$
 n(L)=n_0\exp\left(-\frac{L}{G\tau}\right)
 $$(MSMPReq8)
 
-where $n_0$ is an integration constant, determined from the boundary conditions, that has the phisical meaning of population density of nuclei in the crystallizer at steady state. 
+where $n_0$ is an integration constant, determined from the boundary conditions, that has the physical meaning of population density of nuclei in the crystallizer at steady state. 
 
 In this formulation of the population balance we consider particles to be born as nuclei at length $L=0$. 
 The nucleation rate $J$, i.e. the number of nuclei generated per unit time per unit volume can be written as: 
@@ -224,7 +224,7 @@ $$(MSMPReq15)
 
 where $\beta$ is the surface shape factor of the particles. 
 
-- $m_3=\int_0^{\infty}L^2ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles per unit volume contained in the crystallizer: 
+- $m_3=\int_0^{\infty}L^3ndL\propto{V}$ is proportional to the total volume of particles with size smaller or equal than size $L$. For $L\rightarrow{\infty}$, $V$ tends to the total volume of the particles per unit volume contained in the crystallizer: 
 
 $$
 V_T=6{\alpha}n_0(G\tau)^4
@@ -295,4 +295,7 @@ axes.legend(['M(x)','m(x)'], fontsize=18);
 
 ## Contributions
 
-Guilherme Pizarro Werner, 23 Feb 2021
+Guilherme Pizarro Werner, 23 February 2021
+
+Ahmad Eblagh, 13 March 2021
+
