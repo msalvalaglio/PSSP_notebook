@@ -298,4 +298,3 @@ axes.legend(['M(x)','m(x)'], fontsize=18);
 Guilherme Pizarro Werner, 23 February 2021
 
 Ahmad Eblagh, 13 March 2021
-

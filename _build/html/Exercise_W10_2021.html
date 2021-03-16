@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 - Exercise &#8212; PSSP Virtual Notebook</title>
+    <title>Week 10 - Exercise &#8212; PSSP Virtual Notebook</title>
     
   <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,8 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Week 8 - Exercise" href="Exercise_W8_2021.html" />
-    <link rel="prev" title="Week 5 - Exercise" href="Exercise_W5_2021.html" />
+    <link rel="prev" title="Week 9 - Exercise" href="Exercise_W9_2021.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -166,8 +165,8 @@
    Week 5 - Exercise
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W6_2021.html">
    Week 6 - Exercise
   </a>
  </li>
@@ -181,8 +180,8 @@
    Week 9 - Exercise
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W10_2021.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Week 10 - Exercise
   </a>
  </li>
@@ -226,7 +225,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Exercise_W6_2021.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Exercise_W10_2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -246,10 +245,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FExercise_W6_2021.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FExercise_W10_2021.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Exercise_W6_2021.ipynb"><button
+        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Exercise_W10_2021.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -269,7 +268,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Exercise_W6_2021.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Exercise_W10_2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -307,16 +306,20 @@
         
               <div>
                 
-  <div class="section" id="week-6-exercise">
-<h1>Week 6 - Exercise<a class="headerlink" href="#week-6-exercise" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="week-10-exercise">
+<h1>Week 10 - Exercise<a class="headerlink" href="#week-10-exercise" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
-<p>Continuous slurry adsorption is carried out to reduce the pollutant content in an aqueous stream from an inlet concentration of 1x10<span class="math notranslate nohighlight">\(^{-2}\)</span> mol l<span class="math notranslate nohighlight">\(^{-1}\)</span> . The flowrate of the aqueous stream is 50 m<span class="math notranslate nohighlight">\(^3\)</span> h<span class="math notranslate nohighlight">\(^{-1}\)</span> .
-The adsorbent flowrate is 750 kg h<span class="math notranslate nohighlight">\(^{-1}\)</span>. The residence time is 3 h.</p>
-<p>Adsorption is controlled by external mass transfer with a coefficient k<span class="math notranslate nohighlight">\(_L\)</span>= 0.5 m h<span class="math notranslate nohighlight">\(^{-1}\)</span>.
-The adsorbent particles have a surface area of 10 m<span class="math notranslate nohighlight">\(^2\)</span> kg<span class="math notranslate nohighlight">\(^{-1}\)</span> and a density of 1850 kg m<span class="math notranslate nohighlight">\(^{-3}\)</span>.
-Consider a linear isotherm of the form <span class="math notranslate nohighlight">\(q=kc\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> [mol kg<span class="math notranslate nohighlight">\(^{-1}\)</span>] is the amount of phenol adsorbed per kg of adsorbent, <span class="math notranslate nohighlight">\(c\)</span> is the molar concentration of pollutant in solution and <span class="math notranslate nohighlight">\(k=1\times{10}^4\)</span> [l kg<span class="math notranslate nohighlight">\(^{-1}\)</span>] is the partition coefficient.</p>
-<p>Determine the steady state concentration of pollutant in the aqueous stream leaving the unit.</p>
+<p>Consider a drying process evolving through two stages of <em>i</em> constant drying rate, and <em>ii</em> falling rate (first order kinetics).</p>
+<p>During stage <em>i</em> the drying rate per unit area is constant, and indicated with <span class="math notranslate nohighlight">\(R_c=m\times{f_c}=const\)</span>. The the critical moisture content is indicated with <span class="math notranslate nohighlight">\(w_c\)</span>, and <span class="math notranslate nohighlight">\(w_0\)</span> indicates initial moisture content.</p>
+<ul class="simple">
+<li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_0\)</span> to <span class="math notranslate nohighlight">\(w_c\)</span>.</p></li>
+</ul>
+<p>During stage <em>ii</em> the rate of drying is constant, and proportional to the free moisture content. The falling rate regime stops at the rquilibrium moisture content <span class="math notranslate nohighlight">\(w_e\)</span>.</p>
+<ul class="simple">
+<li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_c\)</span> to <span class="math notranslate nohighlight">\(w_e\)</span> in the (linear) falling regime.</p></li>
+</ul>
+<p>If a system, characterised by critical moisture content of 18% and an equilibrium moisture content of 2% takes 7300 seconds to reach a final moisture content of 5% from an initial moistyure content of 20%, how long will it take, in the same conditions, to dry a system from 30% to 3%.</p>
 </div>
 </div>
 
@@ -348,8 +351,7 @@ Consider a linear isotherm of the form <span class="math notranslate nohighlight
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Exercise_W5_2021.html" title="previous page">Week 5 - Exercise</a>
-    <a class='right-next' id="next-link" href="Exercise_W8_2021.html" title="next page">Week 8 - Exercise</a>
+    <a class='left-prev' id="prev-link" href="Exercise_W9_2021.html" title="previous page">Week 9 - Exercise</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
