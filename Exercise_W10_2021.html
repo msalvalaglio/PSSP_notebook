@@ -295,6 +295,11 @@
    Problem Statement
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tasks">
+   Tasks
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -311,15 +316,26 @@
 <div class="section" id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
 <p>Consider a drying process evolving through two stages of <em>i</em> constant drying rate, and <em>ii</em> falling rate (first order kinetics).</p>
-<p>During stage <em>i</em> the drying rate per unit area is constant, and indicated with <span class="math notranslate nohighlight">\(R_c=m\times{f_c}=const\)</span>. The the critical moisture content is indicated with <span class="math notranslate nohighlight">\(w_c\)</span>, and <span class="math notranslate nohighlight">\(w_0\)</span> indicates initial moisture content.</p>
+<p>During stage <em>i</em> the drying rate <em>per unit area</em> is constant, and indicated with <span class="math notranslate nohighlight">\(R_c=m\times{f_c}=const\)</span>.</p>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m\)</span> is a drying rate constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(f_c=w_c-w_e\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(w_c\)</span> is the critical moisture content</p></li>
+<li><p><span class="math notranslate nohighlight">\(w_e\)</span> is the equilibrium moisture content</p></li>
+<li><p><span class="math notranslate nohighlight">\(w_0\)</span> is the initial moisture content</p></li>
+</ul>
+<p>During stage <em>ii</em> the rate of drying is constant, and proportional to the free moisture content (<span class="math notranslate nohighlight">\(f=w-w_e\)</span>). The falling rate regime stops at the rquilibrium moisture content <span class="math notranslate nohighlight">\(w_e\)</span>.</p>
+</div>
+<div class="section" id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_0\)</span> to <span class="math notranslate nohighlight">\(w_c\)</span>.</p></li>
-</ul>
-<p>During stage <em>ii</em> the rate of drying is constant, and proportional to the free moisture content. The falling rate regime stops at the rquilibrium moisture content <span class="math notranslate nohighlight">\(w_e\)</span>.</p>
-<ul class="simple">
 <li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_c\)</span> to <span class="math notranslate nohighlight">\(w_e\)</span> in the (linear) falling regime.</p></li>
+<li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_0\)</span> to <span class="math notranslate nohighlight">\(w_e\)</span> in the (linear) falling regime.</p></li>
+<li><p>If a system, characterised by critical moisture content of 18% and an equilibrium moisture content of 2% takes 7300 seconds to reach a final moisture content of 5% from an initial moistyure content of 20%, how long will it take, in the same conditions, to dry a system from 30% to 3%.</p></li>
+<li><p>For the same system produce a plot of the drying time as a function of the kinetic constant m</p></li>
 </ul>
-<p>If a system, characterised by critical moisture content of 18% and an equilibrium moisture content of 2% takes 7300 seconds to reach a final moisture content of 5% from an initial moistyure content of 20%, how long will it take, in the same conditions, to dry a system from 30% to 3%.</p>
 </div>
 </div>
 
