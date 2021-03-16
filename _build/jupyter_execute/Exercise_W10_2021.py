@@ -22,5 +22,3 @@ During stage _ii_ the rate of drying is constant, and proportional to the free m
 - Derive an expression for the time necessary to reduce the moisture content from $w_0$ to $w_e$.
 - If a system, characterised by critical moisture content of 18% and an equilibrium moisture content of 2% takes 7300 seconds to reach a final moisture content of 5% from an initial moistyure content of 20%, how long will it take, in the same conditions, to dry a system from 30% to 3%.
 - For the same system produce a plot of the drying time as a function of the kinetic constant m
-
-
