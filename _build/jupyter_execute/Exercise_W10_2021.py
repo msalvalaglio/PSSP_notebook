@@ -13,7 +13,7 @@ Where:
 - $w_e$ is the equilibrium moisture content
 - $w_0$ is the initial moisture content
 
-During stage _ii_ the rate of drying is constant, and proportional to the free moisture content ($f=w-w_e$). The falling rate regime stops at the rquilibrium moisture content $w_e$. 
+During stage _ii_ the rate of drying is proportional to the free moisture content ($f=w-w_e$). The falling rate regime stops at the rquilibrium moisture content $w_e$. 
 
 ### Tasks
 
