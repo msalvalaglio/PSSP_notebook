@@ -306,6 +306,11 @@
    Tasks
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution">
+   Solution
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -335,13 +340,161 @@
 </div>
 <div class="section" id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
+<ol class="simple">
 <li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_0\)</span> to <span class="math notranslate nohighlight">\(w_c\)</span>.</p></li>
 <li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_c\)</span> to <span class="math notranslate nohighlight">\(w_e\)</span> in the (linear) falling regime.</p></li>
 <li><p>Derive an expression for the time necessary to reduce the moisture content from <span class="math notranslate nohighlight">\(w_0\)</span> to <span class="math notranslate nohighlight">\(w_e&lt;w&lt;w_c\)</span>.</p></li>
 <li><p>If a system, characterised by critical moisture content of 18% and an equilibrium moisture content of 2% takes 7300 seconds to reach a final moisture content of 5% from an initial moisture content of 20%, how long will it take, in the same conditions, to dry a system from 30% to 3%.</p></li>
 <li><p>For the same system produce a plot of the drying time as a function of the kinetic constant m.</p></li>
-</ul>
+</ol>
+</div>
+<div class="section" id="solution">
+<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from an initial value <span class="math notranslate nohighlight">\(w_0\)</span> to the critical moisture content <span class="math notranslate nohighlight">\(w_c\)</span> we shall start by realising that for <span class="math notranslate nohighlight">\(w\geq{w_c}\)</span> the rate of drying (per unit area) <span class="math notranslate nohighlight">\(R=const=R_c=m(w_c-w_e)\)</span>.
+Hence we can write the rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> as:
+$<span class="math notranslate nohighlight">\(
+\frac{dw}{dt}=-R_cA
+\)</span>$</p>
+<p>which can be solved by separating the variables</p>
+</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+-\frac{dw}{R_cA}=dt
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and integrating:
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+-\frac{1}{R_c}\int_{w_0}^{w_c}dw=\int_{0}^{t_c}dt
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>leads to: 
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+t_c=\frac{w_0-w_c}{R_c}=\frac{w_0-w_c}{mA(w_c-w_e)}
+\]</div>
+<ol class="simple">
+<li><p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from the critical value  <span class="math notranslate nohighlight">\(w_c\)</span> to the equilibrium moisture content let us begin first by deriving an expression for a generic <span class="math notranslate nohighlight">\(w_e\geq{w}&lt;w_c\)</span>.
+In this case we know that the rate is linearly dependent on <span class="math notranslate nohighlight">\(w\)</span> accordig to the expression given in the text <span class="math notranslate nohighlight">\(R=m(w-w_e)\)</span>.
+The rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> now becomes:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\frac{dw}{dt}=-mA(w-w_e)
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>which can be solved again by separating the variables  
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+-\frac{1}{mA}\frac{dw}{w-w_e}=dt
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and integrating:
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+-\frac{1}{mA}\int_{w_c}^{w^\prime}\frac{dw}{w-w_e}=\int_0^{t_w}dt
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>leads to: 
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+t_w=\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>we note that since ${w-w_e}$ is at the denominator, 
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+\lim_{w\rightarrow{w_e}}\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)=+\infty
+\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so for the moisture content approaching iuts equilibrium value the time necessary diverges.
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>The total time necessary to dry from an initial moiusture content <span class="math notranslate nohighlight">\(w_0&gt;w_c\)</span> to a final moisture content <span class="math notranslate nohighlight">\(w&lt;w_c\)</span> is equal to:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+t_{tot}=\frac{1}{mA}\left(\frac{w_0-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w-w_e}\right)
+\]</div>
+<ol class="simple">
+<li><p>Using the expression derived earlier one can compute first</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+mA=\frac{1}{t_{tot,1}}\left(\frac{w_{0,1}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_1-w_e}\right)
+\]</div>
+<p>and then once <span class="math notranslate nohighlight">\(mA\)</span> is known,</p>
+<div class="math notranslate nohighlight">
+\[
+t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_e}\right)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">w_e</span><span class="o">=</span><span class="mf">0.02</span>
+<span class="n">w_c</span><span class="o">=</span><span class="mf">0.18</span>
+
+<span class="n">w0_1</span><span class="o">=</span><span class="mf">0.2</span>
+<span class="n">w_1</span><span class="o">=</span><span class="mf">0.05</span>
+<span class="n">t_1</span><span class="o">=</span><span class="mi">7300</span>
+
+
+<span class="n">mA</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t_1</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_1</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_1</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+            
+<span class="n">w0_2</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">w_2</span> <span class="o">=</span> <span class="mf">0.03</span>
+            
+<span class="n">t_2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The drying time is&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">t_2</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;[s]&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The drying time is 1.247e+04 [s]
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>One cannot plot the dependence of the time on m alone, but the term mA can be used instead</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1"># Data</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">mA_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mA</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="n">mA</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA_v</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mA_v</span><span class="p">,</span><span class="n">t_v</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span> 
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mA</span><span class="p">,</span><span class="n">t_2</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$mA$ [$s^{-1}$]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$t$ [s]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise_W10_2021_8_0.png" src="_images/Exercise_W10_2021_8_0.png" />
+</div>
+</div>
 </div>
 </div>
 
