@@ -310,6 +310,33 @@
   <a class="reference internal nav-link" href="#solution">
    Solution
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1">
+     Task 1.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2">
+     Task 2.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3">
+     Task 3.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4">
+     Task 4.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-5">
+     Task 5.
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -350,83 +377,72 @@
 </div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<ol>
-<li><p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from an initial value <span class="math notranslate nohighlight">\(w_0\)</span> to the critical moisture content <span class="math notranslate nohighlight">\(w_c\)</span> we shall start by realising that for <span class="math notranslate nohighlight">\(w\geq{w_c}\)</span> the rate of drying (per unit area) <span class="math notranslate nohighlight">\(R=const=R_c=m(w_c-w_e)\)</span>.
-Hence we can write the rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> as:
-$<span class="math notranslate nohighlight">\(
+<div class="section" id="task-1">
+<h3>Task 1.<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h3>
+<p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from an initial value <span class="math notranslate nohighlight">\(w_0\)</span> to the critical moisture content <span class="math notranslate nohighlight">\(w_c\)</span> we shall start by realising that for <span class="math notranslate nohighlight">\(w\geq{w_c}\)</span> the rate of drying (per unit area) <span class="math notranslate nohighlight">\(R=const=R_c=m(w_c-w_e)\)</span>.</p>
+<p>Hence we can write the rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{dw}{dt}=-R_cA
-\)</span>$</p>
+\]</div>
 <p>which can be solved by separating the variables</p>
-</li>
-</ol>
 <div class="math notranslate nohighlight">
 \[
 -\frac{dw}{R_cA}=dt
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and integrating:
-</pre></div>
-</div>
+<p>and integrating:</p>
 <div class="math notranslate nohighlight">
 \[
 -\frac{1}{R_c}\int_{w_0}^{w_c}dw=\int_{0}^{t_c}dt
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>leads to: 
-</pre></div>
-</div>
+<p>leads to:</p>
 <div class="math notranslate nohighlight">
 \[
 t_c=\frac{w_0-w_c}{R_c}=\frac{w_0-w_c}{mA(w_c-w_e)}
 \]</div>
-<ol class="simple">
-<li><p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from the critical value  <span class="math notranslate nohighlight">\(w_c\)</span> to the equilibrium moisture content let us begin first by deriving an expression for a generic <span class="math notranslate nohighlight">\(w_e\geq{w}&lt;w_c\)</span>.
+</div>
+<div class="section" id="task-2">
+<h3>Task 2.<a class="headerlink" href="#task-2" title="Permalink to this headline">¶</a></h3>
+<p>In order to derive an expression for the time necessary to obtain a reduction in the moisture content from the critical value  <span class="math notranslate nohighlight">\(w_c\)</span> to the equilibrium moisture content let us begin first by deriving an expression for a generic <span class="math notranslate nohighlight">\(w_e\geq{w}&lt;w_c\)</span>.
 In this case we know that the rate is linearly dependent on <span class="math notranslate nohighlight">\(w\)</span> accordig to the expression given in the text <span class="math notranslate nohighlight">\(R=m(w-w_e)\)</span>.
-The rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> now becomes:</p></li>
-</ol>
+The rate of reduction in moisture content <span class="math notranslate nohighlight">\(\frac{dw}{dt}\)</span> now becomes:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{dw}{dt}=-mA(w-w_e)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>which can be solved again by separating the variables  
-</pre></div>
-</div>
+<p>which can be solved again by separating the variables</p>
 <div class="math notranslate nohighlight">
 \[
 -\frac{1}{mA}\frac{dw}{w-w_e}=dt
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and integrating:
-</pre></div>
-</div>
+<p>and integrating:</p>
 <div class="math notranslate nohighlight">
 \[
 -\frac{1}{mA}\int_{w_c}^{w^\prime}\frac{dw}{w-w_e}=\int_0^{t_w}dt
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>leads to: 
-</pre></div>
-</div>
+<p>leads to:</p>
 <div class="math notranslate nohighlight">
 \[
 t_w=\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>we note that since ${w-w_e}$ is at the denominator, 
-</pre></div>
-</div>
+<p>we note that since <span class="math notranslate nohighlight">\({w-w_e}\)</span> is at the denominator,</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{w\rightarrow{w_e}}\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)=+\infty
 \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>so for the moisture content approaching iuts equilibrium value the time necessary diverges.
-</pre></div>
+<p>so for the moisture content approaching iuts equilibrium value the time necessary diverges.</p>
 </div>
-<ol class="simple">
-<li><p>The total time necessary to dry from an initial moiusture content <span class="math notranslate nohighlight">\(w_0&gt;w_c\)</span> to a final moisture content <span class="math notranslate nohighlight">\(w&lt;w_c\)</span> is equal to:</p></li>
-</ol>
+<div class="section" id="task-3">
+<h3>Task 3.<a class="headerlink" href="#task-3" title="Permalink to this headline">¶</a></h3>
+<p>The total time necessary to dry from an initial moiusture content <span class="math notranslate nohighlight">\(w_0&gt;w_c\)</span> to a final moisture content <span class="math notranslate nohighlight">\(w&lt;w_c\)</span> is equal to:</p>
 <div class="math notranslate nohighlight">
 \[
 t_{tot}=\frac{1}{mA}\left(\frac{w_0-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w-w_e}\right)
 \]</div>
-<ol class="simple">
-<li><p>Using the expression derived earlier one can compute first</p></li>
-</ol>
+</div>
+<div class="section" id="task-4">
+<h3>Task 4.<a class="headerlink" href="#task-4" title="Permalink to this headline">¶</a></h3>
+<p>Using the expression derived earlier one can compute first</p>
 <div class="math notranslate nohighlight">
 \[
 mA=\frac{1}{t_{tot,1}}\left(\frac{w_{0,1}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_1-w_e}\right)
@@ -465,9 +481,10 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>One cannot plot the dependence of the time on m alone, but the term mA can be used instead</p></li>
-</ol>
+</div>
+<div class="section" id="task-5">
+<h3>Task 5.<a class="headerlink" href="#task-5" title="Permalink to this headline">¶</a></h3>
+<p>One cannot plot the dependence of the time on m alone, but the term mA can be used instead.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -493,6 +510,7 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Exercise_W10_2021_8_0.png" src="_images/Exercise_W10_2021_8_0.png" />
+</div>
 </div>
 </div>
 </div>
