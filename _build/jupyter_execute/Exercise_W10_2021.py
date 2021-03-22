@@ -156,3 +156,28 @@ axes.set_xlabel('$mA$ [$s^{-1}$]', fontsize=18);
 axes.set_ylabel('$t$ [s]',fontsize=18);
 
 
+## Additional info
+
+1. Asymptotic behaviour of the time for the moisture content reaching the equilibrium moisture content: 
+
+import numpy as np
+import matplotlib.pyplot as plt 
+from matplotlib.pyplot import cm
+
+# Data
+
+N=10000
+ww = np.linspace(w_e*1.01,w_c*0.99, N)
+
+
+#Plotting
+figure=plt.figure()
+axes = figure.add_axes([0.1,0.1,1.2,1.2])
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+axes.plot(ww,t_v, marker=' ')
+axes.plot(np.array([w_e, w_e]),np.array([0, 44000]))
+t_v=(1/mA)*((w0_2-w_c)+np.log((w_c-w_e)/(ww-w_e)))
+axes.set_xlabel('$w$ [-]', fontsize=18);
+axes.set_ylabel('$t$ [s]',fontsize=18);
+
