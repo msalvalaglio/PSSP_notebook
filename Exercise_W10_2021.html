@@ -338,6 +338,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-info">
+   Additional info
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -511,6 +516,41 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 <div class="cell_output docutils container">
 <img alt="_images/Exercise_W10_2021_8_0.png" src="_images/Exercise_W10_2021_8_0.png" />
 </div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-info">
+<h2>Additional info<a class="headerlink" href="#additional-info" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Asymptotic behaviour of the time for the moisture content reaching the equilibrium moisture content:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1"># Data</span>
+
+<span class="n">N</span><span class="o">=</span><span class="mi">10000</span>
+<span class="n">ww</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">w_e</span><span class="o">*</span><span class="mf">1.01</span><span class="p">,</span><span class="n">w_c</span><span class="o">*</span><span class="mf">0.99</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ww</span><span class="p">,</span><span class="n">t_v</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w_e</span><span class="p">,</span> <span class="n">w_e</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">44000</span><span class="p">]))</span>
+<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ww</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$w$ [-]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$t$ [s]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise_W10_2021_10_0.png" src="_images/Exercise_W10_2021_10_0.png" />
 </div>
 </div>
 </div>
