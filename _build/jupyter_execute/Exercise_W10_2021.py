@@ -27,71 +27,81 @@ During stage _ii_ the rate of drying is proportional to the free moisture conten
 
 ### Solution
 
-1. In order to derive an expression for the time necessary to obtain a reduction in the moisture content from an initial value $w_0$ to the critical moisture content $w_c$ we shall start by realising that for $w\geq{w_c}$ the rate of drying (per unit area) $R=const=R_c=m(w_c-w_e)$. 
-    Hence we can write the rate of reduction in moisture content $\frac{dw}{dt}$ as: 
+#### Task 1.
+
+In order to derive an expression for the time necessary to obtain a reduction in the moisture content from an initial value $w_0$ to the critical moisture content $w_c$ we shall start by realising that for $w\geq{w_c}$ the rate of drying (per unit area) $R=const=R_c=m(w_c-w_e)$. 
+
+Hence we can write the rate of reduction in moisture content $\frac{dw}{dt}$ as: 
+
 $$
 \frac{dw}{dt}=-R_cA
 $$
 
-    which can be solved by separating the variables  
+which can be solved by separating the variables  
 
 $$
 -\frac{dw}{R_cA}=dt
 $$
 
-    and integrating:
+and integrating:
 
 $$
 -\frac{1}{R_c}\int_{w_0}^{w_c}dw=\int_{0}^{t_c}dt
 $$
 
-    leads to: 
+leads to:
+
 $$
 t_c=\frac{w_0-w_c}{R_c}=\frac{w_0-w_c}{mA(w_c-w_e)}
 $$
 
 
-2. In order to derive an expression for the time necessary to obtain a reduction in the moisture content from the critical value  $w_c$ to the equilibrium moisture content let us begin first by deriving an expression for a generic $w_e\geq{w}<w_c$. 
-    In this case we know that the rate is linearly dependent on $w$ accordig to the expression given in the text $R=m(w-w_e)$. 
-    The rate of reduction in moisture content $\frac{dw}{dt}$ now becomes: 
+#### Task 2. 
+In order to derive an expression for the time necessary to obtain a reduction in the moisture content from the critical value  $w_c$ to the equilibrium moisture content let us begin first by deriving an expression for a generic $w_e\geq{w}<w_c$. 
+In this case we know that the rate is linearly dependent on $w$ accordig to the expression given in the text $R=m(w-w_e)$. 
+The rate of reduction in moisture content $\frac{dw}{dt}$ now becomes: 
 
 $$
 \frac{dw}{dt}=-mA(w-w_e)
 $$
 
-    which can be solved again by separating the variables  
+which can be solved again by separating the variables  
 
 $$
 -\frac{1}{mA}\frac{dw}{w-w_e}=dt
 $$
 
-    and integrating:
+and integrating:
 
 $$
 -\frac{1}{mA}\int_{w_c}^{w^\prime}\frac{dw}{w-w_e}=\int_0^{t_w}dt
 $$
 
-    leads to: 
+leads to: 
 
 $$
 t_w=\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)
 $$
 
-    we note that since ${w-w_e}$ is at the denominator, 
+we note that since ${w-w_e}$ is at the denominator, 
 
 $$
 \lim_{w\rightarrow{w_e}}\frac{1}{mA}\ln\left(\frac{w_c-w_e}{w-w_e}\right)=+\infty
 $$
 
-    so for the moisture content approaching iuts equilibrium value the time necessary diverges.
+so for the moisture content approaching iuts equilibrium value the time necessary diverges.
 
-3. The total time necessary to dry from an initial moiusture content $w_0>w_c$ to a final moisture content $w<w_c$ is equal to: 
+#### Task 3. 
+
+The total time necessary to dry from an initial moiusture content $w_0>w_c$ to a final moisture content $w<w_c$ is equal to: 
 
 $$
 t_{tot}=\frac{1}{mA}\left(\frac{w_0-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w-w_e}\right)
 $$
 
-4. Using the expression derived earlier one can compute first 
+#### Task 4. 
+
+Using the expression derived earlier one can compute first 
 
 $$
 mA=\frac{1}{t_{tot,1}}\left(\frac{w_{0,1}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_1-w_e}\right)
@@ -102,8 +112,6 @@ and then once $mA$ is known,
 $$
 t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_e}\right)
 $$
-
-
 
 import numpy as np
 
@@ -124,7 +132,9 @@ t_2=(1/mA)*((w0_2-w_c)+np.log((w_c-w_e)/(w_2-w_e)))
             
 print("\nThe drying time is", f"{t_2:.4}", "[s]") 
 
-5. One cannot plot the dependence of the time on m alone, but the term mA can be used instead
+#### Task 5. 
+
+One cannot plot the dependence of the time on m alone, but the term mA can be used instead. 
 
 import numpy as np
 import matplotlib.pyplot as plt 
