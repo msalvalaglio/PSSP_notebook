@@ -39,7 +39,7 @@ $$
 where $Re_p$ is the Reynolds number and $v$ the velocity of the fluid, we get: 
 
 $$
-v_t=\frac{\rho_fdv}{24\mu}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g=\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}
+v_t=\frac{\rho_fd}{24\mu}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g=\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}
 $$
 
 Now, if we take the ratio between $v_{mf}$ and $v_t$ we get: 
