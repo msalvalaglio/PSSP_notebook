@@ -141,7 +141,7 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 
 # Data
-N=100
+N=1000
 mA_v = np.linspace(mA/10,10*mA, N)
 t_v=(1/mA_v)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(w_2-w_e)))
 
@@ -165,9 +165,9 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 
 # Data
-
-N=10000
+N=1000
 ww = np.linspace(w_e*1.01,w_c*0.99, N)
+t_div=(1/mA)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(ww-w_e)))
 
 
 #Plotting
@@ -175,9 +175,11 @@ figure=plt.figure()
 axes = figure.add_axes([0.1,0.1,1.2,1.2])
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-axes.plot(ww,t_v, marker=' ')
+axes.plot(ww,t_div, marker=' ')
 axes.plot(np.array([w_e, w_e]),np.array([0, 44000]))
-t_v=(1/mA)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(ww-w_e)))
 axes.set_xlabel('$w$ [-]', fontsize=18);
 axes.set_ylabel('$t$ [s]',fontsize=18);
+
+## Contributions
+Nikita Gusev, 29 March 2021 
 
