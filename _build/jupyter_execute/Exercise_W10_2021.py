@@ -123,12 +123,12 @@ w_1=0.05
 t_1=7300
 
 
-mA=(1/t_1)*((w0_1-w_c)+np.log((w_c-w_e)/(w_1-w_e)))
+mA=(1/t_1)*((w0_1-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(w_1-w_e)))
             
 w0_2 = 0.3
 w_2 = 0.03
             
-t_2=(1/mA)*((w0_2-w_c)+np.log((w_c-w_e)/(w_2-w_e)))
+t_2=(1/mA)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(w_2-w_e)))
             
 print("\nThe drying time is", f"{t_2:.4}", "[s]") 
 
@@ -143,7 +143,7 @@ from matplotlib.pyplot import cm
 # Data
 N=100
 mA_v = np.linspace(mA/10,10*mA, N)
-t_v=(1/mA_v)*((w0_2-w_c)+np.log((w_c-w_e)/(w_2-w_e)))
+t_v=(1/mA_v)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(w_2-w_e)))
 
 #Plotting
 figure=plt.figure()
@@ -177,7 +177,7 @@ plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 axes.plot(ww,t_v, marker=' ')
 axes.plot(np.array([w_e, w_e]),np.array([0, 44000]))
-t_v=(1/mA)*((w0_2-w_c)+np.log((w_c-w_e)/(ww-w_e)))
+t_v=(1/mA)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(ww-w_e)))
 axes.set_xlabel('$w$ [-]', fontsize=18);
 axes.set_ylabel('$t$ [s]',fontsize=18);
 

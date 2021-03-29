@@ -469,19 +469,19 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 <span class="n">t_1</span><span class="o">=</span><span class="mi">7300</span>
 
 
-<span class="n">mA</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t_1</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_1</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_1</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+<span class="n">mA</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">t_1</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_1</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_1</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
             
 <span class="n">w0_2</span> <span class="o">=</span> <span class="mf">0.3</span>
 <span class="n">w_2</span> <span class="o">=</span> <span class="mf">0.03</span>
             
-<span class="n">t_2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+<span class="n">t_2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
             
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The drying time is&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">t_2</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;[s]&quot;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The drying time is 1.247e+04 [s]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The drying time is 1.429e+04 [s]
 </pre></div>
 </div>
 </div>
@@ -499,7 +499,7 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 <span class="c1"># Data</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">100</span>
 <span class="n">mA_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mA</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="n">mA</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA_v</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA_v</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_2</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
 
 <span class="c1">#Plotting</span>
 <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
@@ -543,14 +543,47 @@ t_{tot,2}=\frac{1}{mA}\left(\frac{w_{0,2}-w_c}{w_c-w_e}+\ln\frac{w_c-w_e}{w_2-w_
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ww</span><span class="p">,</span><span class="n">t_v</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w_e</span><span class="p">,</span> <span class="n">w_e</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">44000</span><span class="p">]))</span>
-<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ww</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+<span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ww</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$w$ [-]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$t$ [s]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Exercise_W10_2021_10_0.png" src="_images/Exercise_W10_2021_10_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">53</span><span class="o">-</span><span class="mi">5748</span><span class="n">bece145f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">16</span> <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ww</span><span class="p">,</span><span class="n">t_v</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w_e</span><span class="p">,</span> <span class="n">w_e</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">44000</span><span class="p">]))</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">t_v</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">mA</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">w0_2</span><span class="o">-</span><span class="n">w_c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">w_c</span><span class="o">-</span><span class="n">w_e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ww</span><span class="o">-</span><span class="n">w_e</span><span class="p">)))</span>
+
+<span class="nn">/Applications/anaconda3/lib/python3.7/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">plot</span><span class="nt">(self, scalex, scaley, data, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1645</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1646</span><span class="s2">         kwargs = cbook.normalize_kwargs(kwargs, mlines.Line2D)</span>
+<span class="ne">-&gt; </span><span class="mi">1647</span><span class="s2">         lines = [*self._get_lines(*args, data=data, **kwargs)]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1648</span><span class="s2">         for line in lines:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1649</span><span class="s2">             self.add_line(line)</span>
+
+<span class="nn">/Applications/anaconda3/lib/python3.7/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">214</span><span class="s2">                 this += args[0],</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="s2">                 args = args[1:]</span>
+<span class="ne">--&gt; </span><span class="mi">216</span><span class="s2">             yield from self._plot_args(this, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="s2">     def get_next_color(self):</span>
+
+<span class="nn">/Applications/anaconda3/lib/python3.7/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">_plot_args</span><span class="nt">(self, tup, kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span><span class="s2">         if x.shape[0] != y.shape[0]:</span>
+<span class="ne">--&gt; </span><span class="mi">342</span><span class="s2">             raise ValueError(f&quot;x and y must have same first dimension, but &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2">                              f&quot;have shapes </span><span class="si">{x.shape}</span><span class="s2"> and </span><span class="si">{y.shape}</span><span class="s2">&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span><span class="s2">         if x.ndim &gt; 2 or y.ndim &gt; 2:</span>
+
+<span class="ne">ValueError</span>: x and y must have same first dimension, but have shapes (10000,) and (100,)
+</pre></div>
+</div>
+<img alt="_images/Exercise_W10_2021_10_1.png" src="_images/Exercise_W10_2021_10_1.png" />
 </div>
 </div>
 </div>
