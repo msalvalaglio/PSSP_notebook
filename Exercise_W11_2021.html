@@ -309,6 +309,28 @@
     <a class="reference internal nav-link" href="#solution">
      Solution
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#task-1">
+       Task 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#task-2-4">
+       Task 2 / 4
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#task-3-4">
+       Task 3 / 4
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#task-5">
+       Task 5
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -331,7 +353,7 @@
 <div class="section" id="tasks">
 <h3>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Demonstrate that, in laminar regime, the minimum fluidization velocity is alway smaller than the terminal falling velocity.</p></li>
+<li><p>Demonstrate that, in laminar regime, the minimum fluidization velocity is always smaller than the terminal falling velocity.</p></li>
 <li><p>Compute the minimum fluidisation velocity and the terminal falling velocity of the bed particles.</p></li>
 <li><p>Sketch a plot of the <span class="math notranslate nohighlight">\(\Delta{P}\)</span> as a function of the fluid velocity, clearly indicating the minimum fluidisation velocity.</p></li>
 <li><p>How would your result change if particles were twice as large?</p></li>
@@ -340,6 +362,8 @@
 </div>
 <div class="section" id="solution">
 <h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="task-1">
+<h4>Task 1<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h4>
 <p>In the laminar regime, for spherical particles of diameter <span class="math notranslate nohighlight">\(d\)</span> the minimum fluidization velocity is given by:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -373,17 +397,145 @@ $<span class="math notranslate nohighlight">\(
 \frac{v_{mf}}{v_t}&lt;1
 \)</span>$</p>
 <p>and the minimum fluidization velocity is always smaller than the terminal Falling velocity, irrespective of <span class="math notranslate nohighlight">\(d\)</span>, <span class="math notranslate nohighlight">\(\rho_p\)</span>, <span class="math notranslate nohighlight">\(\rho_f\)</span> or <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+</div>
+<div class="section" id="task-2-4">
+<h4>Task 2 / 4<a class="headerlink" href="#task-2-4" title="Permalink to this headline">¶</a></h4>
+<p>In order to solve task 2 we need to estimate the void fraction. A typical approach whne the actual void fraction is not provided is to compute it as the ratio between the volume of a sphere of diameter <span class="math notranslate nohighlight">\(d\)</span> and a cube with the side of lenghth <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+e=1-\frac{\pi}{6}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
 <span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
 
-<span class="n">dens_fluid</span><span class="o">=</span><span class="mi">1000</span> <span class="c1">#</span>
-<span class="n">dens_particles</span><span class="o">=</span><span class="mi">1500</span>
+<span class="n">rho_f</span><span class="o">=</span><span class="mi">1000</span> <span class="c1">#</span>
+<span class="n">rho_s</span><span class="o">=</span><span class="mi">1500</span> <span class="c1"># kg m$^{-3}</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">1E-3</span> <span class="c1"># N s m$^{-2}$</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="mf">1E-3</span> <span class="c1">#m</span>
+<span class="n">g</span><span class="o">=</span><span class="mf">9.81</span> <span class="c1"># m /s^2</span>
+<span class="n">e</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span>
+<span class="n">common</span><span class="o">=</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">rho_s</span><span class="o">-</span><span class="n">rho_f</span><span class="p">)</span><span class="o">*</span><span class="n">g</span><span class="o">/</span><span class="n">mu</span> <span class="c1">#m/s</span>
+<span class="n">v_mf</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">))</span><span class="o">*</span><span class="n">common</span>
+<span class="n">v_t</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">18</span><span class="o">*</span><span class="n">common</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Diameter: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">d</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [mm]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Terminal Falling velocity: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_t</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m/s]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum Fluidisation velocity: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_mf</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m/s]&quot;</span><span class="p">)</span>
+
+<span class="n">common</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">rho_s</span><span class="o">-</span><span class="n">rho_f</span><span class="p">)</span><span class="o">*</span><span class="n">g</span><span class="o">/</span><span class="n">mu</span> <span class="c1">#m/s</span>
+<span class="n">v_mf</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">))</span><span class="o">*</span><span class="n">common</span>
+<span class="n">v_t</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">18</span><span class="o">*</span><span class="n">common</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Diameter: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [mm]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Terminal Falling velocity: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_t</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m/s]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minimum Fluidisation velocity: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v_mf</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m/s]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Diameter:  0.0005  [mm]
+
+Terminal Falling velocity:  0.06813  [m/s]
+Minimum Fluidisation velocity:  0.001407  [m/s]
+
+Diameter:  0.001  [mm]
+
+Terminal Falling velocity:  0.2725  [m/s]
+Minimum Fluidisation velocity:  0.005627  [m/s]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="task-3-4">
+<h4>Task 3 / 4<a class="headerlink" href="#task-3-4" title="Permalink to this headline">¶</a></h4>
+<p>Without specifying the total lenght of the packed bed it is only possible to plot the pressure gradient <span class="math notranslate nohighlight">\(\Delta{P}/l\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1"># Data</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">1000</span>
+
+<span class="n">v</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">v_mf</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_heat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span>
+
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">mDeltaP_l_mf</span><span class="o">=</span><span class="n">v_mf</span><span class="o">*</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">mu</span><span class="o">/</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span> <span class="c1"># N/m</span>
+<span class="n">mDeltaP_l</span><span class="o">=</span><span class="n">v</span><span class="o">*</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">mu</span><span class="o">/</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span> <span class="c1"># N/m</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">mDeltaP_l</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_mf</span><span class="p">,</span><span class="n">mDeltaP_l_mf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+
+
+<span class="c1"># Double particle diameter</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">mDeltaP_l_mf</span><span class="o">=</span><span class="n">v_mf</span><span class="o">*</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="c1"># N/m</span>
+<span class="n">mDeltaP_l</span><span class="o">=</span><span class="n">v</span><span class="o">*</span><span class="mi">180</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">e</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="c1"># N/m</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">mDeltaP_l</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_mf</span><span class="p">,</span><span class="n">mDeltaP_l_mf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$v$ [$m s^{-1}$]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$-\Delta</span><span class="si">{P}</span><span class="s1">$ ${l^{-1}}$ [N/m$^3$]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise_W11_2021_6_0.png" src="_images/Exercise_W11_2021_6_0.png" />
+</div>
+</div>
+<p>We can treat the bed length as a parameter, to show the behaviour of the <span class="math notranslate nohighlight">\(\Delta{P}\)</span> as a function of velocity:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+
+<span class="c1"># Data</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">1000</span>
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Parameter: bed length</span>
+<span class="n">lengths</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_heat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lengths</span><span class="p">:</span> 
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">mDeltaP_mf</span><span class="o">=</span><span class="n">mDeltaP_l_mf</span><span class="o">*</span><span class="n">l</span> <span class="c1"># N/m</span>
+    <span class="n">mDeltaP</span><span class="o">=</span><span class="n">mDeltaP_l</span><span class="o">*</span><span class="n">l</span> <span class="c1"># N/m</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">mDeltaP</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">v_mf</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">v_mf</span><span class="p">]),</span><span class="n">mDeltaP_mf</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_mf</span><span class="p">,</span><span class="n">mDeltaP_mf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$v$ [$m s^{-1}$]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$-\Delta</span><span class="si">{P}</span><span class="s1">$ [N/m$^2$]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Exercise_W11_2021_8_0.png" src="_images/Exercise_W11_2021_8_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="task-5">
+<h4>Task 5<a class="headerlink" href="#task-5" title="Permalink to this headline">¶</a></h4>
+<p>The terminal falling velocity corresponds to the velocity at whixh thew drag froces counterbalance the net weight of the particles, over coming thisb velocity leads to net upward acceleration of the particles and corresponds to the instauration of the transport regime.</p>
 </div>
 </div>
 </div>
