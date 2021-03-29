@@ -34,19 +34,19 @@ plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 axes.plot(ww,t_v, marker=' ')
 axes.plot(np.array([w_e, w_e]),np.array([0, 44000]))
-t_v=(1/mA)*((w0_2-w_c)+np.log((w_c-w_e)/(ww-w_e)))
+t_v=(1/mA)*((w0_2-w_c)/(w_c-w_e)+np.log((w_c-w_e)/(ww-w_e)))
 axes.set_xlabel('$w$ [-]', fontsize=18);
 axes.set_ylabel('$t$ [s]',fontsize=18);
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m<ipython-input-3-2ea43a8a247c>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-3-5748bece145f>[0m in [0;36m<module>[0;34m[0m
 [1;32m     14[0m [0mplt[0m[0;34m.[0m[0mxticks[0m[0;34m([0m[0mfontsize[0m[0;34m=[0m[0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     15[0m [0mplt[0m[0;34m.[0m[0myticks[0m[0;34m([0m[0mfontsize[0m[0;34m=[0m[0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 16[0;31m [0maxes[0m[0;34m.[0m[0mplot[0m[0;34m([0m[0mww[0m[0;34m,[0m[0mt_v[0m[0;34m,[0m [0mmarker[0m[0;34m=[0m[0;34m' '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m     17[0m [0maxes[0m[0;34m.[0m[0mplot[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0;34m[[0m[0mw_e[0m[0;34m,[0m [0mw_e[0m[0;34m][0m[0;34m)[0m[0;34m,[0m[0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0;34m[[0m[0;36m0[0m[0;34m,[0m [0;36m44000[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     18[0m [0mt_v[0m[0;34m=[0m[0;34m([0m[0;36m1[0m[0;34m/[0m[0mmA[0m[0;34m)[0m[0;34m*[0m[0;34m([0m[0;34m([0m[0mw0_2[0m[0;34m-[0m[0mw_c[0m[0;34m)[0m[0;34m+[0m[0mnp[0m[0;34m.[0m[0mlog[0m[0;34m([0m[0;34m([0m[0mw_c[0m[0;34m-[0m[0mw_e[0m[0;34m)[0m[0;34m/[0m[0;34m([0m[0mww[0m[0;34m-[0m[0mw_e[0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     18[0m [0mt_v[0m[0;34m=[0m[0;34m([0m[0;36m1[0m[0;34m/[0m[0mmA[0m[0;34m)[0m[0;34m*[0m[0;34m([0m[0;34m([0m[0mw0_2[0m[0;34m-[0m[0mw_c[0m[0;34m)[0m[0;34m/[0m[0;34m([0m[0mw_c[0m[0;34m-[0m[0mw_e[0m[0;34m)[0m[0;34m+[0m[0mnp[0m[0;34m.[0m[0mlog[0m[0;34m([0m[0;34m([0m[0mw_c[0m[0;34m-[0m[0mw_e[0m[0;34m)[0m[0;34m/[0m[0;34m([0m[0mww[0m[0;34m-[0m[0mw_e[0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/Applications/anaconda3/lib/python3.7/site-packages/matplotlib/axes/_axes.py[0m in [0;36mplot[0;34m(self, scalex, scaley, data, *args, **kwargs)[0m
 [1;32m   1645[0m         """
