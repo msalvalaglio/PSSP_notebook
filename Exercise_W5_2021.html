@@ -346,18 +346,84 @@ The chromatogram resulting from the separation is reported in the following:</p>
 <h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>The chromatogram clearly indicates three components, let us indicate them with A, B, and C.
-The retention times for these components are:
-<span class="math notranslate nohighlight">\(t_{r,A}=7\)</span> //
-<span class="math notranslate nohighlight">\(t_{r,B}=10\)</span>
-<span class="math notranslate nohighlight">\(t_{r,C}=15\)</span></p></li>
+The retention times for these components are:</p></li>
+</ol>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(t_{r,A}=7\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_{r,B}=10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_{r,C}=15\)</span></p></li>
+</ul>
+<ol class="simple">
 <li><p>The selectivity can be computed for every pair of components as:
 $<span class="math notranslate nohighlight">\(
 S_{i,j}=\frac{t_{r,i}-t_0}{t_{r,j}-t_0}
 \)</span>$</p></li>
-<li><p>Since <span class="math notranslate nohighlight">\(S_{i,j}=H_i/H_j\)</span> we can determine the relative affinity of components A, B and C for the startionary phase. Component C shows the highest affinity for the stationary phase, followed by B and then C.</p></li>
-<li><p>The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship <span class="math notranslate nohighlight">\(N=\)</span></p></li>
-<li></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">tr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">]);</span> 
+<span class="n">t0</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">SEL</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)));</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)):</span>
+        <span class="n">SEL</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">t0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Selectivity i,j</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">SEL</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Selectivity i,j
+ [[1.         0.66666667 0.42857143]
+ [1.5        1.         0.64285714]
+ [2.33333333 1.55555556 1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Since <span class="math notranslate nohighlight">\(S_{i,j}=H_i/H_j\)</span> we can determine the relative affinity of components A, B and C for the startionary phase. Component C shows the highest affinity for the stationary phase, followed by B and then C.</p></li>
+</ol>
+<p>4/5. The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship <span class="math notranslate nohighlight">\(N=16*(tr/tw)^2\)</span>. The resolution for every couple of components is computed as: <span class="math notranslate nohighlight">\(R_{i,j}=\frac{t_{r,i}-t_{r,j}}{2(t_{w,i}+t_{w,j})}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">tr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">]);</span> 
+<span class="n">tw</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.5</span><span class="p">]);</span> 
+<span class="n">L</span><span class="o">=</span><span class="mi">10</span> <span class="c1">#cm</span>
+
+<span class="n">N</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="p">(</span><span class="n">tr</span><span class="o">/</span><span class="n">tw</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">H</span><span class="o">=</span><span class="n">L</span><span class="o">/</span><span class="n">N</span>
+
+<span class="n">R</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)));</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tr</span><span class="p">)):</span>
+        <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="nb">abs</span><span class="p">((</span><span class="n">tr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">tr</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">tw</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">tw</span><span class="p">[</span><span class="n">j</span><span class="p">])))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Height of a theoretical plates &#39;</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="s1">&#39; [-]&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of theoretical plates &#39;</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="s1">&#39; cm&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resolution i,j</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Height of a theoretical plates  [0.0127551 0.025     0.00625  ]  [-]
+Number of theoretical plates  [0.0127551 0.025     0.00625  ]  cm
+Resolution i,j
+ [[0.         0.5        1.6       ]
+ [0.5        0.         0.71428571]
+ [1.6        0.71428571 0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
