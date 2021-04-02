@@ -12,11 +12,7 @@ The cumulative particle size distribution $N(L)$ has been measured for two diffe
 - Can you say anything about the residence time in the two crystallisers? 
 - Which process is operating at the highest temperature? 
 
-
-
-
-
-
-
-
+### Solution
+- [Contributed by Guilherme Pizarro Werner](https://raw.githubusercontent.com/msalvalaglio/PSSP_notebook/master/PSSP_Solution_Proposal_PizarroWerner.pdf)
+- [Contributed by Nikita Gusev](https://raw.githubusercontent.com/msalvalaglio/PSSP_notebook/master/Week_9_Exercise_Gusev.pdf)
 
