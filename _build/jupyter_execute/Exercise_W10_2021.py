@@ -156,6 +156,7 @@ axes.set_xlabel('$mA$ [$s^{-1}$]', fontsize=18);
 axes.set_ylabel('$t$ [s]',fontsize=18);
 
 
+
 ## Additional info
 
 1. Asymptotic behaviour of the time for the moisture content reaching the equilibrium moisture content: 
