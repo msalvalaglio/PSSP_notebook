@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. The Osmotic Pressure" href="Osmosis.html" />
+    <link rel="prev" title="1. Material Balances in a Gas Permeation Unit" href="Gas_permeation.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -93,15 +95,30 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Gas_permeation.html">
    1. Material Balances in a Gas Permeation Unit
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Pervaporation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Osmosis.html">
+   3. The Osmotic Pressure
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W2_2021.html">
    Week 2 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W3_2021.html">
+   Week 3 - Exercise
   </a>
  </li>
 </ul>
@@ -249,7 +266,7 @@ In this process, evaporation and permeation of different chemical through a semi
 <h2>2.2 Vapour-Liquid Equilibrium conditions<a class="headerlink" href="#vapour-liquid-equilibrium-conditions" title="Permalink to this headline">¶</a></h2>
 <p>To express the partial pressure of component <span class="math notranslate nohighlight">\(i\)</span> in a vapour phase in equilibrium with the liquid on the retentate side we shall begin by expressing the fundamental condition that has to be fulfilled by all species at thermodynamic equilibrium:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-fund">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-fund" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(9)<a class="headerlink" href="#equation-pvapeq-fund" title="Permalink to this equation">¶</a></span>\[
 \mu_i^L(T,P,\vec{x})=\mu_i^V(T,P,\vec{y})
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_i^L(T,P,\vec{x})\)</span> and <span class="math notranslate nohighlight">\(\mu_i^V(T,P,\vec{y})\)</span> are the chemical potentials for specie <span class="math notranslate nohighlight">\(i\)</span> in the liquid and vapour phase, respectively.</p>
@@ -261,34 +278,34 @@ Integrating this expression between the phases in equilibrium yields:</p>
 \int_{L,T,P,\vec{x}}^{V,T,P,\vec{y}}d\mu_i=\int_{L,T,P,\vec{x}}^{V,T,P,\vec{y}}RTd\ln{f_i}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-pvapeq-chempot">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-chempot" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(10)<a class="headerlink" href="#equation-pvapeq-chempot" title="Permalink to this equation">¶</a></span>\[
 \mu_i^V(T,P,\vec{y})-\mu_i^L(T,P,\vec{x})=RT\ln\frac{f_i^V(T,P,\vec{y}}{f_i^L(T,P,\vec{x})}
 \]</div>
 <p>Hence, the equilibrium condition expressed by Eq. <code class="xref eq docutils literal notranslate"><span class="pre">eq:fund</span></code> can be conveniently stated as:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-equi">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-equi" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(11)<a class="headerlink" href="#equation-pvapeq-equi" title="Permalink to this equation">¶</a></span>\[
 f_i^V(T,P,\vec{y})=f_i^L(T,P,\vec{x})
 \]</div>
 <p>The left-hand term can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-vapour">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-vapour" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(12)<a class="headerlink" href="#equation-pvapeq-vapour" title="Permalink to this equation">¶</a></span>\[
 f_i^V(T,P,\vec{y})=\phi(T,P,\vec{y})Py_i
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi(T,P,\vec{y})\)</span> is the fugacity coefficient, <span class="math notranslate nohighlight">\(P\)</span> the pressure and <span class="math notranslate nohighlight">\(y_i\)</span> the molar fraction in the vapour phase.</p>
 <p>The right hand side term can instead be written as:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-liquid">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-liquid" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(13)<a class="headerlink" href="#equation-pvapeq-liquid" title="Permalink to this equation">¶</a></span>\[
 f_i^L(T,P,\vec{x})=\gamma_i(T,P,\vec{x})x_i\phi(T,P^o(T))P^o(T)e^{\frac{v_i(P-P^o(T))}{RT}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(i\)</span> in the liquid phase, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient for component i in the liquid mixture, <span class="math notranslate nohighlight">\(P^o(T)\)</span> is the equilibrium vapour pressure of the pure component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\phi(T,P^o(T))\)</span> is the fugacity coefficient for the pure component <span class="math notranslate nohighlight">\(i\)</span> at <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P^o(T)\)</span>, and the term <span class="math notranslate nohighlight">\(e^{\frac{v_i(P-P^o(T))}{RT}}\)</span> is the Poynting correction. For a discussion on the origin of the Poynting correction please refer to the notes on osmosis.</p>
 <p>Introducing Eq.<code class="xref eq docutils literal notranslate"><span class="pre">eq:vapour</span></code> and Eq. <code class="xref eq docutils literal notranslate"><span class="pre">eq:liquid</span></code> in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">eq:EQUI</span></code>, while considering negligible the Poynting correction, and ideal gas approximation applicable yields:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-final">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-final" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(14)<a class="headerlink" href="#equation-pvapeq-final" title="Permalink to this equation">¶</a></span>\[
 Py_i=\gamma_i(T,P,\vec{x})P^o(T)x_i
 \]</div>
 <p>It should be noted that introducing the further hypothesis of ideal liquid mixture yields the Raoult law:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-raoult">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-raoult" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(15)<a class="headerlink" href="#equation-pvapeq-raoult" title="Permalink to this equation">¶</a></span>\[
 Py_i=P^o(T)x_i
 \]</div>
 </div>
@@ -296,13 +313,13 @@ Py_i=P^o(T)x_i
 <h2>2.3 Flux Equation in a pervaporation Unit<a class="headerlink" href="#flux-equation-in-a-pervaporation-unit" title="Permalink to this headline">¶</a></h2>
 <p>Considering now a binary mixture of components <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, the flux equation for species <span class="math notranslate nohighlight">\(i\)</span> in a pervaporation unit is:</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-flux">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-flux" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(16)<a class="headerlink" href="#equation-pvapeq-flux" title="Permalink to this equation">¶</a></span>\[
 J_i=\frac{P_i}{l}\left(\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)-p_py^p_i\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(P_i\)</span> is the permeability of species <span class="math notranslate nohighlight">\(i\)</span> through the membrane, <span class="math notranslate nohighlight">\(l\)</span> the thickness of the membrane, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})x^r_ip_i^o(T)\)</span> is the partial pressure in the virtual vapour phase in equilibrium with the liquid on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> the pressure on the permeate side, and <span class="math notranslate nohighlight">\(y^p_i\)</span> the molar fraction of component <span class="math notranslate nohighlight">\(i\)</span> in the real vapour phase on the permeate side.</p>
 <p>The flux equation of component <span class="math notranslate nohighlight">\(j\)</span> can be expressed as a function of the molar fractions of component <span class="math notranslate nohighlight">\(i\)</span> taking advantage of the stoichiometric constraints <span class="math notranslate nohighlight">\(\sum_{i=1}^{N}x^r_i=1\)</span>, <span class="math notranslate nohighlight">\(\sum_{i=1}^{N}y^p_i=1\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-pvapeq-flux2">
-<span class="eqno">()<a class="headerlink" href="#equation-pvapeq-flux2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(17)<a class="headerlink" href="#equation-pvapeq-flux2" title="Permalink to this equation">¶</a></span>\[
 J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right)
 \]</div>
 </div>
@@ -336,6 +353,8 @@ J_j=\frac{P_j}{l}\left(\gamma_j(T,P,\vec{x})(1-x^r_i)p_j^o(T)-p_p(1-y^p_i)\right
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="Gas_permeation.html" title="previous page">1. Material Balances in a Gas Permeation Unit</a>
+    <a class='right-next' id="next-link" href="Osmosis.html" title="next page">3. The Osmotic Pressure</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
