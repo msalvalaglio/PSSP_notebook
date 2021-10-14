@@ -33,7 +33,7 @@ $$
 $$(PVAPeq:chempot)
 
 
-Hence, the equilibrium condition expressed by Eq. {eq}`eq:fund` can be conveniently stated as: 
+Hence, the equilibrium condition expressed by Eq. {eq}`PVAPeq:fund` can be conveniently stated as: 
 
 $$
 f_i^V(T,P,\vec{y})=f_i^L(T,P,\vec{x})
