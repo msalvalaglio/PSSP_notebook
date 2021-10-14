@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "/Applications/anaconda3/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/Applications/anaconda3/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+## Solution trace
+import scipy as sp
+##from sp.optimize import fsolve
+
+# Variables
+A=15 * 1E4 # [m^2 * cm^2 / m^2]
+P_r=5.5 * 101325 # [atm] * [Pa / atm]
+P_p=1.01 * 101325 # [atm] * [Pa / atm] 
+l=2.0*1E-4 # cm
+rho_STP=1/22.4E3 # / [mol/cm3(stp)]
+PCO2=0.034E-13 * 3600 # [cm3(STP) * cm/cm2/s/Pa] * [s/h]
+PN2=0.089E-14 * 3600#  [cm3(STP) * cm/cm2/s/Pa] * [s/h]
+# Permeate Composition
+y=0.38
+# Feed Composition
+z = 0.20
+
+alpha=PCO2/PN2
+
+def equations(vars):
+    x, Fin, Fp, Fr, theta = vars
+    eq1 = ((theta - 1) / theta) * x + (z / theta) - y
+    eq2 = x - (y * (1 + P_p/P_r * (1-y) * (alpha - 1)) / (alpha - (alpha - 1) * y))
+    eq3 = Fin - Fr - Fp
+    eq4 = Fp-A*PCO2*rho_STP / y / l * (x*P_r-y*P_p)
+    eq5 = Fin - (Fp/theta)
+    return [eq1, eq2, eq3, eq4, eq5]
+
+x, Fin, Fp, Fr, theta =  sp.optimize.fsolve(equations, (0.1, 0.1, 0.1, 0.1, 0.1))
+
+print("\nRetentate composition: ", f"{x:.4}", " [-]")
+print("Cut: ", f"{theta:.4}", "[-]")
+print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
+print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
+print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m<ipython-input-2-0bfb9b8e6d30>[0m in [0;36m<module>[0;34m[0m
+[1;32m     27[0m     [0;32mreturn[0m [0;34m[[0m[0meq1[0m[0;34m,[0m [0meq2[0m[0;34m,[0m [0meq3[0m[0;34m,[0m [0meq4[0m[0;34m,[0m [0meq5[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     28[0m [0;34m[0m[0m
+[0;32m---> 29[0;31m [0mx[0m[0;34m,[0m [0mFin[0m[0;34m,[0m [0mFp[0m[0;34m,[0m [0mFr[0m[0;34m,[0m [0mtheta[0m [0;34m=[0m  [0msp[0m[0;34m.[0m[0moptimize[0m[0;34m.[0m[0mfsolve[0m[0;34m([0m[0mequations[0m[0;34m,[0m [0;34m([0m[0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     30[0m [0;34m[0m[0m
+[1;32m     31[0m [0mprint[0m[0;34m([0m[0;34m"\nRetentate composition: "[0m[0;34m,[0m [0;34mf"{x:.4}"[0m[0;34m,[0m [0;34m" [-]"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mAttributeError[0m: module 'scipy' has no attribute 'optimize'
+AttributeError: module 'scipy' has no attribute 'optimize'
+
