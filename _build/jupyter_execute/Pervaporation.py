@@ -55,7 +55,7 @@ $$(PVAPeq:liquid)
 
 where $x_i$ is the molar fraction of component $i$ in the liquid phase, $\gamma_i(T,P,\vec{x})$ is the activity coefficient for component i in the liquid mixture, $P^o(T)$ is the equilibrium vapour pressure of the pure component $i$, $\phi(T,P^o(T))$ is the fugacity coefficient for the pure component $i$ at $T$ and $P^o(T)$, and the term $e^{\frac{v_i(P-P^o(T))}{RT}}$ is the Poynting correction. For a discussion on the origin of the Poynting correction please refer to the notes on osmosis. 
 
-Introducing Eq.{eq}`eq:vapour` and Eq. {eq}`eq:liquid` in Eq.{eq}`eq:EQUI`, while considering negligible the Poynting correction, and ideal gas approximation applicable yields: 
+Introducing Eq.{eq}`PVAPeq:vapour` and Eq. {eq}`PVAPeq:liquid` in Eq.{eq}`PVAPeq:EQUI`, while considering negligible the Poynting correction, and ideal gas approximation applicable yields: 
 
 $$
 Py_i=\gamma_i(T,P,\vec{x})P^o(T)x_i

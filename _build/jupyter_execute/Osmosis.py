@@ -115,7 +115,8 @@ $$
 $$(OSMeq7)
 
 Where now $x_B$ is the molar fraction of component $B$ (e.g. NaCl).
-When the solution in compartment 1 is diluted ($x_B$ small), $\gamma_A(T,P_1,x_A)\rightarrow{1}$,  $\ln{\left({(1-x_B)}\right)}\rightarrow{-x_B}$thus: 
+When the solution in compartment 1 is diluted ($x_B$ small), $\gamma_A(T,P_1,x_A)\rightarrow{1}$,  $\ln{\left({(1-x_B)}\right)}\rightarrow{-x_B}$ thus: 
+
 $$
 \pi=-\frac{RT}{v}\ln\left({(1-x_B)}\right)={RT\frac{x_B}{v}}\simeq{RTc_B}
 $$(OSMeq8)
