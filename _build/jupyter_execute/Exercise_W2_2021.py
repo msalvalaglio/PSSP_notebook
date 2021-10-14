@@ -93,7 +93,8 @@ print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
 __The brute force way__
 
 ## Solution trace
-from scipy.optimize import fsolve
+import scipy as sp
+##from sp.optimize import fsolve
 
 # Variables
 A=15 * 1E4 # [m^2 * cm^2 / m^2]
@@ -119,10 +120,11 @@ def equations(vars):
     eq5 = Fin - (Fp/theta)
     return [eq1, eq2, eq3, eq4, eq5]
 
-x, Fin, Fp, Fr, theta =  fsolve(equations, (0.1, 0.1, 0.1, 0.1, 0.1))
+x, Fin, Fp, Fr, theta =  sp.optimize.fsolve(equations, (0.1, 0.1, 0.1, 0.1, 0.1))
 
 print("\nRetentate composition: ", f"{x:.4}", " [-]")
 print("Cut: ", f"{theta:.4}", "[-]")
 print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
 print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
+
