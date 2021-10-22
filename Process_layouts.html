@@ -333,12 +333,14 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 <span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
 
+<span class="c1">#Every length in m</span>
+
 <span class="n">A</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>  <span class="c1">#m^2</span>
 <span class="n">B</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
-<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span>
-<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="p">;</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="o">*</span><span class="mf">1E3</span><span class="p">;</span> <span class="c1">#kg /l * dm^3/m^3</span>
+<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="mf">1E-3</span><span class="p">;</span> <span class="c1">#l * m^3/dm^3</span>
 
-<span class="n">C_specific</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">C_specific</span> <span class="o">=</span> <span class="mf">0.2</span><span class="o">*</span><span class="mf">1E3</span>
 
 <span class="c1">#Operating Equation</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">C0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">B</span><span class="o">*</span><span class="n">A</span><span class="o">/</span><span class="n">V0</span><span class="o">/</span><span class="n">C0</span><span class="o">*</span><span class="n">time</span><span class="p">)</span> 
@@ -377,7 +379,7 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The process time necessary to obtain a solid residue concentration of 0.2 [kg/l] is: [17.32867951] [h]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The process time necessary to obtain a solid residue concentration of 200.0 [kg/l] is: [17.32867951] [h]
 </pre></div>
 </div>
 <img alt="_images/Process_layouts_6_1.png" src="_images/Process_layouts_6_1.png" />
@@ -417,21 +419,21 @@ C_{OUT}=C_{IN}+\frac{AB}{Q_{IN}}
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
 
 <span class="c1"># data: </span>
-<span class="n">A</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>  
+<span class="n">A</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>  <span class="c1">#[m^2]</span>
 <span class="n">B</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
-<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span>
-<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="p">;</span>
-<span class="n">process_time</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> 
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="o">*</span><span class="mf">1E3</span><span class="p">;</span> <span class="c1">#kg /l * dm^3/m^3</span>
+<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="mf">1E-3</span><span class="p">;</span> <span class="c1">#l * m^3/dm^3</span>
+<span class="n">process_time</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> <span class="c1"># [h]</span>
 
 <span class="n">Cout</span><span class="o">=</span><span class="n">C0</span><span class="o">+</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="o">*</span><span class="n">process_time</span><span class="o">/</span><span class="n">V0</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/l]&quot;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/m^3]&quot;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 0.07 [kg/l]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 70.0 [kg/m^3]
 </pre></div>
 </div>
 </div>
@@ -486,9 +488,9 @@ Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 <span class="c1"># data: </span>
 <span class="n">A</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>  
 <span class="n">B</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span>
-<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="p">;</span>
-<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="p">;</span>
-<span class="n">process_time</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> 
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.05</span><span class="o">*</span><span class="mf">1E3</span><span class="p">;</span> <span class="c1">#kg /l * dm^3/m^3</span>
+<span class="n">V0</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="mf">1E-3</span><span class="p">;</span> <span class="c1">#l * m^3/dm^3</span>
+<span class="n">process_time</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> <span class="c1"># [h]</span>
 
 
 <span class="c1"># The number of elements of this array corresponds to the number of stages. </span>
@@ -506,12 +508,12 @@ Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 <span class="c1"># Output concentration</span>
 <span class="n">Cout</span><span class="o">=</span><span class="n">CIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="o">/</span><span class="n">FIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/l]&quot;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/m^3]&quot;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 1.5444000000000002 [kg/l]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 1544.4 [kg/m^3]
 </pre></div>
 </div>
 </div>
@@ -535,12 +537,12 @@ In the first, representing a single-stage configuration with four membrane units
 <span class="c1"># Output concentration</span>
 <span class="n">Cout</span><span class="o">=</span><span class="n">CIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="o">/</span><span class="n">FIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/l]&quot;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/m^3]&quot;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 0.13 [kg/l]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 130.0 [kg/m^3]
 </pre></div>
 </div>
 </div>
@@ -563,12 +565,12 @@ In the first, representing a single-stage configuration with four membrane units
 <span class="c1"># Output concentration</span>
 <span class="n">Cout</span><span class="o">=</span><span class="n">CIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">n</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="o">/</span><span class="n">FIN</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/l]&quot;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The steady state concentration is&quot;</span><span class="p">,</span> <span class="n">Cout</span><span class="p">,</span> <span class="s2">&quot;[kg/m^3]&quot;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 0.19208000000000003 [kg/l]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 192.07999999999998 [kg/m^3]
 </pre></div>
 </div>
 </div>
