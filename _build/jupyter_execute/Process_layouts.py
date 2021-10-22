@@ -85,12 +85,14 @@ from scipy.optimize import fsolve
 N = 500 #number of points
 time = np.linspace(0, 30, N)
 
+#Every length in m
+
 A=20;  #m^2
 B=0.1;
-C0=0.05;
-V0=500;
+C0=0.05*1E3; #kg /l * dm^3/m^3
+V0=500*1E-3; #l * m^3/dm^3
 
-C_specific = 0.2
+C_specific = 0.2*1E3
 
 #Operating Equation
 C = C0*np.exp(B*A/V0/C0*time) 
@@ -164,16 +166,16 @@ import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
 
 # data: 
-A=20;  
+A=20;  #[m^2]
 B=0.1;
-C0=0.05;
-V0=500;
-process_time=5; 
+C0=0.05*1E3; #kg /l * dm^3/m^3
+V0=500*1E-3; #l * m^3/dm^3
+process_time=5; # [h]
 
 Cout=C0+A*B*process_time/V0
 
 
-print("The steady state concentration is", Cout, "[kg/l]") 
+print("The steady state concentration is", Cout, "[kg/m^3]") 
 
 ## 4.3 Cascade configuration
 
@@ -236,9 +238,9 @@ from scipy.optimize import fsolve
 # data: 
 A=20;  
 B=0.1;
-C0=0.05;
-V0=500;
-process_time=5; 
+C0=0.05*1E3; #kg /l * dm^3/m^3
+V0=500*1E-3; #l * m^3/dm^3
+process_time=5; # [h]
 
 
 # The number of elements of this array corresponds to the number of stages. 
@@ -256,7 +258,7 @@ for i in range(1,np.size(n)):
 # Output concentration
 Cout=CIN[np.size(n)-1]+n[np.size(n)-1]*A*B/FIN[np.size(n)-1];
 
-print("The steady state concentration is", Cout, "[kg/l]") 
+print("The steady state concentration is", Cout, "[kg/m^3]") 
 
 In order to answer the problem request one should solve the system for two different configurations. 
 In the first, representing a single-stage configuration with four membrane units in parallel, the number of stages should be set to $N=1$ and the number of units in the first stage $n_1$ to 4. 
@@ -276,7 +278,7 @@ for i in range(1,np.size(n)):
 # Output concentration
 Cout=CIN[np.size(n)-1]+n[np.size(n)-1]*A*B/FIN[np.size(n)-1];
 
-print("The steady state concentration is", Cout, "[kg/l]") 
+print("The steady state concentration is", Cout, "[kg/m^3]") 
 
 In the second the number of stages should be set to $N=4$, each of the stages being assembled as a single unit ($n_i=1$ for $i=[1, 4]$).
 
@@ -295,6 +297,6 @@ for i in range(1,np.size(n)):
 # Output concentration
 Cout=CIN[np.size(n)-1]+n[np.size(n)-1]*A*B/FIN[np.size(n)-1];
 
-print("The steady state concentration is", Cout, "[kg/l]") 
+print("The steady state concentration is", Cout, "[kg/m^3]") 
 
 The cascade configuration allows for a more efficient process since it allows to obtain a larger concentration with the same number of modules. 

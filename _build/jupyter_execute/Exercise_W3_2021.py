@@ -12,7 +12,7 @@ $$
 
 Where T is the temperature in K,  $N$ is the total number of ionic species in solution, and ci is the concentration expressed in $[mol/l]$. 
 
-The asymmetric membrane used for the separation has a permeance of $1E-5\,[m h^{-1} bar^{-1}]$.
+The asymmetric membrane used for the separation has a permeance of $10^{-5}\,[m h^{-1} bar^{-1}]$.
 
 Once you have solved the problem consider the following questions:
 
