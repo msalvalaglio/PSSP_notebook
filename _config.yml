@@ -2,6 +2,7 @@
 # Book settings
 title : PSSP Virtual Notebook
 author: Matteo Salvalaglio
+copyright                   : "2021"  # Copyright year to be placed in the footer
 logo: 'Logo.png'
 
 # Information about where the book exists on the web

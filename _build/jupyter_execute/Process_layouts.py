@@ -98,17 +98,13 @@ C_specific = 0.2*1E3
 C = C0*np.exp(B*A/V0/C0*time) 
 V = V0*np.exp(-B*A/V0/C0*time) 
 
+def equation(proc_time):
+    eq1 = C0*np.exp(B*A/V0/C0*proc_time) - C_specific
+    return eq1
+
+process_time = fsolve(equation,[1])
+
 #Plotting
-figure=plt.figure()
-axes = figure.add_axes([0.1,0.1,0.8,0.8])
-plt.xticks(fontsize=14)
-plt.yticks(fontsize=14)
-axes.plot(time,C, marker=' ' , color='r')
-
-plt.title('Solute concentration', fontsize=18);
-axes.set_xlabel('time [h]', fontsize=14);
-axes.set_ylabel('concentration [kg/m$^3$]',fontsize=14);
-
 figure=plt.figure()
 axes = figure.add_axes([0.1,0.1,0.8,0.8])
 plt.xticks(fontsize=14)
@@ -119,12 +115,23 @@ plt.title('Suspension Volume', fontsize=18);
 axes.set_xlabel('time [h]', fontsize=14);
 axes.set_ylabel('V [m$^3$]',fontsize=14);
 
+figure=plt.figure()
+axes = figure.add_axes([0.1,0.1,0.8,0.8])
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+axes.plot(time,C, marker=' ' , color='r')
+axes.plot([process_time,process_time],[0, C_specific], marker=' ' , color='lime', markersize=3)
+axes.plot([0,process_time],[C_specific, C_specific], marker=' ' , color='lime', markersize=3)
 
-def equation(proc_time):
-    eq1 = C0*np.exp(B*A/V0/C0*proc_time) - C_specific
-    return eq1
 
-process_time = fsolve(equation,[1])
+axes.plot([process_time,process_time],[0, C_specific], marker=' ' , color='lime', markersize=3)
+
+
+axes.plot(process_time,C_specific, marker='o' , color='lime', markersize=10)
+
+plt.title('Solute concentration', fontsize=18);
+axes.set_xlabel('time [h]', fontsize=14);
+axes.set_ylabel('concentration [kg/m$^3$]',fontsize=14);
 
 print("The process time necessary to obtain a solid residue concentration of", C_specific, "[kg/l] is:", process_time, "[h]") 
 
@@ -245,7 +252,7 @@ process_time=5; # [h]
 
 # The number of elements of this array corresponds to the number of stages. 
 # The value in each element is the number of modules per stage. 
-n=np.array([5, 4, 3, 2]);
+n=np.array([17]);
 
 CIN=np.append(C0,np.zeros(np.size(n)-1))
 FIN=np.append(V0/process_time, np.zeros(np.size(n)-1));
