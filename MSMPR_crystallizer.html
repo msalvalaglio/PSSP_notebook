@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Week 2 - Exercise" href="Exercise_W2_2021.html" />
+    <link rel="prev" title="9. Solubility" href="Solubility.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -93,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Gas_permeation.html">
    1. Material Balances in a Gas Permeation Unit
@@ -139,6 +141,11 @@
    9. Solubility
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W2_2021.html">
    Week 2 - Exercise
@@ -167,6 +174,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W8_2021.html">
    Week 8 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W9_2021.html">
+   Week 9 - Exercise
   </a>
  </li>
 </ul>
@@ -350,7 +362,7 @@ In these notes we will derive the analystical expression of the steady state par
 </ul>
 <p>At steady state the mass balance for the solute precipitating in an MSMPR crystallizer can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq0">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq0" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(111)<a class="headerlink" href="#equation-msmpreq0" title="Permalink to this equation">¶</a></span>\[
 Q_{IN}C_{IN}=Q_{OUT}C_{OUT}+Q_{OUT}M_T
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(Q_{IN}\)</span> is the volumetric inlet flowrate of the liquid phase, <span class="math notranslate nohighlight">\(Q_{OUT}\)</span> is the volumetric outlet flowrate of the liquid phase (mother liquor), <span class="math notranslate nohighlight">\(C_{IN}\)</span> is the solute density in the feed, <span class="math notranslate nohighlight">\(C_{OUT}\)</span> is the solute density int he outlet stream, and <span class="math notranslate nohighlight">\(M_T\)</span> is the mass of crystals precipitated per unit volume of liquid phase.
@@ -362,18 +374,18 @@ Typically <span class="math notranslate nohighlight">\(Q_{IN}\simeq{Q_{OUT}}=Q\)
 <p>Let us begin by defining <span class="math notranslate nohighlight">\(N(L)\)</span> as the <strong>number</strong> of  crystals of characteristic length <span class="math notranslate nohighlight">\(L\)</span> per unit volume.
 The <strong>number population density</strong> <span class="math notranslate nohighlight">\(n\)</span>, or in short number density, is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq1">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(112)<a class="headerlink" href="#equation-msmpreq1" title="Permalink to this equation">¶</a></span>\[
 \lim_{\Delta{L}\to{0}}\frac{\Delta{N(L)}}{\Delta{L}}=\frac{d{N(L)}}{d{L}}=n(L)
 \]</div>
 <p>and represents the number of crystals of length <span class="math notranslate nohighlight">\(L\)</span> <strong>per unit length</strong>, per unit volume.
 The number of crystals per unit volume with dimension comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span> can thus be computed as a definite integral of the population density:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq2">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(113)<a class="headerlink" href="#equation-msmpreq2" title="Permalink to this equation">¶</a></span>\[
 N_{1,2}=\int_{L_1}^{L_2}n(L)dL
 \]</div>
 <p>Similarly the total number of crystals per unit volume is obtained as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq3">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(114)<a class="headerlink" href="#equation-msmpreq3" title="Permalink to this equation">¶</a></span>\[
 N_{T}=\int_{0}^{\infty}n(L)dL
 \]</div>
 </div>
@@ -381,21 +393,21 @@ N_{T}=\int_{0}^{\infty}n(L)dL
 <h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Permalink to this headline">¶</a></h2>
 <p>Let us write a steady state population balance for particles with size comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq4">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(115)<a class="headerlink" href="#equation-msmpreq4" title="Permalink to this equation">¶</a></span>\[
 {\Delta{N}}V=n_1G_1V\Delta{t}-n_2G_2V\Delta{t}-Q\overline{n}\Delta{L}\Delta{t}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta{N}V\)</span> is the change in the number of particles within the length interval <span class="math notranslate nohighlight">\(\Delta{L}=L_2-L_1\)</span> per unit volume, accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>.
 The term <span class="math notranslate nohighlight">\(n_1G_1V\Delta{t}\)</span> captures the number of crystals that outgrow length <span class="math notranslate nohighlight">\(L_1\)</span> in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>, where <span class="math notranslate nohighlight">\(G_1\)</span> is the growth rate of particles of length <span class="math notranslate nohighlight">\(L_1\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is the total volume.
 Similarly, the term <span class="math notranslate nohighlight">\(n_2G_2V\Delta{t}\)</span> takes into account particles leaving the length  interval <span class="math notranslate nohighlight">\(\Delta{L}\)</span>, outgrowing length <span class="math notranslate nohighlight">\(L_2\)</span>.
 Finally the term <span class="math notranslate nohighlight">\(Q\overline{n}\Delta{L}\Delta{t}\)</span> accounts for the removal of particles with size comprised in  <span class="math notranslate nohighlight">\(\Delta{L}\)</span> from the crystalliser due to the magma flowrate with volumetric flowrate <span class="math notranslate nohighlight">\(Q\)</span>, where <span class="math notranslate nohighlight">\(\overline{n}\)</span> represents the average population density within the length interval <span class="math notranslate nohighlight">\(\Delta{L}\)</span>.</p>
-<p>Eq. <a class="reference internal" href="#equation-msmpreq4">()</a> can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in <span class="math notranslate nohighlight">\(\delta{L}\)</span> accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>:</p>
+<p>Eq. <a class="reference internal" href="#equation-msmpreq4">(115)</a> can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in <span class="math notranslate nohighlight">\(\delta{L}\)</span> accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq5">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(116)<a class="headerlink" href="#equation-msmpreq5" title="Permalink to this equation">¶</a></span>\[
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
 \]</div>
-<p>At steady state there is no accumulation and Eq. <a class="reference internal" href="#equation-msmpreq5">()</a> can be rewritten as:</p>
+<p>At steady state there is no accumulation and Eq. <a class="reference internal" href="#equation-msmpreq5">(116)</a> can be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq6">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(117)<a class="headerlink" href="#equation-msmpreq6" title="Permalink to this equation">¶</a></span>\[
 \frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
 \]</div>
 <p>Noting that the residence time <span class="math notranslate nohighlight">\(\tau=V/Q\)</span>, and taking the limit for <span class="math notranslate nohighlight">\(\Delta{L}\rightarrow{0}\)</span> we get:
@@ -404,25 +416,25 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$(MSMPReq7)</p>
 <p>Whic can be solved analytically, yielding the steady state number population density n(L):</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq8">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(118)<a class="headerlink" href="#equation-msmpreq8" title="Permalink to this equation">¶</a></span>\[
 n(L)=n_0\exp\left(-\frac{L}{G\tau}\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(n_0\)</span> is an integration constant, determined from the boundary conditions, that has the physical meaning of population density of nuclei in the crystallizer at steady state.</p>
 <p>In this formulation of the population balance we consider particles to be born as nuclei at length <span class="math notranslate nohighlight">\(L=0\)</span>.
 The nucleation rate <span class="math notranslate nohighlight">\(J\)</span>, i.e. the number of nuclei generated per unit time per unit volume can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq9">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(119)<a class="headerlink" href="#equation-msmpreq9" title="Permalink to this equation">¶</a></span>\[
 J={\frac{dN}{dt}}\vert_{L=0}
 \]</div>
 <p>by applying the chain rule we can rewrite the nucleation rate as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq10">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq10" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(120)<a class="headerlink" href="#equation-msmpreq10" title="Permalink to this equation">¶</a></span>\[
 J=\frac{dN}{dL}\vert_{L=0}\frac{dL}{dt}\vert_{L=0}=n_0G
 \]</div>
 <p>where, by definition <span class="math notranslate nohighlight">\(\frac{dN}{dL}\vert_{L=0}=n_0\)</span>, and <span class="math notranslate nohighlight">\(\frac{dL}{dt}=G\)</span>. We shall note that here we are considering the growth rate to be independent from the crystal size.</p>
 <p>This expression allows us to determine the integration constant <span class="math notranslate nohighlight">\(n_0\)</span> based on characteristic rates of crystal nucleation and growth, yielding:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq11">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(121)<a class="headerlink" href="#equation-msmpreq11" title="Permalink to this equation">¶</a></span>\[
 n_0=\frac{J}{G}
 \]</div>
 </div>
@@ -523,7 +535,7 @@ n_0=\frac{J}{G}
 <p>The number population density <span class="math notranslate nohighlight">\(n(L)\)</span> can be used to derive other properties of the population of particles through the calculation of the moments of the distribution.
 The <span class="math notranslate nohighlight">\(i^{th}\)</span> order moment of the number population density is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq12">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(122)<a class="headerlink" href="#equation-msmpreq12" title="Permalink to this equation">¶</a></span>\[
 m_i=\int_0^{\infty}L^indL
 \]</div>
 <p>Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning:</p>
@@ -531,21 +543,21 @@ m_i=\int_0^{\infty}L^indL
 <li><p><span class="math notranslate nohighlight">\(m_0=\int_0^{\infty}L^0ndL=N_L\)</span> represents the number of particles per unit volume of liquid phase  with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(N_L\)</span> tends to the total number of particles per unit volume of liquid phase in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq13">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(123)<a class="headerlink" href="#equation-msmpreq13" title="Permalink to this equation">¶</a></span>\[
 N_T=n_0G\tau
 \]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(m_1=\int_0^{\infty}L^1ndL=\mathcal{L}\)</span> represents the total length of particles per unit volume of liquid phase with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> tends to the total length of particles per unit volume of liquid phase in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq14">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq14" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(124)<a class="headerlink" href="#equation-msmpreq14" title="Permalink to this equation">¶</a></span>\[
 \mathcal{L}_T=n_0(G\tau)^2
 \]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(m_2=\int_0^{\infty}L^2ndL\propto{A}\)</span> is proportional to the total area of particles per unit volume of liquid phase with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(A\)</span> tends to the total area of the particles per unit volume of liquid phase contained in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq15">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq15" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(125)<a class="headerlink" href="#equation-msmpreq15" title="Permalink to this equation">¶</a></span>\[
 A_T=2{\beta}n_0(G\tau)^3
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the surface shape factor of the particles.</p>
@@ -553,13 +565,13 @@ A_T=2{\beta}n_0(G\tau)^3
 <li><p><span class="math notranslate nohighlight">\(m_3=\int_0^{\infty}L^3ndL\propto{V}\)</span> is proportional to the total volume of particles with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(V\)</span> tends to the total volume of the particles per unit volume contained in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq16">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq16" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(126)<a class="headerlink" href="#equation-msmpreq16" title="Permalink to this equation">¶</a></span>\[
 V_T=6{\alpha}n_0(G\tau)^4
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the volumetric shape factor of the particles.</p>
 <p>It should be noted that the total volume of the particles per unit volume of liquid phase allows to compute the total mass of particles per unit volume of liquid phase in the system:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq17">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq17" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(127)<a class="headerlink" href="#equation-msmpreq17" title="Permalink to this equation">¶</a></span>\[
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho_c\)</span> is the density of the crystalline phase.</p>
@@ -570,17 +582,17 @@ M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 <p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
 <p>The cumulative mass distribution can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq18">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq18" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(128)<a class="headerlink" href="#equation-msmpreq18" title="Permalink to this equation">¶</a></span>\[
 M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
 \]</div>
 <p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(x)\)</span>with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq19">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq19" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(129)<a class="headerlink" href="#equation-msmpreq19" title="Permalink to this equation">¶</a></span>\[
 m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
 \]</div>
 <p>The mass-based population density m(x) has a maximum for <span class="math notranslate nohighlight">\(x=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq20">
-<span class="eqno">()<a class="headerlink" href="#equation-msmpreq20" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(130)<a class="headerlink" href="#equation-msmpreq20" title="Permalink to this equation">¶</a></span>\[
 L_D=3G\tau
 \]</div>
 <div class="cell docutils container">
@@ -654,6 +666,8 @@ L_D=3G\tau
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="Solubility.html" title="previous page">9. Solubility</a>
+    <a class='right-next' id="next-link" href="Exercise_W2_2021.html" title="next page">Week 2 - Exercise</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
