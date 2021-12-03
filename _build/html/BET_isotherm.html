@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Equilibria in Ion Exchange Systems" href="Ion_Exchange.html" />
+    <link rel="prev" title="5. The Langmuir Isotherm" href="Langmuir_isotherm.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -93,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="Gas_permeation.html">
    1. Material Balances in a Gas Permeation Unit
@@ -115,6 +117,36 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Langmuir_isotherm.html">
+   5. The Langmuir Isotherm
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. The BET Isotherm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ion_Exchange.html">
+   7. Equilibria in Ion Exchange Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Slurry_Adsorption.html">
+   8. Batch Slurry Adsorption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Solubility.html">
+   9. Solubility
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MSMPR_crystallizer.html">
+   10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W2_2021.html">
    Week 2 - Exercise
   </a>
@@ -127,6 +159,31 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise_W4_2021.html">
    Week 4 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W5_2021.html">
+   Week 5 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W6_2021.html">
+   Week 6 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W8_2021.html">
+   Week 8 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W9_2021.html">
+   Week 9 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W10_2021.html">
+   Week 10 - Exercise
   </a>
  </li>
 </ul>
@@ -263,28 +320,28 @@
 <p>Following an approach similar to the one adopted for the derivation of the Langmuir isotherm let us begin by defining the rates of adsorption and desorption. In the case of th BET isotherm the rates will depend on the layer considered and will therefore have subscript <span class="math notranslate nohighlight">\(i\)</span> that indicate the layer on which adsorption takes place.</p>
 <p>The adsorption rate on layer <span class="math notranslate nohighlight">\(i\)</span> can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq1">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(61)<a class="headerlink" href="#equation-beteq1" title="Permalink to this equation">¶</a></span>\[
 R_{A,i}=k_{A,i}\Gamma_iP
 \]</div>
 <p>The desorption rate instead, explicitly introducing the dependence on the adsorption enthalpy through an Arrhenius-like functional form, is written as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq2">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(62)<a class="headerlink" href="#equation-beteq2" title="Permalink to this equation">¶</a></span>\[
 R_{D,i}=k_{D,i}\Gamma_i=A_ie^{\frac{-E_i}{RT}}\Gamma_i
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_i\)</span> is the adsorption energy. Denoting with <span class="math notranslate nohighlight">\(E_0\)</span> the adsorption energy on a free adsorption site, the adsorption energy on all successive layers is <span class="math notranslate nohighlight">\(E_2=E_3=...E_n=\lambda\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the condensation enthalpy.</p>
 <p>Following the same criterion also the adsorption constant <span class="math notranslate nohighlight">\(k_{A,i}\)</span>, and the pre-exponential factor of the desorption constant <span class="math notranslate nohighlight">\(A_i\)</span> are independent from the layer index - except for those related to the adsorption on a free surface and the desorption from the first layer:</p>
 <div class="math notranslate nohighlight" id="equation-beteq3">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(63)<a class="headerlink" href="#equation-beteq3" title="Permalink to this equation">¶</a></span>\[
 A_{i\geq2}=const=A
 \]</div>
 <div class="math notranslate nohighlight" id="equation-beteq4">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(64)<a class="headerlink" href="#equation-beteq4" title="Permalink to this equation">¶</a></span>\[
 k_{A,i\geq1}=const=k_A
 \]</div>
 <p>Having defined the rates of adsorption and desorption one can write population balances for every layer of the adsorbed phase.
 In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> represents the fraction of free adsorption sites, <span class="math notranslate nohighlight">\(\Gamma_i\)</span> represents the fractional occupation of the <span class="math notranslate nohighlight">\(i^{th}\)</span> layer.</p>
 <div class="math notranslate nohighlight" id="equation-beteq5">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq5" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(65)<a class="headerlink" href="#equation-beteq5" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{cases}
  \frac{d\Gamma_0}{dt}&amp;=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  \frac{d\Gamma_1}{dt}&amp;=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -296,7 +353,7 @@ In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> 
 \end{split}\]</div>
 <p>At equilibrium the balances reduce to:</p>
 <div class="math notranslate nohighlight" id="equation-beteq6">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq6" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(66)<a class="headerlink" href="#equation-beteq6" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{cases}
  0=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  0=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -308,58 +365,58 @@ In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> 
 \end{split}\]</div>
 <p>From the steady state balance on free sites we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq7">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(67)<a class="headerlink" href="#equation-beteq7" title="Permalink to this equation">¶</a></span>\[
 k_{A,0}\Gamma_0P=k_{D,1}\Gamma_1
 \]</div>
 <p>hence, inserting this equality into the balance on the fraction of sites occupied by a single layer, <span class="math notranslate nohighlight">\(\Gamma_1\)</span> we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq8">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(68)<a class="headerlink" href="#equation-beteq8" title="Permalink to this equation">¶</a></span>\[
 k_{A,1}\Gamma_1P=k_{D,2}\Gamma_2
 \]</div>
 <p>Introducing the Arrhenius expression for the adsorption rates we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq9">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(69)<a class="headerlink" href="#equation-beteq9" title="Permalink to this equation">¶</a></span>\[
 \Gamma_1=\frac{k_{A,0}}{k_{D,1}}\Gamma_0P=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P\Gamma_0
 \]</div>
 <p>and analogously for <span class="math notranslate nohighlight">\(\Gamma_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-beteq10">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq10" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(70)<a class="headerlink" href="#equation-beteq10" title="Permalink to this equation">¶</a></span>\[
 \Gamma_2=\frac{k_{A,1}}{k_{D,2}}\Gamma_1P=\frac{k_{A,1}}{A_{2}}e^{\frac{E_2}{RT}}P\Gamma_1
 \]</div>
 <p>a similar procedure can now be followed recursively to obtain a compact expression for the fraction of sites occupied by an arbitrary number of layers <span class="math notranslate nohighlight">\(n\)</span>. To this aim we can introduce two constants, <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> - defined as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq11">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(71)<a class="headerlink" href="#equation-beteq11" title="Permalink to this equation">¶</a></span>\[
 \alpha=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P
 \]</div>
 <div class="math notranslate nohighlight" id="equation-beteq12">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(72)<a class="headerlink" href="#equation-beteq12" title="Permalink to this equation">¶</a></span>\[
 \beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P
 \]</div>
 <p>At this point the fraction of sites occupied by <span class="math notranslate nohighlight">\(n\)</span> layers can be obtained as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq13">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(73)<a class="headerlink" href="#equation-beteq13" title="Permalink to this equation">¶</a></span>\[
 \Gamma_n=\beta\Gamma_{n-1}=\beta^2\Gamma_{n-2}=...=\beta^{n-1}\Gamma_{1}=\beta^n\frac{\alpha}{\beta}\Gamma_0
 \]</div>
 <p>Deining for the sake of compactness the constant <span class="math notranslate nohighlight">\(B_2=\alpha/\beta\)</span> and introducing the volume of adsorbate per unit area  <span class="math notranslate nohighlight">\(v_s^1\)</span> one can express the total volume adsorbed as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq14">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq14" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(74)<a class="headerlink" href="#equation-beteq14" title="Permalink to this equation">¶</a></span>\[
 v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}=v_s^1B_2\beta\frac{d\sum_{i=1}^n\beta^{i}}{d\beta}
 \]</div>
 <p>By introducing the notable result for the term <span class="math notranslate nohighlight">\(\sum_{i=1}^n\beta^{i}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-beteq15">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq15" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(75)<a class="headerlink" href="#equation-beteq15" title="Permalink to this equation">¶</a></span>\[
 \sum_{i=1}^n\beta^{i}=\left(\frac{1-\beta^n}{1-\beta}\right)\beta
 \]</div>
 <p>one gets:</p>
 <div class="math notranslate nohighlight" id="equation-beteq16">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq16" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(76)<a class="headerlink" href="#equation-beteq16" title="Permalink to this equation">¶</a></span>\[
 \frac{v_s}{v_s^1}=\frac{B_2\beta}{1-\beta}\frac{\left[1-(n+1)\beta^n+n\beta^{n+1}\right]}{\left[1+(B_2-1)\beta-B_2\beta^{n+1}\right]}
 \label{eq:16}
 \]</div>
 <p>In order to obtain the final formulation of the BET isotherm it is useful to consider the limit corresponding to macroscopic condensation, which corresponds to a buildup of an infinite number of adsorbed layers, which corresponds to <span class="math notranslate nohighlight">\(\beta=1\)</span>. Since this condition is realised for <span class="math notranslate nohighlight">\(P=P^o\)</span>, it can be shown that <span class="math notranslate nohighlight">\(\beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P=P/P^o\)</span>.</p>
 <p>Introducing this equality in <code class="xref eq docutils literal notranslate"><span class="pre">eq16</span></code> one gets the so called limited form of the BET isotherm:</p>
 <div class="math notranslate nohighlight" id="equation-beteq17">
-<span class="eqno">()<a class="headerlink" href="#equation-beteq17" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(77)<a class="headerlink" href="#equation-beteq17" title="Permalink to this equation">¶</a></span>\[
 \frac{v_s}{v_s^1}=\frac{B_2\left(\frac{P}{P^o}\right)}{1-\left(\frac{P}{P^o}\right)}\frac{\left[1-(n+1)\left(\frac{P}{P^o}\right)^n+n\left(\frac{P}{P^o}\right)^{n+1}\right]}{\left[1+(B_2-1)\left(\frac{P}{P^o}\right)-B_2\left(\frac{P}{P^o}\right)^{n+1}\right]}
 \]</div>
 <p>note that the left hand side of this equation can be expressed in terms of unit mass of adsorbent, instead of unit surface.</p>
@@ -444,6 +501,8 @@ v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="Langmuir_isotherm.html" title="previous page">5. The Langmuir Isotherm</a>
+    <a class='right-next' id="next-link" href="Ion_Exchange.html" title="next page">7. Equilibria in Ion Exchange Systems</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

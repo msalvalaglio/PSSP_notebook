@@ -46,13 +46,13 @@ $$
 and integrating:
 
 $$
--\frac{1}{R_c}\int_{w_0}^{w_c}dw=\int_{0}^{t_c}dt
+-\frac{1}{AR_c}\int_{w_0}^{w_c}dw=\int_{0}^{t_c}dt
 $$
 
 leads to:
 
 $$
-t_c=\frac{w_0-w_c}{R_c}=\frac{w_0-w_c}{mA(w_c-w_e)}
+t_c=\frac{w_0-w_c}{AR_c}=\frac{w_0-w_c}{mA(w_c-w_e)}
 $$
 
 
