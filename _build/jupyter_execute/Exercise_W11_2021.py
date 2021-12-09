@@ -54,6 +54,8 @@ $$
 Since the void fraction $0<e<1$ by definition, with a lower theoretical limit at $\approx{0.36}$ (corresponding to a close-packing of equal spheres),  the term $\frac{e^3}{(1-e)}$ is dof order $e^2$ and smaller than 1. 
 
 Hence 
+
+
 $$
 \frac{v_{mf}}{v_t}<1
 $$
@@ -134,8 +136,6 @@ axes.plot(v,mDeltaP_l, marker=' ',c=c)
 axes.plot(v_mf,mDeltaP_l_mf,marker='o',markersize=10,c=c)
 axes.set_xlabel('$v$ [$m s^{-1}$]', fontsize=18);
 axes.set_ylabel('$-\Delta{P}$ ${l^{-1}}$ [N/m$^3$]',fontsize=18);
-axes.set_xlim([0,1]);
-axes.set_ylim([0,1]);
 
 
 
