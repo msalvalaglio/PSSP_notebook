@@ -51,7 +51,7 @@ $$
 \frac{v_{mf}}{v_t}=\frac{\frac{1}{180}\frac{e^3}{(1-e)}\frac{d^2(\rho_s-\rho_f)g}{\mu}}{\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}}=\frac{1}{10}\frac{e^3}{(1-e)}
 $$
 
-Since the void fraction $0<e<1$ by definition, with a lower theoretical limit at $\approx{0.36}$ (corresponding to a close-packing of equal spheres),  the term $\frac{e^3}{(1-e)}$ is dof order $e^2$ and smaller than 1. 
+Since the void fraction $0<e<1$ by definition, with a lower theoretical limit at $\approx{0.36}$ (corresponding to a close-packing of equal spheres),  the term $\frac{e^3}{(1-e)}$ is of order $e^2$ and smaller than 1. 
 
 Hence 
 
