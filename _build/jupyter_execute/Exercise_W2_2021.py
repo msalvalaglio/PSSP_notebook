@@ -1,57 +1,63 @@
-# Week 2 - Exercise
+#!/usr/bin/env python
+# coding: utf-8
 
-## Problem Statement
+# # Week 2 - Exercise
 
-A perfectly mixed gas permeation module is used to separate carbon dioxide from nitrogen using a poly
-(2,6-dimethylphenylene oxide) membrane	($P_{CO_2}=0.034\times10^{-13}$ $P_{N_2}=0.089\times10^{-14} [cm^3 (STP) / cm s Pa]$). The process carried out at a temperature of 25$^oC$. 
-The feed flowrate is 20.0 mol% carbon dioxide.
-The module has 15.0 $m^2$ of membrane. The module is operated with a retentate pressure of 5.5 atm
-and a permeate pressure of 1.01 atm. 
+# ## Problem Statement
 
-The permeate is enriched to 38.0 mol% in carbon dioxide. The membrane thickness is $\ell = 2.0 \times 10^{-4}$ cm. 
+# A perfectly mixed gas permeation module is used to separate carbon dioxide from nitrogen using a poly
+# (2,6-dimethylphenylene oxide) membrane	($P_{CO_2}=0.034\times10^{-13}$ $P_{N_2}=0.089\times10^{-14} [cm^3 (STP) / cm s Pa]$). The process carried out at a temperature of 25$^oC$. 
+# The feed flowrate is 20.0 mol% carbon dioxide.
+# The module has 15.0 $m^2$ of membrane. The module is operated with a retentate pressure of 5.5 atm
+# and a permeate pressure of 1.01 atm. 
+# 
+# The permeate is enriched to 38.0 mol% in carbon dioxide. The membrane thickness is $\ell = 2.0 \times 10^{-4}$ cm. 
+# 
+# - Draw a scheme of the unit clearly labelling all the streams and relevant variables.
+# 
+# - Completely characterise the unit, by computing feed, permeate and retentate flow rates, cut, and retentate composition. 
 
-- Draw a scheme of the unit clearly labelling all the streams and relevant variables.
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+# ## Solution trace
+# <img src="./scheme.png" alt="Drawing" style="width: 500px;">
+# 
+# __Unknowns__: 
+# $x$,$F_{p}$,$F_{in}$, $F_{r}$, $\theta$
+# 
+# We can start computing the ideal separation factor and the composition in the retentate:
+# 
+# $$
+# \alpha=P_{CO_2}/P_{N_2}
+# $$
+# 
+# and then using the rate transfer equation to computing $x$: 
+# 
+# $$
+# x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
+# $$
+# 
+# Then we can compute the cut: 
+# 
+# $$
+# \theta=\frac{z-x}{y-x}
+# $$
+# 
+# and the permeate flowrate from the flux equation: 
+# 
+# $$
+# Fp=\frac{A\,P_{CO_2}\rho_{STP}}{l y}\left(xP_r-yP_p\right)
+# $$
+# 
+# where $\rho_{STP}$ is the molar density of an ideal gas at standard T and P. 
+# 
+# Finally, the retentate flowrate can be computed as: 
+# 
+# $$
+# F_r=F_p-F_{in}
+# $$
+# 
 
-- Completely characterise the unit, by computing feed, permeate and retentate flow rates, cut, and retentate composition. 
-
------------------------------------------------------------------------------------------------------------------------------------------------
-## Solution trace
-<img src="./scheme.png" alt="Drawing" style="width: 500px;">
-
-__Unknowns__: 
-$x$,$F_{p}$,$F_{in}$, $F_{r}$, $\theta$
-
-We can start computing the ideal separation factor and the composition in the retentate:
-
-$$
-\alpha=P_{CO_2}/P_{N_2}
-$$
-
-and then using the rate transfer equation to computing $x$: 
-
-$$
-x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
-$$
-
-Then we can compute the cut: 
-
-$$
-\theta=\frac{z-x}{y-x}
-$$
-
-and the permeate flowrate from the flux equation: 
-
-$$
-Fp=\frac{A\,P_{CO_2}\rho_{STP}}{l y}\left(xP_r-yP_p\right)
-$$
-
-where $\rho_{STP}$ is the molar density of an ideal gas at standard T and P. 
-
-Finally, the retentate flowrate can be computed as: 
-
-$$
-F_r=F_p-F_{in}
-$$
+# In[1]:
 
 
 ## Solution trace
@@ -90,7 +96,11 @@ print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
 print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
 
-__The brute force way__
+
+# __The brute force way__
+
+# In[4]:
+
 
 ## Solution trace
 import scipy as sp
@@ -127,4 +137,10 @@ print("Cut: ", f"{theta:.4}", "[-]")
 print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
 print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
+
+
+# In[ ]:
+
+
+
 

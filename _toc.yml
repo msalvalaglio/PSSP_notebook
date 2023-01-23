@@ -1,6 +1,7 @@
-# - file: README
-- file: index
-- file: Gas_permeation.ipynb 
+format: jb-article
+root: index
+sections:
+- file: Gas_permeation.ipynb
 - file: Pervaporation.ipynb
 - file: Osmosis.ipynb
 - file: Process_layouts.ipynb

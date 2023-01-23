@@ -1,76 +1,82 @@
-# Week 11 - Exercise
+#!/usr/bin/env python
+# coding: utf-8
 
-## Problem Statement
+# # Week 11 - Exercise
 
-Water (density 1000 kg m$^{-3}$, viscosity 1 mN s m$^{-2}$) is used to fluidise a bed of packed spheres characterised by a diameter of 0.5 mm and a density of 1500 kg m$^{-3}$.
+# ## Problem Statement
+# 
+# Water (density 1000 kg m$^{-3}$, viscosity 1 mN s m$^{-2}$) is used to fluidise a bed of packed spheres characterised by a diameter of 0.5 mm and a density of 1500 kg m$^{-3}$.
+# 
+# ### Tasks
+# - Demonstrate that, in laminar regime, the minimum fluidization velocity is always smaller than the terminal falling velocity. 
+# - Compute the minimum fluidisation velocity and the terminal falling velocity of the bed particles.
+# - Sketch a plot of the $\Delta{P}$ as a function of the fluid velocity, clearly indicating the minimum fluidisation velocity.
+# - How would your result change if particles were twice as large?
+# - What does the terminal falling velocity represent in the context of fluidisation? 
 
-### Tasks
-- Demonstrate that, in laminar regime, the minimum fluidization velocity is always smaller than the terminal falling velocity. 
-- Compute the minimum fluidisation velocity and the terminal falling velocity of the bed particles.
-- Sketch a plot of the $\Delta{P}$ as a function of the fluid velocity, clearly indicating the minimum fluidisation velocity.
-- How would your result change if particles were twice as large?
-- What does the terminal falling velocity represent in the context of fluidisation? 
+# ### Solution
+# 
 
-### Solution
+# #### Task 1
+# 
+# In the laminar regime, for spherical particles of diameter $d$ the minimum fluidization velocity is given by: 
+# 
+# $$
+# v_{mf}=\frac{1}{180}\frac{e^3}{(1-e)}\frac{d^2(\rho_s-\rho_f)g}{\mu}
+# $$
+# 
+# where, $e$ is the void fraction, $d$ the diameter of the particles, $\rho_s$ is the density of the particles,  $\rho_f$ is the density of the fluidising fluid, $g$ is the gravity acceleration constant, and $\mu$ the viscosity of the fluid. 
+# 
+# The terminal falling velocity, conversely is determined by the steady state force balance on a single particle: 
+# 
+# $$
+# v_t^2=Cd^{-1}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g
+# $$
+# 
+# where $Cd$ is the drag coefficient. 
+# 
+# If we introduce the definition of the drag coefficient in laminar regime given by the Stokes relation: 
+# 
+# $$
+# Cd=\frac{24}{Re_p}=\frac{24\mu}{\rho_fdv}
+# $$
+# 
+# where $Re_p$ is the Reynolds number and $v$ the velocity of the fluid, we get: 
+# 
+# $$
+# v_t=\frac{\rho_fd}{24\mu}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g=\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}
+# $$
+# 
+# Now, if we take the ratio between $v_{mf}$ and $v_t$ we get: 
+# 
+# 
+# $$
+# \frac{v_{mf}}{v_t}=\frac{\frac{1}{180}\frac{e^3}{(1-e)}\frac{d^2(\rho_s-\rho_f)g}{\mu}}{\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}}=\frac{1}{10}\frac{e^3}{(1-e)}
+# $$
+# 
+# Since the void fraction $0<e<1$ by definition, with a lower theoretical limit at $\approx{0.36}$ (corresponding to a close-packing of equal spheres),  the term $\frac{e^3}{(1-e)}$ is of order $e^2$ and smaller than 1. 
+# 
+# Hence 
+# 
+# 
+# $$
+# \frac{v_{mf}}{v_t}<1
+# $$
+# 
+# and the minimum fluidization velocity is always smaller than the terminal Falling velocity, irrespective of $d$, $\rho_p$, $\rho_f$ or $\mu$.
+# 
+# 
+# #### Task 2 / 4
+# 
+# In order to solve task 2 we need to estimate the void fraction. A typical approach whne the actual void fraction is not provided is to compute it as the ratio between the volume of a sphere of diameter $d$ and a cube with the side of lenghth $d$. 
+# 
+# $$
+# e=1-\frac{\pi}{6}
+# $$
+# 
+# 
 
-
-#### Task 1
-
-In the laminar regime, for spherical particles of diameter $d$ the minimum fluidization velocity is given by: 
-
-$$
-v_{mf}=\frac{1}{180}\frac{e^3}{(1-e)}\frac{d^2(\rho_s-\rho_f)g}{\mu}
-$$
-
-where, $e$ is the void fraction, $d$ the diameter of the particles, $\rho_s$ is the density of the particles,  $\rho_f$ is the density of the fluidising fluid, $g$ is the gravity acceleration constant, and $\mu$ the viscosity of the fluid. 
-
-The terminal falling velocity, conversely is determined by the steady state force balance on a single particle: 
-
-$$
-v_t^2=Cd^{-1}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g
-$$
-
-where $Cd$ is the drag coefficient. 
-
-If we introduce the definition of the drag coefficient in laminar regime given by the Stokes relation: 
-
-$$
-Cd=\frac{24}{Re_p}=\frac{24\mu}{\rho_fdv}
-$$
-
-where $Re_p$ is the Reynolds number and $v$ the velocity of the fluid, we get: 
-
-$$
-v_t=\frac{\rho_fd}{24\mu}\frac{(\rho_s-\rho_f)}{\rho_f}\frac{4d}{3}g=\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}
-$$
-
-Now, if we take the ratio between $v_{mf}$ and $v_t$ we get: 
-
-
-$$
-\frac{v_{mf}}{v_t}=\frac{\frac{1}{180}\frac{e^3}{(1-e)}\frac{d^2(\rho_s-\rho_f)g}{\mu}}{\frac{1}{18}\frac{d^2(\rho_s-\rho_f)g}{\mu}}=\frac{1}{10}\frac{e^3}{(1-e)}
-$$
-
-Since the void fraction $0<e<1$ by definition, with a lower theoretical limit at $\approx{0.36}$ (corresponding to a close-packing of equal spheres),  the term $\frac{e^3}{(1-e)}$ is of order $e^2$ and smaller than 1. 
-
-Hence 
-
-
-$$
-\frac{v_{mf}}{v_t}<1
-$$
-
-and the minimum fluidization velocity is always smaller than the terminal Falling velocity, irrespective of $d$, $\rho_p$, $\rho_f$ or $\mu$.
-
-
-#### Task 2 / 4
-
-In order to solve task 2 we need to estimate the void fraction. A typical approach whne the actual void fraction is not provided is to compute it as the ratio between the volume of a sphere of diameter $d$ and a cube with the side of lenghth $d$. 
-
-$$
-e=1-\frac{\pi}{6}
-$$
-
+# In[1]:
 
 
 import numpy as np
@@ -101,9 +107,12 @@ print("\nTerminal Falling velocity: ", f"{v_t:.4}", " [m/s]")
 print("Minimum Fluidisation velocity: ", f"{v_mf:.4}", " [m/s]\n")
 
 
-#### Task 3 / 4
+# #### Task 3 / 4
+# 
+# Without specifying the total lenght of the packed bed it is only possible to plot the pressure gradient $\Delta{P}/l$. 
 
-Without specifying the total lenght of the packed bed it is only possible to plot the pressure gradient $\Delta{P}/l$. 
+# In[2]:
+
 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -139,7 +148,10 @@ axes.set_ylabel('$-\Delta{P}$ ${l^{-1}}$ [N/m$^3$]',fontsize=18);
 
 
 
-We can treat the bed length as a parameter, to show the behaviour of the $\Delta{P}$ as a function of velocity: 
+# We can treat the bed length as a parameter, to show the behaviour of the $\Delta{P}$ as a function of velocity: 
+
+# In[3]:
+
 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -170,6 +182,7 @@ for l in lengths:
 axes.set_xlabel('$v$ [$m s^{-1}$]', fontsize=18);
 axes.set_ylabel('$-\Delta{P}$ [N/m$^2$]',fontsize=18);
 
-#### Task 5 
 
-The terminal falling velocity corresponds to the velocity at whixh thew drag froces counterbalance the net weight of the particles, over coming thisb velocity leads to net upward acceleration of the particles and corresponds to the instauration of the transport regime. 
+# #### Task 5 
+# 
+# The terminal falling velocity corresponds to the velocity at whixh thew drag froces counterbalance the net weight of the particles, over coming thisb velocity leads to net upward acceleration of the particles and corresponds to the instauration of the transport regime. 

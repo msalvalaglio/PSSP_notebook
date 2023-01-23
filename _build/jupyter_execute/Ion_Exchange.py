@@ -1,57 +1,63 @@
-# 7. Equilibria in Ion Exchange Systems
+#!/usr/bin/env python
+# coding: utf-8
 
-In ion exchange processes adsorption takes place through by exchanging the counterions bound to charged ligands immobilised on the stationary phase. 
-In the following examples the ligands are anionic and monovalent and are indicated with $R^-$. 
+# # 7. Equilibria in Ion Exchange Systems
 
-## 7.1 Monovalent, symmetric cation exchange. 
+# In ion exchange processes adsorption takes place through by exchanging the counterions bound to charged ligands immobilised on the stationary phase. 
+# In the following examples the ligands are anionic and monovalent and are indicated with $R^-$. 
 
-Let us consider an ion exchange system in which the cations that are selectively displaced from the liquid phase are indicated as $A^+$, while the ligand counterions are indicated with $B^+$. 
-The ion exchange reaction considered can be written as:
+# ## 7.1 Monovalent, symmetric cation exchange. 
 
-$$
-A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \\
-$$
+# Let us consider an ion exchange system in which the cations that are selectively displaced from the liquid phase are indicated as $A^+$, while the ligand counterions are indicated with $B^+$. 
+# The ion exchange reaction considered can be written as:
+# 
+# $$
+# A^+ + R^-B^+ + X^- \leftrightarrows B^+ + R^-A^+ + X^- \\
+# $$
+# 
+# where $X^-$ are spectator anions. 
+# 
+# The isotherm in the case of an ion exchange process can be derived starting from the equilibrium constant for the ion exchange reaction. 
+# If we indicate with $C_A$, $C_B$ the concentration of cations A and B in the fluid phase and with $n_A$, $n_B$ their respective concentration in the adsorbed phase. 
+# 
+# The equilibrtium constant is written as: 
+# 
+# $$
+# K_{AB}=\frac{n_AC_B}{n_BC_A}
+# $$(IEXeq1)
+# 
+# The concentration of surface ligands is related to the concentration in the adsorbed phase of cations $A^+$ and $B^+$ by the following expression: 
+# 
+# $$
+# n_R=n_A+n_B
+# $$(IEXeq2)
+# 
+# The total cationic concentration in the fluid phase $C_T$ is analogously defined as: 
+# 
+# $$
+# C_T=C_A+C_B
+# $$(IEXeq3)
+# 
+# hence the equilibrium constant becomes: 
+# 
+# $$
+# K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
+# $$(IEXeq4)
+# 
+# This expression can be manipulated to provide an explicit relation between the concetration in the adsorbed phase $n_A$, and the concentration in the fluid phase $C_A$, i.e. an isotherm for the ion exchange process:
+# 
+# $$
+# n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}
+# $$(IEXeq5)
+# 
+# This expression can be further simplified by introducing the molar fractions in the adsorbed and fluid phases indicated with $y_A$ and $x_A$, respectively:
+# 
+# $$
+# y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}
+# $$(IEXeq6)
 
-where $X^-$ are spectator anions. 
+# In[1]:
 
-The isotherm in the case of an ion exchange process can be derived starting from the equilibrium constant for the ion exchange reaction. 
-If we indicate with $C_A$, $C_B$ the concentration of cations A and B in the fluid phase and with $n_A$, $n_B$ their respective concentration in the adsorbed phase. 
-
-The equilibrtium constant is written as: 
-
-$$
-K_{AB}=\frac{n_AC_B}{n_BC_A}
-$$(IEXeq1)
-
-The concentration of surface ligands is related to the concentration in the adsorbed phase of cations $A^+$ and $B^+$ by the following expression: 
-
-$$
-n_R=n_A+n_B
-$$(IEXeq2)
-
-The total cationic concentration in the fluid phase $C_T$ is analogously defined as: 
-
-$$
-C_T=C_A+C_B
-$$(IEXeq3)
-
-hence the equilibrium constant becomes: 
-
-$$
-K_{AB}=\frac{n_A(C_T-C_A)}{(n_R-n_A)C_A}
-$$(IEXeq4)
-
-This expression can be manipulated to provide an explicit relation between the concetration in the adsorbed phase $n_A$, and the concentration in the fluid phase $C_A$, i.e. an isotherm for the ion exchange process:
-
-$$
-n_A=\frac{n_RK_{AB}C_A}{C_T+C_A(K_{AB}-1)}
-$$(IEXeq5)
-
-This expression can be further simplified by introducing the molar fractions in the adsorbed and fluid phases indicated with $y_A$ and $x_A$, respectively:
-
-$$
-y_A=\frac{K_{AB}x_A}{1+x_A(K_{AB}-1)}
-$$(IEXeq6)
 
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -83,7 +89,11 @@ plt.title('Ion Exchange', fontsize=18);
 axes.set_xlabel('$x_A$', fontsize=18);
 axes.set_ylabel('$y_A$',fontsize=18);
 
-The concentration of surface groups in the statrionary phase $n_R$ also plays a role in determining the amound adsorbed. In the following we report the concentration in the adsorbed phase, in equilibrium with an arbitrary molar fraction $x_A'$ in the fluid phase as a function of the affinity towards the stationary phase (captured by the equilibrium constant $K_{AB}$) and of the density of surface charged ligands $n_R$. 
+
+# The concentration of surface groups in the statrionary phase $n_R$ also plays a role in determining the amound adsorbed. In the following we report the concentration in the adsorbed phase, in equilibrium with an arbitrary molar fraction $x_A'$ in the fluid phase as a function of the affinity towards the stationary phase (captured by the equilibrium constant $K_{AB}$) and of the density of surface charged ligands $n_R$. 
+
+# In[2]:
+
 
 import numpy as np
 import pandas as pd
@@ -121,3 +131,4 @@ axes.set_xlabel('$nR$', fontsize=14);
 axes.set_ylabel('$k_{AB}$',fontsize=14);
 axes.set_zlabel('$nA$',fontsize=14);
 figure.colorbar(surf, shrink=0.5, aspect=5);
+

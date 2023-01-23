@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[22]:
+
+
 ## Solution trace
 import scipy as sp
 
@@ -39,4 +45,10 @@ print("Cut: ", f"{theta:.4}", "[-]")
 print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
 print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
+
+
+# In[ ]:
+
+
+
 
