@@ -332,7 +332,7 @@
 <p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
 <div class="section" id="problem-statement">
 <h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
-<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 <span class="math notranslate nohighlight">\(mm\)</span> and density of <span class="math notranslate nohighlight">\(700 kg\,m^{-3}\)</span>. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}} [dm]\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]\)</span>.</p>
+<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 <span class="math notranslate nohighlight">\(mm\)</span> and density of <span class="math notranslate nohighlight">\(700 kg\,m^{-3}\)</span>. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}} [dm]\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-8}}\,[m h^{-1}]\)</span>.</p>
 <ul class="simple">
 <li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
 <li><p>If this is the case how much time does it take to lower the pollutant concetration to the target specification?</p></li>
@@ -425,7 +425,7 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
-<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
 
 <span class="c1">#particles mass</span>
 <span class="n">pm</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="c1">#kg</span>
@@ -444,7 +444,7 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 <span class="c1">#Batch volume</span>
 <span class="n">Vl</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="c1">#m^3</span>
 <span class="c1">#Mass transfer</span>
-<span class="n">kl</span><span class="o">=</span><span class="mf">1E-5</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">;</span> <span class="c1">#m/s</span>
+<span class="n">kl</span><span class="o">=</span><span class="mf">1E-8</span><span class="p">;</span> <span class="c1">#m/h</span>
 <span class="c1">#Equilibrium</span>
 <span class="n">H</span><span class="o">=</span><span class="mf">1E-1</span><span class="p">;</span> <span class="c1">#</span>
 
@@ -497,7 +497,8 @@ c_{in}Q=qS+c_{out}Q
 </div>
 <div class="section" id="contributions">
 <h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h2>
-<p>Salar Rahbari Namin, 8 Feb 2021<br />
+<p>Romain Dujardin, 2 May 2022<br />
+Salar Rahbari Namin, 8 Feb 2021<br />
 Nikita Gusev, 9 Feb 2021</p>
 </div>
 </div>

@@ -4,7 +4,7 @@ In this notes we will use an example problem to introduce material balances in s
 
 ## 8.1 Problem Statement
 
-A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 $[mol l^{-1}]$, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume $V_{\ell}$ of 2 $m^3$, in which $100\,kg$ of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 $mm$ and density of $700 kg\,m^{-3}$. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm $q=Hc^*$ with $H=1\times{10^{-1}} [dm]$.  The liquid-side mass transfer coefficient is $k_{\ell}=1\times{10^{-5}}\,[m s^{-1}]$.
+A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 $[mol l^{-1}]$, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume $V_{\ell}$ of 2 $m^3$, in which $100\,kg$ of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 $mm$ and density of $700 kg\,m^{-3}$. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm $q=Hc^*$ with $H=1\times{10^{-1}} [dm]$.  The liquid-side mass transfer coefficient is $k_{\ell}=1\times{10^{-8}}\,[m h^{-1}]$.
 
 - Is it possible to carry out the requested purification with the operation parameters described in the problem statment? 
 - If this is the case how much time does it take to lower the pollutant concetration to the target specification? 
@@ -115,7 +115,7 @@ axes = figure.add_axes([0.1,0.1,1.2,1.2])
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 N = 500 #number of points
-time = np.linspace(0,24, N)
+time = np.linspace(0,15, N)
 
 #particles mass
 pm=100; #kg
@@ -134,7 +134,7 @@ Sp=NP*uS; #particles surface
 #Batch volume
 Vl=2; #m^3
 #Mass transfer
-kl=1E-5 / 3600; #m/s
+kl=1E-8; #m/h
 #Equilibrium
 H=1E-1; #
 
@@ -185,5 +185,7 @@ $$(slurryeq14)
 
 ## Contributions
 
+Romain Dujardin, 2 May 2022   
 Salar Rahbari Namin, 8 Feb 2021  
 Nikita Gusev, 9 Feb 2021
+
