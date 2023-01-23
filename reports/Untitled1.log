@@ -1,20 +1,20 @@
 Traceback (most recent call last):
-  File "/Applications/anaconda3/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 1087, in execute
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/Applications/anaconda3/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
     return future.result()
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 832, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/Applications/anaconda3/lib/python3.7/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 ## Solution trace
@@ -62,12 +62,12 @@ print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mAttributeError[0m                            Traceback (most recent call last)
-[0;32m<ipython-input-1-867716cc95ea>[0m in [0;36m<module>[0;34m[0m
-[1;32m     29[0m     [0;32mreturn[0m [0;34m[[0m[0meq1[0m[0;34m,[0m [0meq2[0m[0;34m,[0m [0meq3[0m[0;34m,[0m [0meq4[0m[0;34m,[0m [0meq5[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[1;32m     30[0m [0;34m[0m[0m
-[0;32m---> 31[0;31m [0mx[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mFp[0m[0;34m,[0m [0mFr[0m[0;34m,[0m [0mtheta[0m [0;34m=[0m  [0msp[0m[0;34m.[0m[0moptimize[0m[0;34m.[0m[0mfsolve[0m[0;34m([0m[0mequations[0m[0;34m,[0m [0;34m([0m[0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m,[0m [0;36m0.1[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     32[0m [0;34m[0m[0m
-[1;32m     33[0m [0mprint[0m[0;34m([0m[0mequations[0m[0;34m([0m[0;34m[[0m[0mx[0m[0;34m,[0m [0my[0m[0;34m,[0m [0mFp[0m[0;34m,[0m [0mFr[0m[0;34m,[0m [0mtheta[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+Input [0;32mIn [1][0m, in [0;36m<cell line: 31>[0;34m()[0m
+[1;32m     28[0m     [38;5;66;03m#eq4 = Fp*(1-y)-A*PN2*rho_STP / l * ((1-x)*P_r-(1-y)*P_p)[39;00m
+[1;32m     29[0m     [38;5;28;01mreturn[39;00m [eq1, eq2, eq3, eq4, eq5]
+[0;32m---> 31[0m x, y, Fp, Fr, theta [38;5;241m=[39m  [43msp[49m[38;5;241;43m.[39;49m[43moptimize[49m[38;5;241m.[39mfsolve(equations, ([38;5;241m0.1[39m, [38;5;241m0.1[39m, [38;5;241m0.1[39m, [38;5;241m0.1[39m, [38;5;241m0.1[39m))
+[1;32m     33[0m [38;5;28mprint[39m(equations([x, y, Fp, Fr, theta]))
+[1;32m     35[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;130;01m\n[39;00m[38;5;124mFeed composition: [39m[38;5;124m"[39m, [38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00mz[38;5;132;01m:[39;00m[38;5;124m.4[39m[38;5;132;01m}[39;00m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m [-][39m[38;5;124m"[39m)
 
 [0;31mAttributeError[0m: module 'scipy' has no attribute 'optimize'
 AttributeError: module 'scipy' has no attribute 'optimize'

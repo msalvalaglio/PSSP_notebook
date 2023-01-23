@@ -4,10 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5. The Langmuir Isotherm &#8212; PSSP Virtual Notebook</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -17,85 +20,102 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="6. The BET Isotherm" href="BET_isotherm.html" />
     <link rel="prev" title="4. Membrane Processes Layouts" href="Process_layouts.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/Logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
-  
-</a>
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   Particulate Systems and Separation Processes Notebook
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Particulate Systems and Separation Processes Notebook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Gas_permeation.html">
    1. Material Balances in a Gas Permeation Unit
@@ -193,109 +213,227 @@
  </li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Langmuir_isotherm.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-        <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/msalvalaglio/PSSP_notebook"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FLangmuir_isotherm.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Langmuir_isotherm.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Langmuir_isotherm.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/Langmuir_isotherm.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FLangmuir_isotherm.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Langmuir_isotherm.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Langmuir_isotherm.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#isotherm-dependence-on-b-0">
    5.1 Isotherm dependence on
@@ -321,17 +459,58 @@
  </li>
 </ul>
 
-        </nav>
-        
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>5. The Langmuir Isotherm</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isotherm-dependence-on-b-0">
+   5.1 Isotherm dependence on
+   <span class="math notranslate nohighlight">
+    \(B_0\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concentration-in-the-adsorbed-phase">
+   5.2 Concentration in the adsorbed phase.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#langmuir-isotherm-in-the-gas-phase">
+   5.3 Langmuir isotherm in the gas phase.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multicomponent-competitive-adsorption">
+   5.4 Multicomponent, competitive adsorption
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="the-langmuir-isotherm">
-<h1>5. The Langmuir Isotherm<a class="headerlink" href="#the-langmuir-isotherm" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-langmuir-isotherm">
+<h1>5. The Langmuir Isotherm<a class="headerlink" href="#the-langmuir-isotherm" title="Permalink to this headline">#</a></h1>
 <p>The Langmuir isotherm provides a relationship between the compositions of the fluid phase and of the adsorbed phase at equilibrium.</p>
 <p>In the following we shall note with <span class="math notranslate nohighlight">\(C\)</span> the concentration of the component that undergoes adsorption in the fluid phase, and with <span class="math notranslate nohighlight">\(q\)</span> its  molar fraction in the adsorbed phase.</p>
 <p>The Langmuir isother is based on a set of assumptions:</p>
@@ -343,38 +522,38 @@
 <p>In order to derive the langmuir adsorption isotherm from this set of hypotheses let’s start by defining expressions for the adsorption and desorption rates.</p>
 <p>The adsorption process takes place when a molecule of the component that is undergoing adsorption finds a free adsorption site. The rate of an adsorption event can thus be considered analogous to a bimolecular elementary reaction step with rate:</p>
 <div class="math notranslate nohighlight" id="equation-langeq1">
-<span class="eqno">(48)<a class="headerlink" href="#equation-langeq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(52)<a class="headerlink" href="#equation-langeq1" title="Permalink to this equation">#</a></span>\[
 R_A=k_A\Gamma_0{C}
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(k_A\)</span> is the kinetic constant, <span class="math notranslate nohighlight">\(\Gamma_0\)</span> is the fraction of free adsorption sites,  and <span class="math notranslate nohighlight">\(x\)</span> is the molar fraction of the adsorbing component in the fluid phase.</p>
 <p>The rate of desorption instead can be considered analogous to a monomolecular reaction, in which a (non-covalent) bond is broken and an adsorbed molecule is released to the fluid phase, leaving one free site. Its rate can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-langeq2">
-<span class="eqno">(49)<a class="headerlink" href="#equation-langeq2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(53)<a class="headerlink" href="#equation-langeq2" title="Permalink to this equation">#</a></span>\[
 R_D=k_D\Gamma_1
 \]</div>
 <p>At equilibrium, the rates of adsorption and desorption are equal and the net flux of molecules to and from the adsorbed phase is null.
 We can thus write:</p>
 <div class="math notranslate nohighlight" id="equation-langeq3">
-<span class="eqno">(50)<a class="headerlink" href="#equation-langeq3" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(54)<a class="headerlink" href="#equation-langeq3" title="Permalink to this equation">#</a></span>\[
 k_A\Gamma_0{C}=k_D\Gamma_1
 \]</div>
 <p>Recalling the stoichiometric relation between the fraction of accupied and free sites Eq. \eqref{eq:3} becomes:</p>
 <div class="math notranslate nohighlight" id="equation-langeq4">
-<span class="eqno">(51)<a class="headerlink" href="#equation-langeq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(55)<a class="headerlink" href="#equation-langeq4" title="Permalink to this equation">#</a></span>\[
 k_A(1-\Gamma_1){C}=k_D\Gamma_1
 \]</div>
 <p>which can be rearranged to provide an explicit expression of <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, the fraction of accupied sites, as a function of the concentration <span class="math notranslate nohighlight">\(C\)</span> in the fluid phase:</p>
 <div class="math notranslate nohighlight" id="equation-langeq5">
-<span class="eqno">(52)<a class="headerlink" href="#equation-langeq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(56)<a class="headerlink" href="#equation-langeq5" title="Permalink to this equation">#</a></span>\[
 \Gamma_1=\frac{k_A{C}}{k_D+k_A{C}}
 \]</div>
 <p>To obtain a typical expression of the Langmuir isotherm we shall introduce as a single parameter for this equation the adsorption equilibrium constant <span class="math notranslate nohighlight">\(B_0=k_A/k_D\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-langeq6">
-<span class="eqno">(53)<a class="headerlink" href="#equation-langeq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(57)<a class="headerlink" href="#equation-langeq6" title="Permalink to this equation">#</a></span>\[
 \Gamma_1=\frac{B_0{C}}{1+B_0{C}}
 \]</div>
-<div class="section" id="isotherm-dependence-on-b-0">
-<h2>5.1 Isotherm dependence on <span class="math notranslate nohighlight">\(B_0\)</span><a class="headerlink" href="#isotherm-dependence-on-b-0" title="Permalink to this headline">¶</a></h2>
+<section id="isotherm-dependence-on-b-0">
+<h2>5.1 Isotherm dependence on <span class="math notranslate nohighlight">\(B_0\)</span><a class="headerlink" href="#isotherm-dependence-on-b-0" title="Permalink to this headline">#</a></h2>
 <p>In order to understand the role of the adsorption equilibrium constant let us plot the fraction of occupied adsorption sites as a function of <span class="math notranslate nohighlight">\(B_0\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -414,13 +593,13 @@ k_A(1-\Gamma_1){C}=k_D\Gamma_1
 <img alt="_images/Langmuir_isotherm_4_0.png" src="_images/Langmuir_isotherm_4_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="concentration-in-the-adsorbed-phase">
-<h2>5.2 Concentration in the adsorbed phase.<a class="headerlink" href="#concentration-in-the-adsorbed-phase" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="concentration-in-the-adsorbed-phase">
+<h2>5.2 Concentration in the adsorbed phase.<a class="headerlink" href="#concentration-in-the-adsorbed-phase" title="Permalink to this headline">#</a></h2>
 <p>The Langmuir isotherm as discussed so far provides a relationship between the fractional occupation of adsorption sites <span class="math notranslate nohighlight">\(\Gamma_1\)</span> and the concentration in the fluid phase <span class="math notranslate nohighlight">\(C\)</span>. This relationship is only dependent on the thermodynamics of adsorption, captured by the value of the adsorption equilibrium coinstant <span class="math notranslate nohighlight">\(B_0\)</span>. In order to compute the concentration adsorbed by a specific material we need one additional parameter, the maximum concentration <span class="math notranslate nohighlight">\(q_M\)</span> in the adsorbed phase.
 The concentration in the adsorbed phase is thus computed as: <span class="math notranslate nohighlight">\(q=\Gamma_1{q_M}\)</span>, hence:</p>
 <div class="math notranslate nohighlight" id="equation-langeq7">
-<span class="eqno">(54)<a class="headerlink" href="#equation-langeq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(58)<a class="headerlink" href="#equation-langeq7" title="Permalink to this equation">#</a></span>\[
 q=q_M\frac{B_0{C}}{1+B_0{C}}
 \]</div>
 <p>The parameter <span class="math notranslate nohighlight">\(q_M\)</span> depends on the adsorbent material, and in particular on the amount of surface area per unit volume.</p>
@@ -470,42 +649,42 @@ q=q_M\frac{B_0{C}}{1+B_0{C}}
 <img alt="_images/Langmuir_isotherm_7_0.png" src="_images/Langmuir_isotherm_7_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="langmuir-isotherm-in-the-gas-phase">
-<h2>5.3 Langmuir isotherm in the gas phase.<a class="headerlink" href="#langmuir-isotherm-in-the-gas-phase" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="langmuir-isotherm-in-the-gas-phase">
+<h2>5.3 Langmuir isotherm in the gas phase.<a class="headerlink" href="#langmuir-isotherm-in-the-gas-phase" title="Permalink to this headline">#</a></h2>
 <p>When describing the thermodynamics of adsorption from the gas phase it is convenient to introduce explicitly the pressure <span class="math notranslate nohighlight">\(P\)</span> in the Langmuir isotherm.
 In this case the expression of the monocomponent Langmuir isotherm becomes:</p>
 <div class="math notranslate nohighlight" id="equation-langeq8">
-<span class="eqno">(55)<a class="headerlink" href="#equation-langeq8" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(59)<a class="headerlink" href="#equation-langeq8" title="Permalink to this equation">#</a></span>\[
 q=q_M\frac{B_1{P}}{1+B_1{P}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(B_1=B_0/RT\)</span> and <span class="math notranslate nohighlight">\(P\)</span> is pressure.</p>
-</div>
-<div class="section" id="multicomponent-competitive-adsorption">
-<h2>5.4 Multicomponent, competitive adsorption<a class="headerlink" href="#multicomponent-competitive-adsorption" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="multicomponent-competitive-adsorption">
+<h2>5.4 Multicomponent, competitive adsorption<a class="headerlink" href="#multicomponent-competitive-adsorption" title="Permalink to this headline">#</a></h2>
 <p>In multicomponent systems, in which <span class="math notranslate nohighlight">\(N\)</span> components compete for the same adsorption sites we can define the adsorption equilibrium constant of component <span class="math notranslate nohighlight">\(i\)</span> as:</p>
 <div class="math notranslate nohighlight" id="equation-langeq9">
-<span class="eqno">(56)<a class="headerlink" href="#equation-langeq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(60)<a class="headerlink" href="#equation-langeq9" title="Permalink to this equation">#</a></span>\[
 B_{1,i}=\frac{\Gamma_i}{P_i\Gamma_0}
 \]</div>
 <p>In a multicomponent system, the single layer hypothesis bocomes:</p>
 <div class="math notranslate nohighlight" id="equation-langeq10">
-<span class="eqno">(57)<a class="headerlink" href="#equation-langeq10" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(61)<a class="headerlink" href="#equation-langeq10" title="Permalink to this equation">#</a></span>\[
 \Gamma_0+\sum_{i=1}^N{\Gamma_i}=1 
 \]</div>
-<p>Substituting in Eq. <a class="reference internal" href="#equation-langeq10">(57)</a> the definition of adsorption equilibrium constant given in Eq. <a class="reference internal" href="#equation-langeq9">(56)</a> we get:</p>
+<p>Substituting in Eq. <a class="reference internal" href="#equation-langeq10">(61)</a> the definition of adsorption equilibrium constant given in Eq. <a class="reference internal" href="#equation-langeq9">(60)</a> we get:</p>
 <div class="math notranslate nohighlight" id="equation-langeq11">
-<span class="eqno">(58)<a class="headerlink" href="#equation-langeq11" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(62)<a class="headerlink" href="#equation-langeq11" title="Permalink to this equation">#</a></span>\[
 \Gamma_0^{-1}=1+\sum_{i=1}^N{B_{1,i}P_i}
 \]</div>
-<p>finally, substituting again <span class="math notranslate nohighlight">\(\Gamma_0^ {-1}\)</span> in Eq. <a class="reference internal" href="#equation-langeq9">(56)</a>, and rearranging we get an expression of the fraction of sites occupied by specie <span class="math notranslate nohighlight">\(i\)</span> as a function of the partial pressure (concentration) of <span class="math notranslate nohighlight">\(i\)</span> in the fluid phase.</p>
+<p>finally, substituting again <span class="math notranslate nohighlight">\(\Gamma_0^ {-1}\)</span> in Eq. <a class="reference internal" href="#equation-langeq9">(60)</a>, and rearranging we get an expression of the fraction of sites occupied by specie <span class="math notranslate nohighlight">\(i\)</span> as a function of the partial pressure (concentration) of <span class="math notranslate nohighlight">\(i\)</span> in the fluid phase.</p>
 <div class="math notranslate nohighlight" id="equation-langeq12">
-<span class="eqno">(59)<a class="headerlink" href="#equation-langeq12" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(63)<a class="headerlink" href="#equation-langeq12" title="Permalink to this equation">#</a></span>\[
 \Gamma_i=\frac{B_{1,i}P_i}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 \]</div>
 <p>Finally, inserting the density of specie <span class="math notranslate nohighlight">\(i\)</span> in the adsorbed phase we get:</p>
 <div class="math notranslate nohighlight" id="equation-langeq13">
-<span class="eqno">(60)<a class="headerlink" href="#equation-langeq13" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(64)<a class="headerlink" href="#equation-langeq13" title="Permalink to this equation">#</a></span>\[
 q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(N\)</span> is the total number of components, <span class="math notranslate nohighlight">\(P_i\)</span> is the partial pressure component <span class="math notranslate nohighlight">\(i\)</span> in the gas phase, and <span class="math notranslate nohighlight">\(B_{1,i}=B_{0,i}/RT\)</span> where <span class="math notranslate nohighlight">\(B_{0,i}\)</span> is the adsorption equilibrium constant for component <span class="math notranslate nohighlight">\(i\)</span>.</p>
@@ -552,8 +731,8 @@ q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 <img alt="_images/Langmuir_isotherm_11_0.png" src="_images/Langmuir_isotherm_11_0.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -577,36 +756,48 @@ q_i=q_M\frac{B_{1,i}{P_i}}{1+\sum_{i=1}^NB_{1,i}{P_i}}
 
               </div>
               
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Process_layouts.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">4. Membrane Processes Layouts</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="BET_isotherm.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. The BET Isotherm</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="Process_layouts.html" title="previous page">4. Membrane Processes Layouts</a>
-    <a class='right-next' id="next-link" href="BET_isotherm.html" title="next page">6. The BET Isotherm</a>
-
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Matteo Salvalaglio<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Matteo Salvalaglio<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
 
-
-    
   </body>
 </html>
