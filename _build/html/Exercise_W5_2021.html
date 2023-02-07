@@ -527,11 +527,12 @@ The retention times for these components are:</p></li>
 <li><p><span class="math notranslate nohighlight">\(t_{r,C}=15\)</span></p></li>
 </ul>
 <ol class="simple">
-<li><p>The selectivity can be computed for every pair of components as:
-$<span class="math notranslate nohighlight">\(
-S_{i,j}=\frac{t_{r,i}-t_0}{t_{r,j}-t_0}
-\)</span>$</p></li>
+<li><p>The selectivity can be computed for every pair of components as:</p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[
+S_{i,j}=\frac{t_{r,i}-t_0}{t_{r,j}-t_0}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -560,7 +561,7 @@ S_{i,j}=\frac{t_{r,i}-t_0}{t_{r,j}-t_0}
 <ol class="simple">
 <li><p>Since <span class="math notranslate nohighlight">\(S_{i,j}=H_i/H_j\)</span> we can determine the relative affinity of components A, B and C for the startionary phase. Component C shows the highest affinity for the stationary phase, followed by B and then C.</p></li>
 </ol>
-<p>4/5. The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship <span class="math notranslate nohighlight">\(N=16*(tr/tw)^2\)</span>. The resolution for every couple of components is computed as: <span class="math notranslate nohighlight">\(R_{i,j}=\frac{t_{r,i}-t_{r,j}}{2(t_{w,i}+t_{w,j})}\)</span></p>
+<p>4/5. The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship <span class="math notranslate nohighlight">\(N=16*(tr/tw)^2\)</span>. The resolution for every couple of components is computed as: <span class="math notranslate nohighlight">\(R_{i,j}=\frac{t_{r,i}-t_{r,j}}{\frac{1}{2}(t_{w,i}+t_{w,j})}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>

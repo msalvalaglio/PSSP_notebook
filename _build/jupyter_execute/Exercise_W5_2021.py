@@ -29,6 +29,7 @@
 # - $t_{r,C}=15$
 # 
 # 2. The selectivity can be computed for every pair of components as: 
+# 
 # $$
 # S_{i,j}=\frac{t_{r,i}-t_0}{t_{r,j}-t_0}
 # $$
@@ -51,7 +52,7 @@ print('Selectivity i,j\n',SEL)
 
 # 3. Since $S_{i,j}=H_i/H_j$ we can determine the relative affinity of components A, B and C for the startionary phase. Component C shows the highest affinity for the stationary phase, followed by B and then C. 
 # 
-# 4/5. The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship $N=16*(tr/tw)^2$. The resolution for every couple of components is computed as: $R_{i,j}=\frac{t_{r,i}-t_{r,j}}{2(t_{w,i}+t_{w,j})}$
+# 4/5. The number of theoretical plates associated to the elution of components A, B, and C can be obtained applying the relationship $N=16*(tr/tw)^2$. The resolution for every couple of components is computed as: $R_{i,j}=\frac{t_{r,i}-t_{r,j}}{\frac{1}{2}(t_{w,i}+t_{w,j})}$
 
 # In[2]:
 
