@@ -617,11 +617,15 @@ C(t)=\frac{m}{V(t)}=\frac{C_0V_0}{V_0}e^{\frac{B}{V_0C_0 }At}={C_0}e^{\frac{B}{V
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/numpy/core/shape_base.py:65: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
+  ary = asanyarray(ary)
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The process time necessary to obtain a solid residue concentration of 200.0 [kg/l] is: [17.32867951] [h]
 </pre></div>
 </div>
-<img alt="_images/Process_layouts_6_1.png" src="_images/Process_layouts_6_1.png" />
 <img alt="_images/Process_layouts_6_2.png" src="_images/Process_layouts_6_2.png" />
+<img alt="_images/Process_layouts_6_3.png" src="_images/Process_layouts_6_3.png" />
 </div>
 </div>
 </section>
@@ -716,7 +720,7 @@ Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(i=1...N\)</span> with <span class="math notranslate nohighlight">\(N\)</span> is the total number of stages.</p>
 <p><strong>Numerical Solution</strong></p>
-<p>The solution of a cascade composed of any number of stages, each formed by an arbitrary number of modules in parallel can be tackled sequentially through a simple cycle similar to the following:</p>
+<p>The solution of a cascade composed of any number of stages, each formed by an arbitrary number of modules in parallel can be tackled sequentially through a simple cycle similar to the following, let’s for example consider a system that reflects the sketch above i.e. with 4 stages implementing 4, 3, 2, and 1 modules each:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -733,7 +737,7 @@ Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 
 <span class="c1"># The number of elements of this array corresponds to the number of stages. </span>
 <span class="c1"># The value in each element is the number of modules per stage. </span>
-<span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">17</span><span class="p">]);</span>
+<span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]);</span>
 
 <span class="n">CIN</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">C0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">FIN</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">V0</span><span class="o">/</span><span class="n">process_time</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
@@ -751,7 +755,7 @@ Q_{IN,i+1}=\frac{C_{IN,i}{Q_{IN,i}}}{C_{IN,i+1}}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 390.0 [kg/m^3]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The steady state concentration is 720.7199999999999 [kg/m^3]
 </pre></div>
 </div>
 </div>

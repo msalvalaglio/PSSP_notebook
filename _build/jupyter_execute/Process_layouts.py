@@ -247,7 +247,7 @@ print("The steady state concentration is", Cout, "[kg/m^3]")
 
 # __Numerical Solution__ 
 # 
-# The solution of a cascade composed of any number of stages, each formed by an arbitrary number of modules in parallel can be tackled sequentially through a simple cycle similar to the following:  
+# The solution of a cascade composed of any number of stages, each formed by an arbitrary number of modules in parallel can be tackled sequentially through a simple cycle similar to the following, let's for example consider a system that reflects the sketch above i.e. with 4 stages implementing 4, 3, 2, and 1 modules each: 
 
 # In[3]:
 
@@ -266,7 +266,7 @@ process_time=5; # [h]
 
 # The number of elements of this array corresponds to the number of stages. 
 # The value in each element is the number of modules per stage. 
-n=np.array([17]);
+n=np.array([4,3,2,1]);
 
 CIN=np.append(C0,np.zeros(np.size(n)-1))
 FIN=np.append(V0/process_time, np.zeros(np.size(n)-1));
