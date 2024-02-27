@@ -77,7 +77,7 @@ axes.set_ylabel('Molar Fraction in the Permeate',fontsize=14);
 # where $J$ is the volumetric flux across the membrane, $\rho_A$ is the molar density of component A, and $A_M$ is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. {eq}`GPeq2` becomes:
 # 
 # $$
-# F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
+# F_py=\frac{P_A}{l}\rho_AA_M\left(xp_r-yp_p\right)
 # $$(GPeq3)
 # 
 # where $P_A$ is the permeability of the membrane to component $A$, $l$ is the thickness of the membrane, $p_r$ is the pressure on the retentate side, $p_p$ is the pressure on the permeate side. 
@@ -85,7 +85,7 @@ axes.set_ylabel('Molar Fraction in the Permeate',fontsize=14);
 # The same expression can be written for component $B$: 
 # 
 # $$
-# F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
+# F_p(1-y)=\frac{P_B}{l}\rho_BA_M\left((1-x)p_r-(1-y)p_p\right)
 # $$(GPeq4)
 # 
 # Both Eq. {eq}`GPeq3` and {eq}`GPeq4` can be solved for $F_p$ and equated, leading to: 
@@ -179,7 +179,8 @@ print("Operating point -> x = ", x_set, " y = ", y_set)
 
 # ## Contributions
 # 
-# Radoslav Lukanov, 16 Feb 2021
+# - Radoslav Lukanov, 16 Feb 2021 
+# - Garv Mittal, 4 Feb 2024
 
 # In[ ]:
 

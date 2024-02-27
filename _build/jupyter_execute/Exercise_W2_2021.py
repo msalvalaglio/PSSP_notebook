@@ -53,7 +53,7 @@
 # Finally, the retentate flowrate can be computed as: 
 # 
 # $$
-# F_r=F_p-F_{in}
+# F_r=F_{in}-F_p
 # $$
 # 
 
@@ -138,6 +138,10 @@ print("Permeate flowrate: ", f"{Fp:.4}", " [mol/h]")
 print("Feed flowrate: ", f"{Fin:.4}",  " [mol/h]")
 print("Retentate flowrate: ", f"{Fr:.4}", " [mol/h]\n")
 
+
+# ## Contributions
+# 
+# - Divyansh Vashishtha, 19 Feb 2024
 
 # In[ ]:
 

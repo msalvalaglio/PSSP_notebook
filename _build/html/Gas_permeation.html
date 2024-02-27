@@ -603,13 +603,13 @@ F_py=J\rho_AA_M
 <p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="#equation-gpeq2">(3)</a> becomes:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq3">
 <span class="eqno">(4)<a class="headerlink" href="#equation-gpeq3" title="Permalink to this equation">#</a></span>\[
-F_py=\frac{P_A}{l}\rho_AA\left(xp_r-yp_p\right)
+F_py=\frac{P_A}{l}\rho_AA_M\left(xp_r-yp_p\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(P_A\)</span> is the permeability of the membrane to component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(l\)</span> is the thickness of the membrane, <span class="math notranslate nohighlight">\(p_r\)</span> is the pressure on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> is the pressure on the permeate side.</p>
 <p>The same expression can be written for component <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq4">
 <span class="eqno">(5)<a class="headerlink" href="#equation-gpeq4" title="Permalink to this equation">#</a></span>\[
-F_p(1-y)=\frac{P_B}{l}\rho_BA\left((1-x)p_r-(1-y)p_p\right)
+F_p(1-y)=\frac{P_B}{l}\rho_BA_M\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
 <p>Both Eq. <a class="reference internal" href="#equation-gpeq3">(4)</a> and <a class="reference internal" href="#equation-gpeq4">(5)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq5">
@@ -709,7 +709,10 @@ x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{
 </section>
 <section id="contributions">
 <h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">#</a></h2>
-<p>Radoslav Lukanov, 16 Feb 2021</p>
+<ul class="simple">
+<li><p>Radoslav Lukanov, 16 Feb 2021</p></li>
+<li><p>Garv Mittal, 4 Feb 2024</p></li>
+</ul>
 </section>
 </section>
 
