@@ -4,10 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3. On the thermodynamic origin of the osmotic pressure &#8212; PSSP Virtual Notebook</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -17,215 +20,418 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Mass balances in membrane separation processes" href="04-Process_layouts.html" />
-    <link rel="prev" title="2. Pervaporation" href="02-Pervaporation.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/Logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
-  
-</a>
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Particulate Systems and Separation Processes Notebook
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Gas_permeation.html">
-   1. Material Balances In a Perfectly Mixed Gas Separation Membrane Unit
+  <a class="reference internal" href="Gas_permeation.html">
+   1. Material Balances in a Gas Permeation Unit
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Pervaporation.html">
+  <a class="reference internal" href="Pervaporation.html">
    2. Pervaporation
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. On the thermodynamic origin of the osmotic pressure
+ <li class="toctree-l1">
+  <a class="reference internal" href="Osmosis.html">
+   3. The Osmotic Pressure
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Process_layouts.html">
-   4. Mass balances in membrane separation processes
+  <a class="reference internal" href="Process_layouts.html">
+   4. Membrane Processes Layouts
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06-Langmuir_isotherm.html">
-   6. The Langmuir isotherm
+  <a class="reference internal" href="Langmuir_isotherm.html">
+   5. The Langmuir Isotherm
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07-BET_isotherm.html">
-   7. The BET isotherm
+  <a class="reference internal" href="BET_isotherm.html">
+   6. The BET Isotherm
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08-Ion_Exchange.html">
-   8. Equilibria in Ion Exchange systems
+  <a class="reference internal" href="Ion_Exchange.html">
+   7. Equilibria in Ion Exchange Systems
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09-Slurry_Adsorption.html">
-   9. Batch Slurry Adsorption
+  <a class="reference internal" href="Slurry_Adsorption.html">
+   8. Batch Slurry Adsorption
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-Solubility.html">
-   5. Thermodynamic definition of solubility
+  <a class="reference internal" href="Solubility.html">
+   9. Solubility
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="10-MSMPR_crystallizer.html">
+  <a class="reference internal" href="MSMPR_crystallizer.html">
    10. MSMPR Crystallizer: population balance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W2_2021.html">
+   Week 2 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W3_2021.html">
+   Week 3 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W4_2024_updated.html">
+   Week 4 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W5_2021.html">
+   Week 5 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W6_2021.html">
+   Week 6 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W8_2021.html">
+   Week 8 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W9_2021.html">
+   Week 9 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W10_2021.html">
+   Week 10 - Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_W11_2021.html">
+   Week 11 - Exercise
   </a>
  </li>
 </ul>
 
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
     </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/03-Osmosis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-        <!-- Source interaction buttons -->
-
-
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
-
-        <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/03-Osmosis.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/03-Osmosis.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2F03-Osmosis.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/03-Osmosis.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/03-Osmosis.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#osmosis">
    3.1 Osmosis
@@ -255,19 +461,64 @@
  </li>
 </ul>
 
-        </nav>
-        
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>3. On the thermodynamic origin of the osmotic pressure</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#osmosis">
+   3.1 Osmosis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equilibrium-conditions">
+   3.2 Equilibrium Conditions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-osmotic-pressure">
+   3.3 The Osmotic Pressure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
+     3.3.1 Dependence of the Osmotic pressure on the composition of the system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flux-of-the-solvent-suring-osmosis">
+   3.4 Flux of the solvent suring Osmosis
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="on-the-thermodynamic-origin-of-the-osmotic-pressure">
-<h1>3. On the thermodynamic origin of the osmotic pressure<a class="headerlink" href="#on-the-thermodynamic-origin-of-the-osmotic-pressure" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="osmosis">
-<h2>3.1 Osmosis<a class="headerlink" href="#osmosis" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="on-the-thermodynamic-origin-of-the-osmotic-pressure">
+<h1>3. On the thermodynamic origin of the osmotic pressure<a class="headerlink" href="#on-the-thermodynamic-origin-of-the-osmotic-pressure" title="Permalink to this headline">#</a></h1>
+<section id="osmosis">
+<h2>3.1 Osmosis<a class="headerlink" href="#osmosis" title="Permalink to this headline">#</a></h2>
 <p>Osmosis is a mass transfer process that takes place spontaneously when two compartments, containing fluid mixtures of different composition are separated by a semipermeable membrane, i.e. a membrane that restricts the transfer of one of the components across compartments.</p>
 <p>For the sake of simplicity, let us consider for now an ideal semipermeable membrane that completely restricts the transfer of the solute, while instead allowing the permeation of a solvent.</p>
 <p>Let us consider an initial state characterised by two compartments (1 and 2), at the same temperature T and pressure P.
@@ -279,21 +530,21 @@ Compartment 1 contains a binary mixture of component B (solute) in component A (
 <li><p>The pressure difference between compartments at equilibrium is the <em>osmotic pressure</em> <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span>.</p></li>
 </ul>
 <p>In the next paragraphs we will see what is the thermodynamic origin of the osmotic pressure.</p>
-</div>
-<div class="section" id="equilibrium-conditions">
-<h2>3.2 Equilibrium Conditions<a class="headerlink" href="#equilibrium-conditions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="equilibrium-conditions">
+<h2>3.2 Equilibrium Conditions<a class="headerlink" href="#equilibrium-conditions" title="Permalink to this headline">#</a></h2>
 <p>In order to understand the origin of the osmotic pressure, i.e. pressure difference induced by a composition difference across compartments separated by a semipermeable membrane, we begin by defining the the equilibrium state for the system described in the previous paragraph.
 To this aim we can rely on the thermodynamic definition of equilibrium for component A (e.g. water), i.e. the only component that can transfer across the membrane.
 Equilibrium is defined when <span class="math notranslate nohighlight">\(A\)</span> has the same chemical potential in both compartments</p>
 <div class="math notranslate nohighlight" id="equation-eq0">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">#</a></span>\[
 \mu_{A,1}=\mu_{A,2}
 \]</div>
 <p>The equilibrium condition is conveniently written introducing fugacity.
 Fugacity and chemical potential are related by the expression <span class="math notranslate nohighlight">\(\mu_i=\mu_0+RT\ln{f_i}\)</span>, where <span class="math notranslate nohighlight">\(\mu_0\)</span> is the chemical potential of an arbitrary reference state.</p>
 <p>Equilibrium can conditions are thus equivalently formulated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-equilibrium">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">#</a></span>\[
 f_{A,1}=f_{A,2}
 \]</div>
 <p><em>In compartment 1</em> we have a <em>non-ideal</em> mixture of two components. The fugacity of component A in compartment 1 is thus written as:
@@ -313,7 +564,7 @@ f_{A,2}=f_A(T,P_2)
 <p><strong>The Poynting correction</strong> In order to define a common reference state between the two compartments we rewrite fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_2\)</span> (<span class="math notranslate nohighlight">\(f_A(T,P_2)\)</span>) as a function of the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span> and of the pressure difference <span class="math notranslate nohighlight">\((P_2-P_1)\)</span>.</p>
 <p>To do that we express the difference in chemical potential <span class="math notranslate nohighlight">\(\Delta\mu_{P_1\rightarrow{P_2}}\)</span> between pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_1\)</span> and pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">#</a></span>\[
 \Delta\mu_{P_1\rightarrow{P_2}}=\int_{T,P_1}^{T,P_2}d\mu=\int_{T,P_1}^{T,P_2}vdP=v(P_2-P_1)
 \]</div>
 <p>where:</p>
@@ -321,44 +572,45 @@ f_{A,2}=f_A(T,P_2)
 <li><p>the expression introduced for the definition of the <span class="math notranslate nohighlight">\(\Delta\mu\)</span> is the Gibbs Duhem equation (<span class="math notranslate nohighlight">\(d{\mu}=-sdT+vdP\)</span>)</p></li>
 <li><p><span class="math notranslate nohighlight">\(v\)</span> is the molar volume of the system</p></li>
 </ul>
-<p>Using the definition of fugacity introduced earlier one can thus write:
-$<span class="math notranslate nohighlight">\(
+<p>Using the definition of fugacity introduced earlier one can thus write:</p>
+<div class="math notranslate nohighlight" id="equation-eq2">
+<span class="eqno">()<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">#</a></span>\[
 \Delta\mu_{P_1\rightarrow{P_2}}=RT\ln\frac{f_A(T,P_2)}{f_A(T,P_1)}=v(P_2-P_1)
-\)</span>$(eq2)</p>
-<p>The fugacity of a pure A liquid at pressure <span class="math notranslate nohighlight">\(P_2\)</span> can thus be written as:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>The fugacity of a pure A liquid at pressure <span class="math notranslate nohighlight">\(P_2\)</span> can thus be written as:</p>
+<div class="math notranslate nohighlight" id="equation-eq3">
+<span class="eqno">()<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">#</a></span>\[
 f_A(T,P_2)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
-\label{eq:Poynting}
-\)</span>$(eq3)</p>
+\]</div>
 <p>where the term <span class="math notranslate nohighlight">\(\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]\)</span> is the Poynting correction.</p>
-</div>
-<div class="section" id="the-osmotic-pressure">
-<h2>3.3 The Osmotic Pressure<a class="headerlink" href="#the-osmotic-pressure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-osmotic-pressure">
+<h2>3.3 The Osmotic Pressure<a class="headerlink" href="#the-osmotic-pressure" title="Permalink to this headline">#</a></h2>
 <p>Given the definition of equilibrium conditions, the expressions of the fugacity of component A in the two compartments 1 and 2, and the Poynting correction given in the previous paragraph we can write:</p>
 <div class="math notranslate nohighlight" id="equation-eq">
-<span class="eqno">(15)<a class="headerlink" href="#equation-eq" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq" title="Permalink to this equation">#</a></span>\[
 \gamma_A(T,P_1,x_A)x_A f_A(T,P_1)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> is the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span>, now appearing on both sides of the equation.</p>
 <p>We can thus divide both sides by <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> to obtain the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">#</a></span>\[
 \gamma_A(T,P_1,x_A)x_A =\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>Rearranging this expression one obtains:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">#</a></span>\[
 P_2-P_1=\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>Recalling that the Osmotic pressure <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span> we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">#</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>This expression \textbf{relates the composition of compartment 1}, containing a mixture of components A and B (e.g NaCl in water),  \textbf{to the osmotic pressure} generated at equilibrium conditions when such compartment is in contact with a \textbf{semipermeable} membrane that has on the opposite side a compartment filled by pure component A liquid.</p>
 <p>Please note that in this expression <span class="math notranslate nohighlight">\(x_A\)</span> is the molar fraction of the solvent (e.g. water). Since we are considering a binary system and from an engineering standpoint what is typically measured is the solute concentration we can rewrite the expression as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">#</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)(1-x_B)}\right)
 \]</div>
 <p>Where now <span class="math notranslate nohighlight">\(x_B\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(B\)</span> (e.g. NaCl).
@@ -367,8 +619,8 @@ $<span class="math notranslate nohighlight">\(
 \pi=-\frac{RT}{v}\ln\left({(1-x_B)}\right)={RT\frac{x_B}{v}}\simeq{RTc_B}
 \)</span>$(eq8)</p>
 <p>Where <span class="math notranslate nohighlight">\(c_B\simeq{x_B}v^{-1}\)</span> is the molar concentration of component B, the solute.</p>
-<div class="section" id="dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
-<h3>3.3.1 Dependence of the Osmotic pressure on the composition of the system<a class="headerlink" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system" title="Permalink to this headline">¶</a></h3>
+<section id="dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
+<h3>3.3.1 Dependence of the Osmotic pressure on the composition of the system<a class="headerlink" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system" title="Permalink to this headline">#</a></h3>
 <p>Note that the expression <span class="math notranslate nohighlight">\(\pi={RTc_B}\)</span> is only valid for small molar fractions of component B, the solute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -404,13 +656,13 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p>Note that the dimensionless osmotic pressure plotted abotve is obtained as <span class="math notranslate nohighlight">\(\pi{v}/RT\)</span>.</p>
-</div>
-</div>
-<div class="section" id="flux-of-the-solvent-suring-osmosis">
-<h2>3.4 Flux of the solvent suring Osmosis<a class="headerlink" href="#flux-of-the-solvent-suring-osmosis" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="flux-of-the-solvent-suring-osmosis">
+<h2>3.4 Flux of the solvent suring Osmosis<a class="headerlink" href="#flux-of-the-solvent-suring-osmosis" title="Permalink to this headline">#</a></h2>
 <p>In osmosis the flux of the solvent (component A) through a membrane is driven by the difference between the <span class="math notranslate nohighlight">\(\Delta{P}=P_1-P_2\)</span> across compartments and the osmotic pressure <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">#</a></span>\[
 J_A=p_A\left( \Delta{P} - \pi \right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(p_A\)</span> is the permeability of the membrane with respect to component A.</p>
@@ -463,8 +715,8 @@ J_A=p_A\left( \Delta{P} - \pi \right)
 <img alt="_images/03-Osmosis_13_0.png" src="_images/03-Osmosis_13_0.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -488,36 +740,34 @@ J_A=p_A\left( \Delta{P} - \pi \right)
 
               </div>
               
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
         </div>
     </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="02-Pervaporation.html" title="previous page">2. Pervaporation</a>
-    <a class='right-next' id="next-link" href="04-Process_layouts.html" title="next page">4. Mass balances in membrane separation processes</a>
-
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Matteo Salvalaglio<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Matteo Salvalaglio<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
 
-
-    
   </body>
 </html>
