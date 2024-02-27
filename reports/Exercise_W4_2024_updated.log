@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Applications/anaconda3/envs/plumed-masterclass-2022/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#Note: This code cannot be run in Jupyter notebook, copy paste into GAMS.
+
+Parameters
+Q0,C0,C2;
+Q0=200/24;
+C0=0.5;
+C2=20;
+
+Variables
+n, Q1, C1, Q2, A1, A2
+;
+
+Equations
+mb1, mb2, area, vb1, vb2
+;
+
+mb1.. Q0=e=(3.8*10**(-2))*log(145/C1)*A1+Q1;
+vb1.. Q1=e=Q0*C0/C1;
+mb2.. Q1=e=(3.8*10**(-2))*log(145/20)*A2+Q2;
+vb2.. Q2=e=Q1*C1/C2;
+area.. n=e=A1/5+A2/5;
+
+Model process /all/;
+c1.l=5;
+Solve process using NLP minimising n;
+
+------------------
+
+[0;36m  Input [0;32mIn [3][0;36m[0m
+[0;31m    mb1.. Q0=e=(3.8*10**(-2))*log(145/C1)*A1+Q1;[0m
+[0m        ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (3698467338.py, line 17)
+
