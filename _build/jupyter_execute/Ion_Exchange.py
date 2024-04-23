@@ -132,3 +132,15 @@ axes.set_ylabel('$k_{AB}$',fontsize=14);
 axes.set_zlabel('$nA$',fontsize=14);
 figure.colorbar(surf, shrink=0.5, aspect=5);
 
+
+# ## 7.2 Example problem
+# 
+# An aqueous solution containing 10% by mass of NaCl and an unknown concentration of KCl exchanges cations with a stationary phase until reaching equilibrium. When equilibrated, the resin has 10.5% of sites occupied by sodium ions. The ion exchange equilibrium constant, KNa+/K+ , is equal to 10. 
+# 
+# a)	Write the ion exchange reaction describing the symmetric monovalent exchange taking place in the ion-exchange column. 			       
+# b)	Compute the molar fraction of HNO3 in solution at equilibrium.	               
+# c)	If a solution with the same composition, but containing KNO3 instead of NaNO3 
+# (KK+/H+ =9.2) was equilibrated with the same resin, how do you expect the fraction of occupied resin sites to change? 					      
+# 
+#       [4]
+# 
