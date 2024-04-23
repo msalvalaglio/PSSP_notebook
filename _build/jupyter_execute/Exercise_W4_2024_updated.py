@@ -168,7 +168,12 @@ print("\nMinimum number of total membranes: ", f"{minN}", " [-]")
 # ```
 
 # ## Refinement of the GAMS Solution:
-# [In this version only an integer number of membrane modules can be adopted in every stage. In this version, only an integer number of membrane modules can be adopted in every stage. Contributed by Divyansh Vashishtha, March 2024]_
+# _[Contributed by Divyansh Vashishtha, March 2024]_
+# 
+# 
+# In this version only an integer number of membrane modules can be adopted in every stage. In this version, only an integer number of membrane modules can be adopted in every stage. 
+# 
+# 
 
 # ```python
 # Parameters
