@@ -225,56 +225,6 @@ print("\nMinimum number of total membranes: ", f"{minN}", " [-]")
 # c1.l=5;
 # Solve process using DNLP minimising n;
 # display n.l, n1_rounded.l, n2_rounded.l, nx.l;
-# Parameters
-# Q0 intial volumetric flowrate coming into stage 1 [m^3 h^-1],
-# C0 initial protein concentration coming into stage 1  [kg m^-3 ],C2 final protein concentration leaving stage 2 [kg m^-3];
-# *Initialisation of Parameters from the Process Description: Q0, C0, C2.
-# Q0=200/24;
-# C0=0.5;
-# C2=20;
-# 
-# Variables
-# n total number of membrane modules across the two stages [decimal],
-# Q1 volumetric flowrate leaving the first stage [m^3 h^-1],
-# C1 concentration of protein leaving the first stage [kg m^-3],
-# Q2 volumetric flowrate leaving the second stage [m^3 h^-1],
-# A1 Total area of membranes required in stage 1 [m^2],
-# A2 Total area of membranes required in stage 2 [m^2],
-# n1 number of membrane modules required for stage 1 [decimal],
-# n1_rounded minimum number of membrane modules required for stage 1 [integer],
-# n2 number of membrane modules required for stage 2 [decimal],
-# n2_rounded minimum number of membrane modules required for stage 2 [integer],
-# nx rounded up value of the total membranes required [integer].
-# ;
-# 
-# Equations
-# mb1 equation for the mass balane of the solute over stage 1,
-# mb2 equation for the mass balance of the solute over stage 2,
-# area1 equation for the area of membrane required over the first stage,
-# vb1 equation for the volume balance over stage 1,
-# vb2 equation for the volume balance over stage 2,
-# area2 equation for the area of membrane required over the second stage,
-# roundn1 equation that rounds up the decimal value of the number of membrane modules obtained in the first stage ,
-# roundn2 equation that rounds up the decimal value of the number of membrane modules obtained in the second stage,
-# total_n equation that determines the total number of membrane modules obtained over the two stages [returns a decimal],
-# roundN equation that displays the rounded number of total membrane modules over the two stages;
-# 
-# vb1.. Q0=e=(3.8*10**(-2))*log(145/C1)*A1+Q1;
-# mb1.. Q1=e=Q0*C0/C1;
-# vb2.. Q1=e=(3.8*10**(-2))*log(145/C2)*A2+Q2;
-# mb2.. Q2=e=Q1*C1/C2;
-# area1.. n1 =e= A1/5;
-# area2.. n2 =e= A2/5;
-# roundn1.. n1_rounded =e= ceil(n1);
-# roundn2.. n2_rounded =e= ceil(n2);
-# total_n.. n =e= n1 + n2;
-# roundN.. nx =e= ceil(n);
-# 
-# Model process /all/;
-# c1.l=5;
-# Solve process using DNLP minimising n;
-# display n.l, n1_rounded.l, n2_rounded.l, nx.l;
-# 
 # ```
 
 # In[ ]:
