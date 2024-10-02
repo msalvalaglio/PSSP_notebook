@@ -1,112 +1,177 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>10. MSMPR Crystallizer: population balance &#8212; PSSP Virtual Notebook</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MSMPR_crystallizer';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Week 2 - Exercise" href="Exercise_W2_2021.html" />
     <link rel="prev" title="9. Solubility" href="Solubility.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/Logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">PSSP Virtual Notebook</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,451 +181,261 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Gas_permeation.html">
-   1. Material Balances in a Gas Permeation Unit
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pervaporation.html">
-   2. Pervaporation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Osmosis.html">
-   3. The Osmotic Pressure
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Process_layouts.html">
-   4. Membrane Processes Layouts
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Langmuir_isotherm.html">
-   5. The Langmuir Isotherm
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="BET_isotherm.html">
-   6. The BET Isotherm
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Ion_Exchange.html">
-   7. Equilibria in Ion Exchange Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Slurry_Adsorption.html">
-   8. Batch Slurry Adsorption
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Solubility.html">
-   9. Solubility
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   10. MSMPR Crystallizer: population balance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W2_2021.html">
-   Week 2 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W3_2021.html">
-   Week 3 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W4_2024_updated.html">
-   Week 4 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W5_2021.html">
-   Week 5 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W6_2021.html">
-   Week 6 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W8_2021.html">
-   Week 8 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W9_2021.html">
-   Week 9 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W10_2021.html">
-   Week 10 - Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_W11_2021.html">
-   Week 11 - Exercise
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Gas_permeation.html">1. Material Balances in a Gas Permeation Unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Osmosis.html">3. The Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Process_layouts.html">4. Membrane Processes Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Langmuir_isotherm.html">5. The Langmuir Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BET_isotherm.html">6. The BET Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ion_Exchange.html">7. Equilibria in Ion Exchange Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Slurry_Adsorption.html">8. Batch Slurry Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Solubility.html">9. Solubility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. MSMPR Crystallizer: population balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W2_2021.html">Week 2 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W3_2021.html">Week 3 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W4_2024_updated.html">Week 4 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W5_2021.html">Week 5 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W6_2021.html">Week 6 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W8_2021.html">Week 8 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W9_2021.html">Week 9 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W10_2021.html">Week 10 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W11_2021.html">Week 11 - Exercise</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/msalvalaglio/PSSP_notebook/master?urlpath=tree/MSMPR_crystallizer.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/MSMPR_crystallizer.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FMSMPR_crystallizer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/MSMPR_crystallizer.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/msalvalaglio/PSSP_notebook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FMSMPR_crystallizer.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/MSMPR_crystallizer.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/MSMPR_crystallizer.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#material-balance">
-   10.0 Material Balance
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#number-and-number-population-density">
-   10.1 Number and number population density
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#population-balance-in-an-msmpr-crystallizer">
-   10.2 Population Balance in an MSMPR crystallizer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">
-   10.3 Particle size distribution and process parameters:
-   <span class="math notranslate nohighlight">
-    \(\tau\)
-   </span>
-   ,
-   <span class="math notranslate nohighlight">
-    \(G\)
-   </span>
-   ,
-   <span class="math notranslate nohighlight">
-    \(J\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">
-   10.4 Moments of the PSD in a MSMPR crystallizer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">
-   10.5 Adimensional Mass distribution and dominant crystal size
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contributions">
-   Contributions
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>10. MSMPR Crystallizer: population balance</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#material-balance">
-   10.0 Material Balance
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#number-and-number-population-density">
-   10.1 Number and number population density
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#population-balance-in-an-msmpr-crystallizer">
-   10.2 Population Balance in an MSMPR crystallizer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">
-   10.3 Particle size distribution and process parameters:
-   <span class="math notranslate nohighlight">
-    \(\tau\)
-   </span>
-   ,
-   <span class="math notranslate nohighlight">
-    \(G\)
-   </span>
-   ,
-   <span class="math notranslate nohighlight">
-    \(J\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">
-   10.4 Moments of the PSD in a MSMPR crystallizer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">
-   10.5 Adimensional Mass distribution and dominant crystal size
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contributions">
-   Contributions
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>10. MSMPR Crystallizer: population balance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balance">10.0 Material Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-and-number-population-density">10.1 Number and number population density</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#population-balance-in-an-msmpr-crystallizer">10.2 Population Balance in an MSMPR crystallizer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">10.4 Moments of the PSD in a MSMPR crystallizer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">10.5 Adimensional Mass distribution and dominant crystal size</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="msmpr-crystallizer-population-balance">
-<h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Permalink to this headline">#</a></h1>
+<h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Permalink to this heading">#</a></h1>
 <p>Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature.
 In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.</p>
 <section id="material-balance">
-<h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Permalink to this headline">#</a></h2>
+<h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Permalink to this heading">#</a></h2>
 <p>Let us begin by considering the global material balance for an MSMPR crystallizer. The operation of an ideal MSMPR crystallizer is characterised by the following set of hypotheses:</p>
 <ul class="simple">
 <li><p>The crystalliser operates continuously</p></li>
@@ -582,7 +457,7 @@ Typically <span class="math notranslate nohighlight">\(Q_{IN}\simeq{Q_{OUT}}=Q\)
 <p>It should be noted that <span class="math notranslate nohighlight">\(M_T\)</span> is determined by the process of precipitation producing a certain particles population and can be computed from the kinetics of crystal nucleation and growth, based on the population balance discussed in the next section.</p>
 </section>
 <section id="number-and-number-population-density">
-<h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Permalink to this headline">#</a></h2>
+<h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Permalink to this heading">#</a></h2>
 <p>Let us begin by defining <span class="math notranslate nohighlight">\(N(L)\)</span> as the <strong>number</strong> of  crystals of characteristic length <span class="math notranslate nohighlight">\(L\)</span> per unit volume.
 The <strong>number population density</strong> <span class="math notranslate nohighlight">\(n\)</span>, or in short number density, is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq1">
@@ -602,7 +477,7 @@ N_{T}=\int_{0}^{\infty}n(L)dL
 \]</div>
 </section>
 <section id="population-balance-in-an-msmpr-crystallizer">
-<h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Permalink to this headline">#</a></h2>
+<h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Permalink to this heading">#</a></h2>
 <p>Let us write a steady state population balance for particles with size comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq4">
 <span class="eqno">(119)<a class="headerlink" href="#equation-msmpreq4" title="Permalink to this equation">#</a></span>\[
@@ -651,7 +526,7 @@ n_0=\frac{J}{G}
 \]</div>
 </section>
 <section id="particle-size-distribution-and-process-parameters-tau-g-j">
-<h2>10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span><a class="headerlink" href="#particle-size-distribution-and-process-parameters-tau-g-j" title="Permalink to this headline">#</a></h2>
+<h2>10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span><a class="headerlink" href="#particle-size-distribution-and-process-parameters-tau-g-j" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -736,14 +611,14 @@ n_0=\frac{J}{G}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MSMPR_crystallizer_8_0.png" src="_images/MSMPR_crystallizer_8_0.png" />
-<img alt="_images/MSMPR_crystallizer_8_1.png" src="_images/MSMPR_crystallizer_8_1.png" />
-<img alt="_images/MSMPR_crystallizer_8_2.png" src="_images/MSMPR_crystallizer_8_2.png" />
+<img alt="_images/3f22f6cae975ad13e9dcff2c3a3e66a66a60ee0f8e6eb7abb7716fc6166685c1.png" src="_images/3f22f6cae975ad13e9dcff2c3a3e66a66a60ee0f8e6eb7abb7716fc6166685c1.png" />
+<img alt="_images/ec9439facc0baa0b6e8f7f908e3333a8b42e78a159372f71b2698b3313014c79.png" src="_images/ec9439facc0baa0b6e8f7f908e3333a8b42e78a159372f71b2698b3313014c79.png" />
+<img alt="_images/b005badf1d6dc433bc2f6fd26d6bf96798ffa1e26840501a445cc13db1a81123.png" src="_images/b005badf1d6dc433bc2f6fd26d6bf96798ffa1e26840501a445cc13db1a81123.png" />
 </div>
 </div>
 </section>
 <section id="moments-of-the-psd-in-a-msmpr-crystallizer">
-<h2>10.4 Moments of the PSD in a MSMPR crystallizer<a class="headerlink" href="#moments-of-the-psd-in-a-msmpr-crystallizer" title="Permalink to this headline">#</a></h2>
+<h2>10.4 Moments of the PSD in a MSMPR crystallizer<a class="headerlink" href="#moments-of-the-psd-in-a-msmpr-crystallizer" title="Permalink to this heading">#</a></h2>
 <p>The number population density <span class="math notranslate nohighlight">\(n(L)\)</span> can be used to derive other properties of the population of particles through the calculation of the moments of the distribution.
 The <span class="math notranslate nohighlight">\(i^{th}\)</span> order moment of the number population density is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq12">
@@ -790,7 +665,7 @@ M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 <p>This expression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
 </section>
 <section id="adimensional-mass-distribution-and-dominant-crystal-size">
-<h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Permalink to this headline">#</a></h2>
+<h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Permalink to this heading">#</a></h2>
 <p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
 <p>The cumulative mass distribution can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq18">
@@ -839,12 +714,12 @@ L_D=3G\tau
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/MSMPR_crystallizer_13_0.png" src="_images/MSMPR_crystallizer_13_0.png" />
+<img alt="_images/7c868ba256537c64f975797063ba7888575a6fc7054cf300d2128de1ffb93c4d.png" src="_images/7c868ba256537c64f975797063ba7888575a6fc7054cf300d2128de1ffb93c4d.png" />
 </div>
 </div>
 </section>
 <section id="contributions">
-<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">#</a></h2>
+<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h2>
 <p>Guilherme Pizarro Werner, 23 February 2021</p>
 <p>Ahmad Eblagh, 13 March 2021</p>
 </section>
@@ -862,7 +737,7 @@ L_D=3G\tau
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -870,50 +745,109 @@ L_D=3G\tau
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Solubility.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">9. Solubility</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Solubility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">9. Solubility</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Exercise_W2_2021.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Exercise_W2_2021.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Week 2 - Exercise</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balance">10.0 Material Balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-and-number-population-density">10.1 Number and number population density</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#population-balance-in-an-msmpr-crystallizer">10.2 Population Balance in an MSMPR crystallizer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">10.4 Moments of the PSD in a MSMPR crystallizer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">10.5 Adimensional Mass distribution and dominant crystal size</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Matteo Salvalaglio<br/>
-  
-      &copy; Copyright 2024.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Matteo Salvalaglio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

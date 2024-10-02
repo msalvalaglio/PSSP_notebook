@@ -1,0 +1,134 @@
+Traceback (most recent call last):
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt 
+from scipy.optimize import fsolve
+
+# Parameters: 
+N = 500 #number of points
+time = np.linspace(0, 30, N)
+
+#Every length in m
+
+A=20;  #m^2
+B=0.1;
+C0=0.05*1E3; #kg /l * dm^3/m^3
+V0=500*1E-3; #l * m^3/dm^3
+
+C_specific = 0.2*1E3
+
+#Operating Equation
+C = C0*np.exp(B*A/V0/C0*time) 
+V = V0*np.exp(-B*A/V0/C0*time) 
+
+def equation(proc_time):
+    eq1 = C0*np.exp(B*A/V0/C0*proc_time) - C_specific
+    return eq1
+
+process_time = fsolve(equation,[1])
+
+#Plotting
+figure=plt.figure()
+axes = figure.add_axes([0.1,0.1,0.8,0.8])
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+axes.plot(time,V, marker=' ' , color='b')
+
+plt.title('Suspension Volume', fontsize=18);
+axes.set_xlabel('time [h]', fontsize=14);
+axes.set_ylabel('V [m$^3$]',fontsize=14);
+
+figure=plt.figure()
+axes = figure.add_axes([0.1,0.1,0.8,0.8])
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+axes.plot(time,C, marker=' ' , color='r')
+axes.plot([process_time,process_time],[0, C_specific], marker=' ' , color='lime', markersize=3)
+axes.plot([0,process_time],[C_specific, C_specific], marker=' ' , color='lime', markersize=3)
+
+
+axes.plot([process_time,process_time],[0, C_specific], marker=' ' , color='lime', markersize=3)
+
+
+axes.plot(process_time,C_specific, marker='o' , color='lime', markersize=10)
+
+plt.title('Solute concentration', fontsize=18);
+axes.set_xlabel('time [h]', fontsize=14);
+axes.set_ylabel('concentration [kg/m$^3$]',fontsize=14);
+
+print("The process time necessary to obtain a solid residue concentration of", C_specific, "[kg/l] is:", process_time, "[h]") 
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[1], line 45[0m
+[1;32m     43[0m axes[38;5;241m.[39mplot(time,C, marker[38;5;241m=[39m[38;5;124m'[39m[38;5;124m [39m[38;5;124m'[39m , color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mr[39m[38;5;124m'[39m)
+[1;32m     44[0m axes[38;5;241m.[39mplot([process_time,process_time],[[38;5;241m0[39m, C_specific], marker[38;5;241m=[39m[38;5;124m'[39m[38;5;124m [39m[38;5;124m'[39m , color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlime[39m[38;5;124m'[39m, markersize[38;5;241m=[39m[38;5;241m3[39m)
+[0;32m---> 45[0m [43maxes[49m[38;5;241;43m.[39;49m[43mplot[49m[43m([49m[43m[[49m[38;5;241;43m0[39;49m[43m,[49m[43mprocess_time[49m[43m][49m[43m,[49m[43m[[49m[43mC_specific[49m[43m,[49m[43m [49m[43mC_specific[49m[43m][49m[43m,[49m[43m [49m[43mmarker[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m [39;49m[38;5;124;43m'[39;49m[43m [49m[43m,[49m[43m [49m[43mcolor[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mlime[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mmarkersize[49m[38;5;241;43m=[39;49m[38;5;241;43m3[39;49m[43m)[49m
+[1;32m     48[0m axes[38;5;241m.[39mplot([process_time,process_time],[[38;5;241m0[39m, C_specific], marker[38;5;241m=[39m[38;5;124m'[39m[38;5;124m [39m[38;5;124m'[39m , color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlime[39m[38;5;124m'[39m, markersize[38;5;241m=[39m[38;5;241m3[39m)
+[1;32m     51[0m axes[38;5;241m.[39mplot(process_time,C_specific, marker[38;5;241m=[39m[38;5;124m'[39m[38;5;124mo[39m[38;5;124m'[39m , color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlime[39m[38;5;124m'[39m, markersize[38;5;241m=[39m[38;5;241m10[39m)
+
+File [0;32m~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_axes.py:1721[0m, in [0;36mAxes.plot[0;34m(self, scalex, scaley, data, *args, **kwargs)[0m
+[1;32m   1478[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
+[1;32m   1479[0m [38;5;124;03mPlot y versus x as lines and/or markers.[39;00m
+[1;32m   1480[0m 
+[0;32m   (...)[0m
+[1;32m   1718[0m [38;5;124;03m(``'green'``) or hex strings (``'#008000'``).[39;00m
+[1;32m   1719[0m [38;5;124;03m"""[39;00m
+[1;32m   1720[0m kwargs [38;5;241m=[39m cbook[38;5;241m.[39mnormalize_kwargs(kwargs, mlines[38;5;241m.[39mLine2D)
+[0;32m-> 1721[0m lines [38;5;241m=[39m [[38;5;241m*[39m[38;5;28mself[39m[38;5;241m.[39m_get_lines([38;5;28mself[39m, [38;5;241m*[39margs, data[38;5;241m=[39mdata, [38;5;241m*[39m[38;5;241m*[39mkwargs)]
+[1;32m   1722[0m [38;5;28;01mfor[39;00m line [38;5;129;01min[39;00m lines:
+[1;32m   1723[0m     [38;5;28mself[39m[38;5;241m.[39madd_line(line)
+
+File [0;32m~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:303[0m, in [0;36m_process_plot_var_args.__call__[0;34m(self, axes, data, *args, **kwargs)[0m
+[1;32m    301[0m     this [38;5;241m+[39m[38;5;241m=[39m args[[38;5;241m0[39m],
+[1;32m    302[0m     args [38;5;241m=[39m args[[38;5;241m1[39m:]
+[0;32m--> 303[0m [38;5;28;01myield from[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_plot_args[49m[43m([49m
+[1;32m    304[0m [43m    [49m[43maxes[49m[43m,[49m[43m [49m[43mthis[49m[43m,[49m[43m [49m[43mkwargs[49m[43m,[49m[43m [49m[43mambiguous_fmt_datakey[49m[38;5;241;43m=[39;49m[43mambiguous_fmt_datakey[49m[43m)[49m
+
+File [0;32m~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:488[0m, in [0;36m_process_plot_var_args._plot_args[0;34m(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)[0m
+[1;32m    485[0m         kw[prop_name] [38;5;241m=[39m val
+[1;32m    487[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(xy) [38;5;241m==[39m [38;5;241m2[39m:
+[0;32m--> 488[0m     x [38;5;241m=[39m [43m_check_1d[49m[43m([49m[43mxy[49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m[43m)[49m
+[1;32m    489[0m     y [38;5;241m=[39m _check_1d(xy[[38;5;241m1[39m])
+[1;32m    490[0m [38;5;28;01melse[39;00m:
+
+File [0;32m~/anaconda3/lib/python3.11/site-packages/matplotlib/cbook.py:1358[0m, in [0;36m_check_1d[0;34m(x)[0m
+[1;32m   1352[0m [38;5;66;03m# plot requires `shape` and `ndim`.  If passed an[39;00m
+[1;32m   1353[0m [38;5;66;03m# object that doesn't provide them, then force to numpy array.[39;00m
+[1;32m   1354[0m [38;5;66;03m# Note this will strip unit information.[39;00m
+[1;32m   1355[0m [38;5;28;01mif[39;00m ([38;5;129;01mnot[39;00m [38;5;28mhasattr[39m(x, [38;5;124m'[39m[38;5;124mshape[39m[38;5;124m'[39m) [38;5;129;01mor[39;00m
+[1;32m   1356[0m         [38;5;129;01mnot[39;00m [38;5;28mhasattr[39m(x, [38;5;124m'[39m[38;5;124mndim[39m[38;5;124m'[39m) [38;5;129;01mor[39;00m
+[1;32m   1357[0m         [38;5;28mlen[39m(x[38;5;241m.[39mshape) [38;5;241m<[39m [38;5;241m1[39m):
+[0;32m-> 1358[0m     [38;5;28;01mreturn[39;00m [43mnp[49m[38;5;241;43m.[39;49m[43matleast_1d[49m[43m([49m[43mx[49m[43m)[49m
+[1;32m   1359[0m [38;5;28;01melse[39;00m:
+[1;32m   1360[0m     [38;5;28;01mreturn[39;00m x
+
+File [0;32m~/anaconda3/lib/python3.11/site-packages/numpy/core/shape_base.py:65[0m, in [0;36matleast_1d[0;34m(*arys)[0m
+[1;32m     63[0m res [38;5;241m=[39m []
+[1;32m     64[0m [38;5;28;01mfor[39;00m ary [38;5;129;01min[39;00m arys:
+[0;32m---> 65[0m     ary [38;5;241m=[39m [43masanyarray[49m[43m([49m[43mary[49m[43m)[49m
+[1;32m     66[0m     [38;5;28;01mif[39;00m ary[38;5;241m.[39mndim [38;5;241m==[39m [38;5;241m0[39m:
+[1;32m     67[0m         result [38;5;241m=[39m ary[38;5;241m.[39mreshape([38;5;241m1[39m)
+
+[0;31mValueError[0m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
