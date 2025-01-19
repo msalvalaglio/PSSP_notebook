@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>8. Batch Slurry Adsorption &#8212; PSSP Virtual Notebook</title>
   
@@ -19,45 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Slurry_Adsorption';</script>
@@ -142,6 +141,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -163,7 +164,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -229,9 +230,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -373,10 +374,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -384,14 +385,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -428,10 +429,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="batch-slurry-adsorption">
-<h1>8. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Permalink to this heading">#</a></h1>
+<h1>8. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Link to this heading">#</a></h1>
 <p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
 <section id="problem-statement">
-<h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h2>
+<h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
 <p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 <span class="math notranslate nohighlight">\(mm\)</span> and density of <span class="math notranslate nohighlight">\(700 kg\,m^{-3}\)</span>. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}} [dm]\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-8}}\,[m h^{-1}]\)</span>.</p>
 <ul class="simple">
 <li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
@@ -439,29 +440,29 @@ document.write(`
 </ul>
 </section>
 <section id="material-balance-in-a-batch-slurry-adsorption-process">
-<h2>8.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Permalink to this heading">#</a></h2>
+<h2>8.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Link to this heading">#</a></h2>
 <p>Let us begin by writing the material balance for a batch membrane separator.</p>
 <p>Since we have a batch system, no inlet or outlet streams are present and we can write:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq1">
-<span class="eqno">(88)<a class="headerlink" href="#equation-slurryeq1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(88)<a class="headerlink" href="#equation-slurryeq1" title="Link to this equation">#</a></span>\[
 V_\ell{c_0}=V_\ell{c}+S_pq
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of pollutant in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of pollutant in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous surface concentration of pollutant adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the total surface exposed by the stationary phase particles.</p>
 <p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq2">
-<span class="eqno">(89)<a class="headerlink" href="#equation-slurryeq2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(89)<a class="headerlink" href="#equation-slurryeq2" title="Link to this equation">#</a></span>\[
 J=-k_\ell(c-c^*)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(k_\ell\)</span> is the mass transfer coefficient on the liquid side, and <span class="math notranslate nohighlight">\(c^*\)</span> is the equilibrium concentration, reached at the solid/liquid interface. <span class="math notranslate nohighlight">\(J\)</span> has the units of number of moles per unit time per unit surface.</p>
 <p>The differential material balance on the solute concentration can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq3">
-<span class="eqno">(90)<a class="headerlink" href="#equation-slurryeq3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(90)<a class="headerlink" href="#equation-slurryeq3" title="Link to this equation">#</a></span>\[
 \frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles surface area per unit of fluid volume.</p>
 <p>The equilibrium of the adsorption process is well captured by a linear isotherm:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq4">
-<span class="eqno">(91)<a class="headerlink" href="#equation-slurryeq4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(91)<a class="headerlink" href="#equation-slurryeq4" title="Link to this equation">#</a></span>\[
 c^*=\frac{q}{H}
 \label{eq:equilibrium}
 \]</div>
@@ -471,19 +472,19 @@ c^*=\frac{q}{H}
 \frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = -k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-slurryeq5">
-<span class="eqno">(92)<a class="headerlink" href="#equation-slurryeq5" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(92)<a class="headerlink" href="#equation-slurryeq5" title="Link to this equation">#</a></span>\[
 =-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}
 \]</div>
 <p>Defining: <span class="math notranslate nohighlight">\(\beta=\left(1+\frac{V_\ell}{HS_p}\right)\)</span>, and <span class="math notranslate nohighlight">\(\alpha=\frac{V_\ell}{HS_p}\)</span>, one gets:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq6">
-<span class="eqno">(93)<a class="headerlink" href="#equation-slurryeq6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(93)<a class="headerlink" href="#equation-slurryeq6" title="Link to this equation">#</a></span>\[
 \frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
 \]</div>
 <p>which is a first order, non homogeneous ODE in the form <span class="math notranslate nohighlight">\(y^\prime+C_1y=C_2\)</span> with constant <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> coefficients.</p>
 <p>In order to solve our problem Eq. <a class="reference internal" href="#equation-slurryeq6">(93)</a> should either numerically or analytically.
 In this case the analytical solution can be obtained from the general solution for ODEs in the form:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq7">
-<span class="eqno">(94)<a class="headerlink" href="#equation-slurryeq7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(94)<a class="headerlink" href="#equation-slurryeq7" title="Link to this equation">#</a></span>\[
 y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(A(t)=\int{C_1dt}\)</span></p>
@@ -494,22 +495,22 @@ y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
 </ul>
 <p>thus:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq8">
-<span class="eqno">(95)<a class="headerlink" href="#equation-slurryeq8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(95)<a class="headerlink" href="#equation-slurryeq8" title="Link to this equation">#</a></span>\[
 \int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta}\,t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta}\,t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta}\,t}
 \]</div>
 <p>putting everything together:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq9">
-<span class="eqno">(96)<a class="headerlink" href="#equation-slurryeq9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(96)<a class="headerlink" href="#equation-slurryeq9" title="Link to this equation">#</a></span>\[
 c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
 \]</div>
 <p>The constant <span class="math notranslate nohighlight">\(C_1\)</span> can be computed from the initial conditions: at <span class="math notranslate nohighlight">\(t=0\)</span> <span class="math notranslate nohighlight">\(c(t)=c_0\)</span>, therefore:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq10">
-<span class="eqno">(97)<a class="headerlink" href="#equation-slurryeq10" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(97)<a class="headerlink" href="#equation-slurryeq10" title="Link to this equation">#</a></span>\[
 k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
 \]</div>
 <p>The final solution for the time-dependent concentration profile <span class="math notranslate nohighlight">\(c(t)\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq11">
-<span class="eqno">(98)<a class="headerlink" href="#equation-slurryeq11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(98)<a class="headerlink" href="#equation-slurryeq11" title="Link to this equation">#</a></span>\[
 c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 \]</div>
 <p>The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time <span class="math notranslate nohighlight">\(\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}\)</span>.</p>
@@ -570,33 +571,33 @@ c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/66bc162b55a6c743d4c8d3116f795665890e4c152e889766c10ed90808ef0ee9.png" src="_images/66bc162b55a6c743d4c8d3116f795665890e4c152e889766c10ed90808ef0ee9.png" />
+<img alt="_images/a926497cf9cb7223e455165204a6cfe82e8dd1380d4d18ca33009f90ac4ef85c.png" src="_images/a926497cf9cb7223e455165204a6cfe82e8dd1380d4d18ca33009f90ac4ef85c.png" />
 </div>
 </div>
 </section>
 <section id="continuous-slurry-adsorption">
-<h2>8.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Permalink to this heading">#</a></h2>
+<h2>8.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Link to this heading">#</a></h2>
 <p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
 <p>In a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq13">
-<span class="eqno">(99)<a class="headerlink" href="#equation-slurryeq13" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(99)<a class="headerlink" href="#equation-slurryeq13" title="Link to this equation">#</a></span>\[
 a={S}\sigma/Q
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid adsorpbent phase, and <span class="math notranslate nohighlight">\(\sigma\)</span> is the surface area per unit mass of the adsorbent.</p>
 <p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq12">
-<span class="eqno">(100)<a class="headerlink" href="#equation-slurryeq12" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(100)<a class="headerlink" href="#equation-slurryeq12" title="Link to this equation">#</a></span>\[
 \frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time, <span class="math notranslate nohighlight">\(c_{out}\)</span> the concentration in the liquid phase in the unit, <span class="math notranslate nohighlight">\(c_{in}\)</span> the concentration in the feed, and <span class="math notranslate nohighlight">\(a\)</span> the amount of surface of the stationary phase particles per unit volume of the liquid phase.</p>
 <p>This expression should solved with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, <span class="math notranslate nohighlight">\(c\)</span> is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient typically expressed in [l kg<span class="math notranslate nohighlight">\(^{-1}\)</span>], and with the global material balance at steady state, which reads:</p>
 <div class="math notranslate nohighlight" id="equation-slurryeq14">
-<span class="eqno">(101)<a class="headerlink" href="#equation-slurryeq14" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(101)<a class="headerlink" href="#equation-slurryeq14" title="Link to this equation">#</a></span>\[
 c_{in}Q=qS+c_{out}Q
 \]</div>
 </section>
 <section id="contributions">
-<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h2>
+<h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
 <p>Romain Dujardin, 2 May 2022<br />
 Salar Rahbari Namin, 8 Feb 2021<br />
 Nikita Gusev, 9 Feb 2021</p>
@@ -719,8 +720,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

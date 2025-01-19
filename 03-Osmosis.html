@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. On the thermodynamic origin of the osmotic pressure &#8212; PSSP Virtual Notebook</title>
   
@@ -19,45 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '03-Osmosis';</script>
@@ -142,6 +141,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -163,7 +164,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -229,9 +230,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -373,10 +374,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -384,14 +385,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -431,9 +432,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="on-the-thermodynamic-origin-of-the-osmotic-pressure">
-<h1>3. On the thermodynamic origin of the osmotic pressure<a class="headerlink" href="#on-the-thermodynamic-origin-of-the-osmotic-pressure" title="Permalink to this heading">#</a></h1>
+<h1>3. On the thermodynamic origin of the osmotic pressure<a class="headerlink" href="#on-the-thermodynamic-origin-of-the-osmotic-pressure" title="Link to this heading">#</a></h1>
 <section id="osmosis">
-<h2>3.1 Osmosis<a class="headerlink" href="#osmosis" title="Permalink to this heading">#</a></h2>
+<h2>3.1 Osmosis<a class="headerlink" href="#osmosis" title="Link to this heading">#</a></h2>
 <p>Osmosis is a mass transfer process that takes place spontaneously when two compartments, containing fluid mixtures of different composition are separated by a semipermeable membrane, i.e. a membrane that restricts the transfer of one of the components across compartments.</p>
 <p>For the sake of simplicity, let us consider for now an ideal semipermeable membrane that completely restricts the transfer of the solute, while instead allowing the permeation of a solvent.</p>
 <p>Let us consider an initial state characterised by two compartments (1 and 2), at the same temperature T and pressure P.
@@ -447,19 +448,19 @@ Compartment 1 contains a binary mixture of component B (solute) in component A (
 <p>In the next paragraphs we will see what is the thermodynamic origin of the osmotic pressure.</p>
 </section>
 <section id="equilibrium-conditions">
-<h2>3.2 Equilibrium Conditions<a class="headerlink" href="#equilibrium-conditions" title="Permalink to this heading">#</a></h2>
+<h2>3.2 Equilibrium Conditions<a class="headerlink" href="#equilibrium-conditions" title="Link to this heading">#</a></h2>
 <p>In order to understand the origin of the osmotic pressure, i.e. pressure difference induced by a composition difference across compartments separated by a semipermeable membrane, we begin by defining the the equilibrium state for the system described in the previous paragraph.
 To this aim we can rely on the thermodynamic definition of equilibrium for component A (e.g. water), i.e. the only component that can transfer across the membrane.
 Equilibrium is defined when <span class="math notranslate nohighlight">\(A\)</span> has the same chemical potential in both compartments</p>
 <div class="math notranslate nohighlight" id="equation-eq0">
-<span class="eqno">()<a class="headerlink" href="#equation-eq0" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq0" title="Link to this equation">#</a></span>\[
 \mu_{A,1}=\mu_{A,2}
 \]</div>
 <p>The equilibrium condition is conveniently written introducing fugacity.
 Fugacity and chemical potential are related by the expression <span class="math notranslate nohighlight">\(\mu_i=\mu_0+RT\ln{f_i}\)</span>, where <span class="math notranslate nohighlight">\(\mu_0\)</span> is the chemical potential of an arbitrary reference state.</p>
 <p>Equilibrium can conditions are thus equivalently formulated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-equilibrium">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-equilibrium" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-equilibrium" title="Link to this equation">#</a></span>\[
 f_{A,1}=f_{A,2}
 \]</div>
 <p><em>In compartment 1</em> we have a <em>non-ideal</em> mixture of two components. The fugacity of component A in compartment 1 is thus written as:
@@ -479,7 +480,7 @@ f_{A,2}=f_A(T,P_2)
 <p><strong>The Poynting correction</strong> In order to define a common reference state between the two compartments we rewrite fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_2\)</span> (<span class="math notranslate nohighlight">\(f_A(T,P_2)\)</span>) as a function of the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span> and of the pressure difference <span class="math notranslate nohighlight">\((P_2-P_1)\)</span>.</p>
 <p>To do that we express the difference in chemical potential <span class="math notranslate nohighlight">\(\Delta\mu_{P_1\rightarrow{P_2}}\)</span> between pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_1\)</span> and pure liquid A at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq1">
-<span class="eqno">()<a class="headerlink" href="#equation-eq1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq1" title="Link to this equation">#</a></span>\[
 \Delta\mu_{P_1\rightarrow{P_2}}=\int_{T,P_1}^{T,P_2}d\mu=\int_{T,P_1}^{T,P_2}vdP=v(P_2-P_1)
 \]</div>
 <p>where:</p>
@@ -489,43 +490,43 @@ f_{A,2}=f_A(T,P_2)
 </ul>
 <p>Using the definition of fugacity introduced earlier one can thus write:</p>
 <div class="math notranslate nohighlight" id="equation-eq2">
-<span class="eqno">()<a class="headerlink" href="#equation-eq2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq2" title="Link to this equation">#</a></span>\[
 \Delta\mu_{P_1\rightarrow{P_2}}=RT\ln\frac{f_A(T,P_2)}{f_A(T,P_1)}=v(P_2-P_1)
 \]</div>
 <p>The fugacity of a pure A liquid at pressure <span class="math notranslate nohighlight">\(P_2\)</span> can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-eq3">
-<span class="eqno">()<a class="headerlink" href="#equation-eq3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq3" title="Link to this equation">#</a></span>\[
 f_A(T,P_2)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>where the term <span class="math notranslate nohighlight">\(\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]\)</span> is the Poynting correction.</p>
 </section>
 <section id="the-osmotic-pressure">
-<h2>3.3 The Osmotic Pressure<a class="headerlink" href="#the-osmotic-pressure" title="Permalink to this heading">#</a></h2>
+<h2>3.3 The Osmotic Pressure<a class="headerlink" href="#the-osmotic-pressure" title="Link to this heading">#</a></h2>
 <p>Given the definition of equilibrium conditions, the expressions of the fugacity of component A in the two compartments 1 and 2, and the Poynting correction given in the previous paragraph we can write:</p>
 <div class="math notranslate nohighlight" id="equation-eq">
-<span class="eqno">()<a class="headerlink" href="#equation-eq" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq" title="Link to this equation">#</a></span>\[
 \gamma_A(T,P_1,x_A)x_A f_A(T,P_1)={f_A(T,P_1)}\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> is the fugacity of the pure component A at pressure <span class="math notranslate nohighlight">\(P_1\)</span>, now appearing on both sides of the equation.</p>
 <p>We can thus divide both sides by <span class="math notranslate nohighlight">\(f_A(T,P_1)\)</span> to obtain the expression:</p>
 <div class="math notranslate nohighlight" id="equation-eq4">
-<span class="eqno">()<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq4" title="Link to this equation">#</a></span>\[
 \gamma_A(T,P_1,x_A)x_A =\left[\exp\left(\frac{v(P_2-P_1)}{RT}\right)\right]
 \]</div>
 <p>Rearranging this expression one obtains:</p>
 <div class="math notranslate nohighlight" id="equation-eq5">
-<span class="eqno">()<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq5" title="Link to this equation">#</a></span>\[
 P_2-P_1=\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>Recalling that the Osmotic pressure <span class="math notranslate nohighlight">\(\pi=P_1-P_2\)</span> we get:</p>
 <div class="math notranslate nohighlight" id="equation-eq6">
-<span class="eqno">()<a class="headerlink" href="#equation-eq6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq6" title="Link to this equation">#</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)x_A}\right)
 \]</div>
 <p>This expression \textbf{relates the composition of compartment 1}, containing a mixture of components A and B (e.g NaCl in water),  \textbf{to the osmotic pressure} generated at equilibrium conditions when such compartment is in contact with a \textbf{semipermeable} membrane that has on the opposite side a compartment filled by pure component A liquid.</p>
 <p>Please note that in this expression <span class="math notranslate nohighlight">\(x_A\)</span> is the molar fraction of the solvent (e.g. water). Since we are considering a binary system and from an engineering standpoint what is typically measured is the solute concentration we can rewrite the expression as follows:</p>
 <div class="math notranslate nohighlight" id="equation-eq7">
-<span class="eqno">()<a class="headerlink" href="#equation-eq7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq7" title="Link to this equation">#</a></span>\[
 \pi=-\frac{RT}{v}\ln\left({\gamma_A(T,P_1,x_A)(1-x_B)}\right)
 \]</div>
 <p>Where now <span class="math notranslate nohighlight">\(x_B\)</span> is the molar fraction of component <span class="math notranslate nohighlight">\(B\)</span> (e.g. NaCl).
@@ -535,7 +536,7 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$(eq8)</p>
 <p>Where <span class="math notranslate nohighlight">\(c_B\simeq{x_B}v^{-1}\)</span> is the molar concentration of component B, the solute.</p>
 <section id="dependence-of-the-osmotic-pressure-on-the-composition-of-the-system">
-<h3>3.3.1 Dependence of the Osmotic pressure on the composition of the system<a class="headerlink" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system" title="Permalink to this heading">#</a></h3>
+<h3>3.3.1 Dependence of the Osmotic pressure on the composition of the system<a class="headerlink" href="#dependence-of-the-osmotic-pressure-on-the-composition-of-the-system" title="Link to this heading">#</a></h3>
 <p>Note that the expression <span class="math notranslate nohighlight">\(\pi={RTc_B}\)</span> is only valid for small molar fractions of component B, the solute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -567,17 +568,17 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f57d7be51099432435b09b13bf9a11708c0fedc9f7cbcd571f41aef0a8831924.png" src="_images/f57d7be51099432435b09b13bf9a11708c0fedc9f7cbcd571f41aef0a8831924.png" />
+<img alt="_images/ffdd361f32380a99b954fd669c524b492fa392d7610a5f7f32e42a04eed6de0a.png" src="_images/ffdd361f32380a99b954fd669c524b492fa392d7610a5f7f32e42a04eed6de0a.png" />
 </div>
 </div>
 <p>Note that the dimensionless osmotic pressure plotted abotve is obtained as <span class="math notranslate nohighlight">\(\pi{v}/RT\)</span>.</p>
 </section>
 </section>
 <section id="flux-of-the-solvent-suring-osmosis">
-<h2>3.4 Flux of the solvent suring Osmosis<a class="headerlink" href="#flux-of-the-solvent-suring-osmosis" title="Permalink to this heading">#</a></h2>
+<h2>3.4 Flux of the solvent suring Osmosis<a class="headerlink" href="#flux-of-the-solvent-suring-osmosis" title="Link to this heading">#</a></h2>
 <p>In osmosis the flux of the solvent (component A) through a membrane is driven by the difference between the <span class="math notranslate nohighlight">\(\Delta{P}=P_1-P_2\)</span> across compartments and the osmotic pressure <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq9">
-<span class="eqno">()<a class="headerlink" href="#equation-eq9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq9" title="Link to this equation">#</a></span>\[
 J_A=p_A\left( \Delta{P} - \pi \right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(p_A\)</span> is the permeability of the membrane with respect to component A.</p>
@@ -748,8 +749,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

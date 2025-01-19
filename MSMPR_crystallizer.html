@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>10. MSMPR Crystallizer: population balance &#8212; PSSP Virtual Notebook</title>
   
@@ -19,45 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'MSMPR_crystallizer';</script>
@@ -142,6 +141,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -163,7 +164,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -229,9 +230,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -373,10 +374,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -384,14 +385,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -431,11 +432,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="msmpr-crystallizer-population-balance">
-<h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Permalink to this heading">#</a></h1>
+<h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Link to this heading">#</a></h1>
 <p>Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature.
 In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.</p>
 <section id="material-balance">
-<h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Permalink to this heading">#</a></h2>
+<h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Link to this heading">#</a></h2>
 <p>Let us begin by considering the global material balance for an MSMPR crystallizer. The operation of an ideal MSMPR crystallizer is characterised by the following set of hypotheses:</p>
 <ul class="simple">
 <li><p>The crystalliser operates continuously</p></li>
@@ -449,7 +450,7 @@ In these notes we will derive the analystical expression of the steady state par
 </ul>
 <p>At steady state the mass balance for the solute precipitating in an MSMPR crystallizer can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq0">
-<span class="eqno">(115)<a class="headerlink" href="#equation-msmpreq0" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(115)<a class="headerlink" href="#equation-msmpreq0" title="Link to this equation">#</a></span>\[
 Q_{IN}C_{IN}=Q_{OUT}C_{OUT}+Q_{OUT}M_T
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(Q_{IN}\)</span> is the volumetric inlet flowrate of the liquid phase, <span class="math notranslate nohighlight">\(Q_{OUT}\)</span> is the volumetric outlet flowrate of the liquid phase (mother liquor), <span class="math notranslate nohighlight">\(C_{IN}\)</span> is the solute density in the feed, <span class="math notranslate nohighlight">\(C_{OUT}\)</span> is the solute density int he outlet stream, and <span class="math notranslate nohighlight">\(M_T\)</span> is the mass of crystals precipitated per unit volume of liquid phase.
@@ -457,30 +458,30 @@ Typically <span class="math notranslate nohighlight">\(Q_{IN}\simeq{Q_{OUT}}=Q\)
 <p>It should be noted that <span class="math notranslate nohighlight">\(M_T\)</span> is determined by the process of precipitation producing a certain particles population and can be computed from the kinetics of crystal nucleation and growth, based on the population balance discussed in the next section.</p>
 </section>
 <section id="number-and-number-population-density">
-<h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Permalink to this heading">#</a></h2>
+<h2>10.1 Number and number population density<a class="headerlink" href="#number-and-number-population-density" title="Link to this heading">#</a></h2>
 <p>Let us begin by defining <span class="math notranslate nohighlight">\(N(L)\)</span> as the <strong>number</strong> of  crystals of characteristic length <span class="math notranslate nohighlight">\(L\)</span> per unit volume.
 The <strong>number population density</strong> <span class="math notranslate nohighlight">\(n\)</span>, or in short number density, is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq1">
-<span class="eqno">(116)<a class="headerlink" href="#equation-msmpreq1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(116)<a class="headerlink" href="#equation-msmpreq1" title="Link to this equation">#</a></span>\[
 \lim_{\Delta{L}\to{0}}\frac{\Delta{N(L)}}{\Delta{L}}=\frac{d{N(L)}}{d{L}}=n(L)
 \]</div>
 <p>and represents the number of crystals of length <span class="math notranslate nohighlight">\(L\)</span> <strong>per unit length</strong>, per unit volume.
 The number of crystals per unit volume with dimension comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span> can thus be computed as a definite integral of the population density:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq2">
-<span class="eqno">(117)<a class="headerlink" href="#equation-msmpreq2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(117)<a class="headerlink" href="#equation-msmpreq2" title="Link to this equation">#</a></span>\[
 N_{1,2}=\int_{L_1}^{L_2}n(L)dL
 \]</div>
 <p>Similarly the total number of crystals per unit volume is obtained as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq3">
-<span class="eqno">(118)<a class="headerlink" href="#equation-msmpreq3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(118)<a class="headerlink" href="#equation-msmpreq3" title="Link to this equation">#</a></span>\[
 N_{T}=\int_{0}^{\infty}n(L)dL
 \]</div>
 </section>
 <section id="population-balance-in-an-msmpr-crystallizer">
-<h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Permalink to this heading">#</a></h2>
+<h2>10.2 Population Balance in an MSMPR crystallizer<a class="headerlink" href="#population-balance-in-an-msmpr-crystallizer" title="Link to this heading">#</a></h2>
 <p>Let us write a steady state population balance for particles with size comprised between <span class="math notranslate nohighlight">\(L_1\)</span> and <span class="math notranslate nohighlight">\(L_2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq4">
-<span class="eqno">(119)<a class="headerlink" href="#equation-msmpreq4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(119)<a class="headerlink" href="#equation-msmpreq4" title="Link to this equation">#</a></span>\[
 {\Delta{N}}V=n_1G_1V\Delta{t}-n_2G_2V\Delta{t}-Q\overline{n}\Delta{L}\Delta{t}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta{N}V\)</span> is the change in the number of particles within the length interval <span class="math notranslate nohighlight">\(\Delta{L}=L_2-L_1\)</span> per unit volume, accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>.
@@ -489,12 +490,12 @@ Similarly, the term <span class="math notranslate nohighlight">\(n_2G_2V\Delta{t
 Finally the term <span class="math notranslate nohighlight">\(Q\overline{n}\Delta{L}\Delta{t}\)</span> accounts for the removal of particles with size comprised in  <span class="math notranslate nohighlight">\(\Delta{L}\)</span> from the crystalliser due to the magma flowrate with volumetric flowrate <span class="math notranslate nohighlight">\(Q\)</span>, where <span class="math notranslate nohighlight">\(\overline{n}\)</span> represents the average population density within the length interval <span class="math notranslate nohighlight">\(\Delta{L}\)</span>.</p>
 <p>Eq. <a class="reference internal" href="#equation-msmpreq4">(119)</a> can be rearranged to obtain on the left side a discrete accumulation term, i.e. the number of particles with size compriused in <span class="math notranslate nohighlight">\(\delta{L}\)</span> accumulated in time <span class="math notranslate nohighlight">\(\Delta{t}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq5">
-<span class="eqno">(120)<a class="headerlink" href="#equation-msmpreq5" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(120)<a class="headerlink" href="#equation-msmpreq5" title="Link to this equation">#</a></span>\[
 \frac{\Delta{N}}{\Delta{t}}=n_1G_1-n_2G_2-\frac{Q}{V}\overline{n}\Delta{L}
 \]</div>
 <p>At steady state there is no accumulation and Eq. <a class="reference internal" href="#equation-msmpreq5">(120)</a> can be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq6">
-<span class="eqno">(121)<a class="headerlink" href="#equation-msmpreq6" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(121)<a class="headerlink" href="#equation-msmpreq6" title="Link to this equation">#</a></span>\[
 \frac{n_2G_2-n_1G_1}{\Delta{L}}=-\frac{Q}{V}\overline{n}
 \]</div>
 <p>Noting that the residence time <span class="math notranslate nohighlight">\(\tau=V/Q\)</span>, and taking the limit for <span class="math notranslate nohighlight">\(\Delta{L}\rightarrow{0}\)</span> we get:
@@ -503,30 +504,30 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$(MSMPReq7)</p>
 <p>Whic can be solved analytically, yielding the steady state number population density n(L):</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq8">
-<span class="eqno">(122)<a class="headerlink" href="#equation-msmpreq8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(122)<a class="headerlink" href="#equation-msmpreq8" title="Link to this equation">#</a></span>\[
 n(L)=n_0\exp\left(-\frac{L}{G\tau}\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(n_0\)</span> is an integration constant, determined from the boundary conditions, that has the physical meaning of population density of nuclei in the crystallizer at steady state.</p>
 <p>In this formulation of the population balance we consider particles to be born as nuclei at length <span class="math notranslate nohighlight">\(L=0\)</span>.
 The nucleation rate <span class="math notranslate nohighlight">\(J\)</span>, i.e. the number of nuclei generated per unit time per unit volume can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq9">
-<span class="eqno">(123)<a class="headerlink" href="#equation-msmpreq9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(123)<a class="headerlink" href="#equation-msmpreq9" title="Link to this equation">#</a></span>\[
 J={\frac{dN}{dt}}\vert_{L=0}
 \]</div>
 <p>by applying the chain rule we can rewrite the nucleation rate as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq10">
-<span class="eqno">(124)<a class="headerlink" href="#equation-msmpreq10" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(124)<a class="headerlink" href="#equation-msmpreq10" title="Link to this equation">#</a></span>\[
 J=\frac{dN}{dL}\vert_{L=0}\frac{dL}{dt}\vert_{L=0}=n_0G
 \]</div>
 <p>where, by definition <span class="math notranslate nohighlight">\(\frac{dN}{dL}\vert_{L=0}=n_0\)</span>, and <span class="math notranslate nohighlight">\(\frac{dL}{dt}=G\)</span>. We shall note that here we are considering the growth rate to be independent from the crystal size.</p>
 <p>This expression allows us to determine the integration constant <span class="math notranslate nohighlight">\(n_0\)</span> based on characteristic rates of crystal nucleation and growth, yielding:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq11">
-<span class="eqno">(125)<a class="headerlink" href="#equation-msmpreq11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(125)<a class="headerlink" href="#equation-msmpreq11" title="Link to this equation">#</a></span>\[
 n_0=\frac{J}{G}
 \]</div>
 </section>
 <section id="particle-size-distribution-and-process-parameters-tau-g-j">
-<h2>10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span><a class="headerlink" href="#particle-size-distribution-and-process-parameters-tau-g-j" title="Permalink to this heading">#</a></h2>
+<h2>10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span><a class="headerlink" href="#particle-size-distribution-and-process-parameters-tau-g-j" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -611,18 +612,18 @@ n_0=\frac{J}{G}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3f22f6cae975ad13e9dcff2c3a3e66a66a60ee0f8e6eb7abb7716fc6166685c1.png" src="_images/3f22f6cae975ad13e9dcff2c3a3e66a66a60ee0f8e6eb7abb7716fc6166685c1.png" />
-<img alt="_images/ec9439facc0baa0b6e8f7f908e3333a8b42e78a159372f71b2698b3313014c79.png" src="_images/ec9439facc0baa0b6e8f7f908e3333a8b42e78a159372f71b2698b3313014c79.png" />
-<img alt="_images/b005badf1d6dc433bc2f6fd26d6bf96798ffa1e26840501a445cc13db1a81123.png" src="_images/b005badf1d6dc433bc2f6fd26d6bf96798ffa1e26840501a445cc13db1a81123.png" />
+<img alt="_images/24a1810bebb9ab738b94f3a50cfb740ea3affc9fc226cf6d1ca31c50966f7f02.png" src="_images/24a1810bebb9ab738b94f3a50cfb740ea3affc9fc226cf6d1ca31c50966f7f02.png" />
+<img alt="_images/b4486f1fb0c03c531f265c20d53f8e3f43f6f1b054752298f9b9b6b32b58120d.png" src="_images/b4486f1fb0c03c531f265c20d53f8e3f43f6f1b054752298f9b9b6b32b58120d.png" />
+<img alt="_images/5679a6b35acfced5e578102e82ca3284c4e3748e1ded9a668a770d31b70027c7.png" src="_images/5679a6b35acfced5e578102e82ca3284c4e3748e1ded9a668a770d31b70027c7.png" />
 </div>
 </div>
 </section>
 <section id="moments-of-the-psd-in-a-msmpr-crystallizer">
-<h2>10.4 Moments of the PSD in a MSMPR crystallizer<a class="headerlink" href="#moments-of-the-psd-in-a-msmpr-crystallizer" title="Permalink to this heading">#</a></h2>
+<h2>10.4 Moments of the PSD in a MSMPR crystallizer<a class="headerlink" href="#moments-of-the-psd-in-a-msmpr-crystallizer" title="Link to this heading">#</a></h2>
 <p>The number population density <span class="math notranslate nohighlight">\(n(L)\)</span> can be used to derive other properties of the population of particles through the calculation of the moments of the distribution.
 The <span class="math notranslate nohighlight">\(i^{th}\)</span> order moment of the number population density is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq12">
-<span class="eqno">(126)<a class="headerlink" href="#equation-msmpreq12" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(126)<a class="headerlink" href="#equation-msmpreq12" title="Link to this equation">#</a></span>\[
 m_i=\int_0^{\infty}L^indL
 \]</div>
 <p>Based on this definition we note that the moments from order 0 to 3 have a well defined physical meaning:</p>
@@ -630,21 +631,21 @@ m_i=\int_0^{\infty}L^indL
 <li><p><span class="math notranslate nohighlight">\(m_0=\int_0^{\infty}L^0ndL=N_L\)</span> represents the number of particles per unit volume of liquid phase  with size smaller or equal than size L. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span> <span class="math notranslate nohighlight">\(N_L\)</span> tends to the total number of particles per unit volume of liquid phase in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq13">
-<span class="eqno">(127)<a class="headerlink" href="#equation-msmpreq13" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(127)<a class="headerlink" href="#equation-msmpreq13" title="Link to this equation">#</a></span>\[
 N_T=n_0G\tau
 \]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(m_1=\int_0^{\infty}L^1ndL=\mathcal{L}\)</span> represents the total length of particles per unit volume of liquid phase with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> tends to the total length of particles per unit volume of liquid phase in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq14">
-<span class="eqno">(128)<a class="headerlink" href="#equation-msmpreq14" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(128)<a class="headerlink" href="#equation-msmpreq14" title="Link to this equation">#</a></span>\[
 \mathcal{L}_T=n_0(G\tau)^2
 \]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(m_2=\int_0^{\infty}L^2ndL\propto{A}\)</span> is proportional to the total area of particles per unit volume of liquid phase with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(A\)</span> tends to the total area of the particles per unit volume of liquid phase contained in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq15">
-<span class="eqno">(129)<a class="headerlink" href="#equation-msmpreq15" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(129)<a class="headerlink" href="#equation-msmpreq15" title="Link to this equation">#</a></span>\[
 A_T=2{\beta}n_0(G\tau)^3
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the surface shape factor of the particles.</p>
@@ -652,34 +653,34 @@ A_T=2{\beta}n_0(G\tau)^3
 <li><p><span class="math notranslate nohighlight">\(m_3=\int_0^{\infty}L^3ndL\propto{V}\)</span> is proportional to the total volume of particles with size smaller or equal than size <span class="math notranslate nohighlight">\(L\)</span>. For <span class="math notranslate nohighlight">\(L\rightarrow{\infty}\)</span>, <span class="math notranslate nohighlight">\(V\)</span> tends to the total volume of the particles per unit volume contained in the crystallizer:</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-msmpreq16">
-<span class="eqno">(130)<a class="headerlink" href="#equation-msmpreq16" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(130)<a class="headerlink" href="#equation-msmpreq16" title="Link to this equation">#</a></span>\[
 V_T=6{\alpha}n_0(G\tau)^4
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the volumetric shape factor of the particles.</p>
 <p>It should be noted that the total volume of the particles per unit volume of liquid phase allows to compute the total mass of particles per unit volume of liquid phase in the system:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq17">
-<span class="eqno">(131)<a class="headerlink" href="#equation-msmpreq17" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(131)<a class="headerlink" href="#equation-msmpreq17" title="Link to this equation">#</a></span>\[
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho_c\)</span> is the density of the crystalline phase.</p>
 <p>This expression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
 </section>
 <section id="adimensional-mass-distribution-and-dominant-crystal-size">
-<h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Permalink to this heading">#</a></h2>
+<h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Link to this heading">#</a></h2>
 <p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
 <p>The cumulative mass distribution can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq18">
-<span class="eqno">(132)<a class="headerlink" href="#equation-msmpreq18" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(132)<a class="headerlink" href="#equation-msmpreq18" title="Link to this equation">#</a></span>\[
 M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
 \]</div>
 <p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(x)\)</span>with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq19">
-<span class="eqno">(133)<a class="headerlink" href="#equation-msmpreq19" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(133)<a class="headerlink" href="#equation-msmpreq19" title="Link to this equation">#</a></span>\[
 m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
 \]</div>
 <p>The mass-based population density m(x) has a maximum for <span class="math notranslate nohighlight">\(x=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq20">
-<span class="eqno">(134)<a class="headerlink" href="#equation-msmpreq20" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(134)<a class="headerlink" href="#equation-msmpreq20" title="Link to this equation">#</a></span>\[
 L_D=3G\tau
 \]</div>
 <div class="cell docutils container">
@@ -714,12 +715,12 @@ L_D=3G\tau
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/7c868ba256537c64f975797063ba7888575a6fc7054cf300d2128de1ffb93c4d.png" src="_images/7c868ba256537c64f975797063ba7888575a6fc7054cf300d2128de1ffb93c4d.png" />
+<img alt="_images/96043eac2a3ab1db274f8da40f9dc6ae7a8fca9bdc12e92afb167eab222ea468.png" src="_images/96043eac2a3ab1db274f8da40f9dc6ae7a8fca9bdc12e92afb167eab222ea468.png" />
 </div>
 </div>
 </section>
 <section id="contributions">
-<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h2>
+<h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
 <p>Guilherme Pizarro Werner, 23 February 2021</p>
 <p>Ahmad Eblagh, 13 March 2021</p>
 </section>
@@ -844,8 +845,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
