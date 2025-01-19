@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6. The BET Isotherm &#8212; PSSP Virtual Notebook</title>
   
@@ -19,45 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'BET_isotherm';</script>
@@ -142,6 +141,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="index.html">
   
@@ -163,7 +164,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -229,9 +230,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -373,10 +374,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -384,14 +385,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -425,7 +426,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-bet-isotherm">
-<h1>6. The BET Isotherm<a class="headerlink" href="#the-bet-isotherm" title="Permalink to this heading">#</a></h1>
+<h1>6. The BET Isotherm<a class="headerlink" href="#the-bet-isotherm" title="Link to this heading">#</a></h1>
 <p>The BET (Brunauer, Emmet and Teller) isotherm allows to extend ideas and hypotheses that are adopted to obtain the Langmuir isotherm to describe the adsorption of a component from a gas phase in cases in which it can form multiple layers on the surface of the stationary phase, up to the limit in which it condenses into a macroscopic liquid phase.</p>
 <p>The hypotheses at the foundation of the BET theory are:</p>
 <ul class="simple">
@@ -437,28 +438,28 @@ document.write(`
 <p>Following an approach similar to the one adopted for the derivation of the Langmuir isotherm let us begin by defining the rates of adsorption and desorption. In the case of th BET isotherm the rates will depend on the layer considered and will therefore have subscript <span class="math notranslate nohighlight">\(i\)</span> that indicate the layer on which adsorption takes place.</p>
 <p>The adsorption rate on layer <span class="math notranslate nohighlight">\(i\)</span> can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq1">
-<span class="eqno">(65)<a class="headerlink" href="#equation-beteq1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(65)<a class="headerlink" href="#equation-beteq1" title="Link to this equation">#</a></span>\[
 R_{A,i}=k_{A,i}\Gamma_iP
 \]</div>
 <p>The desorption rate instead, explicitly introducing the dependence on the adsorption enthalpy through an Arrhenius-like functional form, is written as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq2">
-<span class="eqno">(66)<a class="headerlink" href="#equation-beteq2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(66)<a class="headerlink" href="#equation-beteq2" title="Link to this equation">#</a></span>\[
 R_{D,i}=k_{D,i}\Gamma_i=A_ie^{\frac{-E_i}{RT}}\Gamma_i
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_i\)</span> is the adsorption energy. Denoting with <span class="math notranslate nohighlight">\(E_0\)</span> the adsorption energy on a free adsorption site, the adsorption energy on all successive layers is <span class="math notranslate nohighlight">\(E_2=E_3=...E_n=\lambda\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the condensation enthalpy.</p>
 <p>Following the same criterion also the adsorption constant <span class="math notranslate nohighlight">\(k_{A,i}\)</span>, and the pre-exponential factor of the desorption constant <span class="math notranslate nohighlight">\(A_i\)</span> are independent from the layer index - except for those related to the adsorption on a free surface and the desorption from the first layer:</p>
 <div class="math notranslate nohighlight" id="equation-beteq3">
-<span class="eqno">(67)<a class="headerlink" href="#equation-beteq3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(67)<a class="headerlink" href="#equation-beteq3" title="Link to this equation">#</a></span>\[
 A_{i\geq2}=const=A
 \]</div>
 <div class="math notranslate nohighlight" id="equation-beteq4">
-<span class="eqno">(68)<a class="headerlink" href="#equation-beteq4" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(68)<a class="headerlink" href="#equation-beteq4" title="Link to this equation">#</a></span>\[
 k_{A,i\geq1}=const=k_A
 \]</div>
 <p>Having defined the rates of adsorption and desorption one can write population balances for every layer of the adsorbed phase.
 In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> represents the fraction of free adsorption sites, <span class="math notranslate nohighlight">\(\Gamma_i\)</span> represents the fractional occupation of the <span class="math notranslate nohighlight">\(i^{th}\)</span> layer.</p>
 <div class="math notranslate nohighlight" id="equation-beteq5">
-<span class="eqno">(69)<a class="headerlink" href="#equation-beteq5" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(69)<a class="headerlink" href="#equation-beteq5" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{cases}
  \frac{d\Gamma_0}{dt}&amp;=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  \frac{d\Gamma_1}{dt}&amp;=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -470,7 +471,7 @@ In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> 
 \end{split}\]</div>
 <p>At equilibrium the balances reduce to:</p>
 <div class="math notranslate nohighlight" id="equation-beteq6">
-<span class="eqno">(70)<a class="headerlink" href="#equation-beteq6" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(70)<a class="headerlink" href="#equation-beteq6" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{cases}
  0=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
  0=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
@@ -482,63 +483,63 @@ In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> 
 \end{split}\]</div>
 <p>From the steady state balance on free sites we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq7">
-<span class="eqno">(71)<a class="headerlink" href="#equation-beteq7" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(71)<a class="headerlink" href="#equation-beteq7" title="Link to this equation">#</a></span>\[
 k_{A,0}\Gamma_0P=k_{D,1}\Gamma_1
 \]</div>
 <p>hence, inserting this equality into the balance on the fraction of sites occupied by a single layer, <span class="math notranslate nohighlight">\(\Gamma_1\)</span> we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq8">
-<span class="eqno">(72)<a class="headerlink" href="#equation-beteq8" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(72)<a class="headerlink" href="#equation-beteq8" title="Link to this equation">#</a></span>\[
 k_{A,1}\Gamma_1P=k_{D,2}\Gamma_2
 \]</div>
 <p>Introducing the Arrhenius expression for the adsorption rates we get:</p>
 <div class="math notranslate nohighlight" id="equation-beteq9">
-<span class="eqno">(73)<a class="headerlink" href="#equation-beteq9" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(73)<a class="headerlink" href="#equation-beteq9" title="Link to this equation">#</a></span>\[
 \Gamma_1=\frac{k_{A,0}}{k_{D,1}}\Gamma_0P=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P\Gamma_0
 \]</div>
 <p>and analogously for <span class="math notranslate nohighlight">\(\Gamma_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-beteq10">
-<span class="eqno">(74)<a class="headerlink" href="#equation-beteq10" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(74)<a class="headerlink" href="#equation-beteq10" title="Link to this equation">#</a></span>\[
 \Gamma_2=\frac{k_{A,1}}{k_{D,2}}\Gamma_1P=\frac{k_{A,1}}{A_{2}}e^{\frac{E_2}{RT}}P\Gamma_1
 \]</div>
 <p>a similar procedure can now be followed recursively to obtain a compact expression for the fraction of sites occupied by an arbitrary number of layers <span class="math notranslate nohighlight">\(n\)</span>. To this aim we can introduce two constants, <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> - defined as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq11">
-<span class="eqno">(75)<a class="headerlink" href="#equation-beteq11" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(75)<a class="headerlink" href="#equation-beteq11" title="Link to this equation">#</a></span>\[
 \alpha=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P
 \]</div>
 <div class="math notranslate nohighlight" id="equation-beteq12">
-<span class="eqno">(76)<a class="headerlink" href="#equation-beteq12" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(76)<a class="headerlink" href="#equation-beteq12" title="Link to this equation">#</a></span>\[
 \beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P
 \]</div>
 <p>At this point the fraction of sites occupied by <span class="math notranslate nohighlight">\(n\)</span> layers can be obtained as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq13">
-<span class="eqno">(77)<a class="headerlink" href="#equation-beteq13" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(77)<a class="headerlink" href="#equation-beteq13" title="Link to this equation">#</a></span>\[
 \Gamma_n=\beta\Gamma_{n-1}=\beta^2\Gamma_{n-2}=...=\beta^{n-1}\Gamma_{1}=\beta^n\frac{\alpha}{\beta}\Gamma_0
 \]</div>
 <p>Deining for the sake of compactness the constant <span class="math notranslate nohighlight">\(B_2=\alpha/\beta\)</span> and introducing the volume of adsorbate per unit area  <span class="math notranslate nohighlight">\(v_s^1\)</span> one can express the total volume adsorbed as:</p>
 <div class="math notranslate nohighlight" id="equation-beteq14">
-<span class="eqno">(78)<a class="headerlink" href="#equation-beteq14" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(78)<a class="headerlink" href="#equation-beteq14" title="Link to this equation">#</a></span>\[
 v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}=v_s^1B_2\beta\frac{d\sum_{i=1}^n\beta^{i}}{d\beta}
 \]</div>
 <p>By introducing the notable result for the term <span class="math notranslate nohighlight">\(\sum_{i=1}^n\beta^{i}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-beteq15">
-<span class="eqno">(79)<a class="headerlink" href="#equation-beteq15" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(79)<a class="headerlink" href="#equation-beteq15" title="Link to this equation">#</a></span>\[
 \sum_{i=1}^n\beta^{i}=\left(\frac{1-\beta^n}{1-\beta}\right)\beta
 \]</div>
 <p>one gets:</p>
 <div class="math notranslate nohighlight" id="equation-beteq16">
-<span class="eqno">(80)<a class="headerlink" href="#equation-beteq16" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(80)<a class="headerlink" href="#equation-beteq16" title="Link to this equation">#</a></span>\[
 \frac{v_s}{v_s^1}=\frac{B_2\beta}{1-\beta}\frac{\left[1-(n+1)\beta^n+n\beta^{n+1}\right]}{\left[1+(B_2-1)\beta-B_2\beta^{n+1}\right]}
 \label{eq:16}
 \]</div>
 <p>In order to obtain the final formulation of the BET isotherm it is useful to consider the limit corresponding to macroscopic condensation, which corresponds to a buildup of an infinite number of adsorbed layers, which corresponds to <span class="math notranslate nohighlight">\(\beta=1\)</span>. Since this condition is realised for <span class="math notranslate nohighlight">\(P=P^o\)</span>, it can be shown that <span class="math notranslate nohighlight">\(\beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P=P/P^o\)</span>.</p>
 <p>Introducing this equality in <code class="xref eq docutils literal notranslate"><span class="pre">eq16</span></code> one gets the so called limited form of the BET isotherm:</p>
 <div class="math notranslate nohighlight" id="equation-beteq17">
-<span class="eqno">(81)<a class="headerlink" href="#equation-beteq17" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(81)<a class="headerlink" href="#equation-beteq17" title="Link to this equation">#</a></span>\[
 \frac{v_s}{v_s^1}=\frac{B_2\left(\frac{P}{P^o}\right)}{1-\left(\frac{P}{P^o}\right)}\frac{\left[1-(n+1)\left(\frac{P}{P^o}\right)^n+n\left(\frac{P}{P^o}\right)^{n+1}\right]}{\left[1+(B_2-1)\left(\frac{P}{P^o}\right)-B_2\left(\frac{P}{P^o}\right)^{n+1}\right]}
 \]</div>
 <p>note that the left hand side of this equation can be expressed in terms of unit mass of adsorbent, instead of unit surface.</p>
 <section id="many-isotherm-shapes-from-the-same-expression">
-<h2>6.1 Many isotherm shapes from the same expression<a class="headerlink" href="#many-isotherm-shapes-from-the-same-expression" title="Permalink to this heading">#</a></h2>
+<h2>6.1 Many isotherm shapes from the same expression<a class="headerlink" href="#many-isotherm-shapes-from-the-same-expression" title="Link to this heading">#</a></h2>
 <p>Depending on the parameters introduced in the BET isotherm its functional form can adapt to capture all known shapes of adsorption isotherm. In the following we shall demonstrate combination of parameters that produce isotherms belonging to all five of the classes introduced by Brunauer (Brunauer et al. JACS 1940).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -584,7 +585,7 @@ v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/42ee8c6b75ecaacdd3e5d1d6078b649ddd7d03a29884f410a28102cdac7db521.png" src="_images/42ee8c6b75ecaacdd3e5d1d6078b649ddd7d03a29884f410a28102cdac7db521.png" />
+<img alt="_images/38bfe769f2bdc4d818a61b01faaff21516e66ee829a4eac67a5086569b5fb4ce.png" src="_images/38bfe769f2bdc4d818a61b01faaff21516e66ee829a4eac67a5086569b5fb4ce.png" />
 </div>
 </div>
 </section>
@@ -703,8 +704,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
