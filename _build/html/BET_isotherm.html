@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. The BET Isotherm &#8212; PSSP Virtual Notebook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'BET_isotherm';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Equilibria in Ion Exchange Systems" href="Ion_Exchange.html" />
+    <link rel="prev" title="5. The Langmuir Isotherm" href="Langmuir_isotherm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Particulate Systems and Separation Processes Notebook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Gas_permeation.html">1. Material Balances in a Gas Permeation Unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Osmosis.html">3. The Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Process_layouts.html">4. Membrane Processes Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Langmuir_isotherm.html">5. The Langmuir Isotherm</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. The BET Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ion_Exchange.html">7. Equilibria in Ion Exchange Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Slurry_Adsorption.html">8. Batch Slurry Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Solubility.html">9. Solubility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MSMPR_crystallizer.html">10. MSMPR Crystallizer: population balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W2_2021.html">Week 2 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W3_2021.html">Week 3 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W4_2024_updated.html">Week 4 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W5_2021.html">Week 5 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W6_2021.html">Week 6 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W8_2021.html">Week 8 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W9_2021.html">Week 9 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W10_2021.html">Week 10 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W11_2021.html">Week 11 - Exercise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/BET_isotherm.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FBET_isotherm.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/BET_isotherm.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. The BET Isotherm</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-isotherm-shapes-from-the-same-expression">6.1 Many isotherm shapes from the same expression</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-bet-isotherm">
+<h1>6. The BET Isotherm<a class="headerlink" href="#the-bet-isotherm" title="Link to this heading">#</a></h1>
+<p>The BET (Brunauer, Emmet and Teller) isotherm allows to extend ideas and hypotheses that are adopted to obtain the Langmuir isotherm to describe the adsorption of a component from a gas phase in cases in which it can form multiple layers on the surface of the stationary phase, up to the limit in which it condenses into a macroscopic liquid phase.</p>
+<p>The hypotheses at the foundation of the BET theory are:</p>
+<ul class="simple">
+<li><p>Lateral interactions between adsorbed molecules (i.e. interactions between molecules adsorbed in the same layer) are neglibile. In other words the adsorption process does not depend on the local environment around an adsorption site. This hypothesis is common to the derivation of the Langmuir isotherm.</p></li>
+<li><p>Molecules can adsorb in an infinite number of layers.</p></li>
+<li><p>The adsorption enthalpy on the first layer is constant and independent from the fractional occupation of that layer.</p></li>
+<li><p>The adsorption enthalpy in layers from the second onwards is constant and corresponds to the condensation enthalpy.</p></li>
+</ul>
+<p>Following an approach similar to the one adopted for the derivation of the Langmuir isotherm let us begin by defining the rates of adsorption and desorption. In the case of th BET isotherm the rates will depend on the layer considered and will therefore have subscript <span class="math notranslate nohighlight">\(i\)</span> that indicate the layer on which adsorption takes place.</p>
+<p>The adsorption rate on layer <span class="math notranslate nohighlight">\(i\)</span> can be written as:</p>
+<div class="math notranslate nohighlight" id="equation-beteq1">
+<span class="eqno">(65)<a class="headerlink" href="#equation-beteq1" title="Link to this equation">#</a></span>\[
+R_{A,i}=k_{A,i}\Gamma_iP
+\]</div>
+<p>The desorption rate instead, explicitly introducing the dependence on the adsorption enthalpy through an Arrhenius-like functional form, is written as:</p>
+<div class="math notranslate nohighlight" id="equation-beteq2">
+<span class="eqno">(66)<a class="headerlink" href="#equation-beteq2" title="Link to this equation">#</a></span>\[
+R_{D,i}=k_{D,i}\Gamma_i=A_ie^{\frac{-E_i}{RT}}\Gamma_i
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_i\)</span> is the adsorption energy. Denoting with <span class="math notranslate nohighlight">\(E_0\)</span> the adsorption energy on a free adsorption site, the adsorption energy on all successive layers is <span class="math notranslate nohighlight">\(E_2=E_3=...E_n=\lambda\)</span>, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the condensation enthalpy.</p>
+<p>Following the same criterion also the adsorption constant <span class="math notranslate nohighlight">\(k_{A,i}\)</span>, and the pre-exponential factor of the desorption constant <span class="math notranslate nohighlight">\(A_i\)</span> are independent from the layer index - except for those related to the adsorption on a free surface and the desorption from the first layer:</p>
+<div class="math notranslate nohighlight" id="equation-beteq3">
+<span class="eqno">(67)<a class="headerlink" href="#equation-beteq3" title="Link to this equation">#</a></span>\[
+A_{i\geq2}=const=A
+\]</div>
+<div class="math notranslate nohighlight" id="equation-beteq4">
+<span class="eqno">(68)<a class="headerlink" href="#equation-beteq4" title="Link to this equation">#</a></span>\[
+k_{A,i\geq1}=const=k_A
+\]</div>
+<p>Having defined the rates of adsorption and desorption one can write population balances for every layer of the adsorbed phase.
+In the following <span class="math notranslate nohighlight">\(\Gamma_0\)</span> represents the fraction of free adsorption sites, <span class="math notranslate nohighlight">\(\Gamma_i\)</span> represents the fractional occupation of the <span class="math notranslate nohighlight">\(i^{th}\)</span> layer.</p>
+<div class="math notranslate nohighlight" id="equation-beteq5">
+<span class="eqno">(69)<a class="headerlink" href="#equation-beteq5" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{cases}
+ \frac{d\Gamma_0}{dt}&amp;=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
+ \frac{d\Gamma_1}{dt}&amp;=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
+ \frac{d\Gamma_2}{dt}&amp;=+k_{A,1}\Gamma_1P -k_{D,2}\Gamma_2-k_{A,2}\Gamma_2P+k_{D,3}\Gamma_3 \\
+ \vdots \\
+ \frac{d\Gamma_n}{dt}&amp;=+k_{A,n-1}\Gamma_{n-1}P -k_{D,n}\Gamma_n-k_{A,n}\Gamma_nP+k_{D,n+1}\Gamma_{n+1} \\
+ \vdots\\
+ \end{cases}
+\end{split}\]</div>
+<p>At equilibrium the balances reduce to:</p>
+<div class="math notranslate nohighlight" id="equation-beteq6">
+<span class="eqno">(70)<a class="headerlink" href="#equation-beteq6" title="Link to this equation">#</a></span>\[\begin{split}
+\begin{cases}
+ 0=-k_{A,0}\Gamma_0P +k_{D,1}\Gamma_1 \\
+ 0=+k_{A,0}\Gamma_0P -k_{D,1}\Gamma_1-k_{A,1}\Gamma_1P+k_{D,2}\Gamma_2 \\
+ 0=+k_{A,1}\Gamma_1P -k_{D,2}\Gamma_2-k_{A,2}\Gamma_2P+k_{D,3}\Gamma_3 \\
+ \vdots \\
+ 0=+k_{A,n-1}\Gamma_{n-1}P -k_{D,n}\Gamma_n-k_{A,n}\Gamma_nP+k_{D,n+1}\Gamma_{n+1} \\
+ \vdots\\
+ \end{cases}
+\end{split}\]</div>
+<p>From the steady state balance on free sites we get:</p>
+<div class="math notranslate nohighlight" id="equation-beteq7">
+<span class="eqno">(71)<a class="headerlink" href="#equation-beteq7" title="Link to this equation">#</a></span>\[
+k_{A,0}\Gamma_0P=k_{D,1}\Gamma_1
+\]</div>
+<p>hence, inserting this equality into the balance on the fraction of sites occupied by a single layer, <span class="math notranslate nohighlight">\(\Gamma_1\)</span> we get:</p>
+<div class="math notranslate nohighlight" id="equation-beteq8">
+<span class="eqno">(72)<a class="headerlink" href="#equation-beteq8" title="Link to this equation">#</a></span>\[
+k_{A,1}\Gamma_1P=k_{D,2}\Gamma_2
+\]</div>
+<p>Introducing the Arrhenius expression for the adsorption rates we get:</p>
+<div class="math notranslate nohighlight" id="equation-beteq9">
+<span class="eqno">(73)<a class="headerlink" href="#equation-beteq9" title="Link to this equation">#</a></span>\[
+\Gamma_1=\frac{k_{A,0}}{k_{D,1}}\Gamma_0P=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P\Gamma_0
+\]</div>
+<p>and analogously for <span class="math notranslate nohighlight">\(\Gamma_2\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-beteq10">
+<span class="eqno">(74)<a class="headerlink" href="#equation-beteq10" title="Link to this equation">#</a></span>\[
+\Gamma_2=\frac{k_{A,1}}{k_{D,2}}\Gamma_1P=\frac{k_{A,1}}{A_{2}}e^{\frac{E_2}{RT}}P\Gamma_1
+\]</div>
+<p>a similar procedure can now be followed recursively to obtain a compact expression for the fraction of sites occupied by an arbitrary number of layers <span class="math notranslate nohighlight">\(n\)</span>. To this aim we can introduce two constants, <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> - defined as:</p>
+<div class="math notranslate nohighlight" id="equation-beteq11">
+<span class="eqno">(75)<a class="headerlink" href="#equation-beteq11" title="Link to this equation">#</a></span>\[
+\alpha=\frac{k_{A,0}}{A_{1}}e^{\frac{E_1}{RT}}P
+\]</div>
+<div class="math notranslate nohighlight" id="equation-beteq12">
+<span class="eqno">(76)<a class="headerlink" href="#equation-beteq12" title="Link to this equation">#</a></span>\[
+\beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P
+\]</div>
+<p>At this point the fraction of sites occupied by <span class="math notranslate nohighlight">\(n\)</span> layers can be obtained as:</p>
+<div class="math notranslate nohighlight" id="equation-beteq13">
+<span class="eqno">(77)<a class="headerlink" href="#equation-beteq13" title="Link to this equation">#</a></span>\[
+\Gamma_n=\beta\Gamma_{n-1}=\beta^2\Gamma_{n-2}=...=\beta^{n-1}\Gamma_{1}=\beta^n\frac{\alpha}{\beta}\Gamma_0
+\]</div>
+<p>Deining for the sake of compactness the constant <span class="math notranslate nohighlight">\(B_2=\alpha/\beta\)</span> and introducing the volume of adsorbate per unit area  <span class="math notranslate nohighlight">\(v_s^1\)</span> one can express the total volume adsorbed as:</p>
+<div class="math notranslate nohighlight" id="equation-beteq14">
+<span class="eqno">(78)<a class="headerlink" href="#equation-beteq14" title="Link to this equation">#</a></span>\[
+v_s=v_s^1\sum_{i=1}^n{iB_2\beta^i\Gamma_0}=v_s^1B_2\beta\sum_{i=1}^ni\beta^{i-1}=v_s^1B_2\beta\frac{d\sum_{i=1}^n\beta^{i}}{d\beta}
+\]</div>
+<p>By introducing the notable result for the term <span class="math notranslate nohighlight">\(\sum_{i=1}^n\beta^{i}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-beteq15">
+<span class="eqno">(79)<a class="headerlink" href="#equation-beteq15" title="Link to this equation">#</a></span>\[
+\sum_{i=1}^n\beta^{i}=\left(\frac{1-\beta^n}{1-\beta}\right)\beta
+\]</div>
+<p>one gets:</p>
+<div class="math notranslate nohighlight" id="equation-beteq16">
+<span class="eqno">(80)<a class="headerlink" href="#equation-beteq16" title="Link to this equation">#</a></span>\[
+\frac{v_s}{v_s^1}=\frac{B_2\beta}{1-\beta}\frac{\left[1-(n+1)\beta^n+n\beta^{n+1}\right]}{\left[1+(B_2-1)\beta-B_2\beta^{n+1}\right]}
+\label{eq:16}
+\]</div>
+<p>In order to obtain the final formulation of the BET isotherm it is useful to consider the limit corresponding to macroscopic condensation, which corresponds to a buildup of an infinite number of adsorbed layers, which corresponds to <span class="math notranslate nohighlight">\(\beta=1\)</span>. Since this condition is realised for <span class="math notranslate nohighlight">\(P=P^o\)</span>, it can be shown that <span class="math notranslate nohighlight">\(\beta=\frac{k_{A}}{A}e^{\frac{\lambda}{RT}}P=P/P^o\)</span>.</p>
+<p>Introducing this equality in <code class="xref eq docutils literal notranslate"><span class="pre">eq16</span></code> one gets the so called limited form of the BET isotherm:</p>
+<div class="math notranslate nohighlight" id="equation-beteq17">
+<span class="eqno">(81)<a class="headerlink" href="#equation-beteq17" title="Link to this equation">#</a></span>\[
+\frac{v_s}{v_s^1}=\frac{B_2\left(\frac{P}{P^o}\right)}{1-\left(\frac{P}{P^o}\right)}\frac{\left[1-(n+1)\left(\frac{P}{P^o}\right)^n+n\left(\frac{P}{P^o}\right)^{n+1}\right]}{\left[1+(B_2-1)\left(\frac{P}{P^o}\right)-B_2\left(\frac{P}{P^o}\right)^{n+1}\right]}
+\]</div>
+<p>note that the left hand side of this equation can be expressed in terms of unit mass of adsorbent, instead of unit surface.</p>
+<section id="many-isotherm-shapes-from-the-same-expression">
+<h2>6.1 Many isotherm shapes from the same expression<a class="headerlink" href="#many-isotherm-shapes-from-the-same-expression" title="Link to this heading">#</a></h2>
+<p>Depending on the parameters introduced in the BET isotherm its functional form can adapt to capture all known shapes of adsorption isotherm. In the following we shall demonstrate combination of parameters that produce isotherms belonging to all five of the classes introduced by Brunauer (Brunauer et al. JACS 1940).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+
+<span class="c1">#Parameters</span>
+<span class="n">P0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">]);</span>
+<span class="n">B2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
+<span class="n">n</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">vv1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
+   
+
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">rainbow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">B2</span><span class="p">))))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">B2</span><span class="p">)):</span>     
+    <span class="n">S</span><span class="o">=</span><span class="n">P</span><span class="o">/</span><span class="n">P0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    
+    <span class="c1">#Langmuir isotherm   </span>
+    <span class="n">vv1</span><span class="o">=</span><span class="n">B2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">S</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">S</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="p">(</span><span class="n">B2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">S</span><span class="o">-</span><span class="n">B2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+    
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">vv1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;BET isotherm types&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;P [bar]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$v_l$ / $v_l^1$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Type I&#39;</span><span class="p">,</span><span class="s1">&#39;Type II&#39;</span><span class="p">,</span><span class="s1">&#39;Type III&#39;</span><span class="p">,</span><span class="s1">&#39;Type IV&#39;</span><span class="p">,</span><span class="s1">&#39;Type V&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/38bfe769f2bdc4d818a61b01faaff21516e66ee829a4eac67a5086569b5fb4ce.png" src="_images/38bfe769f2bdc4d818a61b01faaff21516e66ee829a4eac67a5086569b5fb4ce.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Langmuir_isotherm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5. The Langmuir Isotherm</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Ion_Exchange.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Equilibria in Ion Exchange Systems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-isotherm-shapes-from-the-same-expression">6.1 Many isotherm shapes from the same expression</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matteo Salvalaglio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

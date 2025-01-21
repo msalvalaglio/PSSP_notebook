@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. Batch Slurry Adsorption &#8212; PSSP Virtual Notebook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Slurry_Adsorption';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Solubility" href="Solubility.html" />
+    <link rel="prev" title="7. Equilibria in Ion Exchange Systems" href="Ion_Exchange.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Particulate Systems and Separation Processes Notebook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Gas_permeation.html">1. Material Balances in a Gas Permeation Unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Osmosis.html">3. The Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Process_layouts.html">4. Membrane Processes Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Langmuir_isotherm.html">5. The Langmuir Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BET_isotherm.html">6. The BET Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ion_Exchange.html">7. Equilibria in Ion Exchange Systems</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Batch Slurry Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Solubility.html">9. Solubility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MSMPR_crystallizer.html">10. MSMPR Crystallizer: population balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W2_2021.html">Week 2 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W3_2021.html">Week 3 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W4_2024_updated.html">Week 4 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W5_2021.html">Week 5 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W6_2021.html">Week 6 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W8_2021.html">Week 8 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W9_2021.html">Week 9 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W10_2021.html">Week 10 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W11_2021.html">Week 11 - Exercise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Slurry_Adsorption.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FSlurry_Adsorption.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Slurry_Adsorption.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>8. Batch Slurry Adsorption</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">8.1 Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balance-in-a-batch-slurry-adsorption-process">8.2 Material Balance in a Batch Slurry adsorption process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-slurry-adsorption">8.3 Continuous Slurry Adsorption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="batch-slurry-adsorption">
+<h1>8. Batch Slurry Adsorption<a class="headerlink" href="#batch-slurry-adsorption" title="Link to this heading">#</a></h1>
+<p>In this notes we will use an example problem to introduce material balances in slurry adsorption processes. We will consider a Batch, process configuration and then its extension to a continuous process configuration.</p>
+<section id="problem-statement">
+<h2>8.1 Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<p>A water purification process is carried out via batch adsorption. The initial concentration of the pollutant is 0.1 <span class="math notranslate nohighlight">\([mol l^{-1}]\)</span>, and it needs to be lowered by at least an order of magnitude. The process is carried out in batches characterised by a water volume <span class="math notranslate nohighlight">\(V_{\ell}\)</span> of 2 <span class="math notranslate nohighlight">\(m^3\)</span>, in which <span class="math notranslate nohighlight">\(100\,kg\)</span> of adsorbent are dispersed to form a slurry. The adsorbent is characterised spherical particles with an average radius of 1 <span class="math notranslate nohighlight">\(mm\)</span> and density of <span class="math notranslate nohighlight">\(700 kg\,m^{-3}\)</span>. The pollutant adsorption on the surface of the stationary phase particles is well described by a linear isotherm <span class="math notranslate nohighlight">\(q=Hc^*\)</span> with <span class="math notranslate nohighlight">\(H=1\times{10^{-1}} [dm]\)</span>.  The liquid-side mass transfer coefficient is <span class="math notranslate nohighlight">\(k_{\ell}=1\times{10^{-8}}\,[m h^{-1}]\)</span>.</p>
+<ul class="simple">
+<li><p>Is it possible to carry out the requested purification with the operation parameters described in the problem statment?</p></li>
+<li><p>If this is the case how much time does it take to lower the pollutant concetration to the target specification?</p></li>
+</ul>
+</section>
+<section id="material-balance-in-a-batch-slurry-adsorption-process">
+<h2>8.2 Material Balance in a Batch Slurry adsorption process<a class="headerlink" href="#material-balance-in-a-batch-slurry-adsorption-process" title="Link to this heading">#</a></h2>
+<p>Let us begin by writing the material balance for a batch membrane separator.</p>
+<p>Since we have a batch system, no inlet or outlet streams are present and we can write:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq1">
+<span class="eqno">(88)<a class="headerlink" href="#equation-slurryeq1" title="Link to this equation">#</a></span>\[
+V_\ell{c_0}=V_\ell{c}+S_pq
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(V_{\ell}\)</span> is the volume of the liquid phase (it can be considered constant), <span class="math notranslate nohighlight">\(c_0\)</span> is the initial concentration of pollutant in solution, <span class="math notranslate nohighlight">\(c\)</span> is the instantaneous concentration of pollutant in solution,  <span class="math notranslate nohighlight">\(q\)</span> the instantaneous surface concentration of pollutant adsorbed on the stationary phase and <span class="math notranslate nohighlight">\(S_p\)</span> the total surface exposed by the stationary phase particles.</p>
+<p>Mass transfer in these cases is dominated by bulk transport on the liquid side, thus the flux <span class="math notranslate nohighlight">\(J\)</span> of the pollutant leaving the fluid phase to be incorporated in the stationary phase can be written as:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq2">
+<span class="eqno">(89)<a class="headerlink" href="#equation-slurryeq2" title="Link to this equation">#</a></span>\[
+J=-k_\ell(c-c^*)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_\ell\)</span> is the mass transfer coefficient on the liquid side, and <span class="math notranslate nohighlight">\(c^*\)</span> is the equilibrium concentration, reached at the solid/liquid interface. <span class="math notranslate nohighlight">\(J\)</span> has the units of number of moles per unit time per unit surface.</p>
+<p>The differential material balance on the solute concentration can thus be written as:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq3">
+<span class="eqno">(90)<a class="headerlink" href="#equation-slurryeq3" title="Link to this equation">#</a></span>\[
+\frac{dc}{dt}=-k_\ell\frac{S_p}{V_\ell}(c-c^*)=-k_\ell{a}(c-c^*)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(a\)</span> represents the particles surface area per unit of fluid volume.</p>
+<p>The equilibrium of the adsorption process is well captured by a linear isotherm:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq4">
+<span class="eqno">(91)<a class="headerlink" href="#equation-slurryeq4" title="Link to this equation">#</a></span>\[
+c^*=\frac{q}{H}
+\label{eq:equilibrium}
+\]</div>
+<p>Using Eq. <a class="reference internal" href="#equation-slurryeq1">(88)</a> and <a class="reference internal" href="#equation-slurryeq4">(91)</a>, Eq. <a class="reference internal" href="#equation-slurryeq2">(89)</a> can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dc}{dt}=-k_\ell{a}\left(c-\frac{q}{H}\right) = -k_\ell{a}\left(c-\frac{(c_0-c)V_\ell}{HS_p}\right) = 
+\]</div>
+<div class="math notranslate nohighlight" id="equation-slurryeq5">
+<span class="eqno">(92)<a class="headerlink" href="#equation-slurryeq5" title="Link to this equation">#</a></span>\[
+=-k_\ell{a}c\left(1+\frac{V_\ell}{HS_p}\right)+k_\ell{a}c_0\frac{V_\ell}{HS_p}
+\]</div>
+<p>Defining: <span class="math notranslate nohighlight">\(\beta=\left(1+\frac{V_\ell}{HS_p}\right)\)</span>, and <span class="math notranslate nohighlight">\(\alpha=\frac{V_\ell}{HS_p}\)</span>, one gets:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq6">
+<span class="eqno">(93)<a class="headerlink" href="#equation-slurryeq6" title="Link to this equation">#</a></span>\[
+\frac{dc}{dt}+k_\ell{a}\beta\,c=k_\ell{a}c_0\alpha
+\]</div>
+<p>which is a first order, non homogeneous ODE in the form <span class="math notranslate nohighlight">\(y^\prime+C_1y=C_2\)</span> with constant <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> coefficients.</p>
+<p>In order to solve our problem Eq. <a class="reference internal" href="#equation-slurryeq6">(93)</a> should either numerically or analytically.
+In this case the analytical solution can be obtained from the general solution for ODEs in the form:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq7">
+<span class="eqno">(94)<a class="headerlink" href="#equation-slurryeq7" title="Link to this equation">#</a></span>\[
+y(t)=e^{-A(t)}\left[k_1+\int{be^{A(t)}dt}\right]
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A(t)=\int{C_1dt}\)</span></p>
+<p>In our case:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_1=k_\ell{a\beta}\)</span>, thus <span class="math notranslate nohighlight">\(A(t)=k_\ell{a\beta}\,t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_2=k_\ell{a\alpha}c_0\)</span>,</p></li>
+</ul>
+<p>thus:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq8">
+<span class="eqno">(95)<a class="headerlink" href="#equation-slurryeq8" title="Link to this equation">#</a></span>\[
+\int{be^{A(t)}dt}=\int{k_\ell{a\alpha}e^{k_\ell{a\beta}\,t}dt}=\frac{k_\ell{a\alpha}c_0}{k_\ell{a\beta}}e^{k_\ell{a\beta}\,t}=\frac{\alpha{c_0}}{\beta}e^{k_\ell{a\beta}\,t}
+\]</div>
+<p>putting everything together:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq9">
+<span class="eqno">(96)<a class="headerlink" href="#equation-slurryeq9" title="Link to this equation">#</a></span>\[
+c(t)=k_1e^{-k_\ell{a\beta}\,t}+\frac{\alpha{c_0}}{\beta}
+\]</div>
+<p>The constant <span class="math notranslate nohighlight">\(C_1\)</span> can be computed from the initial conditions: at <span class="math notranslate nohighlight">\(t=0\)</span> <span class="math notranslate nohighlight">\(c(t)=c_0\)</span>, therefore:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq10">
+<span class="eqno">(97)<a class="headerlink" href="#equation-slurryeq10" title="Link to this equation">#</a></span>\[
+k_1=c_0\left(1-\frac{\alpha}{\beta}\right)=\frac{c_0}{\beta}
+\]</div>
+<p>The final solution for the time-dependent concentration profile <span class="math notranslate nohighlight">\(c(t)\)</span> is:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq11">
+<span class="eqno">(98)<a class="headerlink" href="#equation-slurryeq11" title="Link to this equation">#</a></span>\[
+c(t)=\frac{c_0}{\beta}\left(e^{-k_\ell{a\beta}\,t}+\alpha\right)
+\]</div>
+<p>The performance of a batch slurry process in removing the concentration in the fluid phase is limited, i.e. the concentration has an asymptotic behavior in time <span class="math notranslate nohighlight">\(\lim_{t\to\infty} c(t) = \frac{\alpha{c_0}}{\beta}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="c1">#Plotting</span>
+<span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1">#number of points</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#particles mass</span>
+<span class="n">pm</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span> <span class="c1">#kg</span>
+<span class="c1">#particles volume</span>
+<span class="n">pV</span><span class="o">=</span><span class="mi">100</span><span class="o">/</span><span class="mi">700</span><span class="p">;</span> <span class="c1">#m^3</span>
+
+<span class="c1">#single particle volume</span>
+<span class="n">radius</span><span class="o">=</span><span class="mf">1E-3</span><span class="p">;</span>
+<span class="n">uV</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">uS</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">#number_of particles</span>
+<span class="n">NP</span><span class="o">=</span><span class="n">pV</span><span class="o">/</span><span class="n">uV</span><span class="p">;</span>
+<span class="n">Sp</span><span class="o">=</span><span class="n">NP</span><span class="o">*</span><span class="n">uS</span><span class="p">;</span> <span class="c1">#particles surface</span>
+
+<span class="c1">#Batch volume</span>
+<span class="n">Vl</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="c1">#m^3</span>
+<span class="c1">#Mass transfer</span>
+<span class="n">kl</span><span class="o">=</span><span class="mf">1E-8</span><span class="p">;</span> <span class="c1">#m/h</span>
+<span class="c1">#Equilibrium</span>
+<span class="n">H</span><span class="o">=</span><span class="mf">1E-1</span><span class="p">;</span> <span class="c1">#</span>
+
+<span class="c1">#Analytical solution 1</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.1</span><span class="p">;</span> <span class="c1">#mol/l</span>
+<span class="n">alpha</span><span class="o">=</span><span class="n">Vl</span><span class="o">/</span><span class="n">H</span><span class="o">/</span><span class="n">Sp</span><span class="p">;</span>
+<span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">alpha</span><span class="p">;</span>
+<span class="n">a</span><span class="o">=</span><span class="n">Sp</span><span class="o">/</span><span class="n">Vl</span><span class="p">;</span>
+<span class="n">C_inf</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">time</span><span class="p">))</span> <span class="o">*</span> <span class="n">C0</span><span class="o">*</span><span class="n">alpha</span><span class="o">/</span><span class="n">beta</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">C0</span><span class="o">/</span><span class="n">beta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">kl</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">time</span><span class="p">)</span><span class="o">+</span><span class="n">alpha</span><span class="p">)</span> 
+
+<span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">C_inf</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$time\,\,[hours]$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$C\,\,[mol / l]$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;$C(t)$&#39;</span><span class="p">,</span><span class="s1">&#39;$C_</span><span class="si">{inf}</span><span class="s1">$&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a926497cf9cb7223e455165204a6cfe82e8dd1380d4d18ca33009f90ac4ef85c.png" src="_images/a926497cf9cb7223e455165204a6cfe82e8dd1380d4d18ca33009f90ac4ef85c.png" />
+</div>
+</div>
+</section>
+<section id="continuous-slurry-adsorption">
+<h2>8.3 Continuous Slurry Adsorption<a class="headerlink" href="#continuous-slurry-adsorption" title="Link to this heading">#</a></h2>
+<p>The slurry adsorption process can be carried out in a continuous mode. In this mode both the adsorbent and the fluid phase are continuously fed into and removed from a stirred tank.</p>
+<p>In a continuous process it is convenient to define <span class="math notranslate nohighlight">\(a\)</span> as:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq13">
+<span class="eqno">(99)<a class="headerlink" href="#equation-slurryeq13" title="Link to this equation">#</a></span>\[
+a={S}\sigma/Q
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flowrate of the liquid phase, ans <span class="math notranslate nohighlight">\(S\)</span> is the mass flowrate of the solid adsorpbent phase, and <span class="math notranslate nohighlight">\(\sigma\)</span> is the surface area per unit mass of the adsorbent.</p>
+<p>In this context the  differential material balance on the solute concentration used to solve the unsteady state batch process should be rewritten as:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq12">
+<span class="eqno">(100)<a class="headerlink" href="#equation-slurryeq12" title="Link to this equation">#</a></span>\[
+\frac{dc}{dt}=-k_\ell{a}(c-c^*) \rightarrow \frac{{c_{in}-c_{out}}}{\tau}=k_\ell{a}(c_{out}-c^*)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time, <span class="math notranslate nohighlight">\(c_{out}\)</span> the concentration in the liquid phase in the unit, <span class="math notranslate nohighlight">\(c_{in}\)</span> the concentration in the feed, and <span class="math notranslate nohighlight">\(a\)</span> the amount of surface of the stationary phase particles per unit volume of the liquid phase.</p>
+<p>This expression should solved with the adsorption isotherm <span class="math notranslate nohighlight">\(q=kc^*\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the amount adsorbed per kg of stationary phase, <span class="math notranslate nohighlight">\(c\)</span> is the molar concentration in solution and <span class="math notranslate nohighlight">\(k\)</span> is the partition coefficient typically expressed in [l kg<span class="math notranslate nohighlight">\(^{-1}\)</span>], and with the global material balance at steady state, which reads:</p>
+<div class="math notranslate nohighlight" id="equation-slurryeq14">
+<span class="eqno">(101)<a class="headerlink" href="#equation-slurryeq14" title="Link to this equation">#</a></span>\[
+c_{in}Q=qS+c_{out}Q
+\]</div>
+</section>
+<section id="contributions">
+<h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
+<p>Romain Dujardin, 2 May 2022<br />
+Salar Rahbari Namin, 8 Feb 2021<br />
+Nikita Gusev, 9 Feb 2021</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Ion_Exchange.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">7. Equilibria in Ion Exchange Systems</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Solubility.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">9. Solubility</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">8.1 Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#material-balance-in-a-batch-slurry-adsorption-process">8.2 Material Balance in a Batch Slurry adsorption process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-slurry-adsorption">8.3 Continuous Slurry Adsorption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matteo Salvalaglio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Week 4 - Exercise &#8212; PSSP Virtual Notebook</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Exercise_W4_2024_updated';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Week 5 - Exercise" href="Exercise_W5_2021.html" />
+    <link rel="prev" title="Week 3 - Exercise" href="Exercise_W3_2021.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Particulate Systems and Separation Processes Notebook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Gas_permeation.html">1. Material Balances in a Gas Permeation Unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Osmosis.html">3. The Osmotic Pressure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Process_layouts.html">4. Membrane Processes Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Langmuir_isotherm.html">5. The Langmuir Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BET_isotherm.html">6. The BET Isotherm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ion_Exchange.html">7. Equilibria in Ion Exchange Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Slurry_Adsorption.html">8. Batch Slurry Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Solubility.html">9. Solubility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MSMPR_crystallizer.html">10. MSMPR Crystallizer: population balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W2_2021.html">Week 2 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W3_2021.html">Week 3 - Exercise</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 4 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W5_2021.html">Week 5 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W6_2021.html">Week 6 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W8_2021.html">Week 8 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W9_2021.html">Week 9 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W10_2021.html">Week 10 - Exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Exercise_W11_2021.html">Week 11 - Exercise</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/edit/master/Exercise_W4_2024_updated.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/msalvalaglio/PSSP_notebook/issues/new?title=Issue%20on%20page%20%2FExercise_W4_2024_updated.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Exercise_W4_2024_updated.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Week 4 - Exercise</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-1">Request 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-balance">Mass Balance:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-balance">Volume Balance:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-2">Request 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refinement-of-the-gams-solution">Refinement of the GAMS Solution:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="week-4-exercise">
+<h1>Week 4 - Exercise<a class="headerlink" href="#week-4-exercise" title="Link to this heading">#</a></h1>
+<section id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<p>The downstream processing of an aqueous stream containing therapeutic proteins produced in a bioreactor is carried out through an ultrafiltration membrane process.
+The volumetric flow to be processed is 200 <span class="math notranslate nohighlight">\(\mathrm{m^3\,day^{-1}}\)</span>, with a suspended protein concentration of 0.5 <span class="math notranslate nohighlight">\(\mathrm{kg\,m^{-3}}\)</span>.
+In order to be used in subsequent formulation stages the protein stream needs to be concentrated to 20 <span class="math notranslate nohighlight">\(\mathrm{kg\,m^{-3}}\)</span>.</p>
+<p>Tubular membrane modules with an exchange surface of 5 <span class="math notranslate nohighlight">\(\mathrm{m^2}\)</span> are used to carry out the ultrafiltration process.</p>
+<p>Due to fouling, the water flow through these membranes decreases when protein concentration (C) increases following the empirical law:</p>
+<div class="math notranslate nohighlight">
+\[
+J(C)=3.8\times10^{-2}\ln\left(\frac{145}{C}\right) \mathrm{[m\,h^{-1}]}
+\]</div>
+</section>
+<section id="requests">
+<h2>Requests<a class="headerlink" href="#requests" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Based on steady state calculations compute the number of membrane modules necessary for the operation of this process in a single-stage feed-and-bleed configuration.</p></li>
+<li><p>Consider now a cascade of two stages. Compute the optimal number of membrane modules and their arrangement in stages in order to achieve the specifics required. Compute all the concentrations and volumetric flows in your process configuration of choice.  Define clearly your chosen criterion for optimality.</p></li>
+</ul>
+</section>
+<section id="solution">
+<h2>Solution:<a class="headerlink" href="#solution" title="Link to this heading">#</a></h2>
+<p><em>[contributed by Max Shone, February 2024]</em></p>
+</section>
+<section id="request-1">
+<h2>Request 1<a class="headerlink" href="#request-1" title="Link to this heading">#</a></h2>
+<p>To compute the mumber of membrane modules necessary for the operation of this process in a single-stage feed-and-bleed configuration, a mass balance and volume balance can be set up:</p>
+<section id="mass-balance">
+<h3>Mass Balance:<a class="headerlink" href="#mass-balance" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+Q_{in}\times C_{in}=Q_{out}\times C_{out}
+\]</div>
+</section>
+<section id="volume-balance">
+<h3>Volume Balance:<a class="headerlink" href="#volume-balance" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+Q_{in}=Q_{out}+J(C)A
+\]</div>
+<p>To solve this problem, the following steps are taken:</p>
+<ul class="simple">
+<li><p>Solve mass balance for Qin.</p></li>
+<li><p>Solve empirical formula for flux through membrane.</p></li>
+<li><p>Rearrange volume balance for area and solve, rounding the final answer up.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">Qin</span> <span class="o">=</span> <span class="mi">200</span><span class="o">/</span><span class="mi">24</span> <span class="c1">#m^3/hr</span>
+<span class="n">Cin</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#kg/m^3</span>
+<span class="n">Cout</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#kg/m^3</span>
+
+<span class="c1">#equations</span>
+
+<span class="c1">#mass balance</span>
+<span class="n">Qout</span> <span class="o">=</span> <span class="n">Qin</span><span class="o">*</span><span class="n">Cin</span><span class="o">/</span><span class="n">Cout</span>
+
+<span class="c1">#Finding flux going through membrane</span>
+<span class="n">Jc</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">145</span><span class="o">/</span><span class="n">Cout</span><span class="p">))</span>
+
+<span class="c1">#Volume balance rearranged for A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">Qin</span><span class="o">-</span><span class="n">Qout</span><span class="p">)</span><span class="o">/</span><span class="n">Jc</span>
+<span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">A</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Flow rate out: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Qout</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m^3/h]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Flux: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Jc</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m/h]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membrane Area: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [m^2]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of stages: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [-]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Flow rate out:  0.2083  [m^3/h]
+
+Flux:  0.07528  [m/h]
+
+Membrane Area:  107.9  [m^2]
+
+Number of stages:  22.0  [-]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="request-2">
+<h2>Request 2<a class="headerlink" href="#request-2" title="Link to this heading">#</a></h2>
+<p>To find the optimal membrane configuration for a cascade of two stages, we would like to find the least number of total membranes that will result in an outlet concentration of 20 <span class="math notranslate nohighlight">\(\mathrm{kg\,m^{-3}}\)</span>.</p>
+<p>This can be done through completing a mass and volume balance over the first membrane, assuming the outlet concentration (C1) value, followed by completing the same calculations over the second membrane, with an outlet concentration of 20 <span class="math notranslate nohighlight">\(\mathrm{kg\,m^{-3}}\)</span>. The following graph shows all possible values of C1 between 0.5 and 20 <span class="math notranslate nohighlight">\(\mathrm{kg\,m^{-3}}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Question 2 Open exercsie</span>
+<span class="c1">#Initialising variables</span>
+<span class="n">Q0</span> <span class="o">=</span> <span class="mi">200</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span> <span class="c1">#[m^3/day] * [day/hour]</span>
+<span class="n">C0</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">#kg/m^3</span>
+<span class="n">C1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span> <span class="c1">#kg/m^3</span>
+<span class="n">C2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">#kg/m^3</span>
+<span class="n">JC</span> <span class="o">=</span> <span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">145.</span><span class="o">/</span><span class="n">C1</span><span class="p">)</span>
+
+<span class="c1">#Membrane Surface Area</span>
+<span class="n">MSA</span> <span class="o">=</span> <span class="mi">5</span> 
+
+<span class="c1">#Calculations over first membrane</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">Q0</span><span class="o">*</span><span class="n">C0</span><span class="o">/</span><span class="n">C1</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q0</span><span class="o">-</span><span class="n">Q1</span><span class="p">)</span><span class="o">/</span><span class="n">JC</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">A1</span><span class="o">/</span><span class="n">MSA</span><span class="p">)</span>
+
+<span class="c1">#Calculations over second membrane</span>
+<span class="n">Q2</span> <span class="o">=</span> <span class="n">Q1</span><span class="o">*</span><span class="n">C1</span><span class="o">/</span><span class="n">C2</span>
+<span class="n">A2</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q1</span><span class="o">-</span><span class="n">Q2</span><span class="p">)</span><span class="o">/</span><span class="n">JC</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">A2</span><span class="o">/</span><span class="n">MSA</span><span class="p">)</span>
+
+<span class="c1">#Total membranes</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">n1</span><span class="o">+</span><span class="n">n2</span>
+
+<span class="c1"># Plotting graphs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Total membranes&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Membrane 1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Membrane 2&quot;</span><span class="p">)</span>
+
+<span class="c1"># Adding legend, labels, and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Membranes&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Number of Membranes vs C1&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Show plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Finding index of minimum number of membranes</span>
+<span class="n">minN_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1">#Finding values at minimum number of membranes</span>
+<span class="n">minN</span> <span class="o">=</span> <span class="n">n</span><span class="p">[</span><span class="n">minN_index</span><span class="p">]</span>
+<span class="n">minN1</span> <span class="o">=</span> <span class="n">n1</span><span class="p">[</span><span class="n">minN_index</span><span class="p">]</span>
+<span class="n">minN2</span> <span class="o">=</span> <span class="n">n2</span><span class="p">[</span><span class="n">minN_index</span><span class="p">]</span>
+<span class="n">minC1</span> <span class="o">=</span> <span class="n">C1</span><span class="p">[</span><span class="n">minN_index</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stage 1 outlet concentration: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minC1</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [kg/m^3]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Minimum number of membranes for stage 1: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minN1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [-]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Minimum number of membranes for stage 2: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minN2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [-]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Minimum number of total membranes: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">minN</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; [-]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2422669e8ec62b36a5e7ba0267c0434d7fe2a3521d173581fd75a92e9fa3f449.png" src="_images/2422669e8ec62b36a5e7ba0267c0434d7fe2a3521d173581fd75a92e9fa3f449.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stage 1 outlet concentration:  2.015  [kg/m^3]
+
+Minimum number of membranes for stage 1:  8.0  [-]
+
+Minimum number of membranes for stage 2:  5.0  [-]
+
+Minimum number of total membranes:  13.0  [-]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can also be solved with GAMS:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Note: This code cannot be run in Jupyter notebook, copy paste into GAMS.</span>
+
+<span class="n">Parameters</span>
+<span class="n">Q0</span><span class="p">,</span><span class="n">C0</span><span class="p">,</span><span class="n">C2</span><span class="p">;</span>
+<span class="n">Q0</span><span class="o">=</span><span class="mi">200</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+<span class="n">C2</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+
+<span class="n">Variables</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">Q1</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">Q2</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span>
+<span class="p">;</span>
+
+<span class="n">Equations</span>
+<span class="n">mb1</span><span class="p">,</span> <span class="n">mb2</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">vb1</span><span class="p">,</span> <span class="n">vb2</span>
+<span class="p">;</span>
+
+<span class="n">mb1</span><span class="o">..</span> <span class="n">Q0</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="mi">145</span><span class="o">/</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="n">A1</span><span class="o">+</span><span class="n">Q1</span><span class="p">;</span>
+<span class="n">vb1</span><span class="o">..</span> <span class="n">Q1</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="n">Q0</span><span class="o">*</span><span class="n">C0</span><span class="o">/</span><span class="n">C1</span><span class="p">;</span>
+<span class="n">mb2</span><span class="o">..</span> <span class="n">Q1</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="mi">145</span><span class="o">/</span><span class="mi">20</span><span class="p">)</span><span class="o">*</span><span class="n">A2</span><span class="o">+</span><span class="n">Q2</span><span class="p">;</span>
+<span class="n">vb2</span><span class="o">..</span> <span class="n">Q2</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="n">Q1</span><span class="o">*</span><span class="n">C1</span><span class="o">/</span><span class="n">C2</span><span class="p">;</span>
+<span class="n">area</span><span class="o">..</span> <span class="n">n</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="n">A1</span><span class="o">/</span><span class="mi">5</span><span class="o">+</span><span class="n">A2</span><span class="o">/</span><span class="mi">5</span><span class="p">;</span>
+
+<span class="n">Model</span> <span class="n">process</span> <span class="o">/</span><span class="nb">all</span><span class="o">/</span><span class="p">;</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">l</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">Solve</span> <span class="n">process</span> <span class="n">using</span> <span class="n">NLP</span> <span class="n">minimising</span> <span class="n">n</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="refinement-of-the-gams-solution">
+<h2>Refinement of the GAMS Solution:<a class="headerlink" href="#refinement-of-the-gams-solution" title="Link to this heading">#</a></h2>
+<p><em>[Contributed by Divyansh Vashishtha, March 2024]</em></p>
+<p>In this version only an integer number of membrane modules can be adopted in every stage. In this version, only an integer number of membrane modules can be adopted in every stage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Parameters</span>
+<span class="n">Q0</span> <span class="n">intial</span> <span class="n">volumetric</span> <span class="n">flowrate</span> <span class="n">coming</span> <span class="n">into</span> <span class="n">stage</span> <span class="mi">1</span> <span class="p">[</span><span class="n">m</span><span class="o">^</span><span class="mi">3</span> <span class="n">h</span><span class="o">^-</span><span class="mi">1</span><span class="p">],</span>
+<span class="n">C0</span> <span class="n">initial</span> <span class="n">protein</span> <span class="n">concentration</span> <span class="n">coming</span> <span class="n">into</span> <span class="n">stage</span> <span class="mi">1</span>  <span class="p">[</span><span class="n">kg</span> <span class="n">m</span><span class="o">^-</span><span class="mi">3</span> <span class="p">],</span><span class="n">C2</span> <span class="n">final</span> <span class="n">protein</span> <span class="n">concentration</span> <span class="n">leaving</span> <span class="n">stage</span> <span class="mi">2</span> <span class="p">[</span><span class="n">kg</span> <span class="n">m</span><span class="o">^-</span><span class="mi">3</span><span class="p">];</span>
+<span class="o">*</span><span class="n">Initialisation</span> <span class="n">of</span> <span class="n">Parameters</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Process</span> <span class="n">Description</span><span class="p">:</span> <span class="n">Q0</span><span class="p">,</span> <span class="n">C0</span><span class="p">,</span> <span class="n">C2</span><span class="o">.</span>
+<span class="n">Q0</span><span class="o">=</span><span class="mi">200</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+<span class="n">C0</span><span class="o">=</span><span class="mf">0.5</span><span class="p">;</span>
+<span class="n">C2</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+
+<span class="n">Variables</span>
+<span class="n">n</span> <span class="n">total</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">across</span> <span class="n">the</span> <span class="n">two</span> <span class="n">stages</span> <span class="p">[</span><span class="n">decimal</span><span class="p">],</span>
+<span class="n">Q1</span> <span class="n">volumetric</span> <span class="n">flowrate</span> <span class="n">leaving</span> <span class="n">the</span> <span class="n">first</span> <span class="n">stage</span> <span class="p">[</span><span class="n">m</span><span class="o">^</span><span class="mi">3</span> <span class="n">h</span><span class="o">^-</span><span class="mi">1</span><span class="p">],</span>
+<span class="n">C1</span> <span class="n">concentration</span> <span class="n">of</span> <span class="n">protein</span> <span class="n">leaving</span> <span class="n">the</span> <span class="n">first</span> <span class="n">stage</span> <span class="p">[</span><span class="n">kg</span> <span class="n">m</span><span class="o">^-</span><span class="mi">3</span><span class="p">],</span>
+<span class="n">Q2</span> <span class="n">volumetric</span> <span class="n">flowrate</span> <span class="n">leaving</span> <span class="n">the</span> <span class="n">second</span> <span class="n">stage</span> <span class="p">[</span><span class="n">m</span><span class="o">^</span><span class="mi">3</span> <span class="n">h</span><span class="o">^-</span><span class="mi">1</span><span class="p">],</span>
+<span class="n">A1</span> <span class="n">Total</span> <span class="n">area</span> <span class="n">of</span> <span class="n">membranes</span> <span class="n">required</span> <span class="ow">in</span> <span class="n">stage</span> <span class="mi">1</span> <span class="p">[</span><span class="n">m</span><span class="o">^</span><span class="mi">2</span><span class="p">],</span>
+<span class="n">A2</span> <span class="n">Total</span> <span class="n">area</span> <span class="n">of</span> <span class="n">membranes</span> <span class="n">required</span> <span class="ow">in</span> <span class="n">stage</span> <span class="mi">2</span> <span class="p">[</span><span class="n">m</span><span class="o">^</span><span class="mi">2</span><span class="p">],</span>
+<span class="n">n1</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">required</span> <span class="k">for</span> <span class="n">stage</span> <span class="mi">1</span> <span class="p">[</span><span class="n">decimal</span><span class="p">],</span>
+<span class="n">n1_rounded</span> <span class="n">minimum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">required</span> <span class="k">for</span> <span class="n">stage</span> <span class="mi">1</span> <span class="p">[</span><span class="n">integer</span><span class="p">],</span>
+<span class="n">n2</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">required</span> <span class="k">for</span> <span class="n">stage</span> <span class="mi">2</span> <span class="p">[</span><span class="n">decimal</span><span class="p">],</span>
+<span class="n">n2_rounded</span> <span class="n">minimum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">required</span> <span class="k">for</span> <span class="n">stage</span> <span class="mi">2</span> <span class="p">[</span><span class="n">integer</span><span class="p">],</span>
+<span class="n">nx</span> <span class="n">rounded</span> <span class="n">up</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">total</span> <span class="n">membranes</span> <span class="n">required</span> <span class="p">[</span><span class="n">integer</span><span class="p">]</span><span class="o">.</span>
+<span class="p">;</span>
+
+<span class="n">Equations</span>
+<span class="n">mb1</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">mass</span> <span class="n">balane</span> <span class="n">of</span> <span class="n">the</span> <span class="n">solute</span> <span class="n">over</span> <span class="n">stage</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">mb2</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">mass</span> <span class="n">balance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">solute</span> <span class="n">over</span> <span class="n">stage</span> <span class="mi">2</span><span class="p">,</span>
+<span class="n">area1</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">area</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">required</span> <span class="n">over</span> <span class="n">the</span> <span class="n">first</span> <span class="n">stage</span><span class="p">,</span>
+<span class="n">vb1</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">balance</span> <span class="n">over</span> <span class="n">stage</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">vb2</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">volume</span> <span class="n">balance</span> <span class="n">over</span> <span class="n">stage</span> <span class="mi">2</span><span class="p">,</span>
+<span class="n">area2</span> <span class="n">equation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">area</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">required</span> <span class="n">over</span> <span class="n">the</span> <span class="n">second</span> <span class="n">stage</span><span class="p">,</span>
+<span class="n">roundn1</span> <span class="n">equation</span> <span class="n">that</span> <span class="n">rounds</span> <span class="n">up</span> <span class="n">the</span> <span class="n">decimal</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">obtained</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">first</span> <span class="n">stage</span> <span class="p">,</span>
+<span class="n">roundn2</span> <span class="n">equation</span> <span class="n">that</span> <span class="n">rounds</span> <span class="n">up</span> <span class="n">the</span> <span class="n">decimal</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">obtained</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">second</span> <span class="n">stage</span><span class="p">,</span>
+<span class="n">total_n</span> <span class="n">equation</span> <span class="n">that</span> <span class="n">determines</span> <span class="n">the</span> <span class="n">total</span> <span class="n">number</span> <span class="n">of</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">obtained</span> <span class="n">over</span> <span class="n">the</span> <span class="n">two</span> <span class="n">stages</span> <span class="p">[</span><span class="n">returns</span> <span class="n">a</span> <span class="n">decimal</span><span class="p">],</span>
+<span class="n">roundN</span> <span class="n">equation</span> <span class="n">that</span> <span class="n">displays</span> <span class="n">the</span> <span class="n">rounded</span> <span class="n">number</span> <span class="n">of</span> <span class="n">total</span> <span class="n">membrane</span> <span class="n">modules</span> <span class="n">over</span> <span class="n">the</span> <span class="n">two</span> <span class="n">stages</span><span class="p">;</span>
+
+<span class="n">vb1</span><span class="o">..</span> <span class="n">Q0</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="mi">145</span><span class="o">/</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="n">A1</span><span class="o">+</span><span class="n">Q1</span><span class="p">;</span>
+<span class="n">mb1</span><span class="o">..</span> <span class="n">Q1</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="n">Q0</span><span class="o">*</span><span class="n">C0</span><span class="o">/</span><span class="n">C1</span><span class="p">;</span>
+<span class="n">vb2</span><span class="o">..</span> <span class="n">Q1</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="mf">3.8</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">log</span><span class="p">(</span><span class="mi">145</span><span class="o">/</span><span class="n">C2</span><span class="p">)</span><span class="o">*</span><span class="n">A2</span><span class="o">+</span><span class="n">Q2</span><span class="p">;</span>
+<span class="n">mb2</span><span class="o">..</span> <span class="n">Q2</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="n">Q1</span><span class="o">*</span><span class="n">C1</span><span class="o">/</span><span class="n">C2</span><span class="p">;</span>
+<span class="n">area1</span><span class="o">..</span> <span class="n">n1</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">A1</span><span class="o">/</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">area2</span><span class="o">..</span> <span class="n">n2</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">A2</span><span class="o">/</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">roundn1</span><span class="o">..</span> <span class="n">n1_rounded</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+<span class="n">roundn2</span><span class="o">..</span> <span class="n">n2_rounded</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">n2</span><span class="p">);</span>
+<span class="n">total_n</span><span class="o">..</span> <span class="n">n</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">;</span>
+<span class="n">roundN</span><span class="o">..</span> <span class="n">nx</span> <span class="o">=</span><span class="n">e</span><span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+<span class="n">Model</span> <span class="n">process</span> <span class="o">/</span><span class="nb">all</span><span class="o">/</span><span class="p">;</span>
+<span class="n">c1</span><span class="o">.</span><span class="n">l</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">Solve</span> <span class="n">process</span> <span class="n">using</span> <span class="n">DNLP</span> <span class="n">minimising</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">display</span> <span class="n">n</span><span class="o">.</span><span class="n">l</span><span class="p">,</span> <span class="n">n1_rounded</span><span class="o">.</span><span class="n">l</span><span class="p">,</span> <span class="n">n2_rounded</span><span class="o">.</span><span class="n">l</span><span class="p">,</span> <span class="n">nx</span><span class="o">.</span><span class="n">l</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Exercise_W3_2021.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Week 3 - Exercise</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Exercise_W5_2021.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 5 - Exercise</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-1">Request 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-balance">Mass Balance:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-balance">Volume Balance:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#request-2">Request 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refinement-of-the-gams-solution">Refinement of the GAMS Solution:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matteo Salvalaglio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
