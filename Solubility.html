@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. Solubility &#8212; PSSP Virtual Notebook</title>
+    <title>Week 2 Liquid/Solid Equilibrium in multicomponent systems: defining solubility &#8212; PSSP Virtual Notebook</title>
   
   
   
@@ -190,7 +190,7 @@
 <li class="toctree-l1"><a class="reference internal" href="BET_isotherm.html">6. The BET Isotherm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ion_Exchange.html">7. Equilibria in Ion Exchange Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Slurry_Adsorption.html">8. Batch Slurry Adsorption</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Solubility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Week 2  Liquid/Solid Equilibrium in multicomponent systems: defining solubility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MSMPR_crystallizer.html">10. MSMPR Crystallizer: population balance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exercise_W2_2025.html">Week 2 - Exercise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Exercise_W3_2021.html">Week 3 - Exercise</a></li>
@@ -390,7 +390,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -401,11 +403,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>9. Solubility</h1>
+    <h1>Week 2  Liquid/Solid Equilibrium in multicomponent systems: defining solubility</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fugacity-of-a-real-solution">Fugacity of a real solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fugacity-of-a-pure-crystalline-solid">Fugacity of a pure crystalline solid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpy-of-phase-transition-at-t-and-p-for-pure-solute">Enthalpy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-of-phase-transition-at-t-and-p-for-pure-solute">Entropy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-of-phase-transition-at-t-and-p-for-pure-solute">Free energy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solubility">Solubility</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-schroeder-van-laar-equation">The Schroeder-Van Laar Equation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -415,73 +431,134 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="solubility">
-<h1>9. Solubility<a class="headerlink" href="#solubility" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="week-2-liquid-solid-equilibrium-in-multicomponent-systems-defining-solubility">
+<h1>Week 2  Liquid/Solid Equilibrium in multicomponent systems: defining solubility<a class="headerlink" href="#week-2-liquid-solid-equilibrium-in-multicomponent-systems-defining-solubility" title="Link to this heading">#</a></h1>
 <p>Let us begin by writing the solid-liquid equilibrium conditions at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P\)</span>, between a pure crystalline phase and a multicomponent liquid phase characterised by composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>.
-Equilibrium conditions is stated by the equality of chemical potentials:</p>
-<div class="math notranslate nohighlight" id="equation-soleq1">
-<span class="eqno">(102)<a class="headerlink" href="#equation-soleq1" title="Link to this equation">#</a></span>\[
+Equilibrium is stated by the equality of chemical potentials:</p>
+<div class="math notranslate nohighlight">
+\[
 \mu_i^s(T,P)=\mu_i^\ell(T,P,\vec{x})
 \]</div>
 <p>which is equivalent to the equality of the fugacity in the two phases:</p>
-<div class="math notranslate nohighlight" id="equation-soleq2">
-<span class="eqno">(103)<a class="headerlink" href="#equation-soleq2" title="Link to this equation">#</a></span>\[
-f_i^s(T,P)=f_i^\ell(T,P,\vec{x})
+<div class="math notranslate nohighlight">
+\[
+f_i^s(T,P)=\hat{f}_i^\ell(T,P,\vec{x})
 \]</div>
-<p>Focusing on the right hand of Eq.<a class="reference internal" href="#equation-soleq2">(103)</a>, the fugacity in the liquid phase can be rewritten as a function of the fugacity of the pure liquid phase as follows:</p>
-<div class="math notranslate nohighlight" id="equation-soleq3">
-<span class="eqno">(104)<a class="headerlink" href="#equation-soleq3" title="Link to this equation">#</a></span>\[
-f_i^\ell(T,P,\vec{x})=f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})
+<p>where <span class="math notranslate nohighlight">\(f_i^s(T,P)\)</span> is the fugacity of a pure crystalline solid at <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P\)</span>, while <span class="math notranslate nohighlight">\(\hat{f}_i^\ell(T,P,\vec{x})\)</span>, is the fugacity of a \emph{real} mixture at the same temperature and pressure, at composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>.</p>
+<section id="fugacity-of-a-real-solution">
+<h2>Fugacity of a real solution<a class="headerlink" href="#fugacity-of-a-real-solution" title="Link to this heading">#</a></h2>
+<p>Focusing on the right hand of Eq.\ref{eq:fugacity}, the fugacity in the \textbf{real solution} phase can be rewritten as a function of the fugacity of the \textbf{pure liquid phase} as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{f}_i^\ell(T,P,\vec{x})=f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction of the solute and <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient of that specie in the liquid phase.</p>
-<p>Let us now focus on the left hand side of Eq. <a class="reference internal" href="#equation-soleq2">(103)</a>. The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid:</p>
-<div class="math notranslate nohighlight" id="equation-soleq4">
-<span class="eqno">(105)<a class="headerlink" href="#equation-soleq4" title="Link to this equation">#</a></span>\[
+<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction that realizes the equality between fugacities, i.e. the solubility of component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(f_i^\ell(T,P)x_i\)</span> is the fugacity of an \emph{ideal} solution at molar fraction <span class="math notranslate nohighlight">\(x_i\)</span>, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient, capturing the non-idealities of the liquid phase in equilibrium with the solid. By definition of an ideal solution <span class="math notranslate nohighlight">\(f_i^\ell(T,P)\)</span> is the fugacity of the \textbf{pure solute in its liquid phase} at temperature T and pressure P.</p>
+</section>
+<section id="fugacity-of-a-pure-crystalline-solid">
+<h2>Fugacity of a pure crystalline solid<a class="headerlink" href="#fugacity-of-a-pure-crystalline-solid" title="Link to this heading">#</a></h2>
+<p>Let us now focus on the left-hand side of Eq.\ref{eq:fugacity}. Here, we are only concerned with the \textbf{physical properties of the pure solute}.
+The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid by introducing the definition of fugacity and integrating between the liquid and solid states \emph{<span class="math notranslate nohighlight">\(\ell\)</span>}<span class="math notranslate nohighlight">\(\rightarrow\)</span>\emph{s}:</p>
+<div class="math notranslate nohighlight">
+\[
 \int^{T,P,s}_{T,P,\ell}d\mu_i=\int^{T,P,s}_{T,P,\ell}RTd\ln{f_i}
 \]</div>
-<div class="math notranslate nohighlight" id="equation-soleq5">
-<span class="eqno">(106)<a class="headerlink" href="#equation-soleq5" title="Link to this equation">#</a></span>\[
+<p>which, integrated, leads to:</p>
+<div class="math notranslate nohighlight">
+\[
 \Delta{\mu}_{i,\ell\rightarrow{s}}=RTln\left(\frac{f_i^s(T,P)}{f_i^\ell(T,P)}\right)
 \]</div>
-<div class="math notranslate nohighlight" id="equation-soleq6">
-<span class="eqno">(107)<a class="headerlink" href="#equation-soleq6" title="Link to this equation">#</a></span>\[
+<p>and rearranged gives:</p>
+<div class="math notranslate nohighlight">
+\[
 f_i^s(T,P)=f_i^\ell(T,P)e^{\frac{\Delta{\mu}_{i,\ell\rightarrow{s}}}{RT}}
 \]</div>
-<p>The change in chemical potential can be written for a pure substance as the partial molar change in free energy <span class="math notranslate nohighlight">\(\Delta{g_i(T,P)}\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-soleq7">
-<span class="eqno">(108)<a class="headerlink" href="#equation-soleq7" title="Link to this equation">#</a></span>\[
+<p>where notably <span class="math notranslate nohighlight">\(\Delta{\mu}_{i,\ell\rightarrow{s}}\)</span>, is the change in chemical potential associated with the liquid to solid transition of the \emph{pure solid}.
+We note that the change in chemical potential for a pure substance corresponds to the the partial molar change in free energy <span class="math notranslate nohighlight">\(\Delta{g_i(T,P)}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \Delta\mu_{i,\ell\rightarrow{s}}=\Delta{g}_i^s(T,P)=\Delta{h}_i(T,P)-T\Delta{s}_i(T,P)
 \]</div>
-<p>The molar enthalpy change is:</p>
-<div class="math notranslate nohighlight" id="equation-soleq8">
-<span class="eqno">(109)<a class="headerlink" href="#equation-soleq8" title="Link to this equation">#</a></span>\[
-\Delta{h}_i(T,P)=-\Delta{h_{fus}\left(T_f\right)}+\int_T^{T_f}Cp^{\ell}dT+\int_T^{T_f}Cp^{s}dT\simeq-\Delta{h_{fus}\left(T_f\right)}+\left(Cp^{\ell}-Cp^{s}\right)\left(T_f-T\right)
+<p>Now we express the molar enthalpy change \textbf{for the pure solute} by considering a thermodynamic cycle, that goes through the melting temperature <span class="math notranslate nohighlight">\(T_f\)</span> at pressure P. This enables the computation of <span class="math notranslate nohighlight">\(\Delta{h}_i(T,P)\)</span> and <span class="math notranslate nohighlight">\(\Delta{s}_i(T,P)\)</span> via an arbitrary but convenient path, taking advantage of the fact that all terms in the free energy expression are \emph{state functions}.</p>
+</section>
+<section id="enthalpy-of-phase-transition-at-t-and-p-for-pure-solute">
+<h2>Enthalpy of phase transition at T and P for pure solute<a class="headerlink" href="#enthalpy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<p>The enthalpy change associated with the solid-to-liquid transition becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta{h}_i(T,P)=-\Delta{h_{fus}\left(T_f\right)}+\int_T^{T_f}Cp^{\ell}dT-\int_T^{T_f}Cp^{s}dT
 \]</div>
-<p>while the molar entropy change is written as:</p>
-<div class="math notranslate nohighlight" id="equation-soleq9">
-<span class="eqno">(110)<a class="headerlink" href="#equation-soleq9" title="Link to this equation">#</a></span>\[
-\Delta{s}_i(T,P)=-\frac{\Delta{h_{fus}\left(T_f\right)}}{T_f}+\int_T^{T_f}\frac{Cp^{\ell}}{T}dT+\int_T^{T_f}\frac{Cp^{s}}{T}dT \simeq -\frac{\Delta{h_{fus}}}{T_f}+\left(Cp^{\ell}-Cp^{s}\right)\ln{\left(\frac{T_f}{T}\right)}
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\int_T^{T_f}Cp^{\ell}dT\)</span> is the enthalpy change associated with raising the temperature of the <em>pure solute liquid</em> from <span class="math notranslate nohighlight">\(T\)</span> to <span class="math notranslate nohighlight">\(T_m\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-\int_T^{T_f}Cp^{s}dT\)</span> is the enthalpy change associated with decreasing the temperature of the <em>pure solid</em> from <span class="math notranslate nohighlight">\(T_m\)</span> to <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({-\Delta{h_{fus}\left(T_f\right)}}\)</span> is the change in enthalpy associated with the liquid to solid transition of the <em>pure solute</em> at the melting temperature</p></li>
+</ul>
+<p>For heat capacities independent of T, the enthalpic contribution reduces to:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta{h}_i(T,P)\simeq-\Delta{h_{fus}\left(T_f\right)}+\left(Cp^{\ell}-Cp^{s}\right)\left(T_f-T\right)
 \]</div>
-<p>Defining <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}=\left(Cp^{\ell}-Cp^{s}\right)\)</span></p>
-<div class="math notranslate nohighlight" id="equation-soleq10">
-<span class="eqno">(111)<a class="headerlink" href="#equation-soleq10" title="Link to this equation">#</a></span>\[
+</section>
+<section id="entropy-of-phase-transition-at-t-and-p-for-pure-solute">
+<h2>Entropy of phase transition at T and P for pure solute<a class="headerlink" href="#entropy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<p>Analogously to the enthalpy term, we can write the molar change in entropy via a the same thermodynamic cycle:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta{s}_i(T,P)=-\frac{\Delta{h_{fus}\left(T_f\right)}}{T_f}+\int_T^{T_f}\frac{Cp^{\ell}}{T}dT-\int_T^{T_f}\frac{Cp^{s}}{T}dT 
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(+\int_T^{T_f}\frac{Cp^{\ell}}{T}dT\)</span> is the entropy change associated with raising the temperature of the <em>pure solute liquid</em> from <span class="math notranslate nohighlight">\(T\)</span> to <span class="math notranslate nohighlight">\(T_m\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-\int_T^{T_f}\frac{Cp^{s}}{T}dT \)</span> is the enthalpy change associated with decreasing the temperature of the <em>pure solid</em> from <span class="math notranslate nohighlight">\(T_m\)</span> to <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-\frac{\Delta{h_{fus}\left(T_f\right)}}{T_f}\)</span> is the change in entropy associated with the liquid to the solid transition of the <em>pure solute</em> at the melting temperature</p></li>
+</ul>
+<p>Again, for heat capacities independent of T, the entropy change reduces to:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta{s}_i(T,P) \simeq -\frac{\Delta{h_{fus}}}{T_f}+\left(Cp^{\ell}-Cp^{s}\right)\ln{\left(\frac{T_f}{T}\right)}
+\]</div>
+</section>
+<section id="free-energy-of-phase-transition-at-t-and-p-for-pure-solute">
+<h2>Free energy of phase transition at T and P for pure solute<a class="headerlink" href="#free-energy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<p>Defining <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}=\left(Cp^{\ell}-Cp^{s}\right)\)</span> we can now recover the expression for <span class="math notranslate nohighlight">\(\Delta{g}_i^s(T,P)\)</span>, where the only assumption is that <span class="math notranslate nohighlight">\(Cp^{\ell}\)</span> and <span class="math notranslate nohighlight">\(Cp^{s}\)</span> are independent from the temperature T.</p>
+<div class="math notranslate nohighlight">
+\[
 \Delta{g}_i^s(T,P)=-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}+\Delta{Cp}_{\ell\rightarrow{s}}\left(T_f-T-T\ln{\left(\frac{T_f}{T}\right)}\right)
 \]</div>
-<p>Since <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}\)</span> is usually small compared the above expression is typically simplified to:</p>
-<div class="math notranslate nohighlight" id="equation-soleq11">
-<span class="eqno">(112)<a class="headerlink" href="#equation-soleq11" title="Link to this equation">#</a></span>\[
+</section>
+<section id="solubility">
+<h2>Solubility<a class="headerlink" href="#solubility" title="Link to this heading">#</a></h2>
+<p>Inserting now this expression in Eq. \ref{eq:fugacitysolid} yields:</p>
+<div class="math notranslate nohighlight">
+\[
+f_i^s(T,P)=f_i^\ell(T,P)\exp\left[\frac{{-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}+\Delta{Cp}_{\ell\rightarrow{s}}\left(T_f-T-T\ln{\left(\frac{T_f}{T}\right)}\right)}}{RT}\right]
+\]</div>
+<p>which then can be inserted into the equality of fugacities defining equilibrium Eq.\ref{eq:fugacity} giving:</p>
+<div class="math notranslate nohighlight">
+\[
+f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})=f_i^\ell(T,P)\exp\left[\frac{{-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}+\Delta{Cp}_{\ell\rightarrow{s}}\left(T_f-T-T\ln{\left(\frac{T_f}{T}\right)}\right)}}{RT}\right]
+\]</div>
+<p>which can be rearranged to yield an expression of the solubility <span class="math notranslate nohighlight">\(x_i\)</span> where the only approximation introduced is in considering the heat capacities of both the crystal and the liquid constant in T.</p>
+<div class="math notranslate nohighlight">
+\[
+x_i=\frac{1}{\gamma_i(T,P,\vec{x})}\exp\left[\frac{{-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}+\Delta{Cp}_{\ell\rightarrow{s}}\left(T_f-T-T\ln{\left(\frac{T_f}{T}\right)}\right)}}{RT}\right]
+\]</div>
+<p>In this expression, the fugacity of the pure liquid solute, <span class="math notranslate nohighlight">\(f_i^\ell(T,P)\)</span> here cancels out, and the term <span class="math notranslate nohighlight">\(-\Delta{h_{fus}}\)</span> is not approximating a different quantity (like the enthalpy of dissolution). It is actually introduced rigorously by the convenient choice of an appropriate thermodynamic cycle for the calculation of <span class="math notranslate nohighlight">\(\Delta\mu_{i,\ell\rightarrow{s}}\)</span>.</p>
+</section>
+<section id="the-schroeder-van-laar-equation">
+<h2>The Schroeder-Van Laar Equation<a class="headerlink" href="#the-schroeder-van-laar-equation" title="Link to this heading">#</a></h2>
+<p>The Schroeder-Van Laar equation for the solubility is derived from \ref{eq:solubility} by assuming that <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}\)</span> is negligible.</p>
+<p>This simplification yields:</p>
+<div class="math notranslate nohighlight">
+\[
 \Delta{g}_i^s(T,P)\simeq-\Delta{h_{fus}\left(1-\frac{T}{T_f}\right)}
 \]</div>
-<p>Inserting this equation into the equality of fugacities yields:</p>
-<div class="math notranslate nohighlight" id="equation-soleq12">
-<span class="eqno">(113)<a class="headerlink" href="#equation-soleq12" title="Link to this equation">#</a></span>\[
-f_i^\ell(T,P)x_i\gamma_i(T,P,\vec{x})=f_i^\ell(T,P)e^{\frac{\Delta{\mu}_{i,\ell\rightarrow{s}}}{RT}}
+<p>Thus leading to the Schroeder-Van Laar solubility equation for <span class="math notranslate nohighlight">\(x_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+x_i=\frac{1}{\gamma_i(T,P,\vec{x})}\exp\left[{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T}-\frac{1}{T_f}\right)}\right]
 \]</div>
-<p>hence the solubility of component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(x_i\)</span> is:</p>
-<div class="math notranslate nohighlight" id="equation-soleq13">
-<span class="eqno">(114)<a class="headerlink" href="#equation-soleq13" title="Link to this equation">#</a></span>\[
-x_i=\frac{1}{\gamma_i(T,P,\vec{x})}e^{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T}-\frac{1}{T_f}\right)}
-\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -538,6 +615,27 @@ x_i=\frac{1}{\gamma_i(T,P,\vec{x})}e^{-\frac{\Delta{h_{fus}}}{R}\left(\frac{1}{T
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fugacity-of-a-real-solution">Fugacity of a real solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fugacity-of-a-pure-crystalline-solid">Fugacity of a pure crystalline solid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpy-of-phase-transition-at-t-and-p-for-pure-solute">Enthalpy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-of-phase-transition-at-t-and-p-for-pure-solute">Entropy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-of-phase-transition-at-t-and-p-for-pure-solute">Free energy of phase transition at T and P for pure solute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solubility">Solubility</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-schroeder-van-laar-equation">The Schroeder-Van Laar Equation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
