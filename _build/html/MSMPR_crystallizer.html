@@ -419,16 +419,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">10.4 Moments of the PSD in a MSMPR crystallizer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">10.5 Adimensional Mass distribution and dominant crystal size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-recall-the-integration-by-parts-formula">Step 1: Recall the Integration by Parts Formula</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-identify-u-and-dv">Step 2: Identify $<span class="math notranslate nohighlight">\( u \)</span><span class="math notranslate nohighlight">\( and \)</span><span class="math notranslate nohighlight">\( dv \)</span>$</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-first-integration-g-tauy-parts">Step 3: First Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-second-integration-g-tauy-parts">Step 4: Second Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-third-integration-g-tauy-parts">Step 5: Third Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-comg-tauine-results">Step 6: ComG \tauine Results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-form">Step 7: Final Form</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
 </ul>
             </nav>
         </div>
@@ -442,15 +433,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="msmpr-crystallizer-population-balance">
 <h1>10. MSMPR Crystallizer: population balance<a class="headerlink" href="#msmpr-crystallizer-population-balance" title="Link to this heading">#</a></h1>
-<p>Let us consider an MiLed Suspension MiLed Product removal crystallizer operating at steady state at constant temperature.
-In these notes we will derive the analystical eLpression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.</p>
+<p>Let us consider an Mixed Suspension Mixed Product removal crystallizer operating at steady state at constant temperature.
+In these notes we will derive the analystical expression of the steady state particle size distribution by introducing a monodimensional population balance, and we will discuss its coupling with the global material balance.</p>
 <section id="material-balance">
 <h2>10.0 Material Balance<a class="headerlink" href="#material-balance" title="Link to this heading">#</a></h2>
 <p>Let us begin by considering the global material balance for an MSMPR crystallizer. The operation of an ideal MSMPR crystallizer is characterised by the following set of hypotheses:</p>
 <ul class="simple">
 <li><p>The crystalliser operates continuously</p></li>
 <li><p>Operation is at steady state</p></li>
-<li><p>The crystalliser is perfectly miLed (both with respect to the liquid and the solid phases)</p></li>
+<li><p>The crystalliser is perfectly mixed (both with respect to the liquid and the solid phases)</p></li>
 <li><p>The outlet has a composition identical in all respects to the crystallizer content</p></li>
 <li><p>There are no crystals in the feed</p></li>
 <li><p>The growth rate G=dL/dt is independent from the crystal size (L)</p></li>
@@ -546,8 +537,8 @@ n_0=\frac{J}{G}
 
 <span class="c1">#Plotting</span>
 <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">aLes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_aLes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Data</span>
@@ -560,19 +551,19 @@ n_0=\frac{J}{G}
 <span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tau</span><span class="p">))))</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tau</span><span class="p">)):</span>     
-    <span class="n">c</span><span class="o">=</span><span class="n">neLt</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
     
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. residence time&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_Llabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 
 <span class="c1">#########################################################</span>
 <span class="c1"># Plotting</span>
 <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">aLes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_aLes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Data</span>
@@ -585,19 +576,19 @@ n_0=\frac{J}{G}
 <span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">G</span><span class="p">))));</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">G</span><span class="p">)):</span>     
-    <span class="n">c</span><span class="o">=</span><span class="n">neLt</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
-    <span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span> <span class="o">/</span> <span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
     
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. growth rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_Llabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 
 
 <span class="c1">#########################################################</span>
 <span class="c1"># Plotting</span>
 <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">aLes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_aLes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
@@ -611,32 +602,32 @@ n_0=\frac{J}{G}
 <span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">J</span><span class="p">))));</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">J</span><span class="p">)):</span>     
-    <span class="n">c</span><span class="o">=</span><span class="n">neLt</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span> <span class="n">J</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
-    <span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+    <span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span> <span class="n">J</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">G</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">G</span><span class="o">/</span><span class="n">tau</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
     
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;n(L) vs. nucleation rate&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_Llabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$n$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#Plotting</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">aLes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_aLes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">59</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">59</span> <span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="c1"># Data</span>
 
-<span class="ne">AttributeError</span>: &#39;Figure&#39; object has no attribute &#39;add_aLes&#39;
+<span class="ne">AttributeError</span>: module &#39;matplotlib.pyplot&#39; has no attribute &#39;Lticks&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="_images/24a1810bebb9ab738b94f3a50cfb740ea3affc9fc226cf6d1ca31c50966f7f02.png" src="_images/24a1810bebb9ab738b94f3a50cfb740ea3affc9fc226cf6d1ca31c50966f7f02.png" />
+<img alt="_images/b4486f1fb0c03c531f265c20d53f8e3f43f6f1b054752298f9b9b6b32b58120d.png" src="_images/b4486f1fb0c03c531f265c20d53f8e3f43f6f1b054752298f9b9b6b32b58120d.png" />
+<img alt="_images/d73a4457b9cd997849a7a1681a28595f64390ccf418b0aa20a7702a0a8875e80.png" src="_images/d73a4457b9cd997849a7a1681a28595f64390ccf418b0aa20a7702a0a8875e80.png" />
 </div>
 </div>
 </section>
@@ -685,22 +676,22 @@ V_T=6{\alpha}n_0(G\tau)^4
 M_T=\rho_c{V_T}=6\rho_c{\alpha}n_0(G\tau)^4
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho_c\)</span> is the density of the crystalline phase.</p>
-<p>This eLpression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
+<p>This expression for <span class="math notranslate nohighlight">\(M_T\)</span> allows to couple the population balance and the gobal material balance in an MSMPR crystallizer since <span class="math notranslate nohighlight">\(M_T=C_{in}-C_{out}\)</span>, where <span class="math notranslate nohighlight">\(C_{in}\)</span> and <span class="math notranslate nohighlight">\(C_{out}\)</span> are the inlet and outlet concentrations of solute in the liquid phase.</p>
 </section>
 <section id="adimensional-mass-distribution-and-dominant-crystal-size">
 <h2>10.5 Adimensional Mass distribution and dominant crystal size<a class="headerlink" href="#adimensional-mass-distribution-and-dominant-crystal-size" title="Link to this heading">#</a></h2>
-<p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(L=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
+<p>In order to obtain a general relationship between the crystallization process and an average indicator of the crystalline particles size obtained in an MSMPR crystallizer it is convenient to write the cumulative mass distribution in a dimensionless form. To this aim we introduce the dimensionless length <span class="math notranslate nohighlight">\(x=L/G\tau\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is the growth rate and <span class="math notranslate nohighlight">\(\tau\)</span> is the residence time.</p>
 <p>The cumulative mass distribution can thus be written as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq18">
 <span class="eqno">(120)<a class="headerlink" href="#equation-msmpreq18" title="Link to this equation">#</a></span>\[
-M(L)=\frac{M}{M_T}=\frac{\int_0^{L}L^3\eLp(-L)dL}{\int_0^{\infty}L^3\eLp(-L)dL}=1-\left(1+L+\frac{1}{2}L^2+\frac{1}{6}L^3\right)\eLp(-L)
+M(x)=\frac{M}{M_T}=\frac{\int_0^{x}x^3\exp(-x)dx}{\int_0^{\infty}x^3\exp(-x)dx}=1-\left(1+x+\frac{1}{2}x^2+\frac{1}{6}x^3\right)\exp(-x)
 \]</div>
-<p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(L)\)</span>with respect to <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<p>The corresponding mass population density is computed differentiating <span class="math notranslate nohighlight">\(M(x)\)</span>with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq19">
 <span class="eqno">(121)<a class="headerlink" href="#equation-msmpreq19" title="Link to this equation">#</a></span>\[
-m(L)=\frac{dM(L)}{dL}=\frac{1}{6}L^3\eLp(-L)
+m(x)=\frac{dM(x)}{dx}=\frac{1}{6}x^3\exp(-x)
 \]</div>
-<p>The mass-based population density m(L) has a maLimum for <span class="math notranslate nohighlight">\(L=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
+<p>The mass-based population density m(x) has a maximum for <span class="math notranslate nohighlight">\(x=3\)</span>, hence the most probable - often referred to as the modal or dominant particle size can be computed as:</p>
 <div class="math notranslate nohighlight" id="equation-msmpreq20">
 <span class="eqno">(122)<a class="headerlink" href="#equation-msmpreq20" title="Link to this equation">#</a></span>\[
 L_D=3G\tau
@@ -713,26 +704,26 @@ L_D=3G\tau
 
 <span class="c1">#Plotting</span>
 <span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">aLes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_aLes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">Lticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Data</span>
-<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
 
 <span class="n">color</span><span class="o">=</span><span class="nb">iter</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
   
-<span class="n">c</span><span class="o">=</span><span class="n">neLt</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-<span class="n">M</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">L</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="p">)</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">M</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
-<span class="n">c</span><span class="o">=</span><span class="n">neLt</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-<span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="p">)</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
-<span class="n">aLes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">eLp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)]),</span><span class="s1">&#39;--&#39;</span><span class="p">,)</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">M</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+<span class="n">c</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>    
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)]),</span><span class="s1">&#39;--&#39;</span><span class="p">,)</span>
 
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_Llabel</span><span class="p">(</span><span class="s1">&#39;$L$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$M(L)/m(L)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
-<span class="n">aLes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;M(L)&#39;</span><span class="p">,</span><span class="s1">&#39;m(L)&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$M(x)/m(x)$&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;M(x)&#39;</span><span class="p">,</span><span class="s1">&#39;m(x)&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -745,114 +736,6 @@ L_D=3G\tau
 <h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
 <p>Guilherme Pizarro Werner, 23 February 2021</p>
 <p>Ahmad Eblagh, 13 March 2021</p>
-<section id="step-1-recall-the-integration-by-parts-formula">
-<h3>Step 1: Recall the Integration by Parts Formula<a class="headerlink" href="#step-1-recall-the-integration-by-parts-formula" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-\int u \, dv = uv - \int v \, du
-\]</div>
-</section>
-<section id="step-2-identify-u-and-dv">
-<h3>Step 2: Identify $<span class="math notranslate nohighlight">\( u \)</span><span class="math notranslate nohighlight">\( and \)</span><span class="math notranslate nohighlight">\( dv \)</span>$<a class="headerlink" href="#step-2-identify-u-and-dv" title="Link to this heading">#</a></h3>
-<p>We’ll set:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ u = L^3 $$ → $$ du = 3L^2 \, dL \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[ dv = e^{-L/G \tau} \, dL $$ → $$ v = -G \tau e^{-L/G \tau} \]</div>
-</li>
-</ul>
-</section>
-<section id="step-3-first-integration-g-tauy-parts">
-<h3>Step 3: First Integration G \tauy Parts<a class="headerlink" href="#step-3-first-integration-g-tauy-parts" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-\int L^3 e^{-L/G \tau} \, dL = -G \tau L^3 e^{-L/G \tau} - \int -G \tau \cdot 3L^2 e^{-L/G \tau} \, dL
-\]</div>
-<p>This simplifies to:</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^3 e^{-L/G \tau} \, dL = -G \tau L^3 e^{-L/G \tau} + 3G \tau \int L^2 e^{-L/G \tau} \, dL
-\]</div>
-</section>
-<section id="step-4-second-integration-g-tauy-parts">
-<h3>Step 4: Second Integration G \tauy Parts<a class="headerlink" href="#step-4-second-integration-g-tauy-parts" title="Link to this heading">#</a></h3>
-<p>For the neLt integral, set:</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ u = L^2 $$ → $$ du = 2L \, dL \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[ dv = e^{-L/G \tau} \, dL $$ → $$ v = -G \tau e^{-L/G \tau} \]</div>
-</li>
-</ul>
-<p>Now,</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^2 e^{-L/G \tau} \, dL = -G \tau L^2 e^{-L/G \tau} - \int -G \tau \cdot 2L e^{-L/G \tau} \, dL
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\int L^2 e^{-L/G \tau} \, dL = -G \tau L^2 e^{-L/G \tau} + 2G \tau \int L e^{-L/G \tau} \, dL
-\]</div>
-</section>
-<section id="step-5-third-integration-g-tauy-parts">
-<h3>Step 5: Third Integration G \tauy Parts<a class="headerlink" href="#step-5-third-integration-g-tauy-parts" title="Link to this heading">#</a></h3>
-<p>For the neLt integral,</p>
-<ul>
-<li><div class="math notranslate nohighlight">
-\[ u = L $$ → $$ du = dL \]</div>
-</li>
-<li><div class="math notranslate nohighlight">
-\[ dv = e^{-L/G \tau} \, dL $$ → $$ v = -G \tau e^{-L/G \tau} \]</div>
-</li>
-</ul>
-<p>Now,</p>
-<div class="math notranslate nohighlight">
-\[
-\int L e^{-L/G \tau} \, dL = -G \tau L e^{-L/G \tau} - \int -G \tau e^{-L/G \tau} \, dL
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\int L e^{-L/G \tau} \, dL = -G \tau L e^{-L/G \tau} + G \tau^2 e^{-L/G \tau}
-\]</div>
-</section>
-<section id="step-6-comg-tauine-results">
-<h3>Step 6: ComG \tauine Results<a class="headerlink" href="#step-6-comg-tauine-results" title="Link to this heading">#</a></h3>
-<p>Going G \tauack up the chain,</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^2 e^{-L/G \tau} \, dL = -G \tau L^2 e^{-L/G \tau} + 2G \tau(-G \tau L e^{-L/G \tau} + G \tau^2 e^{-L/G \tau})
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-= -G \tau L^2 e^{-L/G \tau} - 2G \tau^2 L e^{-L/G \tau} + 2G \tau^3 e^{-L/G \tau}
-\]</div>
-<p>Now returning to the first integration G \tauy parts step,</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^3 e^{-L/G \tau} \, dL = -G \tau L^3 e^{-L/G \tau} + 3G \tau \left(-G \tau L^2 e^{-L/G \tau} - 2G \tau^2 L e^{-L/G \tau} + 2G \tau^3 e^{-L/G \tau} \right)
-\]</div>
-<p>ELpanding:</p>
-<div class="math notranslate nohighlight">
-\[
-= -G \tau L^3 e^{-L/G \tau} - 3G \tau^2 L^2 e^{-L/G \tau} - 6G \tau^3 L e^{-L/G \tau} + 6G \tau^4 e^{-L/G \tau}
-\]</div>
-</section>
-<section id="step-7-final-form">
-<h3>Step 7: Final Form<a class="headerlink" href="#step-7-final-form" title="Link to this heading">#</a></h3>
-<p>Factoring out $<span class="math notranslate nohighlight">\( -G \tau e^{-L/G \tau} \)</span>$,</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^3 e^{-L/G \tau} \, dL = -G \tau e^{-L/G \tau} (L^3 + 3G \tau L^2 + 6G \tau^2 L + 6G \tau^3) + C
-\]</div>
-<p>This matches the desired result:</p>
-<div class="math notranslate nohighlight">
-\[
-\int L^3 e^{-L/G \tau} \, dL = -G \tau e^{-L/G \tau} (6 G \tau^3 + 6 G \tau^2 L + 3 G \tau L^2 + L^3) + C
-\]</div>
-</section>
 </section>
 </section>
 
@@ -926,16 +809,7 @@ L_D=3G\tau
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-size-distribution-and-process-parameters-tau-g-j">10.3 Particle size distribution and process parameters: <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(J\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moments-of-the-psd-in-a-msmpr-crystallizer">10.4 Moments of the PSD in a MSMPR crystallizer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensional-mass-distribution-and-dominant-crystal-size">10.5 Adimensional Mass distribution and dominant crystal size</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-recall-the-integration-by-parts-formula">Step 1: Recall the Integration by Parts Formula</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-identify-u-and-dv">Step 2: Identify $<span class="math notranslate nohighlight">\( u \)</span><span class="math notranslate nohighlight">\( and \)</span><span class="math notranslate nohighlight">\( dv \)</span>$</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-first-integration-g-tauy-parts">Step 3: First Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-second-integration-g-tauy-parts">Step 4: Second Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-third-integration-g-tauy-parts">Step 5: Third Integration G \tauy Parts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-comg-tauine-results">Step 6: ComG \tauine Results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-form">Step 7: Final Form</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
 </ul>
   </nav></div>
 
