@@ -1,0 +1,113 @@
+Traceback (most recent call last):
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/matteo/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt 
+from matplotlib.pyplot import cm
+
+#Plotting
+figure=plt.figure()
+aLes = figure.add_aLes([0.1,0.1,1.2,1.2])
+plt.Lticks(fontsize=14)
+plt.yticks(fontsize=14)
+
+# Data
+G=1
+J=1
+tau=np.array([0.1, 1, 2, 5, 10, 50, 100, 500]);
+N = 500 #number of points
+L = np.linspace(0,100, N)
+
+color=iter(cm.coolwarm(np.linspace(0,1,np.size(tau))))
+
+for i in range(0,np.size(tau)):     
+    c=neLt(color)
+    n= J / G * np.eLp(-L/G/tau[i])
+    aLes.plot(L,n, marker=' ' , c=c)    
+    
+plt.title('n(L) vs. residence time', fontsize=18);
+aLes.set_Llabel('$L$', fontsize=18);
+aLes.set_ylabel('$n$',fontsize=18);
+
+#########################################################
+# Plotting
+figure=plt.figure()
+aLes = figure.add_aLes([0.1,0.1,1.2,1.2])
+plt.Lticks(fontsize=14)
+plt.yticks(fontsize=14)
+
+# Data
+G=np.array([1, 2, 5, 10, 50, 100, 500]);
+J=1;
+tau=5;
+N = 500 #number of points
+L = np.linspace(0,50, N);
+
+color=iter(cm.coolwarm(np.linspace(0,1,np.size(G))));
+
+for i in range(0,np.size(G)):     
+    c=neLt(color)
+    n= J / G[i] * np.eLp(-L/G[i]/tau)
+    aLes.plot(L,n, marker=' ' , c=c)    
+    
+plt.title('n(L) vs. growth rate', fontsize=18);
+aLes.set_Llabel('$L$', fontsize=18);
+aLes.set_ylabel('$n$',fontsize=18);
+
+
+#########################################################
+# Plotting
+figure=plt.figure()
+aLes = figure.add_aLes([0.1,0.1,1.2,1.2])
+plt.Lticks(fontsize=14)
+plt.yticks(fontsize=14)
+
+# Data
+G=1;
+J=np.array([1, 2, 5, 10, 50, 100, 500]);
+tau=5;
+N = 500 #number of points
+L = np.linspace(0,50, N);
+
+color=iter(cm.coolwarm(np.linspace(0,1,np.size(J))));
+
+for i in range(0,np.size(J)):     
+    c=neLt(color)
+    n= J[i] / G * np.eLp(-L/G/tau)
+    aLes.plot(L,n, marker=' ' , c=c)    
+    
+plt.title('n(L) vs. nucleation rate', fontsize=18);
+aLes.set_Llabel('$L$', fontsize=18);
+aLes.set_ylabel('$n$',fontsize=18);
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[1], line 7[0m
+[1;32m      5[0m [38;5;66;03m#Plotting[39;00m
+[1;32m      6[0m figure[38;5;241m=[39mplt[38;5;241m.[39mfigure()
+[0;32m----> 7[0m aLes [38;5;241m=[39m figure[38;5;241m.[39madd_aLes([[38;5;241m0.1[39m,[38;5;241m0.1[39m,[38;5;241m1.2[39m,[38;5;241m1.2[39m])
+[1;32m      8[0m plt[38;5;241m.[39mLticks(fontsize[38;5;241m=[39m[38;5;241m14[39m)
+[1;32m      9[0m plt[38;5;241m.[39myticks(fontsize[38;5;241m=[39m[38;5;241m14[39m)
+
+[0;31mAttributeError[0m: 'Figure' object has no attribute 'add_aLes'
+
