@@ -1,6 +1,6 @@
-format: jb-article
+format: jb-book
 root: index
-sections:
+chapters:
 - file: Gas_permeation.ipynb
 - file: Pervaporation.ipynb
 - file: Osmosis.ipynb
@@ -11,12 +11,14 @@ sections:
 - file: Slurry_Adsorption.ipynb
 - file: Solubility.ipynb
 - file: MSMPR_crystallizer.ipynb
-- file: Exercise_W2_2025.ipynb
-- file: Exercise_W3_2021.ipynb
-- file: Exercise_W4_2024_updated.ipynb
-- file: Exercise_W5_2021.ipynb
-- file: Exercise_W6_2021.ipynb
-- file: Exercise_W8_2021.ipynb
-- file: Exercise_W9_2021.ipynb
-- file: Exercise_W10_2021.ipynb
-- file: Exercise_W11_2021.ipynb
+- file: Exercises.md
+  sections:
+    - file: Exercise_W2_2025.ipynb
+    - file: Exercise_W3_2021.ipynb
+    - file: Exercise_W4_2024_updated.ipynb
+    - file: Exercise_W5_2021.ipynb
+    - file: Exercise_W6_2021.ipynb
+    - file: Exercise_W8_2021.ipynb
+    - file: Exercise_W9_2021.ipynb
+    - file: Exercise_W10_2021.ipynb
+    - file: Exercise_W11_2021.ipynb

@@ -1,0 +1,104 @@
+\select@language {english}
+\contentsline {section}{\numberline {0.1}1. Material Balances in a Gas Permeation Unit}{1}{section.0.1}% 
+\contentsline {subsection}{\numberline {0.1.1}1.1 Operating Equation}{1}{subsection.0.1.1}% 
+\contentsline {subsubsection}{Graphical Representation}{2}{subsubsection*.3}% 
+\contentsline {subsection}{\numberline {0.1.2}1.2 Rate Transfer Equation}{3}{subsection.0.1.2}% 
+\contentsline {subsubsection}{Graphical Representation}{4}{subsubsection*.4}% 
+\contentsline {subsubsection}{Numerical Solution}{5}{subsubsection*.5}% 
+\contentsline {subsection}{\numberline {0.1.3}Contributions}{7}{subsection.0.1.3}% 
+\contentsline {section}{\numberline {0.2}2. Pervaporation}{7}{section.0.2}% 
+\contentsline {subsection}{\numberline {0.2.1}2.1 Vapour\sphinxhyphen {}Liquid Equilibrium in a Pervaporation unit}{7}{subsection.0.2.1}% 
+\contentsline {subsection}{\numberline {0.2.2}2.2 Vapour\sphinxhyphen {}Liquid Equilibrium conditions}{7}{subsection.0.2.2}% 
+\contentsline {subsection}{\numberline {0.2.3}2.3 Flux Equation in a pervaporation Unit}{8}{subsection.0.2.3}% 
+\contentsline {section}{\numberline {0.3}3. The Osmotic Pressure}{8}{section.0.3}% 
+\contentsline {subsection}{\numberline {0.3.1}3.1 Osmosis}{8}{subsection.0.3.1}% 
+\contentsline {subsection}{\numberline {0.3.2}3.2 Equilibrium Conditions}{9}{subsection.0.3.2}% 
+\contentsline {subsection}{\numberline {0.3.3}3.3 The Osmotic Pressure}{10}{subsection.0.3.3}% 
+\contentsline {subsubsection}{3.3.1 Dependence of the Osmotic pressure on the composition of the system}{10}{subsubsection*.6}% 
+\contentsline {subsection}{\numberline {0.3.4}3.4 Flux of the solvent during Osmosis}{12}{subsection.0.3.4}% 
+\contentsline {section}{\numberline {0.4}4. Membrane Processes Layouts}{13}{section.0.4}% 
+\contentsline {subsection}{\numberline {0.4.1}4.1 Batch}{13}{subsection.0.4.1}% 
+\contentsline {subsection}{\numberline {0.4.2}4.2 Feed and Bleed}{17}{subsection.0.4.2}% 
+\contentsline {subsection}{\numberline {0.4.3}4.3 Cascade configuration}{18}{subsection.0.4.3}% 
+\contentsline {section}{\numberline {0.5}5. The Langmuir Isotherm}{21}{section.0.5}% 
+\contentsline {subsection}{\numberline {0.5.1}5.1 Isotherm dependence on \(B_0\)}{22}{subsection.0.5.1}% 
+\contentsline {subsection}{\numberline {0.5.2}5.2 Concentration in the adsorbed phase.}{23}{subsection.0.5.2}% 
+\contentsline {subsection}{\numberline {0.5.3}5.3 Langmuir isotherm in the gas phase.}{25}{subsection.0.5.3}% 
+\contentsline {subsection}{\numberline {0.5.4}5.4 Multicomponent, competitive adsorption}{25}{subsection.0.5.4}% 
+\contentsline {section}{\numberline {0.6}6. The BET Isotherm}{27}{section.0.6}% 
+\contentsline {subsection}{\numberline {0.6.1}6.1 Many isotherm shapes from the same expression}{29}{subsection.0.6.1}% 
+\contentsline {section}{\numberline {0.7}7. Equilibria in Ion Exchange Systems}{30}{section.0.7}% 
+\contentsline {subsection}{\numberline {0.7.1}7.1 Monovalent, symmetric cation exchange.}{30}{subsection.0.7.1}% 
+\contentsline {subsection}{\numberline {0.7.2}7.2 Example problem}{34}{subsection.0.7.2}% 
+\contentsline {section}{\numberline {0.8}8. Batch Slurry Adsorption}{34}{section.0.8}% 
+\contentsline {subsection}{\numberline {0.8.1}8.1 Problem Statement}{34}{subsection.0.8.1}% 
+\contentsline {subsection}{\numberline {0.8.2}8.2 Material Balance in a Batch Slurry adsorption process}{34}{subsection.0.8.2}% 
+\contentsline {subsection}{\numberline {0.8.3}8.3 Continuous Slurry Adsorption}{37}{subsection.0.8.3}% 
+\contentsline {subsection}{\numberline {0.8.4}Contributions}{38}{subsection.0.8.4}% 
+\contentsline {section}{\numberline {0.9}9. Liquid/Solid Equilibrium in multicomponent systems: defining solubility}{38}{section.0.9}% 
+\contentsline {subsection}{\numberline {0.9.1}Fugacity of a real solution}{38}{subsection.0.9.1}% 
+\contentsline {subsection}{\numberline {0.9.2}Fugacity of a pure crystalline solid}{38}{subsection.0.9.2}% 
+\contentsline {subsection}{\numberline {0.9.3}Enthalpy of phase transition at T and P for pure solute}{39}{subsection.0.9.3}% 
+\contentsline {subsection}{\numberline {0.9.4}Entropy of phase transition at T and P for pure solute}{39}{subsection.0.9.4}% 
+\contentsline {subsection}{\numberline {0.9.5}Free energy of phase transition at T and P for pure solute}{40}{subsection.0.9.5}% 
+\contentsline {subsection}{\numberline {0.9.6}Solubility}{40}{subsection.0.9.6}% 
+\contentsline {subsection}{\numberline {0.9.7}The Schroeder\sphinxhyphen {}Van Laar Equation}{40}{subsection.0.9.7}% 
+\contentsline {section}{\numberline {0.10}10. MSMPR Crystallizer: population balance}{41}{section.0.10}% 
+\contentsline {subsection}{\numberline {0.10.1}10.0 Material Balance}{41}{subsection.0.10.1}% 
+\contentsline {subsection}{\numberline {0.10.2}10.1 Number and number population density}{41}{subsection.0.10.2}% 
+\contentsline {subsection}{\numberline {0.10.3}10.2 Population Balance in an MSMPR crystallizer}{42}{subsection.0.10.3}% 
+\contentsline {subsection}{\numberline {0.10.4}10.3 Particle size distribution and process parameters: \(\mittau \), \(G\), \(J\)}{43}{subsection.0.10.4}% 
+\contentsline {subsection}{\numberline {0.10.5}10.4 Moments of the PSD in a MSMPR crystallizer}{44}{subsection.0.10.5}% 
+\contentsline {subsection}{\numberline {0.10.6}10.5 Adimensional Mass distribution and dominant crystal size}{45}{subsection.0.10.6}% 
+\contentsline {subsection}{\numberline {0.10.7}Contributions}{47}{subsection.0.10.7}% 
+\contentsline {section}{\numberline {0.11}Week 2 \sphinxhyphen {} Exercise}{47}{section.0.11}% 
+\contentsline {subsection}{\numberline {0.11.1}Problem Statement}{47}{subsection.0.11.1}% 
+\contentsline {subsection}{\numberline {0.11.2}Solution trace}{47}{subsection.0.11.2}% 
+\contentsline {subsection}{\numberline {0.11.3}Contributions}{49}{subsection.0.11.3}% 
+\contentsline {section}{\numberline {0.12}Week 3 \sphinxhyphen {} Exercise}{50}{section.0.12}% 
+\contentsline {subsection}{\numberline {0.12.1}Problem Statement}{50}{subsection.0.12.1}% 
+\contentsline {subsection}{\numberline {0.12.2}Solution trace}{50}{subsection.0.12.2}% 
+\contentsline {subsection}{\numberline {0.12.3}Contributions}{52}{subsection.0.12.3}% 
+\contentsline {section}{\numberline {0.13}Week 4 \sphinxhyphen {} Exercise}{52}{section.0.13}% 
+\contentsline {subsection}{\numberline {0.13.1}Problem Statement}{52}{subsection.0.13.1}% 
+\contentsline {subsection}{\numberline {0.13.2}Requests}{52}{subsection.0.13.2}% 
+\contentsline {subsection}{\numberline {0.13.3}Solution:}{52}{subsection.0.13.3}% 
+\contentsline {subsection}{\numberline {0.13.4}Request 1}{53}{subsection.0.13.4}% 
+\contentsline {subsubsection}{Mass Balance:}{53}{subsubsection*.7}% 
+\contentsline {subsubsection}{Volume Balance:}{53}{subsubsection*.8}% 
+\contentsline {subsection}{\numberline {0.13.5}Request 2}{54}{subsection.0.13.5}% 
+\contentsline {subsection}{\numberline {0.13.6}Refinement of the GAMS Solution:}{56}{subsection.0.13.6}% 
+\contentsline {section}{\numberline {0.14}Week 5 \sphinxhyphen {} Exercise}{57}{section.0.14}% 
+\contentsline {subsection}{\numberline {0.14.1}Problem Statement}{57}{subsection.0.14.1}% 
+\contentsline {subsubsection}{Determine:}{58}{subsubsection*.9}% 
+\contentsline {subsubsection}{Solution}{58}{subsubsection*.10}% 
+\contentsline {section}{\numberline {0.15}Week 6 \sphinxhyphen {} Exercise}{59}{section.0.15}% 
+\contentsline {subsection}{\numberline {0.15.1}Problem Statement}{59}{subsection.0.15.1}% 
+\contentsline {section}{\numberline {0.16}Week 8 \sphinxhyphen {} Exercise}{59}{section.0.16}% 
+\contentsline {subsection}{\numberline {0.16.1}Problem Statement 1}{59}{subsection.0.16.1}% 
+\contentsline {subsection}{\numberline {0.16.2}Solution Trace}{60}{subsection.0.16.2}% 
+\contentsline {subsection}{\numberline {0.16.3}Problem Statement 2}{60}{subsection.0.16.3}% 
+\contentsline {subsection}{\numberline {0.16.4}Solution Trace}{60}{subsection.0.16.4}% 
+\contentsline {section}{\numberline {0.17}Week 9 \sphinxhyphen {} Exercise}{62}{section.0.17}% 
+\contentsline {subsection}{\numberline {0.17.1}Problem Statement}{62}{subsection.0.17.1}% 
+\contentsline {subsubsection}{Tasks:}{63}{subsubsection*.11}% 
+\contentsline {subsubsection}{Solution}{63}{subsubsection*.12}% 
+\contentsline {section}{\numberline {0.18}Week 10 \sphinxhyphen {} Exercise}{63}{section.0.18}% 
+\contentsline {subsection}{\numberline {0.18.1}Problem Statement}{63}{subsection.0.18.1}% 
+\contentsline {subsection}{\numberline {0.18.2}Tasks}{63}{subsection.0.18.2}% 
+\contentsline {subsection}{\numberline {0.18.3}Solution}{64}{subsection.0.18.3}% 
+\contentsline {subsubsection}{Task 1.}{64}{subsubsection*.13}% 
+\contentsline {subsubsection}{Task 2.}{64}{subsubsection*.14}% 
+\contentsline {subsubsection}{Task 3.}{65}{subsubsection*.15}% 
+\contentsline {subsubsection}{Task 4.}{65}{subsubsection*.16}% 
+\contentsline {subsubsection}{Task 5.}{65}{subsubsection*.17}% 
+\contentsline {subsection}{\numberline {0.18.4}Additional info}{66}{subsection.0.18.4}% 
+\contentsline {subsection}{\numberline {0.18.5}Contributions}{67}{subsection.0.18.5}% 
+\contentsline {section}{\numberline {0.19}Week 11 \sphinxhyphen {} Exercise}{67}{section.0.19}% 
+\contentsline {subsection}{\numberline {0.19.1}Problem Statement}{67}{subsection.0.19.1}% 
+\contentsline {subsubsection}{Tasks}{68}{subsubsection*.18}% 
+\contentsline {subsubsection}{Solution}{68}{subsubsection*.19}% 
+\contentsline {paragraph}{Task 1}{68}{paragraph*.20}% 
+\contentsline {paragraph}{Task 2 / 4}{69}{paragraph*.21}% 
+\contentsline {paragraph}{Task 3 / 4}{69}{paragraph*.22}% 
+\contentsline {paragraph}{Task 5}{72}{paragraph*.23}% 
