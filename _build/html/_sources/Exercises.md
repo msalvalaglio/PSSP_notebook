@@ -5,7 +5,7 @@
 
 | Exercise | Notebook | Summary |
 | --- | --- | --- |
-| Exercise_W2_2025 | [Exercise_W2_2025.ipynb](PSSP_notebook/Exercise_W2_2025.ipynb) | Week 2 - Exercise |
+| Exercise_W2_2025 | [Exercise_W2_2025.ipynb](./Exercise_W2_2025.html) | Week 2 - Exercise |
 | Exercise_W3_2021 | [Exercise_W3_2021.ipynb](PSSP_notebook/Exercise_W3_2021.ipynb) | Week 3 - Exercise |
 | Exercise_W4_2021 | [Exercise_W4_2021.ipynb](PSSP_notebook/Exercise_W4_2021.ipynb) | Week 4 - Exercise |
 | Exercise_W4_2021_bkp | [Exercise_W4_2021_bkp.ipynb](PSSP_notebook/Exercise_W4_2021_bkp.ipynb) | Week 4 - Exercise |
