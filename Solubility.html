@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>9. Liquid/Solid Equilibrium in multicomponent systems: defining solubility &#8212; PSSP Virtual Notebook</title>
   
@@ -16,50 +17,51 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Solubility';</script>
@@ -69,7 +71,6 @@
     <link rel="prev" title="8. Batch Slurry Adsorption" href="Slurry_Adsorption.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +86,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -94,6 +106,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +114,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +131,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,27 +161,12 @@
     
     
     <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
-    <img src="_static/Logo.png" class="logo__image only-dark pst-js-only" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Particulate Systems and Separation Processes Notebook
-                </a>
-            </li>
-        </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Gas_permeation.html">1. Material Balances in a Gas Permeation Unit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
@@ -201,14 +198,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -227,9 +219,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -369,19 +361,27 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -421,7 +421,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="liquid-solid-equilibrium-in-multicomponent-systems-defining-solubility">
-<h1>9. Liquid/Solid Equilibrium in multicomponent systems: defining solubility<a class="headerlink" href="#liquid-solid-equilibrium-in-multicomponent-systems-defining-solubility" title="Link to this heading">#</a></h1>
+<h1>9. Liquid/Solid Equilibrium in multicomponent systems: defining solubility<a class="headerlink" href="#liquid-solid-equilibrium-in-multicomponent-systems-defining-solubility" title="Permalink to this heading">#</a></h1>
 <p>Let us begin by writing the solid-liquid equilibrium conditions at temperature <span class="math notranslate nohighlight">\(T\)</span> and pressure <span class="math notranslate nohighlight">\(P\)</span>, between a pure crystalline phase and a multicomponent liquid phase characterised by composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>.
 Equilibrium is stated by the equality of chemical potentials:</p>
 <div class="math notranslate nohighlight">
@@ -435,7 +435,7 @@ f_i^s(T,P)=\hat{f}_i^\ell(T,P,\vec{x})
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(f_i^s(T,P)\)</span> is the fugacity of a pure crystalline solid at <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P\)</span>, while <span class="math notranslate nohighlight">\(\hat{f}_i^\ell(T,P,\vec{x})\)</span>, is the fugacity of a \emph{real} mixture at the same temperature and pressure, at composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>.</p>
 <section id="fugacity-of-a-real-solution">
-<h2>Fugacity of a real solution<a class="headerlink" href="#fugacity-of-a-real-solution" title="Link to this heading">#</a></h2>
+<h2>Fugacity of a real solution<a class="headerlink" href="#fugacity-of-a-real-solution" title="Permalink to this heading">#</a></h2>
 <p>Focusing on the right hand of Eq.\ref{eq:fugacity}, the fugacity in the \textbf{real solution} phase can be rewritten as a function of the fugacity of the \textbf{pure liquid phase} as follows:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -444,7 +444,7 @@ f_i^s(T,P)=\hat{f}_i^\ell(T,P,\vec{x})
 <p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the molar fraction that realizes the equality between fugacities, i.e. the solubility of component <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(f_i^\ell(T,P)x_i\)</span> is the fugacity of an \emph{ideal} solution at molar fraction <span class="math notranslate nohighlight">\(x_i\)</span>, <span class="math notranslate nohighlight">\(\gamma_i(T,P,\vec{x})\)</span> is the activity coefficient, capturing the non-idealities of the liquid phase in equilibrium with the solid. By definition of an ideal solution <span class="math notranslate nohighlight">\(f_i^\ell(T,P)\)</span> is the fugacity of the \textbf{pure solute in its liquid phase} at temperature T and pressure P.</p>
 </section>
 <section id="fugacity-of-a-pure-crystalline-solid">
-<h2>Fugacity of a pure crystalline solid<a class="headerlink" href="#fugacity-of-a-pure-crystalline-solid" title="Link to this heading">#</a></h2>
+<h2>Fugacity of a pure crystalline solid<a class="headerlink" href="#fugacity-of-a-pure-crystalline-solid" title="Permalink to this heading">#</a></h2>
 <p>Let us now focus on the left-hand side of Eq.\ref{eq:fugacity}. Here, we are only concerned with the \textbf{physical properties of the pure solute}.
 The fugacity of the pure solid phase can also be written as a function of the fugacity of the pure liquid by introducing the definition of fugacity and integrating between the liquid and solid states \emph{<span class="math notranslate nohighlight">\(\ell\)</span>}<span class="math notranslate nohighlight">\(\rightarrow\)</span>\emph{s}:</p>
 <div class="math notranslate nohighlight">
@@ -470,7 +470,7 @@ We note that the change in chemical potential for a pure substance corresponds t
 <p>Now we express the molar enthalpy change \textbf{for the pure solute} by considering a thermodynamic cycle, that goes through the melting temperature <span class="math notranslate nohighlight">\(T_f\)</span> at pressure P. This enables the computation of <span class="math notranslate nohighlight">\(\Delta{h}_i(T,P)\)</span> and <span class="math notranslate nohighlight">\(\Delta{s}_i(T,P)\)</span> via an arbitrary but convenient path, taking advantage of the fact that all terms in the free energy expression are \emph{state functions}.</p>
 </section>
 <section id="enthalpy-of-phase-transition-at-t-and-p-for-pure-solute">
-<h2>Enthalpy of phase transition at T and P for pure solute<a class="headerlink" href="#enthalpy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<h2>Enthalpy of phase transition at T and P for pure solute<a class="headerlink" href="#enthalpy-of-phase-transition-at-t-and-p-for-pure-solute" title="Permalink to this heading">#</a></h2>
 <p>The enthalpy change associated with the solid-to-liquid transition becomes:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -489,7 +489,7 @@ We note that the change in chemical potential for a pure substance corresponds t
 \]</div>
 </section>
 <section id="entropy-of-phase-transition-at-t-and-p-for-pure-solute">
-<h2>Entropy of phase transition at T and P for pure solute<a class="headerlink" href="#entropy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<h2>Entropy of phase transition at T and P for pure solute<a class="headerlink" href="#entropy-of-phase-transition-at-t-and-p-for-pure-solute" title="Permalink to this heading">#</a></h2>
 <p>Analogously to the enthalpy term, we can write the molar change in entropy via a the same thermodynamic cycle:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -508,7 +508,7 @@ We note that the change in chemical potential for a pure substance corresponds t
 \]</div>
 </section>
 <section id="free-energy-of-phase-transition-at-t-and-p-for-pure-solute">
-<h2>Free energy of phase transition at T and P for pure solute<a class="headerlink" href="#free-energy-of-phase-transition-at-t-and-p-for-pure-solute" title="Link to this heading">#</a></h2>
+<h2>Free energy of phase transition at T and P for pure solute<a class="headerlink" href="#free-energy-of-phase-transition-at-t-and-p-for-pure-solute" title="Permalink to this heading">#</a></h2>
 <p>Defining <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}=\left(Cp^{\ell}-Cp^{s}\right)\)</span> we can now recover the expression for <span class="math notranslate nohighlight">\(\Delta{g}_i^s(T,P)\)</span>, where the only assumption is that <span class="math notranslate nohighlight">\(Cp^{\ell}\)</span> and <span class="math notranslate nohighlight">\(Cp^{s}\)</span> are independent from the temperature T.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -516,7 +516,7 @@ We note that the change in chemical potential for a pure substance corresponds t
 \]</div>
 </section>
 <section id="solubility">
-<h2>Solubility<a class="headerlink" href="#solubility" title="Link to this heading">#</a></h2>
+<h2>Solubility<a class="headerlink" href="#solubility" title="Permalink to this heading">#</a></h2>
 <p>Inserting now this expression in Eq. \ref{eq:fugacitysolid} yields:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -535,7 +535,7 @@ x_i=\frac{1}{\gamma_i(T,P,\vec{x})}\exp\left[\frac{{-\Delta{h_{fus}\left(1-\frac
 <p>In this expression, the fugacity of the pure liquid solute, <span class="math notranslate nohighlight">\(f_i^\ell(T,P)\)</span> here cancels out, and the term <span class="math notranslate nohighlight">\(-\Delta{h_{fus}}\)</span> is not approximating a different quantity (like the enthalpy of dissolution). It is actually introduced rigorously by the convenient choice of an appropriate thermodynamic cycle for the calculation of <span class="math notranslate nohighlight">\(\Delta\mu_{i,\ell\rightarrow{s}}\)</span>.</p>
 </section>
 <section id="the-schroeder-van-laar-equation">
-<h2>The Schroeder-Van Laar Equation<a class="headerlink" href="#the-schroeder-van-laar-equation" title="Link to this heading">#</a></h2>
+<h2>The Schroeder-Van Laar Equation<a class="headerlink" href="#the-schroeder-van-laar-equation" title="Permalink to this heading">#</a></h2>
 <p>The Schroeder-Van Laar equation for the solubility is derived from \ref{eq:solubility} by assuming that <span class="math notranslate nohighlight">\(\Delta{Cp}_{\ell\rightarrow{s}}\)</span> is negligible.</p>
 <p>This simplification yields:</p>
 <div class="math notranslate nohighlight">
@@ -605,8 +605,7 @@ x_i=\frac{1}{\gamma_i(T,P,\vec{x})}\exp\left[{-\frac{\Delta{h_{fus}}}{R}\left(\f
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -670,8 +669,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

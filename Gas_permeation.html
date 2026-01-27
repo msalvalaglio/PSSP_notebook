@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Material Balances in a Gas Permeation Unit &#8212; PSSP Virtual Notebook</title>
   
@@ -16,50 +17,51 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Gas_permeation';</script>
@@ -69,7 +71,6 @@
     <link rel="prev" title="Particulate Systems and Separation Processes Notebook" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +86,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -94,6 +106,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +114,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +131,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,27 +161,12 @@
     
     
     <img src="_static/Logo.png" class="logo__image only-light" alt="PSSP Virtual Notebook - Home"/>
-    <img src="_static/Logo.png" class="logo__image only-dark pst-js-only" alt="PSSP Virtual Notebook - Home"/>
+    <script>document.write(`<img src="_static/Logo.png" class="logo__image only-dark" alt="PSSP Virtual Notebook - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    Particulate Systems and Separation Processes Notebook
-                </a>
-            </li>
-        </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Material Balances in a Gas Permeation Unit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pervaporation.html">2. Pervaporation</a></li>
@@ -201,14 +198,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -227,9 +219,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -369,19 +361,27 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -424,9 +424,9 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="material-balances-in-a-gas-permeation-unit">
-<h1>1. Material Balances in a Gas Permeation Unit<a class="headerlink" href="#material-balances-in-a-gas-permeation-unit" title="Link to this heading">#</a></h1>
+<h1>1. Material Balances in a Gas Permeation Unit<a class="headerlink" href="#material-balances-in-a-gas-permeation-unit" title="Permalink to this heading">#</a></h1>
 <section id="operating-equation">
-<h2>1.1 Operating Equation<a class="headerlink" href="#operating-equation" title="Link to this heading">#</a></h2>
+<h2>1.1 Operating Equation<a class="headerlink" href="#operating-equation" title="Permalink to this heading">#</a></h2>
 <p>Consider a binary gas phase mixture fed into a perfectly mixed membrane separation unit with molar flow rate <span class="math notranslate nohighlight">\(F_{in}\)</span>, and composition <span class="math notranslate nohighlight">\(\vec{z}\)</span>. The retentate stream is characterised by molar flow rate <span class="math notranslate nohighlight">\(F_{r}\)</span>, and composition <span class="math notranslate nohighlight">\(\vec{x}\)</span>, while  permeate is characterised by molar flow rate <span class="math notranslate nohighlight">\(F_{p}\)</span>  and composition <span class="math notranslate nohighlight">\(\vec{y}\)</span>.</p>
 <p>Since we are dealing with a binary mixture, in all streams the compositions of A and B complement to 1 (e.g. for the permeate stream <span class="math notranslate nohighlight">\(y_B=1-y_A\)</span>). Hence we drop unnecessary subscripts and indicate with <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(x\)</span>, and <span class="math notranslate nohighlight">\(y\)</span> the molar fraction of component A in the mixture.</p>
 <p>The global material balance on the unit reads: <span class="math notranslate nohighlight">\(F_{in}=F_p+F_r\)</span></p>
@@ -437,18 +437,18 @@
 F_{in}z=F_py+(F_{in}-F_p)x
 \]</div>
 <div class="math notranslate nohighlight" id="equation-gpeq1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-gpeq1" title="Link to this equation">#</a></span>\[
+<span class="eqno">(1)<a class="headerlink" href="#equation-gpeq1" title="Permalink to this equation">#</a></span>\[
 z=\frac{F_p}{F_{in}}y+(1-\frac{F_p}{F_{in}})x
 \]</div>
 <p>the quantity <span class="math notranslate nohighlight">\(\frac{F_p}{F_{in}}\)</span> is commonly defined as cut and indicated as <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p>Solving Eq.<a class="reference internal" href="#equation-gpeq1">(1)</a> for <span class="math notranslate nohighlight">\(y\)</span> leads to the expression:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq-operating">
-<span class="eqno">(2)<a class="headerlink" href="#equation-gpeq-operating" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-gpeq-operating" title="Permalink to this equation">#</a></span>\[
 y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 \]</div>
 <p>Eq. <a class="reference internal" href="#equation-gpeq-operating">(2)</a> is typically referred to as the Operating Equation of a perfectly mixed gas phase membrane module.</p>
 <section id="graphical-representation">
-<h3>Graphical Representation<a class="headerlink" href="#graphical-representation" title="Link to this heading">#</a></h3>
+<h3>Graphical Representation<a class="headerlink" href="#graphical-representation" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -486,42 +486,42 @@ y=\frac{\left(\theta-1\right)}{\theta}x+\frac{1}{\theta}z
 </section>
 </section>
 <section id="rate-transfer-equation">
-<h2>1.2 Rate Transfer Equation<a class="headerlink" href="#rate-transfer-equation" title="Link to this heading">#</a></h2>
+<h2>1.2 Rate Transfer Equation<a class="headerlink" href="#rate-transfer-equation" title="Permalink to this heading">#</a></h2>
 <p>Let us begin by considering that the permeate flow rate of component A is given by its molar flux through the membrane multiplied by the membrane total area:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-gpeq2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-gpeq2" title="Permalink to this equation">#</a></span>\[
 F_py=J\rho_AA_M
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(J\)</span> is the volumetric flux across the membrane, <span class="math notranslate nohighlight">\(\rho_A\)</span> is the molar density of component A, and <span class="math notranslate nohighlight">\(A_M\)</span> is the total area of the membrane. Applying the solution/diffusion model to define the volumetric flux Eq. <a class="reference internal" href="#equation-gpeq2">(3)</a> becomes:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-gpeq3" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-gpeq3" title="Permalink to this equation">#</a></span>\[
 F_py=\frac{P_A}{l}\rho_AA_M\left(xp_r-yp_p\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(P_A\)</span> is the permeability of the membrane to component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(l\)</span> is the thickness of the membrane, <span class="math notranslate nohighlight">\(p_r\)</span> is the pressure on the retentate side, <span class="math notranslate nohighlight">\(p_p\)</span> is the pressure on the permeate side.</p>
 <p>The same expression can be written for component <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-gpeq4" title="Link to this equation">#</a></span>\[
+<span class="eqno">(5)<a class="headerlink" href="#equation-gpeq4" title="Permalink to this equation">#</a></span>\[
 F_p(1-y)=\frac{P_B}{l}\rho_BA_M\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
 <p>Both Eq. <a class="reference internal" href="#equation-gpeq3">(4)</a> and <a class="reference internal" href="#equation-gpeq4">(5)</a> can be solved for <span class="math notranslate nohighlight">\(F_p\)</span> and equated, leading to:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-gpeq5" title="Link to this equation">#</a></span>\[
+<span class="eqno">(6)<a class="headerlink" href="#equation-gpeq5" title="Permalink to this equation">#</a></span>\[
 \frac{P_A}{y}\rho_A\left(xp_r-yp_p\right)=\frac{P_B}{(1-y)}\rho_B\left((1-x)p_r-(1-y)p_p\right)
 \]</div>
 <p>Eq. <a class="reference internal" href="#equation-gpeq5">(6)</a> can be solved either for <span class="math notranslate nohighlight">\(y\)</span> or for <span class="math notranslate nohighlight">\(x\)</span>, the latter being simpler. After some algebraic manipulation the solution for <span class="math notranslate nohighlight">\(x\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-gpeq6" title="Link to this equation">#</a></span>\[
+<span class="eqno">(7)<a class="headerlink" href="#equation-gpeq6" title="Permalink to this equation">#</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)\right]}{\alpha_{AB}\frac{\rho_A}{\rho_B}-\left(\alpha_{AB}\frac{\rho_A}{\rho_B}-1\right)y}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha_{A,B}=\frac{P_A}{P_B}\)</span> is the ideal separation factor.</p>
 <p>Eq. <a class="reference internal" href="#equation-gpeq6">(7)</a> can be simplified when the gas phase can be considered ideal. In such case <span class="math notranslate nohighlight">\(\rho_A=\rho_B=P/RT\)</span>, yielding:</p>
 <div class="math notranslate nohighlight" id="equation-gpeq7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-gpeq7" title="Link to this equation">#</a></span>\[
+<span class="eqno">(8)<a class="headerlink" href="#equation-gpeq7" title="Permalink to this equation">#</a></span>\[
 x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{AB}-\left(\alpha_{AB}-1\right)y}
 \]</div>
 <p>Eq. <a class="reference internal" href="#equation-gpeq7">(8)</a> is called <em>rate transfer equation</em> and together with th operating equation identify the membrane operating conditions in composition space.</p>
 <section id="id1">
-<h3>Graphical Representation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Graphical Representation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters: </span>
@@ -557,7 +557,7 @@ x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{
 <p>The operating conditions correspond to the interasection of the RT and OP equations, i.e. the solution of a system of equations defined by the operating and rate transfer equations.</p>
 </section>
 <section id="numerical-solution">
-<h3>Numerical Solution<a class="headerlink" href="#numerical-solution" title="Link to this heading">#</a></h3>
+<h3>Numerical Solution<a class="headerlink" href="#numerical-solution" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">fsolve</span>
@@ -600,7 +600,7 @@ x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{
 </section>
 </section>
 <section id="contributions">
-<h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
+<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Radoslav Lukanov, 16 Feb 2021</p></li>
 <li><p>Garv Mittal, 4 Feb 2024</p></li>
@@ -663,8 +663,7 @@ x=\frac{y\left[1+\frac{p_p}{p_r}(1-y)\left(\alpha_{AB}-1\right)\right]}{\alpha_{
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -731,8 +730,8 @@ By Matteo Salvalaglio
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
